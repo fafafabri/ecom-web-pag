@@ -73,9 +73,12 @@ const Navbar = () => {
         </nav>
 
         {/* Phone CTA */}
-        <a href="tel:933342580" className="hidden lg:flex items-center gap-2 px-5 py-3 rounded-xl bg-primary text-primary-foreground font-semibold text-sm transition-all hover:opacity-90 shadow-[0_4px_14px_0_hsl(var(--primary)/0.3)]">
-          <Phone className="h-4 w-4" />
-          <span className="tabular-nums">Consultas: 933 342 580</span>
+        <a href="https://wa.me/51933342580?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20sobre%20sus%20servicios." target="_blank" rel="noopener noreferrer" className="hidden lg:flex items-center gap-3 px-6 py-3 rounded-xl bg-primary text-primary-foreground font-semibold text-sm transition-all hover:opacity-90 shadow-[0_4px_14px_0_hsl(var(--primary)/0.3)]">
+          <Phone className="h-5 w-5" />
+          <div className="leading-tight text-left">
+            <span className="text-xs opacity-80">Consultas</span>
+            <span className="block text-base font-bold tabular-nums">933 342 580</span>
+          </div>
         </a>
 
         {/* Mobile Toggle */}
