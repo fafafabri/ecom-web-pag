@@ -35,7 +35,7 @@ const Index = () => {
             <Link to="/contacto" className="bg-accent text-accent-foreground px-8 py-4 rounded-xl font-semibold shadow-[0_4px_14px_0_hsl(24_90%_55%/0.39)] hover:shadow-[0_6px_20px_hsl(24_90%_55%/0.23)] hover:-translate-y-0.5 transition-all duration-300 inline-flex items-center gap-2">
               CONTACTO <ArrowRight className="h-4 w-4" />
             </Link>
-            <a href="tel:933342580" className="bg-transparent text-background border border-background/30 px-8 py-4 rounded-xl font-semibold hover:bg-background/10 transition-colors duration-300">
+            <a href="https://wa.me/51933342580?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20sobre%20sus%20servicios." target="_blank" rel="noopener noreferrer" className="bg-transparent text-background border border-background/30 px-8 py-4 rounded-xl font-semibold hover:bg-background/10 transition-colors duration-300">
               CONSULTAS
             </a>
           </div>
