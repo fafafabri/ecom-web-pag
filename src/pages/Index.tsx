@@ -1,9 +1,13 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, Users, Award, Truck, Wrench, CheckCircle } from 'lucide-react';
+import { ArrowRight, Users, Award, Truck, Wrench } from 'lucide-react';
 import { services, servicesByCategory } from '@/data/services';
 import { serviceImages } from '@/data/serviceImages';
 import heroBg from '@/assets/hero-bg.jpg';
 import empresaImg from '@/assets/empresa-hero.jpg';
+import certIso from '@/assets/cert-iso9001.png';
+import certBqsr from '@/assets/cert-bqsr.png';
+import certIas from '@/assets/cert-ias.png';
+import certIaf from '@/assets/cert-iaf.png';
 
 const pillars = [
   { icon: Users, title: 'Personal Calificado', desc: 'Con certificaciones, experiencia y capacitaciones constantes.' },
