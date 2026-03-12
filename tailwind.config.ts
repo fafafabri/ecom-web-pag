@@ -56,6 +56,7 @@ export default {
           foreground: "hsl(var(--footer-fg))",
         },
         whatsapp: "hsl(var(--whatsapp))",
+        "services-bg": "hsl(var(--services-bg))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

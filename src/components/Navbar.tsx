@@ -115,9 +115,9 @@ const Navbar = () => {
             </div>
             <Link to="/contacto" onClick={() => setMobileOpen(false)} className="py-3 px-3 text-sm font-medium rounded-lg hover:bg-primary/5">CONTACTO</Link>
           </nav>
-          <a href="tel:933342580" className="mt-4 flex items-center justify-center gap-2 py-3 rounded-xl bg-primary text-primary-foreground font-semibold text-sm">
+          <a href="https://wa.me/51933342580?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20sobre%20sus%20servicios." target="_blank" rel="noopener noreferrer" className="mt-4 flex items-center justify-center gap-2 py-3 rounded-xl bg-primary text-primary-foreground font-semibold text-sm">
             <Phone className="h-4 w-4" />
-            933 342 580
+            Consultas: 933 342 580
           </a>
         </div>
       )}

@@ -67,7 +67,7 @@ const ServiceDetail = () => {
                 href={`https://wa.me/51933342580?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20${encodeURIComponent(service.title)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full bg-whatsapp text-accent-foreground flex items-center justify-center gap-3 py-5 rounded-xl text-lg font-bold shadow-[0_8px_24px_rgba(37,211,102,0.3)] hover:-translate-y-1 transition-transform duration-300"
+                className="w-full bg-whatsapp/90 text-accent-foreground flex items-center justify-center gap-3 py-5 rounded-xl text-lg font-bold shadow-[0_8px_24px_rgba(37,211,102,0.25)] hover:-translate-y-1 hover:bg-whatsapp transition-all duration-300"
               >
                 <MessageCircle className="h-6 w-6" />
                 Cotizar por WhatsApp

@@ -129,14 +129,8 @@ const Index = () => {
         <div className="max-w-5xl mx-auto px-6">
           <div className="flex flex-wrap items-center justify-center gap-12 md:gap-20">
             {certifications.map(cert => (
-              <div key={cert} className="flex items-center gap-3">
-                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
-                  <CheckCircle className="h-7 w-7 text-primary" />
-                </div>
-                <div>
-                  <span className="font-display font-bold text-2xl text-foreground">{cert}</span>
-                  <p className="text-xs text-muted-foreground uppercase tracking-wider">Certificación</p>
-                </div>
+              <div key={cert.name} className="flex items-center gap-3">
+                <img src={cert.img} alt={cert.name} className="h-20 w-auto object-contain" />
               </div>
             ))}
           </div>
