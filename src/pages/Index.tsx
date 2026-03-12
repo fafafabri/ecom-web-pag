@@ -1,9 +1,13 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, Users, Award, Truck, Wrench, CheckCircle } from 'lucide-react';
+import { ArrowRight, Users, Award, Truck, Wrench } from 'lucide-react';
 import { services, servicesByCategory } from '@/data/services';
 import { serviceImages } from '@/data/serviceImages';
 import heroBg from '@/assets/hero-bg.jpg';
 import empresaImg from '@/assets/empresa-hero.jpg';
+import certIso from '@/assets/cert-iso9001.png';
+import certBqsr from '@/assets/cert-bqsr.png';
+import certIas from '@/assets/cert-ias.png';
+import certIaf from '@/assets/cert-iaf.png';
 
 const pillars = [
   { icon: Users, title: 'Personal Calificado', desc: 'Con certificaciones, experiencia y capacitaciones constantes.' },
@@ -12,7 +16,12 @@ const pillars = [
   { icon: Wrench, title: 'Equipos y Maquinarias', desc: 'De última tecnología para gestión de residuos y destrucciones.' },
 ];
 
-const certifications = ['ISO 9001', 'BQSR', 'IAS', 'IAF'];
+const certifications = [
+  { name: 'ISO 9001', img: certIso },
+  { name: 'BQSR', img: certBqsr },
+  { name: 'IAS', img: certIas },
+  { name: 'IAF', img: certIaf },
+];
 
 const Index = () => {
   // Show first 6 services on home
@@ -35,7 +44,7 @@ const Index = () => {
             <Link to="/contacto" className="bg-accent text-accent-foreground px-8 py-4 rounded-xl font-semibold shadow-[0_4px_14px_0_hsl(24_90%_55%/0.39)] hover:shadow-[0_6px_20px_hsl(24_90%_55%/0.23)] hover:-translate-y-0.5 transition-all duration-300 inline-flex items-center gap-2">
               CONTACTO <ArrowRight className="h-4 w-4" />
             </Link>
-            <a href="tel:933342580" className="bg-transparent text-background border border-background/30 px-8 py-4 rounded-xl font-semibold hover:bg-background/10 transition-colors duration-300">
+            <a href="https://wa.me/51933342580?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20sobre%20sus%20servicios." target="_blank" rel="noopener noreferrer" className="bg-transparent text-background border border-background/30 px-8 py-4 rounded-xl font-semibold hover:bg-background/10 transition-colors duration-300">
               CONSULTAS
             </a>
           </div>
@@ -120,14 +129,8 @@ const Index = () => {
         <div className="max-w-5xl mx-auto px-6">
           <div className="flex flex-wrap items-center justify-center gap-12 md:gap-20">
             {certifications.map(cert => (
-              <div key={cert} className="flex items-center gap-3">
-                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
-                  <CheckCircle className="h-7 w-7 text-primary" />
-                </div>
-                <div>
-                  <span className="font-display font-bold text-2xl text-foreground">{cert}</span>
-                  <p className="text-xs text-muted-foreground uppercase tracking-wider">Certificación</p>
-                </div>
+              <div key={cert.name} className="flex items-center gap-3">
+                <img src={cert.img} alt={cert.name} className="h-20 w-auto object-contain" />
               </div>
             ))}
           </div>

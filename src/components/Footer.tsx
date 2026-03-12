@@ -21,10 +21,15 @@ const Footer = () => {
               <Phone className="h-4 w-4 text-primary" />
               <span className="text-sm font-semibold">933 342 580 – 933 342 454</span>
             </div>
-            <div className="flex gap-3 mt-4">
-              {['facebook', 'linkedin', 'instagram'].map(social => (
-                <a key={social} href="#" className="w-9 h-9 rounded-full bg-primary/20 flex items-center justify-center hover:bg-primary/40 transition-colors text-xs font-bold uppercase">
-                  {social[0].toUpperCase()}
+            <div className="flex gap-2 mt-4">
+              {[
+                { label: 'Facebook', icon: 'f', href: '#' },
+                { label: 'LinkedIn', icon: 'in', href: '#' },
+                { label: 'X', icon: '𝕏', href: '#' },
+                { label: 'Instagram', icon: '◻', href: '#' },
+              ].map(s => (
+                <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label} className="w-9 h-9 rounded bg-primary flex items-center justify-center hover:opacity-80 transition-opacity text-primary-foreground text-xs font-bold">
+                  {s.icon}
                 </a>
               ))}
             </div>
