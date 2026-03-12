@@ -16,7 +16,12 @@ const pillars = [
   { icon: Wrench, title: 'Equipos y Maquinarias', desc: 'De última tecnología para gestión de residuos y destrucciones.' },
 ];
 
-const certifications = ['ISO 9001', 'BQSR', 'IAS', 'IAF'];
+const certifications = [
+  { name: 'ISO 9001', img: certIso },
+  { name: 'BQSR', img: certBqsr },
+  { name: 'IAS', img: certIas },
+  { name: 'IAF', img: certIaf },
+];
 
 const Index = () => {
   // Show first 6 services on home
