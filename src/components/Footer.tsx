@@ -7,20 +7,15 @@ const Footer = () => {
   return (
     <footer className="bg-footer text-footer-foreground pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
           {/* Column 1 - Brand */}
           <div>
-            <div className="flex items-center gap-3 mb-6">
-              <img src={logo} alt="ECO MBA" className="h-10 w-10 object-contain" />
-              <span className="font-display font-bold text-xl text-footer-foreground">ECO MBA</span>
+            <div className="mb-6">
+              <img src={logo} alt="ECO MBA - Care of the Planet" className="h-12 object-contain" />
             </div>
             <p className="text-sm leading-relaxed opacity-70 mb-6">
               Transporte, recojo de residuos sólidos no peligrosos, peligrosos, destrucción de materiales.
             </p>
-            <div className="flex items-center gap-2 mb-2">
-              <Phone className="h-4 w-4 text-primary" />
-              <span className="text-sm font-semibold">933 342 580 – 933 342 454</span>
-            </div>
             <div className="flex gap-2 mt-4">
               {[
                 { label: 'Facebook', icon: 'f', href: 'https://www.facebook.com/profile.php?id=61579597344363' },
@@ -33,36 +28,6 @@ const Footer = () => {
                 </a>
               ))}
             </div>
-          </div>
-
-          {/* Column 2 - Servicios */}
-          <div>
-            <h4 className="font-display font-bold text-sm uppercase tracking-wider mb-4">Servicios</h4>
-            <div className="w-8 h-0.5 bg-accent mb-4" />
-            <ul className="flex flex-col gap-2">
-              {servicesByCategory.destruccion.map(s => (
-                <li key={s.id}>
-                  <Link to={`/servicios/${s.slug}`} className="text-sm opacity-60 hover:opacity-100 transition-opacity">
-                    {s.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Column 3 - Otros Servicios */}
-          <div>
-            <h4 className="font-display font-bold text-sm uppercase tracking-wider mb-4">Otros Servicios</h4>
-            <div className="w-8 h-0.5 bg-accent mb-4" />
-            <ul className="flex flex-col gap-2">
-              {servicesByCategory.otros.map(s => (
-                <li key={s.id}>
-                  <Link to={`/servicios/${s.slug}`} className="text-sm opacity-60 hover:opacity-100 transition-opacity">
-                    {s.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
           </div>
 
           {/* Column 4 - Contacto */}

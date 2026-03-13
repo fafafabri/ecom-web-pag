@@ -15,12 +15,8 @@ const Navbar = () => {
     <header className="sticky top-0 z-50 w-full bg-card/90 backdrop-blur-md shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-20">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-3 shrink-0">
-          <img src={logo} alt="ECO MBA" className="h-12 w-12 object-contain" />
-          <div className="leading-tight">
-            <span className="font-display font-bold text-xl tracking-tight text-foreground">ECO MBA</span>
-            <span className="block text-xs text-muted-foreground font-medium tracking-wider uppercase">Care of the Planet</span>
-          </div>
+        <Link to="/" className="shrink-0">
+          <img src={logo} alt="ECO MBA - Care of the Planet" className="h-14 object-contain" />
         </Link>
 
         {/* Desktop Nav */}
