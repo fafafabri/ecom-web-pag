@@ -1,5 +1,4 @@
-import { MapPin, Clock, Mail } from 'lucide-react';
-import logo from '@/assets/logo-eco-mba-horizontal.png';
+import { MapPin, Phone, Clock, Mail } from 'lucide-react';
 import logo from '@/assets/logo-eco-mba-horizontal.png';
 
 const Footer = () => {
