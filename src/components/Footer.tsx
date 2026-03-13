@@ -23,10 +23,10 @@ const Footer = () => {
             </div>
             <div className="flex gap-2 mt-4">
               {[
-                { label: 'Facebook', icon: 'f', href: '#' },
-                { label: 'LinkedIn', icon: 'in', href: '#' },
-                { label: 'X', icon: '𝕏', href: '#' },
-                { label: 'Instagram', icon: '◻', href: '#' },
+                { label: 'Facebook', icon: 'f', href: 'https://www.facebook.com/profile.php?id=61579597344363' },
+                { label: 'LinkedIn', icon: 'in', href: 'https://www.linkedin.com/in/eco-mba-87774837b/' },
+                { label: 'X', icon: '𝕏', href: 'https://x.com/eco_mba_peru' },
+                { label: 'Instagram', icon: '◻', href: 'https://www.instagram.com/eco_mba_peru/' },
               ].map(s => (
                 <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label} className="w-9 h-9 rounded bg-primary flex items-center justify-center hover:opacity-80 transition-opacity text-primary-foreground text-xs font-bold">
                   {s.icon}

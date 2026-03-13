@@ -1,10 +1,10 @@
 import { MapPin, Clock } from 'lucide-react';
 
 const socials = [
-  { label: 'LinkedIn', icon: 'in', href: '#' },
-  { label: 'Facebook', icon: 'f', href: '#' },
-  { label: 'X', icon: '𝕏', href: '#' },
-  { label: 'Instagram', icon: '◻', href: '#' },
+  { label: 'LinkedIn', icon: 'in', href: 'https://www.linkedin.com/in/eco-mba-87774837b/' },
+  { label: 'Facebook', icon: 'f', href: 'https://www.facebook.com/profile.php?id=61579597344363' },
+  { label: 'X', icon: '𝕏', href: 'https://x.com/eco_mba_peru' },
+  { label: 'Instagram', icon: '◻', href: 'https://www.instagram.com/eco_mba_peru/' },
 ];
 
 const TopBar = () => (
