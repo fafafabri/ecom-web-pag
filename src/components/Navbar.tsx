@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Phone, ChevronDown, Menu, X } from 'lucide-react';
 import { servicesByCategory } from '@/data/services';
-import logo from '@/assets/logo-eco-mba.png';
+import logo from '@/assets/logo-eco-mba-horizontal.png';
 
 const Navbar = () => {
   const [servicesOpen, setServicesOpen] = useState(false);
