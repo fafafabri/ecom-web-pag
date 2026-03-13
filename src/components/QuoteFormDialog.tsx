@@ -2,8 +2,7 @@ import { useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { services } from '@/data/services';
+import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { CheckCircle } from 'lucide-react';
 
 interface QuoteFormDialogProps {
@@ -77,9 +76,30 @@ const QuoteFormDialog = ({ open, onOpenChange }: QuoteFormDialogProps) => {
                     <SelectValue placeholder="Seleccione un servicio" />
                   </SelectTrigger>
                   <SelectContent>
-                    {services.map(s => (
-                      <SelectItem key={s.id} value={s.id}>{s.title}</SelectItem>
-                    ))}
+                    <SelectGroup>
+                      <SelectLabel>Destrucción</SelectLabel>
+                      <SelectItem value="Destrucción Notarial de Documentos">Notarial de Documentos</SelectItem>
+                      <SelectItem value="Destrucción de Residuos">Residuos</SelectItem>
+                      <SelectItem value="Destrucción de RAEE">RAEE</SelectItem>
+                      <SelectItem value="Destrucción de Ropa">Ropa</SelectItem>
+                    </SelectGroup>
+                    <SelectGroup>
+                      <SelectLabel>Gestión y Transporte</SelectLabel>
+                      <SelectItem value="Gestión IQBF">IQBF</SelectItem>
+                      <SelectItem value="Transporte Maptel">Maptel</SelectItem>
+                      <SelectItem value="Recojo y Transporte de Residuos">Recojo de Residuos</SelectItem>
+                      <SelectItem value="Disposición Final">Disposición Final</SelectItem>
+                    </SelectGroup>
+                    <SelectGroup>
+                      <SelectLabel>Otros</SelectLabel>
+                      <SelectItem value="Venta de Sanitarios Portátiles">Venta de Sanitarios Portátiles</SelectItem>
+                      <SelectItem value="Limpieza de Trampas de Grasa">Limpieza de Trampas de Grasa</SelectItem>
+                      <SelectItem value="Limpieza de Pozos Sépticos">Limpieza de Pozos Sépticos</SelectItem>
+                      <SelectItem value="Limpieza Industrial">Limpieza Industrial</SelectItem>
+                      <SelectItem value="Asesorías Ambientales">Asesorías Ambientales</SelectItem>
+                      <SelectItem value="Limpieza de Biodigestores">Limpieza de Biodigestores</SelectItem>
+                      <SelectItem value="Comercialización de Materiales">Comercialización de Materiales</SelectItem>
+                    </SelectGroup>
                   </SelectContent>
                 </Select>
               </div>
