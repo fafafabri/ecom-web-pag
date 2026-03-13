@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Users, Award, Truck, Wrench } from 'lucide-react';
 import { services, servicesByCategory } from '@/data/services';
@@ -8,6 +9,8 @@ import certIso from '@/assets/cert-iso9001.png';
 import certBqsr from '@/assets/cert-bqsr.png';
 import certIas from '@/assets/cert-ias.png';
 import certIaf from '@/assets/cert-iaf.png';
+import QuoteFormDialog from '@/components/QuoteFormDialog';
+import InquiryFormDialog from '@/components/InquiryFormDialog';
 
 const pillars = [
   { icon: Users, title: 'Personal Calificado', desc: 'Con certificaciones, experiencia y capacitaciones constantes.' },
