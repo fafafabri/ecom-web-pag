@@ -1,8 +1,38 @@
 import { useParams, Link } from 'react-router-dom';
 import { CheckCircle, MessageCircle, ArrowRight } from 'lucide-react';
-import { getServiceBySlug, servicesByCategory } from '@/data/services';
+import { getServiceBySlug, servicesByCategory, Service } from '@/data/services';
 import { serviceImages } from '@/data/serviceImages';
 import NotFound from './NotFound';
+
+const WHATSAPP_NUMBER = '51933342580';
+
+function getWhatsAppUrl(service: Service): string {
+  const title = service.title;
+  let msg = '';
+
+  // Destrucción services
+  if (service.id.startsWith('destruccion-') || service.id === 'manejo-raee') {
+    msg = `Hola ECO MBA, solicito cotización para ${title}. Detalle del material: [ ], ¿Requiere Notario?: [ ], Peso aprox: [ ].`;
+  }
+  // Sanitarios
+  else if (service.id === 'sanitarios-portatiles') {
+    msg = `Hola ECO MBA, solicito información sobre Sanitarios Portátiles. Cantidad: [ ], Tipo/Modelo: [ ].`;
+  }
+  // Limpieza (Pozos, Trampas, Biodigestores)
+  else if (['trampas-grasa', 'pozos-septicos', 'biodigestores'].includes(service.id)) {
+    msg = `Hola ECO MBA, solicito servicio de ${title}. Capacidad aprox: [ ], Distrito: [ ], ¿Cuándo fue su última limpieza?: [ ].`;
+  }
+  // Transporte / Gestión IQBF
+  else if (['gestion-iqbf', 'transporte-maptel', 'recojo-residuos', 'disposicion-final', 'carga-transporte'].includes(service.id)) {
+    msg = `Hola ECO MBA, solicito servicio de ${title}. Tipo de carga: [ ], Volumen: [ ], Origen/Destino: [ ].`;
+  }
+  // Fallback
+  else {
+    msg = `Hola ECO MBA, solicito información sobre ${title}.`;
+  }
+
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+}
 
 const ServiceDetail = () => {
   const { slug } = useParams<{ slug: string }>();
