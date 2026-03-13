@@ -1,6 +1,5 @@
-import { Link } from 'react-router-dom';
-import { MapPin, Phone, Clock, Mail } from 'lucide-react';
-import { servicesByCategory } from '@/data/services';
+import { MapPin, Clock, Mail } from 'lucide-react';
+import logo from '@/assets/logo-eco-mba-horizontal.png';
 import logo from '@/assets/logo-eco-mba-horizontal.png';
 
 const Footer = () => {
