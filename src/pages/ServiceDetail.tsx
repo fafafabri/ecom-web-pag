@@ -64,7 +64,7 @@ const ServiceDetail = () => {
               <img src={image} alt={service.title} className="rounded-2xl shadow-lg w-full object-cover aspect-[4/3]" loading="lazy" />
               
               <a
-                href={`https://wa.me/51933342580?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20${encodeURIComponent(service.title)}`}
+                href={getWhatsAppUrl(service)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full bg-whatsapp/90 text-accent-foreground flex items-center justify-center gap-3 py-5 rounded-xl text-lg font-bold shadow-[0_8px_24px_rgba(37,211,102,0.25)] hover:-translate-y-1 hover:bg-whatsapp transition-all duration-300"
