@@ -102,24 +102,17 @@ const Navbar = () => {
                   </div>
 
                   <div className="rounded-3xl bg-slate-50 p-5 min-h-[300px] border border-slate-200/80 shadow-sm">
-                    <div className="space-y-4">
-                      <div>
-                        <p className="text-xs uppercase tracking-[0.28em] text-slate-500">{solutionCategories.find(category => category.key === activeCategory)?.label}</p>
-                        <h3 className="text-xl font-semibold text-slate-900 mt-2">Servicios</h3>
-                        <p className="text-sm text-slate-600 mt-2">{solutionCategories.find(category => category.key === activeCategory)?.description}</p>
-                      </div>
-                      <div className="grid gap-2">
-                        {solutionCategories.find(category => category.key === activeCategory)?.items.map(item => (
-                          <Link
-                            key={item.slug}
-                            to={`/servicios/${item.slug}`}
-                            className="block rounded-2xl px-4 py-3 bg-white text-sm text-slate-900 border border-slate-200 transition duration-200 hover:bg-emerald-50 hover:text-emerald-900"
-                            onClick={() => setServicesOpen(false)}
-                          >
-                            {item.title}
-                          </Link>
-                        ))}
-                      </div>
+                    <div className="grid gap-2">
+                      {solutionCategories.find(category => category.key === activeCategory)?.items.map(item => (
+                        <Link
+                          key={item.slug}
+                          to={`/servicios/${item.slug}`}
+                          className="block rounded-2xl px-4 py-3 bg-white text-sm text-slate-900 border border-slate-200 transition duration-200 hover:bg-emerald-50 hover:text-emerald-900"
+                          onClick={() => setServicesOpen(false)}
+                        >
+                          {item.title}
+                        </Link>
+                      ))}
                     </div>
                   </div>
                 </div>
