@@ -20,9 +20,8 @@ const Contacto = () => {
 
   return (
     <>
-      {/* Hero */}
       <section className="relative flex items-center min-h-[40vh] w-full overflow-hidden">
-        <img src={contactoHero} alt="Contacto ECO MBA" className="absolute inset-0 w-full h-full object-cover" />
+        <img src={contactoHero} alt="Contacto ECO M" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-foreground/65" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 w-full text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-background tracking-tight">Contáctanos</h1>
@@ -30,21 +29,19 @@ const Contacto = () => {
             <div className="w-8 h-1 rounded-full bg-accent" />
             <div className="w-8 h-1 rounded-full bg-background/40" />
           </div>
-          <p className="text-background/70 mt-4 text-sm">Home / Contacto</p>
+          <p className="text-background/70 mt-4 text-sm">Inicio / Hablemos</p>
         </div>
       </section>
 
-      {/* Content */}
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-card">
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12">
-          {/* Left - Contact Info */}
           <div className="lg:col-span-4">
-            <div className="bg-primary rounded-2xl p-8 text-primary-foreground">
+            <div className="bg-heading rounded-2xl p-8 text-primary-foreground">
               <div className="flex gap-1 mb-4">
                 <div className="w-6 h-1 rounded-full bg-accent" />
                 <div className="w-6 h-1 rounded-full bg-primary-foreground/40" />
               </div>
-              <h3 className="font-display font-bold text-xl mb-8">Contáctanos</h3>
+              <h3 className="font-display font-bold text-xl mb-8 text-primary-foreground">Contáctanos</h3>
 
               <div className="flex flex-col gap-6">
                 <div className="flex gap-3">
@@ -81,16 +78,15 @@ const Contacto = () => {
                   <Mail className="h-5 w-5 text-accent mt-0.5 shrink-0" />
                   <div>
                     <p className="text-xs opacity-70 mb-1">Email</p>
-                    <p className="text-sm font-semibold">comercial@eco-mba-ecology.com</p>
+                    <p className="text-sm font-semibold">comercial@eco-m.com</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Right - Form */}
           <div className="lg:col-span-8">
-            <h2 className="font-display font-bold text-3xl text-foreground mb-2">Consultas</h2>
+            <h2 className="font-display font-bold text-3xl mb-2">Consultas</h2>
             <div className="flex gap-1 my-4">
               <div className="w-8 h-1 rounded-full bg-accent" />
               <div className="w-8 h-1 rounded-full bg-primary" />
@@ -99,38 +95,12 @@ const Contacto = () => {
 
             <form onSubmit={handleSubmit} className="space-y-5">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <input
-                  type="text"
-                  placeholder="Nombre *"
-                  required
-                  value={form.nombre}
-                  onChange={e => setForm({ ...form, nombre: e.target.value })}
-                  className="bg-secondary border-0 ring-1 ring-inset ring-border focus:ring-2 focus:ring-inset focus:ring-primary rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground transition-all outline-none"
-                />
-                <input
-                  type="email"
-                  placeholder="Email *"
-                  required
-                  value={form.email}
-                  onChange={e => setForm({ ...form, email: e.target.value })}
-                  className="bg-secondary border-0 ring-1 ring-inset ring-border focus:ring-2 focus:ring-inset focus:ring-primary rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground transition-all outline-none"
-                />
+                <input type="text" placeholder="Nombre *" required value={form.nombre} onChange={e => setForm({ ...form, nombre: e.target.value })} className="bg-background border-0 ring-1 ring-inset ring-border focus:ring-2 focus:ring-inset focus:ring-heading rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground transition-all outline-none" />
+                <input type="email" placeholder="Email *" required value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} className="bg-background border-0 ring-1 ring-inset ring-border focus:ring-2 focus:ring-inset focus:ring-heading rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground transition-all outline-none" />
               </div>
-              <input
-                type="tel"
-                placeholder="Teléfono"
-                value={form.telefono}
-                onChange={e => setForm({ ...form, telefono: e.target.value })}
-                className="w-full bg-secondary border-0 ring-1 ring-inset ring-border focus:ring-2 focus:ring-inset focus:ring-primary rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground transition-all outline-none"
-              />
-              <textarea
-                placeholder="Consulta"
-                rows={5}
-                value={form.consulta}
-                onChange={e => setForm({ ...form, consulta: e.target.value })}
-                className="w-full bg-secondary border-0 ring-1 ring-inset ring-border focus:ring-2 focus:ring-inset focus:ring-primary rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground transition-all outline-none resize-none"
-              />
-              <button type="submit" className="bg-accent text-accent-foreground px-8 py-3 rounded-xl font-semibold text-sm hover:opacity-90 transition-opacity shadow-[0_4px_14px_0_hsl(24_90%_55%/0.39)]">
+              <input type="tel" placeholder="Teléfono" value={form.telefono} onChange={e => setForm({ ...form, telefono: e.target.value })} className="w-full bg-background border-0 ring-1 ring-inset ring-border focus:ring-2 focus:ring-inset focus:ring-heading rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground transition-all outline-none" />
+              <textarea placeholder="Consulta" rows={5} value={form.consulta} onChange={e => setForm({ ...form, consulta: e.target.value })} className="w-full bg-background border-0 ring-1 ring-inset ring-border focus:ring-2 focus:ring-inset focus:ring-heading rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground transition-all outline-none resize-none" />
+              <button type="submit" className="bg-cta text-cta-foreground px-8 py-3 rounded-xl font-semibold text-sm hover:scale-[1.03] hover:shadow-[0_6px_20px_hsl(var(--cta)/0.35)] transition-all duration-200 shadow-[0_4px_14px_0_hsl(var(--cta)/0.25)]">
                 ENVIAR
               </button>
             </form>
