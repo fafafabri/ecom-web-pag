@@ -69,7 +69,7 @@ const Navbar = () => {
                               <Link
                                 key={item.slug}
                                 to={`/servicios/${item.slug}`}
-                                className="rounded-2xl px-4 py-3 text-sm text-foreground transition-colors duration-200 hover:text-primary hover:bg-primary/5"
+                                className="rounded-2xl px-4 py-3 text-sm text-slate-900 transition-colors duration-200 hover:text-emerald-700 hover:bg-emerald-100"
                                 onClick={() => setServicesOpen(false)}
                               >
                                 {item.title}
@@ -93,7 +93,7 @@ const Navbar = () => {
                             <Link
                               key={item.slug}
                               to={`/servicios/${item.slug}`}
-                              className="rounded-2xl px-4 py-3 text-sm text-foreground transition-colors duration-200 hover:text-primary hover:bg-primary/5"
+                              className="rounded-2xl px-4 py-3 text-sm text-slate-900 transition-colors duration-200 hover:text-emerald-700 hover:bg-emerald-100"
                               onClick={() => setServicesOpen(false)}
                             >
                               {item.title}
@@ -146,7 +146,7 @@ const Navbar = () => {
                           key={item.slug}
                           to={`/servicios/${item.slug}`}
                           onClick={() => { setMobileOpen(false); setServicesOpen(false); }}
-                          className="block rounded-2xl px-3 py-2 text-sm text-foreground transition-colors duration-200 hover:text-primary hover:bg-primary/5"
+                          className="block rounded-2xl px-3 py-2 text-sm text-slate-900 transition-colors duration-200 hover:text-emerald-700 hover:bg-emerald-100"
                         >
                           {item.title}
                         </Link>
@@ -161,7 +161,7 @@ const Navbar = () => {
                           key={item.slug}
                           to={`/servicios/${item.slug}`}
                           onClick={() => { setMobileOpen(false); setServicesOpen(false); }}
-                          className="block rounded-2xl px-3 py-2 text-sm text-foreground transition-colors duration-200 hover:text-primary hover:bg-primary/5"
+                          className="block rounded-2xl px-3 py-2 text-sm text-slate-900 transition-colors duration-200 hover:text-emerald-700 hover:bg-emerald-100"
                         >
                           {item.title}
                         </Link>
