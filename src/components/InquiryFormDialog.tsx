@@ -44,7 +44,7 @@ const InquiryFormDialog = ({ open, onOpenChange }: InquiryFormDialogProps) => {
         ) : (
           <>
             <DialogHeader>
-              <DialogTitle className="text-xl font-bold text-primary">Consulta Rápida</DialogTitle>
+              <DialogTitle className="text-xl font-bold text-heading">Consulta Rápida</DialogTitle>
               <DialogDescription>Déjenos su consulta y le responderemos pronto.</DialogDescription>
             </DialogHeader>
             <form onSubmit={handleSubmit} className="grid gap-4 mt-2">
@@ -60,7 +60,7 @@ const InquiryFormDialog = ({ open, onOpenChange }: InquiryFormDialogProps) => {
                 <Label htmlFor="inq-message">Duda o Consulta *</Label>
                 <Textarea id="inq-message" required value={form.message} onChange={e => setForm(f => ({ ...f, message: e.target.value }))} placeholder="Escriba su consulta aquí..." rows={4} />
               </div>
-              <button type="submit" className="w-full mt-2 bg-primary text-primary-foreground py-3 rounded-xl font-semibold hover:bg-primary/90 transition-colors">
+              <button type="submit" className="w-full mt-2 bg-cta text-cta-foreground py-3 rounded-xl font-semibold hover:scale-[1.03] hover:shadow-[0_6px_20px_hsl(var(--cta)/0.35)] transition-all duration-200">
                 Enviar Consulta
               </button>
             </form>

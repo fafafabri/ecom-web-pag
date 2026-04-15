@@ -51,7 +51,7 @@ const QuoteFormDialog = ({ open, onOpenChange }: QuoteFormDialogProps) => {
         ) : (
           <>
             <DialogHeader>
-              <DialogTitle className="text-xl font-bold text-primary">Solicitud de Cotización</DialogTitle>
+              <DialogTitle className="text-xl font-bold text-heading">Solicitud de Cotización</DialogTitle>
               <DialogDescription>Complete los datos y nos pondremos en contacto.</DialogDescription>
             </DialogHeader>
             <form onSubmit={handleSubmit} className="grid gap-4 mt-2">
@@ -113,7 +113,7 @@ const QuoteFormDialog = ({ open, onOpenChange }: QuoteFormDialogProps) => {
                   <Input id="district" required value={form.district} onChange={e => setForm(f => ({ ...f, district: e.target.value }))} placeholder="Ej: San Isidro" />
                 </div>
               </div>
-              <button type="submit" className="w-full mt-2 bg-primary text-primary-foreground py-3 rounded-xl font-semibold hover:bg-primary/90 transition-colors">
+              <button type="submit" className="w-full mt-2 bg-cta text-cta-foreground py-3 rounded-xl font-semibold hover:scale-[1.03] hover:shadow-[0_6px_20px_hsl(var(--cta)/0.35)] transition-all duration-200">
                 Enviar Solicitud
               </button>
             </form>
