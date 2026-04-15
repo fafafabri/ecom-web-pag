@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
           <div>
             <div className="mb-6">
-              <img src={logo} alt="ECO M - Expert Destruction Management" className="h-16 object-contain" />
+              <img src={logo} alt="ECO M - Expert Destruction Management" className="w-48 h-auto object-contain" />
             </div>
             <p className="text-sm leading-relaxed opacity-70 mb-6">
               Transporte, recojo de residuos sólidos no peligrosos, peligrosos, destrucción de materiales.
@@ -28,7 +28,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={s.label}
-                  className="w-10 h-10 rounded-lg bg-[#2A6B7C]/10 flex items-center justify-center text-[#2A6B7C] transition-all duration-200 hover:bg-[#2A6B7C]/20 hover:text-white hover:scale-[1.03]"
+                  className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-white transition-all duration-300 hover:bg-[#448E33]/20 hover:text-[#448E33] hover:scale-110"
                 >
                   <s.icon className="h-5 w-5" />
                 </a>
