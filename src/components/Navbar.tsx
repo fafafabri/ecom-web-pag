@@ -58,35 +58,22 @@ const Navbar = () => {
 
                   <div className="rounded-3xl bg-slate-50 p-5 min-h-[300px] border border-slate-200/80 shadow-sm">
                     {activeCategory === 'destruccion' ? (
-                      <div className="grid gap-4 md:grid-cols-[1fr_220px]">
-                        <div>
-                          <div className="mb-4">
-                            <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Destrucción</p>
-                            <h3 className="text-lg font-semibold text-foreground">Servicios</h3>
-                          </div>
-                          <div className="grid gap-2">
-                            {destruccionMenu.map(item => (
-                              <Link
-                                key={item.slug}
-                                to={`/servicios/${item.slug}`}
-                                className="rounded-2xl px-4 py-3 text-sm text-slate-900 transition-colors duration-200 hover:text-emerald-700 hover:bg-emerald-100"
-                                onClick={() => setServicesOpen(false)}
-                              >
-                                {item.title}
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
-                        <div className="rounded-3xl bg-secondary/5 p-4 border border-secondary/20">
-                          <p className="text-xs uppercase tracking-[0.25em] text-secondary font-semibold mb-3">Certificado y Control</p>
-                          <p className="text-sm leading-relaxed text-slate-700">Procesos de destrucción con certificación, trazabilidad y supervisión documental para todos los residuos y activos.</p>
-                        </div>
+                      <div className="grid gap-2">
+                        {destruccionMenu.map(item => (
+                          <Link
+                            key={item.slug}
+                            to={`/servicios/${item.slug}`}
+                            className="rounded-2xl px-4 py-3 text-sm text-slate-900 transition-colors duration-200 hover:text-emerald-700 hover:bg-emerald-100"
+                            onClick={() => setServicesOpen(false)}
+                          >
+                            {item.title}
+                          </Link>
+                        ))}
                       </div>
                     ) : (
                       <div>
                         <div className="mb-4">
                           <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Limpieza y Gestión</p>
-                          <h3 className="text-lg font-semibold text-foreground">Servicios</h3>
                         </div>
                         <div className="grid gap-2">
                           {otrosMenu.map(item => (
