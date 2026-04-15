@@ -29,14 +29,13 @@ const certifications = [
 const Index = () => {
   const [quoteOpen, setQuoteOpen] = useState(false);
   const [inquiryOpen, setInquiryOpen] = useState(false);
-  // Show first 6 services on home
   const featuredServices = services.slice(0, 6);
 
   return (
     <>
       {/* Hero */}
       <section className="relative flex items-center min-h-[85vh] w-full overflow-hidden">
-        <img src={heroBg} alt="Planta industrial ECO MBA" className="absolute inset-0 w-full h-full object-cover" loading="eager" />
+        <img src={heroBg} alt="Planta industrial ECO M" className="absolute inset-0 w-full h-full object-cover" loading="eager" />
         <div className="absolute inset-0 bg-foreground/60" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 w-full">
           <p className="text-sm uppercase tracking-[0.2em] text-background/70 font-medium mb-4">
@@ -46,10 +45,10 @@ const Index = () => {
             Destrucción de Materiales y Productos
           </h1>
           <div className="flex flex-wrap gap-4 mt-10">
-            <button onClick={() => setQuoteOpen(true)} className="bg-accent text-accent-foreground px-8 py-4 rounded-xl font-semibold shadow-[0_4px_14px_0_hsl(24_90%_55%/0.39)] hover:shadow-[0_6px_20px_hsl(24_90%_55%/0.23)] hover:-translate-y-0.5 transition-all duration-300 inline-flex items-center gap-2">
+            <button onClick={() => setQuoteOpen(true)} className="bg-cta text-cta-foreground px-8 py-4 rounded-xl font-semibold shadow-[0_4px_14px_0_hsl(var(--cta)/0.35)] hover:shadow-[0_6px_20px_hsl(var(--cta)/0.4)] hover:scale-[1.03] hover:-translate-y-0.5 transition-all duration-300 inline-flex items-center gap-2">
               CONTACTO <ArrowRight className="h-4 w-4" />
             </button>
-            <button onClick={() => setInquiryOpen(true)} className="bg-transparent text-background border border-background/30 px-8 py-4 rounded-xl font-semibold hover:bg-background/10 transition-colors duration-300">
+            <button onClick={() => setInquiryOpen(true)} className="bg-transparent text-background border border-background/30 px-8 py-4 rounded-xl font-semibold hover:bg-background/10 hover:scale-[1.03] hover:shadow-[0_4px_14px_rgba(255,255,255,0.15)] transition-all duration-300">
               CONSULTAS
             </button>
           </div>
@@ -60,12 +59,12 @@ const Index = () => {
       <InquiryFormDialog open={inquiryOpen} onOpenChange={setInquiryOpen} />
 
       {/* Why Choose Us */}
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-card">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <p className="text-xs uppercase tracking-[0.2em] text-primary font-semibold mb-3">ECO MBA</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground tracking-tight mb-2">
+              <p className="text-xs uppercase tracking-[0.2em] text-primary font-semibold mb-3">ECO M</p>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-2">
                 Gestión Integral de Residuos Sólidos
               </h2>
               <div className="flex gap-1 my-6">
@@ -82,7 +81,7 @@ const Index = () => {
                       <p.icon className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-display font-bold text-sm text-foreground">{p.title}</h3>
+                      <h3 className="font-display font-bold text-sm">{p.title}</h3>
                       <p className="text-xs text-muted-foreground mt-1 leading-relaxed">{p.desc}</p>
                     </div>
                   </div>
@@ -90,39 +89,39 @@ const Index = () => {
               </div>
             </div>
             <div className="relative">
-              <img src={empresaImg} alt="ECO MBA operaciones" className="rounded-2xl shadow-lg w-full object-cover aspect-[4/3]" loading="lazy" />
+              <img src={empresaImg} alt="ECO M operaciones" className="rounded-2xl shadow-lg w-full object-cover aspect-[4/3]" loading="lazy" />
             </div>
           </div>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="py-24 bg-secondary/50">
+      <section className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-end justify-between mb-12">
             <div>
-              <p className="text-xs uppercase tracking-[0.2em] text-primary font-semibold mb-3">ECO MBA</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground tracking-tight">Servicios</h2>
+              <p className="text-xs uppercase tracking-[0.2em] text-primary font-semibold mb-3">ECO M</p>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Soluciones</h2>
               <div className="flex gap-1 mt-4">
                 <div className="w-8 h-1 rounded-full bg-accent" />
                 <div className="w-8 h-1 rounded-full bg-primary" />
               </div>
             </div>
-            <Link to="/servicios/destruccion-de-documentos" className="hidden md:inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-border text-sm font-medium text-foreground hover:bg-primary/5 transition-colors">
-              + SERVICIOS <ArrowRight className="h-4 w-4" />
+            <Link to="/servicios/destruccion-de-documentos" className="hidden md:inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-border text-sm font-medium text-foreground hover:bg-primary/5 hover:scale-[1.03] hover:shadow-md transition-all duration-200">
+              + SOLUCIONES <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredServices.map(s => (
-              <Link key={s.id} to={`/servicios/${s.slug}`} className="group relative flex flex-col bg-card rounded-2xl overflow-hidden shadow-[0_1px_3px_rgba(0,0,0,0.05),0_10px_24px_-4px_rgba(0,0,0,0.02)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.05),0_20px_32px_-8px_rgba(0,0,0,0.08)] transition-all duration-300">
+              <Link key={s.id} to={`/servicios/${s.slug}`} className="group relative flex flex-col bg-card rounded-2xl overflow-hidden shadow-[0_1px_3px_rgba(0,0,0,0.05),0_10px_24px_-4px_rgba(0,0,0,0.02)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.05),0_20px_32px_-8px_rgba(0,0,0,0.08)] hover:scale-[1.01] transition-all duration-300">
                 <div className="h-48 w-full overflow-hidden">
                   <img src={serviceImages[s.imageKey]} alt={s.title} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
                 </div>
                 <div className="p-6 flex flex-col flex-1">
-                  <h3 className="font-display font-bold text-foreground mb-2">{s.title}</h3>
+                  <h3 className="font-display font-bold mb-2">{s.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed flex-1">{s.shortDesc}</p>
-                  <span className="mt-4 inline-flex items-center text-primary font-medium text-sm group-hover:text-accent transition-colors">
+                  <span className="mt-4 inline-flex items-center text-primary font-medium text-sm group-hover:text-heading transition-colors">
                     Saber más <ArrowRight className="h-4 w-4 ml-1 transition-transform group-hover:translate-x-1" />
                   </span>
                 </div>
@@ -133,7 +132,7 @@ const Index = () => {
       </section>
 
       {/* Certifications */}
-      <section className="py-16 bg-background border-t border-border">
+      <section className="py-16 bg-card border-t border-border">
         <div className="max-w-5xl mx-auto px-6">
           <div className="flex flex-wrap items-center justify-center gap-12 md:gap-20">
             {certifications.map(cert => (

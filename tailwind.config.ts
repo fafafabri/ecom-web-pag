@@ -55,6 +55,11 @@ export default {
           DEFAULT: "hsl(var(--footer-bg))",
           foreground: "hsl(var(--footer-fg))",
         },
+        cta: {
+          DEFAULT: "hsl(var(--cta))",
+          foreground: "hsl(var(--cta-foreground))",
+        },
+        heading: "hsl(var(--heading))",
         whatsapp: "hsl(var(--whatsapp))",
         "services-bg": "hsl(var(--services-bg))",
         sidebar: {

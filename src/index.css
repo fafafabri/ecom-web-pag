@@ -6,40 +6,45 @@
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
-    --foreground: 240 10% 15%;
+    --background: 210 14% 96%;
+    --foreground: 0 0% 20%;
 
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 15%;
+    --card-foreground: 0 0% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 15%;
+    --popover-foreground: 0 0% 20%;
 
-    --primary: 79 97% 28%;
+    --primary: 110 48% 38%;
     --primary-foreground: 0 0% 100%;
 
     --services-bg: 90 34% 28%;
 
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 240 10% 15%;
+    --secondary: 210 14% 96%;
+    --secondary-foreground: 0 0% 20%;
 
-    --muted: 0 0% 96%;
-    --muted-foreground: 240 5% 46%;
+    --muted: 210 14% 96%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 24 90% 55%;
+    --accent: 38 47% 56%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 79 97% 28%;
+    --cta: 110 48% 38%;
+    --cta-foreground: 0 0% 100%;
+
+    --heading: 193 62% 26%;
+
+    --border: 210 14% 89%;
+    --input: 210 14% 89%;
+    --ring: 193 62% 26%;
 
     --radius: 0.75rem;
 
-    --footer-bg: 160 30% 12%;
-    --footer-fg: 0 0% 90%;
+    --footer-bg: 200 20% 14%;
+    --footer-fg: 0 0% 92%;
 
     --surface: 0 0% 100%;
     --whatsapp: 142 70% 49%;
@@ -67,6 +72,7 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-display;
     text-wrap: balance;
+    color: hsl(var(--heading));
   }
 
   p {

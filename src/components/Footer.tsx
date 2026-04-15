@@ -1,36 +1,43 @@
-import { MapPin, Phone, Clock, Mail } from 'lucide-react';
-import logo from '@/assets/logo-eco-mba-horizontal.png';
+import { MapPin, Phone, Clock, Mail, Linkedin, Facebook, Twitter, Instagram } from 'lucide-react';
+import logo from '@/assets/logo-eco-m.png';
+
+const socials = [
+  { label: 'Facebook', icon: Facebook, href: 'https://www.facebook.com/profile.php?id=61579597344363' },
+  { label: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/in/eco-mba-87774837b/' },
+  { label: 'X', icon: Twitter, href: 'https://x.com/eco_mba_peru' },
+  { label: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/eco_mba_peru/' },
+];
 
 const Footer = () => {
   return (
     <footer className="bg-footer text-footer-foreground pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
-          {/* Column 1 - Brand */}
           <div>
             <div className="mb-6">
-              <img src={logo} alt="ECO MBA - Care of the Planet" className="h-12 object-contain" />
+              <img src={logo} alt="ECO M - Expert Destruction Management" className="h-12 object-contain" />
             </div>
             <p className="text-sm leading-relaxed opacity-70 mb-6">
               Transporte, recojo de residuos sólidos no peligrosos, peligrosos, destrucción de materiales.
             </p>
-            <div className="flex gap-2 mt-4">
-              {[
-                { label: 'Facebook', icon: 'f', href: 'https://www.facebook.com/profile.php?id=61579597344363' },
-                { label: 'LinkedIn', icon: 'in', href: 'https://www.linkedin.com/in/eco-mba-87774837b/' },
-                { label: 'X', icon: '𝕏', href: 'https://x.com/eco_mba_peru' },
-                { label: 'Instagram', icon: '◻', href: 'https://www.instagram.com/eco_mba_peru/' },
-              ].map(s => (
-                <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label} className="w-9 h-9 rounded bg-primary flex items-center justify-center hover:opacity-80 transition-opacity text-primary-foreground text-xs font-bold">
-                  {s.icon}
+            <div className="flex gap-3 mt-4">
+              {socials.map(s => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={s.label}
+                  className="w-10 h-10 rounded-lg bg-footer-foreground/10 flex items-center justify-center text-footer-foreground/70 hover:bg-primary hover:text-primary-foreground transition-all duration-200 hover:scale-[1.03]"
+                >
+                  <s.icon className="h-5 w-5" />
                 </a>
               ))}
             </div>
           </div>
 
-          {/* Column 4 - Contacto */}
           <div>
-            <h4 className="font-display font-bold text-sm uppercase tracking-wider mb-4">Contáctanos</h4>
+            <h4 className="font-display font-bold text-sm uppercase tracking-wider mb-4 text-footer-foreground">Contáctanos</h4>
             <div className="w-8 h-0.5 bg-accent mb-4" />
             <div className="flex flex-col gap-5">
               <div className="flex gap-3">
@@ -52,7 +59,7 @@ const Footer = () => {
                 <Mail className="h-5 w-5 text-primary mt-0.5 shrink-0" />
                 <div>
                   <p className="text-xs opacity-60 mb-1">Email</p>
-                  <p className="text-sm font-semibold">comercial@eco-mba-ecology.com</p>
+                  <p className="text-sm font-semibold">comercial@eco-m.com</p>
                 </div>
               </div>
               <div className="flex gap-3">
@@ -70,7 +77,7 @@ const Footer = () => {
 
         <div className="border-t border-footer-foreground/10 pt-6 text-center">
           <p className="text-xs opacity-50">
-            © {new Date().getFullYear()} <span className="font-semibold">ECO MBA</span> – Care Of The Planet. All rights reserved.
+            © {new Date().getFullYear()} <span className="font-semibold">ECO M</span> – Expert Destruction Management. All rights reserved.
           </p>
         </div>
       </div>
