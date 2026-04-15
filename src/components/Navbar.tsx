@@ -7,6 +7,7 @@ import logo from '@/assets/logo-eco-m.png';
 const Navbar = () => {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeCategory, setActiveCategory] = useState<'destruccion' | 'otros'>('destruccion');
   const location = useLocation();
 
   const isActive = (path: string) => location.pathname === path;
@@ -32,23 +33,42 @@ const Navbar = () => {
             </button>
 
             {servicesOpen && (
-              <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-[600px]">
-                <div className="bg-card rounded-2xl shadow-[0_4px_12px_rgba(0,0,0,0.05),0_20px_32px_-8px_rgba(0,0,0,0.08)] p-6 grid grid-cols-2 gap-6">
-                  <div>
-                    <h4 className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-3">Destrucción y Gestión</h4>
-                    <div className="flex flex-col gap-1">
-                      {servicesByCategory.destruccion.map(s => (
-                        <Link key={s.id} to={`/servicios/${s.slug}`} className="text-sm text-foreground hover:text-primary transition-colors py-1.5 px-2 rounded-md hover:bg-primary/5" onClick={() => setServicesOpen(false)}>
-                          {s.title}
-                        </Link>
-                      ))}
-                    </div>
+              <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-[700px]">
+                <div className="bg-card rounded-[28px] shadow-[0_18px_45px_rgba(0,0,0,0.08)] p-6 grid md:grid-cols-[200px_1fr] gap-4 border border-slate-200/70 transition-all duration-200">
+                  <div className="space-y-3">
+                    <p className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">Explora por categoría</p>
+                    <button
+                      type="button"
+                      onMouseEnter={() => setActiveCategory('destruccion')}
+                      className={`w-full text-left rounded-2xl px-4 py-3 text-sm font-semibold transition ${activeCategory === 'destruccion' ? 'bg-primary/10 text-primary' : 'text-foreground hover:bg-primary/5 hover:text-primary'}`}
+                    >
+                      Destrucción
+                    </button>
+                    <button
+                      type="button"
+                      onMouseEnter={() => setActiveCategory('otros')}
+                      className={`w-full text-left rounded-2xl px-4 py-3 text-sm font-semibold transition ${activeCategory === 'otros' ? 'bg-primary/10 text-primary' : 'text-foreground hover:bg-primary/5 hover:text-primary'}`}
+                    >
+                      Otros Servicios
+                    </button>
                   </div>
-                  <div>
-                    <h4 className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-3">Otros Servicios</h4>
-                    <div className="flex flex-col gap-1">
-                      {servicesByCategory.otros.map(s => (
-                        <Link key={s.id} to={`/servicios/${s.slug}`} className="text-sm text-foreground hover:text-primary transition-colors py-1.5 px-2 rounded-md hover:bg-primary/5" onClick={() => setServicesOpen(false)}>
+
+                  <div className="rounded-3xl bg-slate-50 p-5 min-h-[260px] border border-slate-200/80 shadow-sm">
+                    <div className="flex items-center justify-between mb-5">
+                      <div>
+                        <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Servicios</p>
+                        <h3 className="text-lg font-semibold text-foreground">{activeCategory === 'destruccion' ? 'Destrucción' : 'Otros Servicios'}</h3>
+                      </div>
+                      <span className="text-xs font-medium uppercase text-primary/80">{activeCategory === 'destruccion' ? 'Certificado y control' : 'Limpieza y gestión'}</span>
+                    </div>
+                    <div className="grid gap-2">
+                      {(activeCategory === 'destruccion' ? servicesByCategory.destruccion : servicesByCategory.otros).map(s => (
+                        <Link
+                          key={s.id}
+                          to={`/servicios/${s.slug}`}
+                          className="rounded-2xl px-4 py-3 text-sm text-foreground transition-colors duration-200 hover:text-primary hover:bg-primary/5"
+                          onClick={() => setServicesOpen(false)}
+                        >
                           {s.title}
                         </Link>
                       ))}
@@ -80,23 +100,42 @@ const Navbar = () => {
           <nav className="flex flex-col gap-1">
             <Link to="/" onClick={() => setMobileOpen(false)} className="py-3 px-3 text-sm font-medium rounded-lg hover:bg-primary/5">INICIO</Link>
             <Link to="/empresa" onClick={() => setMobileOpen(false)} className="py-3 px-3 text-sm font-medium rounded-lg hover:bg-primary/5">CONÓCENOS</Link>
-            <div>
-              <button onClick={() => setServicesOpen(!servicesOpen)} className="w-full flex items-center justify-between py-3 px-3 text-sm font-medium rounded-lg hover:bg-primary/5">
+            <div className="rounded-3xl border border-border p-3 bg-background/90">
+              <button onClick={() => setServicesOpen(!servicesOpen)} className="w-full flex items-center justify-between py-3 px-3 text-sm font-medium rounded-2xl hover:bg-primary/5 transition-all duration-200">
                 SOLUCIONES <ChevronDown className={`h-4 w-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
               {servicesOpen && (
-                <div className="pl-4 flex flex-col gap-1">
-                  {servicesByCategory.destruccion.map(s => (
-                    <Link key={s.id} to={`/servicios/${s.slug}`} onClick={() => { setMobileOpen(false); setServicesOpen(false); }} className="py-2 px-3 text-sm text-muted-foreground hover:text-primary rounded-md">
-                      {s.title}
-                    </Link>
-                  ))}
-                  <div className="h-px bg-border my-2" />
-                  {servicesByCategory.otros.map(s => (
-                    <Link key={s.id} to={`/servicios/${s.slug}`} onClick={() => { setMobileOpen(false); setServicesOpen(false); }} className="py-2 px-3 text-sm text-muted-foreground hover:text-primary rounded-md">
-                      {s.title}
-                    </Link>
-                  ))}
+                <div className="mt-3 space-y-3">
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-2">Destrucción</p>
+                    <div className="space-y-1">
+                      {servicesByCategory.destruccion.map(s => (
+                        <Link
+                          key={s.id}
+                          to={`/servicios/${s.slug}`}
+                          onClick={() => { setMobileOpen(false); setServicesOpen(false); }}
+                          className="block rounded-2xl px-3 py-2 text-sm text-foreground transition-colors duration-200 hover:text-primary hover:bg-primary/5"
+                        >
+                          {s.title}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-2">Otros Servicios</p>
+                    <div className="space-y-1">
+                      {servicesByCategory.otros.map(s => (
+                        <Link
+                          key={s.id}
+                          to={`/servicios/${s.slug}`}
+                          onClick={() => { setMobileOpen(false); setServicesOpen(false); }}
+                          className="block rounded-2xl px-3 py-2 text-sm text-foreground transition-colors duration-200 hover:text-primary hover:bg-primary/5"
+                        >
+                          {s.title}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               )}
             </div>
