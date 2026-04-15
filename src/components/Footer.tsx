@@ -1,5 +1,5 @@
 import { MapPin, Phone, Clock, Mail, Linkedin, Facebook, Twitter, Instagram } from 'lucide-react';
-import logo from '@/assets/logo-eco-m.png';
+import logo from '@/assets/logo-eco-m-final.png';
 
 const socials = [
   { label: 'Facebook', icon: Facebook, href: 'https://www.facebook.com/profile.php?id=61579597344363' },

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Phone, ChevronDown, Menu, X } from 'lucide-react';
-import logo from '@/assets/logo-eco-m.png';
+import logo from '@/assets/logo-eco-m-final.png';
 import { destruccionMenu, mainNav, otrosMenu } from '@/data/menu';
 
 const Navbar = () => {
