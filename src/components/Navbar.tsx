@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Phone, ChevronDown, Menu, X } from 'lucide-react';
 import { servicesByCategory } from '@/data/services';
-import logo from '@/assets/logo-eco-m.png';
+import logo from '@/assets/logo-eco-m-final.png';
 
 const Navbar = () => {
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -19,7 +19,7 @@ const Navbar = () => {
     <header className="sticky top-0 z-50 w-full bg-card/90 backdrop-blur-md shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-20">
         <Link to="/" className="shrink-0">
-          <img src={logo} alt="ECO M - Expert Destruction Management" className="h-14 object-contain" />
+          <img src={logo} alt="ECO M - Expert Destruction Management" className="h-20 object-contain" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-1">

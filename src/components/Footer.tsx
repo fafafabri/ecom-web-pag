@@ -1,5 +1,5 @@
 import { MapPin, Phone, Clock, Mail, Linkedin, Facebook, Twitter, Instagram } from 'lucide-react';
-import logo from '@/assets/logo-eco-m.png';
+import logo from '@/assets/logo-eco-m-final.png';
 
 const socials = [
   { label: 'Facebook', icon: Facebook, href: 'https://www.facebook.com/profile.php?id=61579597344363' },
@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
           <div>
             <div className="mb-6">
-              <img src={logo} alt="ECO M - Expert Destruction Management" className="h-12 object-contain" />
+              <img src={logo} alt="ECO M - Expert Destruction Management" className="h-16 object-contain" />
             </div>
             <p className="text-sm leading-relaxed opacity-70 mb-6">
               Transporte, recojo de residuos sólidos no peligrosos, peligrosos, destrucción de materiales.
@@ -28,7 +28,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={s.label}
-                  className="w-10 h-10 rounded-lg bg-footer-foreground/10 flex items-center justify-center text-footer-foreground/70 hover:bg-primary hover:text-primary-foreground transition-all duration-200 hover:scale-[1.03]"
+                  className="w-10 h-10 rounded-lg bg-[#2A6B7C]/10 flex items-center justify-center text-[#2A6B7C] transition-all duration-200 hover:bg-[#2A6B7C]/20 hover:text-white hover:scale-[1.03]"
                 >
                   <s.icon className="h-5 w-5" />
                 </a>
@@ -76,7 +76,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-footer-foreground/10 pt-6 text-center">
-          <p className="text-xs opacity-50">
+          <p className="text-xs text-[#F4F4F4] opacity-90">
             © {new Date().getFullYear()} <span className="font-semibold">ECO M</span> – Expert Destruction Management. All rights reserved.
           </p>
         </div>
