@@ -68,7 +68,40 @@
     "email": "Email *",
     "phone": "Phone",
     "inquiry": "Inquiry",
-    "send": "Send"
+    "send": "Send",
+    "quote": {
+      "title": "Quote Request",
+      "description": "Complete the information and we will contact you.",
+      "contactName": "Contact Name *",
+      "contactNamePlaceholder": "John Doe",
+      "companyName": "Company Name *",
+      "companyNamePlaceholder": "My Company Inc.",
+      "ruc": "RUC *",
+      "rucPlaceholder": "20123456789",
+      "service": "Service you wish to request *",
+      "servicePlaceholder": "Select a service",
+      "volume": "Approximate Volume (Ton/Kg) *",
+      "volumePlaceholder": "Ex: 2 Ton",
+      "district": "Collection District *",
+      "districtPlaceholder": "Ex: San Isidro",
+      "submit": "Send Request",
+      "success": "An advisor will contact you shortly",
+      "destruction": "Destruction",
+      "management": "Management and Transport",
+      "others": "Others"
+    },
+    "inquiryForm": {
+      "title": "Quick Inquiry",
+      "description": "Leave us your inquiry and we will respond soon.",
+      "name": "Name *",
+      "namePlaceholder": "John Doe",
+      "phone": "Phone *",
+      "phonePlaceholder": "987654321",
+      "message": "Question or Inquiry *",
+      "messagePlaceholder": "Write your inquiry here...",
+      "submit": "Send Inquiry",
+      "success": "An advisor will contact you shortly"
+    }
   },
   "footer": {
     "description": "Transportation, collection of non-hazardous and hazardous solid waste, material destruction.",

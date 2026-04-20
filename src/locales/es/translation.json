@@ -68,7 +68,40 @@
     "email": "Email *",
     "phone": "Teléfono",
     "inquiry": "Consulta",
-    "send": "Enviar"
+    "send": "Enviar",
+    "quote": {
+      "title": "Solicitud de Cotización",
+      "description": "Complete los datos y nos pondremos en contacto.",
+      "contactName": "Nombre del Contacto *",
+      "contactNamePlaceholder": "Juan Pérez",
+      "companyName": "Nombre de la Empresa *",
+      "companyNamePlaceholder": "Mi Empresa S.A.C.",
+      "ruc": "RUC *",
+      "rucPlaceholder": "20123456789",
+      "service": "Servicio que desea realizar *",
+      "servicePlaceholder": "Seleccione un servicio",
+      "volume": "Volumen aproximado (Ton/Kg) *",
+      "volumePlaceholder": "Ej: 2 Ton",
+      "district": "Distrito de recojo *",
+      "districtPlaceholder": "Ej: San Isidro",
+      "submit": "Enviar Solicitud",
+      "success": "Un asesor se comunicará a la brevedad con usted",
+      "destruction": "Destrucción",
+      "management": "Gestión y Transporte",
+      "others": "Otros"
+    },
+    "inquiryForm": {
+      "title": "Consulta Rápida",
+      "description": "Déjenos su consulta y le responderemos pronto.",
+      "name": "Nombre *",
+      "namePlaceholder": "Juan Pérez",
+      "phone": "Teléfono *",
+      "phonePlaceholder": "987654321",
+      "message": "Duda o Consulta *",
+      "messagePlaceholder": "Escriba su consulta aquí...",
+      "submit": "Enviar Consulta",
+      "success": "Un asesor se comunicará a la brevedad con usted"
+    }
   },
   "footer": {
     "description": "Transporte, recojo de residuos sólidos no peligrosos, peligrosos, destrucción de materiales.",
