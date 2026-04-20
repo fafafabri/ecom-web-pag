@@ -16,48 +16,48 @@ const Navbar = () => {
   const solutionCategories = [
     {
       key: 'destruccion',
-      label: 'Destrucción y Disposición',
-      description: 'Servicios certificados de destrucción y disposición final.',
+      label: t('nav.categories.destruccion'),
+      description: t('nav.categories.destruccionDesc'),
       items: [
-        { title: 'Destrucción Notarial de Documentos', slug: 'destruccion-de-documentos' },
-        { title: 'Destrucción de Residuos', slug: 'destruccion-de-residuos' },
-        { title: 'Destrucción de RAEE', slug: 'destruccion-de-raee' },
-        { title: 'Destrucción de Ropa', slug: 'destruccion-de-ropa' },
-        { title: 'Disposición Final', slug: 'disposicion-final' },
+        { title: t('nav.services.destruccion_notarial'), slug: 'destruccion-de-documentos' },
+        { title: t('nav.services.destruccion_residuos'), slug: 'destruccion-de-residuos' },
+        { title: t('nav.services.destruccion_raee'), slug: 'destruccion-de-raee' },
+        { title: t('nav.services.destruccion_ropa'), slug: 'destruccion-de-ropa' },
+        { title: t('nav.services.disposicion_final'), slug: 'disposicion-final' },
       ],
     },
     {
       key: 'limpieza',
-      label: 'Limpieza Industrial',
-      description: 'Servicios de limpieza industrial y mantenimiento especializado.',
+      label: t('nav.categories.limpieza'),
+      description: t('nav.categories.limpiezaDesc'),
       items: [
-        { title: 'Limpieza de Trampas de Grasa', slug: 'limpieza-trampas-de-grasa' },
-        { title: 'Limpieza de Pozos Sépticos', slug: 'limpieza-pozos-septicos' },
-        { title: 'Limpieza de Biodigestores', slug: 'limpieza-de-biodigestores' },
-        { title: 'Limpieza Industrial', slug: 'limpieza-industrial' },
+        { title: t('nav.services.limpieza_grasas'), slug: 'limpieza-trampas-de-grasa' },
+        { title: t('nav.services.limpieza_pozos'), slug: 'limpieza-pozos-septicos' },
+        { title: t('nav.services.limpieza_biodigestores'), slug: 'limpieza-de-biodigestores' },
+        { title: t('nav.services.limpieza_industrial'), slug: 'limpieza-industrial' },
       ],
     },
     {
       key: 'logistica',
-      label: 'Logística y Gestión de Residuos',
-      description: 'Soluciones logísticas y gestión especializada de residuos.',
+      label: t('nav.categories.logistica'),
+      description: t('nav.categories.logisticaDesc'),
       items: [
-        { title: 'Recojo y Transporte de Residuos', slug: 'recojo-y-transporte-de-residuos' },
-        { title: 'Carga y Transporte', slug: 'carga-y-transporte' },
-        { title: 'Transporte Maptel', slug: 'transporte-maptel' },
-        { title: 'Gestión IQBF', slug: 'gestion-iqbf' },
-        { title: 'Manejo Adecuado de RAEE', slug: 'manejo-adecuado-de-raee' },
-        { title: 'Acondicionamiento de Materiales', slug: 'acondicionamiento-de-materiales' },
+        { title: t('nav.services.recojo_transporte'), slug: 'recojo-y-transporte-de-residuos' },
+        { title: t('nav.services.carga_transporte'), slug: 'carga-y-transporte' },
+        { title: t('nav.services.transporte_maptel'), slug: 'transporte-maptel' },
+        { title: t('nav.services.gestion_iqbf'), slug: 'gestion-iqbf' },
+        { title: t('nav.services.manejo_raee'), slug: 'manejo-adecuado-de-raee' },
+        { title: t('nav.services.acondicionamiento'), slug: 'acondicionamiento-de-materiales' },
       ],
     },
     {
       key: 'comercial',
-      label: 'Soluciones Comerciales y Ambientales',
-      description: 'Soluciones comerciales y asesoría ambiental estratégica.',
+      label: t('nav.categories.comercial'),
+      description: t('nav.categories.comercialDesc'),
       items: [
-        { title: 'Asesorías Ambientales', slug: 'asesorias-ambientales' },
-        { title: 'Comercialización de Materiales', slug: 'comercializacion-de-materiales' },
-        { title: 'Venta de Sanitarios Portátiles', slug: 'venta-sanitarios-portatiles' },
+        { title: t('nav.services.asesorias'), slug: 'asesorias-ambientales' },
+        { title: t('nav.services.comercializacion'), slug: 'comercializacion-de-materiales' },
+        { title: t('nav.services.sanitarios'), slug: 'venta-sanitarios-portatiles' },
       ],
     },
   ];
@@ -125,6 +125,8 @@ const Navbar = () => {
           </div>
 
           <Link to="/empresa" className={linkClass(isActive('/empresa'))}>{t('nav.empresa')}</Link>
+          
+          <Link to="/contacto" className={linkClass(isActive('/contacto'))}>{t('nav.contacto')}</Link>
         </nav>
 
         <div className="hidden lg:flex items-center gap-3">

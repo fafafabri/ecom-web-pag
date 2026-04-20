@@ -4,7 +4,37 @@
     "empresa": "About Us",
     "soluciones": "Solutions",
     "contacto": "Contact",
-    "categorias": "Categories"
+    "categorias": "Categories",
+    "categories": {
+      "destruccion": "Destruction and Disposal",
+      "destruccionDesc": "Certified destruction and final disposal services.",
+      "limpieza": "Industrial Cleaning",
+      "limpiezaDesc": "Industrial cleaning and specialized maintenance services.",
+      "logistica": "Logistics and Waste Management",
+      "logisticaDesc": "Logistics solutions and specialized waste management.",
+      "comercial": "Commercial and Environmental Solutions",
+      "comercialDesc": "Commercial solutions and strategic environmental advisory."
+    },
+    "services": {
+      "destruccion_notarial": "Notarial Document Destruction",
+      "destruccion_residuos": "Waste Destruction",
+      "destruccion_raee": "WEEE Destruction",
+      "destruccion_ropa": "Clothing Destruction",
+      "disposicion_final": "Final Disposal",
+      "limpieza_grasas": "Grease Trap Cleaning",
+      "limpieza_pozos": "Septic Tank Cleaning",
+      "limpieza_biodigestores": "Biodigester Cleaning",
+      "limpieza_industrial": "Industrial Cleaning",
+      "recojo_transporte": "Collection and Transport of Waste",
+      "carga_transporte": "Loading and Transportation",
+      "transporte_maptel": "Maptel Transportation",
+      "gestion_iqbf": "IQBF Management",
+      "manejo_raee": "Adequate WEEE Management",
+      "acondicionamiento": "Material Conditioning",
+      "asesorias": "Environmental Advisory",
+      "comercializacion": "Material Commercialization",
+      "sanitarios": "Sale of Portable Toilets"
+    }
   },
   "hero": {
     "subtitle": "Document destruction, waste, merchandise, inventories, general waste",

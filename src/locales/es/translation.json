@@ -4,7 +4,37 @@
     "empresa": "Conócenos",
     "soluciones": "Soluciones",
     "contacto": "Hablemos",
-    "categorias": "Categorías"
+    "categorias": "Categorías",
+    "categories": {
+      "destruccion": "Destrucción y Disposición",
+      "destruccionDesc": "Servicios certificados de destrucción y disposición final.",
+      "limpieza": "Limpieza Industrial",
+      "limpiezaDesc": "Servicios de limpieza industrial y mantenimiento especializado.",
+      "logistica": "Logística y Gestión de Residuos",
+      "logisticaDesc": "Soluciones logísticas y gestión especializada de residuos.",
+      "comercial": "Soluciones Comerciales y Ambientales",
+      "comercialDesc": "Soluciones comerciales y asesoría ambiental estratégica."
+    },
+    "services": {
+      "destruccion_notarial": "Destrucción Notarial de Documentos",
+      "destruccion_residuos": "Destrucción de Residuos",
+      "destruccion_raee": "Destrucción de RAEE",
+      "destruccion_ropa": "Destrucción de Ropa",
+      "disposicion_final": "Disposición Final",
+      "limpieza_grasas": "Limpieza de Trampas de Grasa",
+      "limpieza_pozos": "Limpieza de Pozos Sépticos",
+      "limpieza_biodigestores": "Limpieza de Biodigestores",
+      "limpieza_industrial": "Limpieza Industrial",
+      "recojo_transporte": "Recojo y Transporte de Residuos",
+      "carga_transporte": "Carga y Transporte",
+      "transporte_maptel": "Transporte Maptel",
+      "gestion_iqbf": "Gestión IQBF",
+      "manejo_raee": "Manejo Adecuado de RAEE",
+      "acondicionamiento": "Acondicionamiento de Materiales",
+      "asesorias": "Asesorías Ambientales",
+      "comercializacion": "Comercialización de Materiales",
+      "sanitarios": "Venta de Sanitarios Portátiles"
+    }
   },
   "hero": {
     "subtitle": "Destrucción de documentos, mermas, mercadería, inventarios, residuos en general",
