@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Phone, ChevronDown, Menu, X } from 'lucide-react';
+import { Phone, ChevronDown, Menu, X, Moon, Sun } from 'lucide-react';
+import { useTheme } from '@/hooks/use-theme';
 import logo from '@/assets/logo-eco-m-final.png';
 import { destruccionMenu, mainNav, otrosMenu } from '@/data/menu';
 
@@ -9,6 +10,7 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<'destruccion' | 'limpieza' | 'logistica' | 'comercial'>('destruccion');
   const location = useLocation();
+  const { theme, toggleTheme } = useTheme();
 
   const solutionCategories = [
     {
@@ -123,13 +125,27 @@ const Navbar = () => {
           <Link to={mainNav[2].path} className={linkClass(isActive(mainNav[2].path))}>{mainNav[2].label}</Link>
         </nav>
 
-        <a href="https://wa.me/51933342580?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20sobre%20sus%20servicios." target="_blank" rel="noopener noreferrer" className="hidden lg:flex items-center gap-3 px-6 py-3 rounded-xl bg-cta text-cta-foreground font-semibold text-sm transition-all duration-200 hover:scale-[1.03] hover:shadow-[0_6px_20px_0_hsl(var(--cta)/0.35)] shadow-[0_4px_14px_0_hsl(var(--cta)/0.25)]">
-          <Phone className="h-5 w-5" />
-          <div className="leading-tight text-left">
-            <span className="text-xs opacity-80">Consultas</span>
-            <span className="block text-base font-bold tabular-nums">933 342 580</span>
-          </div>
-        </a>
+        <div className="hidden lg:flex items-center gap-3">
+          <button
+            onClick={toggleTheme}
+            className="p-2.5 rounded-lg bg-muted hover:bg-muted/80 transition-colors duration-200"
+            aria-label="Cambiar tema"
+          >
+            {theme === 'light' ? (
+              <Moon className="h-5 w-5 text-foreground" />
+            ) : (
+              <Sun className="h-5 w-5 text-foreground" />
+            )}
+          </button>
+
+          <a href="https://wa.me/51933342580?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20sobre%20sus%20servicios." target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-6 py-3 rounded-xl bg-cta text-cta-foreground font-semibold text-sm transition-all duration-200 hover:scale-[1.03] hover:shadow-[0_6px_20px_0_hsl(var(--cta)/0.35)] shadow-[0_4px_14px_0_hsl(var(--cta)/0.25)]">
+            <Phone className="h-5 w-5" />
+            <div className="leading-tight text-left">
+              <span className="text-xs opacity-80">Consultas</span>
+              <span className="block text-base font-bold tabular-nums">933 342 580</span>
+            </div>
+          </a>
+        </div>
 
         <button className="lg:hidden p-2 rounded-lg hover:bg-muted" onClick={() => setMobileOpen(!mobileOpen)}>
           {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -172,10 +188,23 @@ const Navbar = () => {
             </div>
             <Link to={mainNav[2].path} onClick={() => setMobileOpen(false)} className="py-3 px-3 text-sm font-medium rounded-lg hover:bg-primary/5">{mainNav[2].label}</Link>
           </nav>
-          <a href="https://wa.me/51933342580?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20sobre%20sus%20servicios." target="_blank" rel="noopener noreferrer" className="mt-4 flex items-center justify-center gap-2 py-3 rounded-xl bg-cta text-cta-foreground font-semibold text-sm">
-            <Phone className="h-4 w-4" />
-            Consultas: 933 342 580
-          </a>
+          <div className="flex gap-2 mt-4">
+            <button
+              onClick={toggleTheme}
+              className="flex-1 p-3 rounded-xl bg-muted hover:bg-muted/80 transition-colors duration-200 flex items-center justify-center"
+              aria-label="Cambiar tema"
+            >
+              {theme === 'light' ? (
+                <Moon className="h-5 w-5 text-foreground" />
+              ) : (
+                <Sun className="h-5 w-5 text-foreground" />
+              )}
+            </button>
+            <a href="https://wa.me/51933342580?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20sobre%20sus%20servicios." target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-cta text-cta-foreground font-semibold text-sm">
+              <Phone className="h-4 w-4" />
+              Consultas: 933 342 580
+            </a>
+          </div>
         </div>
       )}
     </header>

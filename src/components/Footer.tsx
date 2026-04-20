@@ -39,36 +39,40 @@ const Footer = () => {
           <div>
             <h4 className="font-display font-bold text-sm uppercase tracking-wider mb-4 text-footer-foreground">Contáctanos</h4>
             <div className="w-8 h-0.5 bg-accent mb-4" />
-            <div className="flex flex-col gap-5">
-              <div className="flex gap-3">
-                <Phone className="h-5 w-5 text-primary mt-0.5 shrink-0" />
-                <div>
-                  <p className="text-xs opacity-60 mb-1">Consultas:</p>
-                  <p className="text-sm font-semibold">933 342 580 – 933 342 454</p>
+            <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+              <div className="space-y-5">
+                <div className="flex gap-3">
+                  <Phone className="h-5 w-5 text-primary mt-0.5 shrink-0" />
+                  <div>
+                    <p className="text-xs opacity-60 mb-1">Consultas:</p>
+                    <p className="text-sm font-semibold">933 342 580 – 933 342 454</p>
+                  </div>
+                </div>
+                <div className="flex gap-3">
+                  <Clock className="h-5 w-5 text-primary mt-0.5 shrink-0" />
+                  <div>
+                    <p className="text-xs opacity-60 mb-1">Horario Atención</p>
+                    <p className="text-sm font-semibold">L a V: 8:00 am a 5:30 pm</p>
+                    <p className="text-sm font-semibold">Sáb 8:00 am a 12:30pm</p>
+                  </div>
                 </div>
               </div>
-              <div className="flex gap-3">
-                <Clock className="h-5 w-5 text-primary mt-0.5 shrink-0" />
-                <div>
-                  <p className="text-xs opacity-60 mb-1">Horario Atención</p>
-                  <p className="text-sm font-semibold">L a V: 8:00 am a 5:30 pm</p>
-                  <p className="text-sm font-semibold">Sáb 8:00 am a 12:30pm</p>
+              <div className="space-y-5">
+                <div className="flex gap-3">
+                  <Mail className="h-5 w-5 text-primary mt-0.5 shrink-0" />
+                  <div>
+                    <p className="text-xs opacity-60 mb-1">Email</p>
+                    <p className="text-sm font-semibold">comercial@eco-m.com</p>
+                  </div>
                 </div>
-              </div>
-              <div className="flex gap-3">
-                <Mail className="h-5 w-5 text-primary mt-0.5 shrink-0" />
-                <div>
-                  <p className="text-xs opacity-60 mb-1">Email</p>
-                  <p className="text-sm font-semibold">comercial@eco-m.com</p>
-                </div>
-              </div>
-              <div className="flex gap-3">
-                <MapPin className="h-5 w-5 text-primary mt-0.5 shrink-0" />
-                <div>
-                  <p className="text-xs opacity-60 mb-1">Plantas:</p>
-                  <p className="text-sm">Valle Hermoso El Arenal, Puente Piedra</p>
-                  <p className="text-sm">Calle Apurímac 07, Ancón</p>
-                  <p className="text-sm">Mz. M Lote 114, Ventanilla, Callao</p>
+                <div className="flex gap-3">
+                  <MapPin className="h-5 w-5 text-primary mt-0.5 shrink-0" />
+                  <div>
+                    <p className="text-xs opacity-60 mb-1">Plantas:</p>
+                    <p className="text-sm">Valle Hermoso El Arenal, Puente Piedra</p>
+                    <p className="text-sm">Calle Apurímac 07, Ancón</p>
+                    <p className="text-sm">Mz. M Lote 114, Ventanilla, Callao</p>
+                  </div>
                 </div>
               </div>
             </div>
