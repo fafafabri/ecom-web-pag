@@ -1,0 +1,66 @@
+{
+  "nav": {
+    "inicio": "Home",
+    "empresa": "Company",
+    "soluciones": "Solutions",
+    "contacto": "Contact",
+    "consultasTel": "Contact Us"
+  },
+  "hero": {
+    "subtitle": "Document destruction, waste, merchandise, inventories, general waste",
+    "title": "Material and Product Destruction",
+    "btnContact": "CONTACT",
+    "btnInquiry": "INQUIRIES"
+  },
+  "why": {
+    "label": "ECO M",
+    "title": "Comprehensive Solid Waste Management",
+    "desc": "Leading company in comprehensive waste management and renewable energy generation. We offer various services: merchandise transport, collection of non-hazardous and hazardous solid waste, destruction of obsolete materials.",
+    "pillars": {
+      "qualified": "Qualified Staff",
+      "qualifiedDesc": "With certifications, experience and continuous training.",
+      "certifications": "Certifications",
+      "certificationsDesc": "We have ISO 9001, BQSR, IAS, IAF.",
+      "fleet": "Truck Fleet",
+      "fleetDesc": "With all permits for national transport.",
+      "equipment": "Equipment and Machinery",
+      "equipmentDesc": "Latest technology for waste management and destructions."
+    }
+  },
+  "services": {
+    "label": "ECO M",
+    "title": "Solutions",
+    "more": "+ SOLUTIONS",
+    "learnMore": "Learn More"
+  },
+  "footer": {
+    "plants": "Plants:",
+    "calls": "Phones:",
+    "hours": "Business Hours",
+    "email": "Email",
+    "consultations": "Inquiries:",
+    "hoursDetail": "Mon-Fri: 8:00 am to 5:30 pm",
+    "hoursSat": "Sat 8:00 am to 12:30 pm"
+  },
+  "empresa": {
+    "title": "Our Company",
+    "who": "Who Are We?",
+    "desc": "ECO M is a leading company in comprehensive solid waste management and renewable energy generation. With over 25 years of experience, we provide responsible environmental solutions to companies and industries throughout Peru.",
+    "mission": "Mission",
+    "missionDesc": "Provide comprehensive solutions in solid waste management with environmental responsibility, contributing to sustainable development of the country.",
+    "vision": "Vision",
+    "visionDesc": "To be the leading company in environmental management and recycling in Latin America, recognized for its innovation and commitment to the environment.",
+    "values": "Values",
+    "valuesDesc": "Environmental responsibility, integrity, commitment to safety, continuous innovation and excellence in service.",
+    "capabilities": "Our Capabilities",
+    "staff": "Qualified Staff",
+    "certs": "Certifications",
+    "trucks": "Truck Fleet",
+    "experience": "Years of Experience"
+  },
+  "contacto": {
+    "title": "Contact Us",
+    "subtitle": "Inquiries",
+    "noHesitate": "Do not hesitate to contact us if you have any questions."
+  }
+}

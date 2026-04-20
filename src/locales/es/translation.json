@@ -1,0 +1,66 @@
+{
+  "nav": {
+    "inicio": "Inicio",
+    "empresa": "Empresa",
+    "soluciones": "Soluciones",
+    "contacto": "Contacto",
+    "consultasTel": "Consultas"
+  },
+  "hero": {
+    "subtitle": "Destrucción de documentos, mermas, mercadería, inventarios, residuos en general",
+    "title": "Destrucción de Materiales y Productos",
+    "btnContact": "CONTACTO",
+    "btnInquiry": "CONSULTAS"
+  },
+  "why": {
+    "label": "ECO M",
+    "title": "Gestión Integral de Residuos Sólidos",
+    "desc": "Empresa líder en la gestión integral de residuos y generación de energía renovable. Brindamos varios servicios: transporte de mercadería, recojo de residuos sólidos no peligrosos, peligrosos, destrucción de materiales dados de baja.",
+    "pillars": {
+      "qualified": "Personal Calificado",
+      "qualifiedDesc": "Con certificaciones, experiencia y capacitaciones constantes.",
+      "certifications": "Certificaciones",
+      "certificationsDesc": "Contamos con ISO 9001, BQSR, IAS, IAF.",
+      "fleet": "Flota de Camiones",
+      "fleetDesc": "Con todos los permisos para el transporte nacional.",
+      "equipment": "Equipos y Maquinarias",
+      "equipmentDesc": "De última tecnología para gestión de residuos y destrucciones."
+    }
+  },
+  "services": {
+    "label": "ECO M",
+    "title": "Soluciones",
+    "more": "+ SOLUCIONES",
+    "learnMore": "Saber más"
+  },
+  "footer": {
+    "plants": "Plantas:",
+    "calls": "Celulares:",
+    "hours": "Horario Atención",
+    "email": "Email",
+    "consultations": "Consultas:",
+    "hoursDetail": "L a V: 8:00 am a 5:30 pm",
+    "hoursSat": "Sáb 8:00 am a 12:30pm"
+  },
+  "empresa": {
+    "title": "Nuestra Empresa",
+    "who": "¿Quiénes Somos?",
+    "desc": "ECO M es una empresa líder en la gestión integral de residuos sólidos y generación de energía renovable. Con más de 25 años de experiencia, brindamos soluciones ambientales responsables a empresas e industrias en todo el Perú.",
+    "mission": "Misión",
+    "missionDesc": "Brindar soluciones integrales en gestión de residuos sólidos con responsabilidad ambiental, contribuyendo al desarrollo sostenible del país.",
+    "vision": "Visión",
+    "visionDesc": "Ser la empresa líder en gestión ambiental y reciclaje en Latinoamérica, reconocida por su innovación y compromiso con el medio ambiente.",
+    "values": "Valores",
+    "valuesDesc": "Responsabilidad ambiental, integridad, compromiso con la seguridad, innovación constante y servicio de excelencia.",
+    "capabilities": "Nuestras Capacidades",
+    "staff": "Personal Calificado",
+    "certs": "Certificaciones",
+    "trucks": "Flota de Camiones",
+    "experience": "Años de Experiencia"
+  },
+  "contacto": {
+    "title": "Contáctanos",
+    "subtitle": "Consultas",
+    "noHesitate": "No dudes en contactarnos si tienes alguna pregunta."
+  }
+}
