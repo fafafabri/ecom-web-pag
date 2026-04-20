@@ -75,15 +75,16 @@ const Navbar = () => {
         </Link>
 
         <nav className="hidden lg:flex items-center gap-1">
-          {mainNav.slice(0, 2).map(link => (
-            <Link key={link.path} to={link.path} className={linkClass(isActive(link.path))}>
-              {link.label}
-            </Link>
-          ))}
+          <Link to="/" className={linkClass(isActive('/'))}>
+            {t('nav.inicio')}
+          </Link>
+          <Link to="/empresa" className={linkClass(isActive('/empresa'))}>
+            {t('nav.empresa')}
+          </Link>
 
           <div className="relative" onMouseEnter={() => setServicesOpen(true)} onMouseLeave={() => setServicesOpen(false)}>
             <button className={linkClass(location.pathname.startsWith('/servicios')) + ' flex items-center gap-1'}>
-              SOLUCIONES
+              {t('nav.soluciones')}
               <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${servicesOpen ? 'rotate-180' : ''}`} />
             </button>
 
@@ -91,7 +92,7 @@ const Navbar = () => {
               <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-[760px]">
                 <div className="bg-card rounded-[32px] shadow-[0_18px_45px_rgba(0,0,0,0.08)] p-5 grid md:grid-cols-[220px_1fr] gap-4 border border-slate-200/70 transition-all duration-200">
                   <div className="space-y-3">
-                    <p className="text-xs font-semibold uppercase tracking-[0.3em] text-secondary-light">Categorías</p>
+                    <p className="text-xs font-semibold uppercase tracking-[0.3em] text-secondary-light">{t('nav.categorias')}</p>
                     {solutionCategories.map(category => (
                       <button
                         key={category.key}
@@ -123,7 +124,7 @@ const Navbar = () => {
             )}
           </div>
 
-          <Link to={mainNav[2].path} className={linkClass(isActive(mainNav[2].path))}>{mainNav[2].label}</Link>
+          <Link to="/empresa" className={linkClass(isActive('/empresa'))}>{t('nav.empresa')}</Link>
         </nav>
 
         <div className="hidden lg:flex items-center gap-3">
@@ -145,9 +146,12 @@ const Navbar = () => {
       {mobileOpen && (
         <div className="lg:hidden bg-card border-t border-border px-4 pb-6 pt-2">
           <nav className="flex flex-col gap-1">
-            {mainNav.slice(0, 2).map(link => (
-              <Link key={link.path} to={link.path} onClick={() => setMobileOpen(false)} className="py-3 px-3 text-sm font-medium rounded-lg hover:bg-primary/5">
-                {link.label}
+            <Link to="/" onClick={() => setMobileOpen(false)} className="py-3 px-3 text-sm font-medium rounded-lg hover:bg-primary/5">
+              {t('nav.inicio')}
+            </Link>
+            <Link to="/empresa" onClick={() => setMobileOpen(false)} className="py-3 px-3 text-sm font-medium rounded-lg hover:bg-primary/5">
+              {t('nav.empresa')}
+            </Link>
               </Link>
             ))}
             <div className="rounded-3xl border border-border p-3 bg-background/90">

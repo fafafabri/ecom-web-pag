@@ -1,25 +1,16 @@
 {
   "nav": {
     "inicio": "Home",
-    "empresa": "Company",
+    "empresa": "About Us",
     "soluciones": "Solutions",
     "contacto": "Contact",
-    "consultasTel": "Contact Us",
-    "destruccion": "Destruction and Disposal",
-    "destruccionDesc": "Certified destruction and final disposal services.",
-    "limpieza": "Industrial Cleaning",
-    "limpiezaDesc": "Industrial cleaning and specialized maintenance services.",
-    "logistica": "Logistics and Waste Management",
-    "logisticaDesc": "Logistics solutions and specialized waste management.",
-    "comercial": "Commercial and Environmental Solutions",
-    "comercialDesc": "Commercial solutions and strategic environmental consulting.",
     "categorias": "Categories"
   },
   "hero": {
     "subtitle": "Document destruction, waste, merchandise, inventories, general waste",
     "title": "Material and Product Destruction",
-    "btnContact": "CONTACT",
-    "btnInquiry": "INQUIRIES"
+    "btnContact": "Contact",
+    "btnInquiry": "Inquiries"
   },
   "why": {
     "label": "ECO M",
@@ -39,20 +30,29 @@
   "services": {
     "label": "ECO M",
     "title": "Solutions",
-    "more": "+ SOLUTIONS",
+    "more": "+ Solutions",
     "learnMore": "Learn More"
   },
+  "form": {
+    "name": "Name *",
+    "email": "Email *",
+    "phone": "Phone",
+    "inquiry": "Inquiry",
+    "send": "Send"
+  },
   "footer": {
-    "plants": "Plants:",
-    "calls": "Phones:",
+    "description": "Transportation, collection of non-hazardous and hazardous solid waste, material destruction.",
+    "contact": "Contact Us",
+    "consultations": "Inquiries",
+    "plants": "Plants",
+    "phones": "Phones",
     "hours": "Business Hours",
     "email": "Email",
-    "consultations": "Inquiries:",
     "hoursDetail": "Mon-Fri: 8:00 am to 5:30 pm",
     "hoursSat": "Sat 8:00 am to 12:30 pm"
   },
   "empresa": {
-    "title": "Our Company",
+    "ourCompany": "Our Company",
     "who": "Who Are We?",
     "desc": "ECO M is a leading company in comprehensive solid waste management and renewable energy generation. With over 25 years of experience, we provide responsible environmental solutions to companies and industries throughout Peru.",
     "mission": "Mission",
@@ -69,11 +69,15 @@
   },
   "contacto": {
     "title": "Contact Us",
-    "subtitle": "Inquiries",
-    "noHesitate": "Do not hesitate to contact us if you have any questions.",
-    "plants": "Plants:",
-    "calls": "Phones:",
+    "contact": "Contact Us",
+    "inquiries": "Inquiries",
+    "dontHesitate": "Do not hesitate to contact us if you have any questions.",
+    "plants": "Plants",
+    "phones": "Phones",
     "hours": "Business Hours",
-    "email": "Email"
+    "email": "Email",
+    "hoursDetail": "Mon-Fri: 8:00 am to 5:30 pm",
+    "hoursSat": "Sat 8:00 am to 12:30 pm",
+    "messageSent": "Message sent! We will contact you soon."
   }
 }

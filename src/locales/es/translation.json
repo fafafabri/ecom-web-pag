@@ -1,25 +1,16 @@
 {
   "nav": {
     "inicio": "Inicio",
-    "empresa": "Empresa",
+    "empresa": "Conócenos",
     "soluciones": "Soluciones",
-    "contacto": "Contacto",
-    "consultasTel": "Consultas",
-    "destruccion": "Destrucción y Disposición",
-    "destruccionDesc": "Servicios certificados de destrucción y disposición final.",
-    "limpieza": "Limpieza Industrial",
-    "limpiezaDesc": "Servicios de limpieza industrial y mantenimiento especializado.",
-    "logistica": "Logística y Gestión de Residuos",
-    "logisticaDesc": "Soluciones logísticas y gestión especializada de residuos.",
-    "comercial": "Soluciones Comerciales y Ambientales",
-    "comercialDesc": "Soluciones comerciales y asesoría ambiental estratégica.",
+    "contacto": "Hablemos",
     "categorias": "Categorías"
   },
   "hero": {
     "subtitle": "Destrucción de documentos, mermas, mercadería, inventarios, residuos en general",
     "title": "Destrucción de Materiales y Productos",
-    "btnContact": "CONTACTO",
-    "btnInquiry": "CONSULTAS"
+    "btnContact": "Contacto",
+    "btnInquiry": "Consultas"
   },
   "why": {
     "label": "ECO M",
@@ -39,20 +30,29 @@
   "services": {
     "label": "ECO M",
     "title": "Soluciones",
-    "more": "+ SOLUCIONES",
+    "more": "+ Soluciones",
     "learnMore": "Saber más"
   },
+  "form": {
+    "name": "Nombre *",
+    "email": "Email *",
+    "phone": "Teléfono",
+    "inquiry": "Consulta",
+    "send": "Enviar"
+  },
   "footer": {
-    "plants": "Plantas:",
-    "calls": "Celulares:",
+    "description": "Transporte, recojo de residuos sólidos no peligrosos, peligrosos, destrucción de materiales.",
+    "contact": "Contáctanos",
+    "consultations": "Consultas",
+    "plants": "Plantas",
+    "phones": "Celulares",
     "hours": "Horario Atención",
     "email": "Email",
-    "consultations": "Consultas:",
     "hoursDetail": "L a V: 8:00 am a 5:30 pm",
     "hoursSat": "Sáb 8:00 am a 12:30pm"
   },
   "empresa": {
-    "title": "Nuestra Empresa",
+    "ourCompany": "Nuestra Empresa",
     "who": "¿Quiénes Somos?",
     "desc": "ECO M es una empresa líder en la gestión integral de residuos sólidos y generación de energía renovable. Con más de 25 años de experiencia, brindamos soluciones ambientales responsables a empresas e industrias en todo el Perú.",
     "mission": "Misión",
@@ -69,11 +69,15 @@
   },
   "contacto": {
     "title": "Contáctanos",
-    "subtitle": "Consultas",
-    "noHesitate": "No dudes en contactarnos si tienes alguna pregunta.",
-    "plants": "Plantas:",
-    "calls": "Celulares:",
+    "contact": "Contáctanos",
+    "inquiries": "Consultas",
+    "dontHesitate": "No dudes en contactarnos si tienes alguna pregunta.",
+    "plants": "Plantas",
+    "phones": "Celulares",
     "hours": "Horario Atención",
-    "email": "Email"
+    "email": "Email",
+    "hoursDetail": "L a V: 8:00 am a 5:30 pm",
+    "hoursSat": "Sáb 8:00 am a 12:30pm",
+    "messageSent": "¡Mensaje enviado! Nos pondremos en contacto pronto."
   }
 }

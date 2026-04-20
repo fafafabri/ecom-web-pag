@@ -1,19 +1,22 @@
 import { Users, Award, Truck, Wrench, Target, Eye, Shield } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import empresaHero from '@/assets/empresa-hero.jpg';
 
 const Empresa = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <section className="relative flex items-center min-h-[40vh] w-full overflow-hidden">
         <img src={empresaHero} alt="ECO M empresa" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-foreground/65" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 w-full text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-background tracking-tight">Nuestra Empresa</h1>
+          <h1 className="text-4xl md:text-6xl font-bold text-background tracking-tight">{t('empresa.ourCompany')}</h1>
           <div className="flex gap-1 justify-center mt-6">
             <div className="w-8 h-1 rounded-full bg-accent" />
             <div className="w-8 h-1 rounded-full bg-background/40" />
           </div>
-          <p className="text-background/70 mt-4 text-sm">Inicio / Conócenos</p>
+          <p className="text-background/70 mt-4 text-sm">{t('nav.inicio')} / {t('nav.empresa')}</p>
         </div>
       </section>
 
@@ -21,24 +24,24 @@ const Empresa = () => {
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-16">
             <p className="text-xs uppercase tracking-[0.2em] text-primary font-semibold mb-3">ECO M</p>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">¿Quiénes Somos?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">{t('empresa.who')}</h2>
             <p className="text-muted-foreground leading-relaxed max-w-3xl mx-auto text-lg">
-              ECO M es una empresa líder en la gestión integral de residuos sólidos y generación de energía renovable. Con más de 25 años de experiencia, brindamos soluciones ambientales responsables a empresas e industrias en todo el Perú.
+              {t('empresa.desc')}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { icon: Target, title: 'Misión', desc: 'Brindar soluciones integrales en gestión de residuos sólidos con responsabilidad ambiental, contribuyendo al desarrollo sostenible del país.' },
-              { icon: Eye, title: 'Visión', desc: 'Ser la empresa líder en gestión ambiental y reciclaje en Latinoamérica, reconocida por su innovación y compromiso con el medio ambiente.' },
-              { icon: Shield, title: 'Valores', desc: 'Responsabilidad ambiental, integridad, compromiso con la seguridad, innovación constante y servicio de excelencia.' },
+              { icon: Target, titleKey: 'empresa.mission', descKey: 'empresa.missionDesc' },
+              { icon: Eye, titleKey: 'empresa.vision', descKey: 'empresa.visionDesc' },
+              { icon: Shield, titleKey: 'empresa.values', descKey: 'empresa.valuesDesc' },
             ].map(item => (
-              <div key={item.title} className="bg-background rounded-2xl p-8 shadow-[0_1px_3px_rgba(0,0,0,0.05),0_10px_24px_-4px_rgba(0,0,0,0.02)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.05),0_20px_32px_-8px_rgba(0,0,0,0.08)] hover:scale-[1.01] transition-all duration-300">
+              <div key={item.titleKey} className="bg-background rounded-2xl p-8 shadow-[0_1px_3px_rgba(0,0,0,0.05),0_10px_24px_-4px_rgba(0,0,0,0.02)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.05),0_20px_32px_-8px_rgba(0,0,0,0.08)] hover:scale-[1.01] transition-all duration-300">
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                   <item.icon className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="font-display font-bold text-lg mb-3">{item.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                <h3 className="font-display font-bold text-lg mb-3">{t(item.titleKey)}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{t(item.descKey)}</p>
               </div>
             ))}
           </div>
@@ -47,20 +50,20 @@ const Empresa = () => {
 
       <section className="py-24 bg-background">
         <div className="max-w-5xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold tracking-tight mb-12">Nuestras Capacidades</h2>
+          <h2 className="text-3xl font-bold tracking-tight mb-12">{t('empresa.capabilities')}</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { icon: Users, title: 'Personal Calificado', value: '+200' },
-              { icon: Award, title: 'Certificaciones', value: '4' },
-              { icon: Truck, title: 'Flota de Camiones', value: '+50' },
-              { icon: Wrench, title: 'Años de Experiencia', value: '+25' },
+              { icon: Users, titleKey: 'empresa.staff', value: '+200' },
+              { icon: Award, titleKey: 'empresa.certs', value: '4' },
+              { icon: Truck, titleKey: 'empresa.trucks', value: '+50' },
+              { icon: Wrench, titleKey: 'empresa.experience', value: '+25' },
             ].map(item => (
-              <div key={item.title} className="flex flex-col items-center">
+              <div key={item.titleKey} className="flex flex-col items-center">
                 <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-4">
                   <item.icon className="h-8 w-8 text-primary" />
                 </div>
                 <span className="font-display font-bold text-3xl text-heading">{item.value}</span>
-                <span className="text-sm text-muted-foreground mt-1">{item.title}</span>
+                <span className="text-sm text-muted-foreground mt-1">{t(item.titleKey)}</span>
               </div>
             ))}
           </div>
