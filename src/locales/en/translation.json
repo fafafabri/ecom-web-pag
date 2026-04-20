@@ -4,7 +4,16 @@
     "empresa": "Company",
     "soluciones": "Solutions",
     "contacto": "Contact",
-    "consultasTel": "Contact Us"
+    "consultasTel": "Contact Us",
+    "destruccion": "Destruction and Disposal",
+    "destruccionDesc": "Certified destruction and final disposal services.",
+    "limpieza": "Industrial Cleaning",
+    "limpiezaDesc": "Industrial cleaning and specialized maintenance services.",
+    "logistica": "Logistics and Waste Management",
+    "logisticaDesc": "Logistics solutions and specialized waste management.",
+    "comercial": "Commercial and Environmental Solutions",
+    "comercialDesc": "Commercial solutions and strategic environmental consulting.",
+    "categorias": "Categories"
   },
   "hero": {
     "subtitle": "Document destruction, waste, merchandise, inventories, general waste",
@@ -61,6 +70,10 @@
   "contacto": {
     "title": "Contact Us",
     "subtitle": "Inquiries",
-    "noHesitate": "Do not hesitate to contact us if you have any questions."
+    "noHesitate": "Do not hesitate to contact us if you have any questions.",
+    "plants": "Plants:",
+    "calls": "Phones:",
+    "hours": "Business Hours",
+    "email": "Email"
   }
 }

@@ -16,7 +16,7 @@ const LanguageSwitcher = () => {
       aria-label="Cambiar idioma / Change language"
     >
       <Globe className="h-4 w-4" />
-      <span className="hidden sm:inline">{i18n.language === 'es' ? 'EN' : 'ES'}</span>
+      <span className="hidden sm:inline">{i18n.language.toUpperCase()}</span>
     </button>
   );
 };

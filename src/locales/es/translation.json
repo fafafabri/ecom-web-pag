@@ -4,7 +4,16 @@
     "empresa": "Empresa",
     "soluciones": "Soluciones",
     "contacto": "Contacto",
-    "consultasTel": "Consultas"
+    "consultasTel": "Consultas",
+    "destruccion": "Destrucción y Disposición",
+    "destruccionDesc": "Servicios certificados de destrucción y disposición final.",
+    "limpieza": "Limpieza Industrial",
+    "limpiezaDesc": "Servicios de limpieza industrial y mantenimiento especializado.",
+    "logistica": "Logística y Gestión de Residuos",
+    "logisticaDesc": "Soluciones logísticas y gestión especializada de residuos.",
+    "comercial": "Soluciones Comerciales y Ambientales",
+    "comercialDesc": "Soluciones comerciales y asesoría ambiental estratégica.",
+    "categorias": "Categorías"
   },
   "hero": {
     "subtitle": "Destrucción de documentos, mermas, mercadería, inventarios, residuos en general",
@@ -61,6 +70,10 @@
   "contacto": {
     "title": "Contáctanos",
     "subtitle": "Consultas",
-    "noHesitate": "No dudes en contactarnos si tienes alguna pregunta."
+    "noHesitate": "No dudes en contactarnos si tienes alguna pregunta.",
+    "plants": "Plantas:",
+    "calls": "Celulares:",
+    "hours": "Horario Atención",
+    "email": "Email"
   }
 }
