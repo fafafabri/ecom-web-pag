@@ -152,11 +152,9 @@ const Navbar = () => {
             <Link to="/empresa" onClick={() => setMobileOpen(false)} className="py-3 px-3 text-sm font-medium rounded-lg hover:bg-primary/5">
               {t('nav.empresa')}
             </Link>
-              </Link>
-            ))}
             <div className="rounded-3xl border border-border p-3 bg-background/90">
               <button onClick={() => setServicesOpen(!servicesOpen)} className="w-full flex items-center justify-between py-3 px-3 text-sm font-medium rounded-2xl hover:bg-primary/5 transition-all duration-200">
-                SOLUCIONES <ChevronDown className={`h-4 w-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
+                {t('nav.soluciones')} <ChevronDown className={`h-4 w-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
               {servicesOpen && (
                 <div className="mt-3 space-y-4">
@@ -180,7 +178,7 @@ const Navbar = () => {
                 </div>
               )}
             </div>
-            <Link to={mainNav[2].path} onClick={() => setMobileOpen(false)} className="py-3 px-3 text-sm font-medium rounded-lg hover:bg-primary/5">{mainNav[2].label}</Link>
+            <Link to="/contacto" onClick={() => setMobileOpen(false)} className="py-3 px-3 text-sm font-medium rounded-lg hover:bg-primary/5">{t('nav.contacto')}</Link>
           </nav>
           <div className="flex gap-2 mt-4">
             <LanguageSwitcher />
