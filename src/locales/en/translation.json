@@ -130,9 +130,81 @@
     "trucks": "Truck Fleet",
     "experience": "Years of Experience"
   },
+  "serviceDetails": {
+    "destruccionDocumentos": {
+      "title": "Notarial Document Destruction",
+      "desc": "We are specialists in document destruction. We handle the entire process from collection, transportation and destruction under strict notarial supervision. We guarantee absolute confidentiality of your information.",
+      "benefits": ["Public and private files unnecessary, obsolete or confidential", "Destruction certificate delivered", "Highly trained personnel", "Efficiency and proven experience", "Absolute warranty and confidentiality", "We have permits and authorizations"]
+    },
+    "destruccionResiduos": {
+      "title": "Waste Destruction",
+      "desc": "We provide comprehensive waste destruction services for solid waste, including surplus materials, expired merchandise, obsolete inventory and scrapped materials. All in strict regulatory compliance.",
+      "benefits": ["Destruction of surplus and merchandise", "Obsolete inventory and scrapped materials", "Destruction certificate", "Environmental compliance", "Permanent process supervision"]
+    },
+    "destruccionRAEE": {
+      "title": "WEEE Destruction",
+      "desc": "We handle the collection, transportation and destruction of Waste Electrical and Electronic Equipment (WEEE) in compliance with current regulations and ensuring proper final disposal.",
+      "benefits": ["Specialized collection and transportation", "Certified destruction of electronic equipment", "Compliance with WEEE regulations", "Responsible final disposal", "Complete process traceability"]
+    },
+    "destruccionRopa": {
+      "title": "Clothing Destruction",
+      "desc": "Specialized service for the destruction of clothing, corporate uniforms, branded textiles and textile materials requiring certified destruction for brand protection.",
+      "benefits": ["Guaranteed brand protection", "Certified textile destruction", "Supervised and documented process", "Ecological final disposal", "Absolute confidentiality"]
+    },
+    "gestionIQBF": {
+      "title": "IQBF Management",
+      "desc": "Comprehensive management of Chemical Inputs and Regulated Goods (IQBF) with all required permits and authorizations by law. Collection, transportation and safe final disposal.",
+      "benefits": ["Current permits and authorizations", "Specialized transportation", "Certified final disposal", "SUNAT regulatory compliance", "Personnel trained in IQBF handling"]
+    },
+    "transporteMaptel": {
+      "title": "Maptel Transportation",
+      "desc": "We have a fleet of trucks with all permits for national transportation of hazardous and non-hazardous materials, complying with all current regulations.",
+      "benefits": ["Certified own fleet", "National transportation permits", "GPS and real-time monitoring", "Trained drivers", "Cargo and liability insurance"]
+    },
+    "recojoresiduos": {
+      "title": "Collection and Transportation of Waste",
+      "desc": "Comprehensive collection and transportation service for hazardous and non-hazardous waste. We have specialized vehicles and highly trained personnel to ensure safe handling.",
+      "benefits": ["Hazardous and non-hazardous waste", "Specialized vehicles", "Personnel with protective equipment", "Waste management manifests", "Coverage in Lima and provinces"]
+    },
+    "disposicionFinal": {
+      "title": "Final Disposal",
+      "desc": "We guarantee proper final disposal of waste in authorized sanitary and security landfills, complying with all current environmental regulations.",
+      "benefits": ["Authorized sanitary landfills", "Final disposal certificates", "Complete traceability", "Regulatory compliance", "Monthly management reports"]
+    },
+    "manejoRAEE": {
+      "title": "Adequate WEEE Management",
+      "desc": "Comprehensive WEEE management program including collection, segregation, dismantling and recycling of components, maximizing recovery of valuable materials.",
+      "benefits": ["Recovery of valuable materials", "Controlled dismantling", "Certified recycling", "Reduction of environmental impact", "Detailed management reports"]
+    },
+    "sanitariosPortatiles": {
+      "title": "Sale of Portable Toilets",
+      "desc": "Sale and rental of high-quality portable toilets for events, construction projects and temporary projects. We include maintenance and periodic cleaning services.",
+      "benefits": ["New and quality toilets", "Maintenance service included", "Delivery and installation", "Standard and premium models", "National coverage"]
+    },
+    "limpiezaGrasas": {
+      "title": "Grease Trap Cleaning",
+      "desc": "Specialized cleaning and maintenance service for industrial grease traps for restaurants, hotels, shopping centers and food industries.",
+      "benefits": ["Specialized suction equipment", "Sanitary regulation compliance", "Scheduled and emergency service", "Cleaning certificate", "Proper waste disposal"]
+    },
+    "limpiezaPozos": {
+      "title": "Septic Tank Cleaning",
+      "desc": "Professional cleaning, maintenance and disinfection service for septic tanks with high-capacity suction equipment and specialized personnel.",
+      "benefits": ["High capacity equipment", "Specialized personnel", "24/7 emergency service", "Disinfection included", "Coverage in Lima and provinces"]
+    },
+    "limpiezaIndustrial": {
+      "title": "Industrial Cleaning",
+      "desc": "Complete industrial cleaning service for production plants, warehouses, corporate offices and common areas. We use specialized equipment and products.",
+      "benefits": ["Cleaning of production plants", "Disinfection of industrial areas", "Specialized equipment", "Personnel trained with PPE", "Customized cleaning plans"]
+    },
+    "asesorias": {
+      "title": "Environmental Advisory",
+      "desc": "We provide comprehensive environmental advisory for compliance with current regulations, development of environmental management plans and solid waste management.",
+      "benefits": ["Environmental audit", "Environmental management plans", "Training in waste management", "Advisory on regulatory compliance", "Detailed technical reports"]
+    }
+  },
   "contacto": {
     "title": "Contact Us",
-    "contact": "Contact Us",
+    "contact": "Quote via",
     "inquiries": "Inquiries",
     "dontHesitate": "Do not hesitate to contact us if you have any questions.",
     "plants": "Plants",

@@ -130,9 +130,81 @@
     "trucks": "Flota de Camiones",
     "experience": "Años de Experiencia"
   },
+  "serviceDetails": {
+    "destruccionDocumentos": {
+      "title": "Destrucción Notarial de Documentos",
+      "desc": "Somos especialistas en la destrucción de documentos. Realizamos todo el proceso desde el recojo, transporte y la destrucción bajo estricta supervisión notarial. Garantizamos la confidencialidad absoluta de su información.",
+      "benefits": ["Archivos públicos y privados innecesarios, obsoletos o confidenciales", "Entrega de certificado de destrucción", "Personal altamente capacitado", "Eficiencia y experiencia comprobada", "Garantía y confidencialidad absoluta", "Contamos con permisos y autorizaciones"]
+    },
+    "destruccionResiduos": {
+      "title": "Destrucción de Residuos",
+      "desc": "Brindamos el servicio integral de destrucción de residuos sólidos, incluyendo mermas, mercadería vencida, inventarios obsoletos y materiales dados de baja. Todo bajo estricto cumplimiento normativo.",
+      "benefits": ["Destrucción de mermas y mercadería", "Inventarios obsoletos y materiales dados de baja", "Certificado de destrucción", "Cumplimiento normativo ambiental", "Supervisión permanente del proceso"]
+    },
+    "destruccionRAEE": {
+      "title": "Destrucción de RAEE",
+      "desc": "Realizamos el recojo, transporte y destrucción de Residuos de Aparatos Eléctricos y Electrónicos (RAEE) cumpliendo con la normativa vigente y garantizando la disposición final adecuada.",
+      "benefits": ["Recojo y transporte especializado", "Destrucción certificada de equipos electrónicos", "Cumplimiento de normativa RAEE", "Disposición final responsable", "Trazabilidad completa del proceso"]
+    },
+    "destruccionRopa": {
+      "title": "Destrucción de Ropa",
+      "desc": "Servicio especializado en la destrucción de prendas de vestir, uniformes corporativos, textiles de marca y materiales textiles que requieren destrucción certificada para protección de marca.",
+      "benefits": ["Protección de marca garantizada", "Destrucción certificada de textiles", "Proceso supervisado y documentado", "Disposición final ecológica", "Confidencialidad absoluta"]
+    },
+    "gestionIQBF": {
+      "title": "Gestión IQBF",
+      "desc": "Gestión integral de Insumos Químicos y Bienes Fiscalizados (IQBF) con todos los permisos y autorizaciones requeridas por ley. Recojo, transporte y disposición final segura.",
+      "benefits": ["Permisos y autorizaciones vigentes", "Transporte especializado", "Disposición final certificada", "Cumplimiento de normativa SUNAT", "Personal capacitado en manejo IQBF"]
+    },
+    "transporteMaptel": {
+      "title": "Transporte Maptel",
+      "desc": "Contamos con una flota de camiones con todos los permisos para el transporte nacional de materiales peligrosos y no peligrosos, cumpliendo con toda la normativa vigente.",
+      "benefits": ["Flota propia certificada", "Permisos de transporte nacional", "GPS y monitoreo en tiempo real", "Conductores capacitados", "Seguros de carga y responsabilidad civil"]
+    },
+    "recojoresiduos": {
+      "title": "Recojo y Transporte de Residuos",
+      "desc": "Servicio integral de recojo y transporte de residuos peligrosos y no peligrosos. Contamos con vehículos especializados y personal altamente capacitado para garantizar un manejo seguro.",
+      "benefits": ["Residuos peligrosos y no peligrosos", "Vehículos especializados", "Personal con equipos de protección", "Manifiestos de manejo de residuos", "Cobertura en Lima y provincias"]
+    },
+    "disposicionFinal": {
+      "title": "Disposición Final",
+      "desc": "Garantizamos la disposición final adecuada de residuos en rellenos sanitarios y de seguridad autorizados, cumpliendo con toda la normativa ambiental vigente.",
+      "benefits": ["Rellenos sanitarios autorizados", "Certificados de disposición final", "Trazabilidad completa", "Cumplimiento normativo", "Reportes mensuales de gestión"]
+    },
+    "manejoRAEE": {
+      "title": "Manejo Adecuado de RAEE",
+      "desc": "Programa integral de manejo de RAEE que incluye recolección, segregación, desmantelamiento y reciclaje de componentes, maximizando la recuperación de materiales valiosos.",
+      "benefits": ["Recuperación de materiales valiosos", "Desmantelamiento controlado", "Reciclaje certificado", "Reducción de impacto ambiental", "Informes de gestión detallados"]
+    },
+    "sanitariosPortatiles": {
+      "title": "Venta de Sanitarios Portátiles",
+      "desc": "Venta y alquiler de sanitarios portátiles de alta calidad para eventos, obras de construcción y proyectos temporales. Incluimos servicio de mantenimiento y limpieza periódica.",
+      "benefits": ["Sanitarios nuevos y de calidad", "Servicio de mantenimiento incluido", "Entrega e instalación", "Modelos estándar y premium", "Atención a nivel nacional"]
+    },
+    "limpiezaGrasas": {
+      "title": "Limpieza de Trampas de Grasa",
+      "desc": "Servicio especializado de limpieza y mantenimiento de trampas de grasa para restaurantes, hoteles, centros comerciales e industrias alimentarias.",
+      "benefits": ["Equipos de succión especializados", "Cumplimiento de normativa sanitaria", "Servicio programado y de emergencia", "Certificado de limpieza", "Disposición adecuada de residuos"]
+    },
+    "limpiezaPozos": {
+      "title": "Limpieza de Pozos Sépticos",
+      "desc": "Servicio profesional de limpieza, mantenimiento y desinfección de pozos sépticos con equipos de succión de alta capacidad y personal especializado.",
+      "benefits": ["Equipos de alta capacidad", "Personal especializado", "Servicio 24/7 para emergencias", "Desinfección incluida", "Cobertura Lima y provincias"]
+    },
+    "limpiezaIndustrial": {
+      "title": "Limpieza Industrial",
+      "desc": "Servicio completo de limpieza industrial para plantas de producción, almacenes, oficinas corporativas y áreas comunes. Utilizamos equipos y productos especializados.",
+      "benefits": ["Limpieza de plantas de producción", "Desinfección de áreas industriales", "Equipos especializados", "Personal capacitado con EPP", "Planes de limpieza personalizados"]
+    },
+    "asesorias": {
+      "title": "Asesorías Ambientales",
+      "desc": "Brindamos asesoría ambiental integral para el cumplimiento de la normativa vigente, elaboración de planes de manejo ambiental y gestión de residuos sólidos.",
+      "benefits": ["Auditoría ambiental", "Planes de manejo ambiental", "Capacitación en gestión de residuos", "Asesoría en cumplimiento normativo", "Reportes técnicos detallados"]
+    }
+  },
   "contacto": {
     "title": "Contáctanos",
-    "contact": "Contáctanos",
+    "contact": "Cotizar por",
     "inquiries": "Consultas",
     "dontHesitate": "No dudes en contactarnos si tienes alguna pregunta.",
     "plants": "Plantas",

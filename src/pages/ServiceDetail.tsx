@@ -1,4 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { CheckCircle, MessageCircle, ArrowRight } from 'lucide-react';
 import { getServiceBySlug, servicesByCategory, Service } from '@/data/services';
 import { serviceImages } from '@/data/serviceImages';
@@ -25,13 +26,33 @@ function getWhatsAppUrl(service: Service): string {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
 }
 
+const serviceKeyMap: { [key: string]: string } = {
+  'destruccion-documentos': 'destruccionDocumentos',
+  'destruccion-residuos': 'destruccionResiduos',
+  'destruccion-raee': 'destruccionRAEE',
+  'destruccion-ropa': 'destruccionRopa',
+  'gestion-iqbf': 'gestionIQBF',
+  'transporte-maptel': 'transporteMaptel',
+  'recojo-residuos': 'recojoresiduos',
+  'disposicion-final': 'disposicionFinal',
+  'manejo-raee': 'manejoRAEE',
+  'sanitarios-portatiles': 'sanitariosPortatiles',
+  'trampas-grasa': 'limpiezaGrasas',
+  'pozos-septicos': 'limpiezaPozos',
+  'limpieza-industrial': 'limpiezaIndustrial',
+  'asesorias-ambientales': 'asesorias',
+};
+
 const ServiceDetail = () => {
   const { slug } = useParams<{ slug: string }>();
+  const { t } = useTranslation();
   const service = slug ? getServiceBySlug(slug) : undefined;
 
   if (!service) return <NotFound />;
 
   const image = serviceImages[service.imageKey];
+  const serviceKey = serviceKeyMap[service.id] || service.id;
+  const serviceData = t(`serviceDetails.${serviceKey}`, { returnObjects: true }) as { title: string; desc: string; benefits: string[] };
 
   const related = (service.category === 'destruccion' ? servicesByCategory.destruccion : servicesByCategory.otros)
     .filter(s => s.id !== service.id)
@@ -43,13 +64,13 @@ const ServiceDetail = () => {
         <img src={image} alt={service.title} className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-foreground/65" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 w-full text-center">
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-background tracking-tight">{service.title}</h1>
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-background tracking-tight">{serviceData?.title || service.title}</h1>
           <div className="flex gap-1 justify-center mt-6">
             <div className="w-8 h-1 rounded-full bg-accent" />
             <div className="w-8 h-1 rounded-full bg-background/40" />
           </div>
           <p className="text-background/70 mt-4 text-sm">
-            <Link to="/" className="hover:text-background transition-colors">Inicio</Link> / <Link to="/" className="hover:text-background transition-colors">Soluciones</Link> / {service.title}
+            <Link to="/" className="hover:text-background transition-colors">{t('nav.inicio')}</Link> / <Link to="/" className="hover:text-background transition-colors">{t('nav.soluciones')}</Link> / {serviceData?.title || service.title}
           </p>
         </div>
       </section>
@@ -58,15 +79,15 @@ const ServiceDetail = () => {
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-7">
             <p className="text-xs uppercase tracking-[0.2em] text-primary font-semibold mb-3">ECO M</p>
-            <h2 className="text-3xl font-bold tracking-tight mb-2">{service.title}</h2>
+            <h2 className="text-3xl font-bold tracking-tight mb-2">{serviceData?.title || service.title}</h2>
             <div className="flex gap-1 my-6">
               <div className="w-8 h-1 rounded-full bg-accent" />
               <div className="w-8 h-1 rounded-full bg-primary" />
             </div>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-10">{service.fullDesc}</p>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-10">{serviceData?.desc || service.fullDesc}</p>
 
             <div className="flex flex-col gap-4">
-              {service.benefits.map((b, i) => (
+              {(serviceData?.benefits || service.benefits).map((b: string, i: number) => (
                 <div key={i} className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-primary mt-0.5 shrink-0" />
                   <span className="text-foreground">{b}</span>
@@ -86,11 +107,11 @@ const ServiceDetail = () => {
                 className="w-full bg-whatsapp/90 text-accent-foreground flex items-center justify-center gap-3 py-5 rounded-xl text-lg font-bold shadow-[0_8px_24px_rgba(37,211,102,0.25)] hover:-translate-y-1 hover:scale-[1.03] hover:bg-whatsapp hover:shadow-[0_12px_32px_rgba(37,211,102,0.35)] transition-all duration-300"
               >
                 <MessageCircle className="h-6 w-6" />
-                Cotizar por WhatsApp
+                {t('contacto.contact')} WhatsApp
               </a>
 
               <Link to="/contacto" className="w-full bg-cta text-cta-foreground flex items-center justify-center gap-2 py-4 rounded-xl font-semibold shadow-[0_4px_14px_0_hsl(var(--cta)/0.25)] hover:scale-[1.03] hover:shadow-[0_6px_20px_hsl(var(--cta)/0.35)] transition-all duration-200">
-                Solicitar Información <ArrowRight className="h-4 w-4" />
+                {t('form.quote.submit')} <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>
