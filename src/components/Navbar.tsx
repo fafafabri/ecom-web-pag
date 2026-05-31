@@ -124,8 +124,6 @@ const Navbar = () => {
             )}
           </div>
 
-          <Link to="/empresa" className={linkClass(isActive('/empresa'))}>{t('nav.empresa')}</Link>
-          
           <Link to="/contacto" className={linkClass(isActive('/contacto'))}>{t('nav.contacto')}</Link>
         </nav>
 

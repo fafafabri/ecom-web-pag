@@ -1,6 +1,11 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Users, Award, Truck, Wrench, ChevronDown } from 'lucide-react';
+import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right';
+import Users from 'lucide-react/dist/esm/icons/users';
+import Award from 'lucide-react/dist/esm/icons/award';
+import Truck from 'lucide-react/dist/esm/icons/truck';
+import Wrench from 'lucide-react/dist/esm/icons/wrench';
+import ChevronDown from 'lucide-react/dist/esm/icons/chevron-down';
 import { useTranslation } from 'react-i18next';
 import { services } from '@/data/services';
 import { serviceImages } from '@/data/serviceImages';
@@ -12,42 +17,8 @@ import certIas from '@/assets/cert-ias.png';
 import certIaf from '@/assets/cert-iaf.png';
 import QuoteFormDialog from '@/components/QuoteFormDialog';
 import InquiryFormDialog from '@/components/InquiryFormDialog';
-
-/* ─── Hook: detecta cuando un elemento entra en el viewport ─── */
-function useInView(threshold = 0.15) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [inView, setInView] = useState(false);
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) { setInView(true); obs.disconnect(); } },
-      { threshold }
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, [threshold]);
-  return { ref, inView };
-}
-
-/* ─── Contador animado ─── */
-function AnimatedCounter({ target, suffix = '' }: { target: number; suffix?: string }) {
-  const [count, setCount] = useState(0);
-  const { ref, inView } = useInView(0.3);
-  useEffect(() => {
-    if (!inView) return;
-    let start = 0;
-    const duration = 1800;
-    const step = Math.ceil(target / (duration / 16));
-    const timer = setInterval(() => {
-      start += step;
-      if (start >= target) { setCount(target); clearInterval(timer); }
-      else setCount(start);
-    }, 16);
-    return () => clearInterval(timer);
-  }, [inView, target]);
-  return <span ref={ref}>{count}{suffix}</span>;
-}
+import AnimatedCounter from '@/components/AnimatedCounter';
+import AnimatedSection from '@/components/AnimatedSection';
 
 /* ─── Componente principal ─── */
 const Index = () => {
@@ -83,11 +54,6 @@ const Index = () => {
     { value: 98,   suffix: '%', label: 'Satisfacción' },
     { value: 1200, suffix: '+', label: 'Proyectos completados' },
   ];
-
-  // Refs para animaciones con scroll
-  const whyRef   = useInView();
-  const statsRef = useInView(0.2);
-  const svcRef   = useInView(0.1);
 
   return (
     <>
@@ -172,10 +138,8 @@ const Index = () => {
         <div className="absolute inset-0 opacity-10"
           style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '32px 32px' }}
         />
-        <div
-          ref={statsRef.ref}
-          className={`max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 relative transition-all duration-700 ${statsRef.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-        >
+        <AnimatedSection direction="up" threshold={0.2} duration={700}>
+          <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 relative">
           {stats.map((s, i) => (
             <div
               key={s.label}
@@ -188,7 +152,8 @@ const Index = () => {
               <p className="text-white/70 text-sm mt-1 font-medium">{s.label}</p>
             </div>
           ))}
-        </div>
+          </div>
+        </AnimatedSection>
       </section>
 
       {/* ══════════════ WHY CHOOSE US ══════════════ */}
@@ -196,14 +161,10 @@ const Index = () => {
         {/* Gradiente decorativo esquina */}
         <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-primary/5 blur-3xl pointer-events-none" />
         <div className="absolute -bottom-32 -left-32 w-96 h-96 rounded-full bg-accent/5 blur-3xl pointer-events-none" />
-
-        <div
-          ref={whyRef.ref}
-          className="max-w-7xl mx-auto px-6"
-        >
+        <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Texto */}
-            <div className={`transition-all duration-700 ${whyRef.inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
+            <AnimatedSection direction="left" duration={700}>
               <p className="text-xs uppercase tracking-[0.2em] text-primary font-semibold mb-3">{t('why.label')}</p>
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-2">{t('why.title')}</h2>
               <div className="flex gap-1 my-6">
@@ -213,27 +174,22 @@ const Index = () => {
               <p className="text-muted-foreground leading-relaxed mb-8">{t('why.desc')}</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {pillars.map((p, i) => (
-                  <div
-                    key={p.title}
-                    className={`group flex gap-4 p-4 rounded-xl hover:bg-background hover:shadow-md transition-all duration-300 cursor-default ${whyRef.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-                    style={{ transitionDelay: `${200 + i * 100}ms`, transitionDuration: '600ms' }}
-                  >
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                  <AnimatedSection key={p.title} direction="up" duration={600} delay={200 + i * 100}>
+                    <div className="group flex gap-4 p-4 rounded-xl hover:bg-background hover:shadow-md transition-all duration-300 cursor-default">
+                      <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
                       <p.icon className="h-6 w-6 text-primary group-hover:text-white transition-colors duration-300" />
-                    </div>
-                    <div>
+                      </div>
+                      <div>
                       <h3 className="font-display font-bold text-sm">{p.title}</h3>
                       <p className="text-xs text-muted-foreground mt-1 leading-relaxed">{p.desc}</p>
+                      </div>
                     </div>
-                  </div>
+                  </AnimatedSection>
                 ))}
               </div>
-            </div>
-
+            </AnimatedSection>
             {/* Imagen con efecto */}
-            <div
-              className={`relative transition-all duration-700 delay-200 ${whyRef.inView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}
-            >
+            <AnimatedSection direction="right" duration={700} delay={200}>
               {/* Marco decorativo desfasado */}
               <div className="absolute -top-4 -right-4 w-full h-full rounded-2xl border-2 border-primary/20 pointer-events-none" />
               <img
@@ -246,7 +202,7 @@ const Index = () => {
               <div className="absolute -bottom-5 -left-5 bg-primary text-white px-5 py-3 rounded-xl shadow-lg font-semibold text-sm">
                 ✓ Certificados internacionalmente
               </div>
-            </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
@@ -254,66 +210,62 @@ const Index = () => {
       {/* ══════════════ SERVICIOS ══════════════ */}
       <section className="py-28 bg-background relative overflow-hidden">
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
-
-        <div
-          ref={svcRef.ref}
-          className="max-w-7xl mx-auto px-6"
-        >
+        <div className="max-w-7xl mx-auto px-6">
           {/* Header */}
-          <div
-            className={`flex items-end justify-between mb-14 transition-all duration-700 ${svcRef.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
-          >
-            <div>
-              <p className="text-xs uppercase tracking-[0.2em] text-primary font-semibold mb-3">{t('services.label')}</p>
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight">{t('services.title')}</h2>
-              <div className="flex gap-1 mt-4">
-                <div className="w-8 h-1 rounded-full bg-accent" />
-                <div className="w-8 h-1 rounded-full bg-primary" />
+          <AnimatedSection direction="up" threshold={0.1} duration={700}>
+            <div className="flex items-end justify-between mb-14">
+              <div>
+                <p className="text-xs uppercase tracking-[0.2em] text-primary font-semibold mb-3">{t('services.label')}</p>
+                <h2 className="text-3xl md:text-4xl font-bold tracking-tight">{t('services.title')}</h2>
+                <div className="flex gap-1 mt-4">
+                  <div className="w-8 h-1 rounded-full bg-accent" />
+                  <div className="w-8 h-1 rounded-full bg-primary" />
+                </div>
               </div>
+              <Link
+                to="/servicios/destruccion-de-documentos"
+                className="hidden md:inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-border text-sm font-medium text-foreground hover:bg-primary hover:text-white hover:border-primary hover:scale-[1.03] hover:shadow-md transition-all duration-300 group"
+              >
+                {t('services.more')}
+                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
             </div>
-            <Link
-              to="/servicios/destruccion-de-documentos"
-              className="hidden md:inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-border text-sm font-medium text-foreground hover:bg-primary hover:text-white hover:border-primary hover:scale-[1.03] hover:shadow-md transition-all duration-300 group"
-            >
-              {t('services.more')}
-              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-            </Link>
-          </div>
+          </AnimatedSection>
 
           {/* Grid de servicios */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredServices.map((s, i) => (
-              <Link
-                key={s.id}
-                to={`/servicios/${s.slug}`}
-                className={`group relative flex flex-col bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:scale-[1.02] hover:-translate-y-1 transition-all duration-400 ${svcRef.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-                style={{ transitionDelay: `${i * 80}ms`, transitionDuration: '600ms' }}
-              >
-                {/* Imagen */}
-                <div className="h-48 w-full overflow-hidden relative">
-                  <img
-                    src={serviceImages[s.imageKey]}
-                    alt={s.title}
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    loading="lazy"
-                  />
-                  {/* Shimmer overlay al hover */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </div>
+              <AnimatedSection key={s.id} direction="up" duration={600} delay={i * 80} threshold={0.1}>
+                <Link
+                  to={`/servicios/${s.slug}`}
+                  className="group relative flex flex-col bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:scale-[1.02] hover:-translate-y-1 transition-all duration-400"
+                >
+                  {/* Imagen */}
+                  <div className="h-48 w-full overflow-hidden relative">
+                    <img
+                      src={serviceImages[s.imageKey]}
+                      alt={s.title}
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      loading="lazy"
+                    />
+                    {/* Shimmer overlay al hover */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
 
-                {/* Borde superior de color al hover */}
-                <div className="absolute top-0 left-0 right-0 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-400 origin-left" />
+                  {/* Borde superior de color al hover */}
+                  <div className="absolute top-0 left-0 right-0 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-400 origin-left" />
 
-                {/* Contenido */}
-                <div className="p-6 flex flex-col flex-1">
-                  <h3 className="font-display font-bold mb-2 group-hover:text-primary transition-colors duration-300">{s.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed flex-1">{s.shortDesc}</p>
-                  <span className="mt-4 inline-flex items-center text-primary font-medium text-sm group-hover:gap-2 transition-all duration-300">
-                    {t('services.learnMore')}
-                    <ArrowRight className="h-4 w-4 ml-1 transition-transform duration-300 group-hover:translate-x-1" />
-                  </span>
-                </div>
-              </Link>
+                  {/* Contenido */}
+                  <div className="p-6 flex flex-col flex-1">
+                    <h3 className="font-display font-bold mb-2 group-hover:text-primary transition-colors duration-300">{s.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed flex-1">{s.shortDesc}</p>
+                    <span className="mt-4 inline-flex items-center text-primary font-medium text-sm group-hover:gap-2 transition-all duration-300">
+                      {t('services.learnMore')}
+                      <ArrowRight className="h-4 w-4 ml-1 transition-transform duration-300 group-hover:translate-x-1" />
+                    </span>
+                  </div>
+                </Link>
+              </AnimatedSection>
             ))}
           </div>
 
