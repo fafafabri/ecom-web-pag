@@ -4,6 +4,7 @@ import { CheckCircle, MessageCircle, ArrowRight } from 'lucide-react';
 import { getServiceBySlug, servicesByCategory, Service } from '@/data/services';
 import { serviceImages } from '@/data/serviceImages';
 import NotFound from './NotFound';
+import { PageHeroBanner, SectionHeader } from '@/components/shared';
 
 const WHATSAPP_NUMBER = '51933342580';
 
@@ -60,30 +61,26 @@ const ServiceDetail = () => {
 
   return (
     <>
-      <section className="relative flex items-center min-h-[40vh] w-full overflow-hidden">
-        <img src={image} alt={service.title} className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-foreground/65" />
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 w-full text-center">
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-background tracking-tight">{serviceData?.title || service.title}</h1>
-          <div className="flex gap-1 justify-center mt-6">
-            <div className="w-8 h-1 rounded-full bg-accent" />
-            <div className="w-8 h-1 rounded-full bg-background/40" />
-          </div>
-          <p className="text-background/70 mt-4 text-sm">
+      <PageHeroBanner
+        imageSrc={image}
+        imageAlt={service.title}
+        title={serviceData?.title || service.title}
+        titleClassName="text-3xl md:text-5xl lg:text-6xl"
+        breadcrumb={
+          <>
             <Link to="/" className="hover:text-background transition-colors">{t('nav.inicio')}</Link> / <Link to="/" className="hover:text-background transition-colors">{t('nav.soluciones')}</Link> / {serviceData?.title || service.title}
-          </p>
-        </div>
-      </section>
+          </>
+        }
+      />
 
       <section className="py-24 bg-card">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-7">
-            <p className="text-xs uppercase tracking-[0.2em] text-primary font-semibold mb-3">ECO M</p>
-            <h2 className="text-3xl font-bold tracking-tight mb-2">{serviceData?.title || service.title}</h2>
-            <div className="flex gap-1 my-6">
-              <div className="w-8 h-1 rounded-full bg-accent" />
-              <div className="w-8 h-1 rounded-full bg-primary" />
-            </div>
+            <SectionHeader
+              label="ECO M"
+              title={serviceData?.title || service.title}
+              titleClassName="text-3xl"
+            />
             <p className="text-lg text-muted-foreground leading-relaxed mb-10">{serviceData?.desc || service.fullDesc}</p>
 
             <div className="flex flex-col gap-4">
