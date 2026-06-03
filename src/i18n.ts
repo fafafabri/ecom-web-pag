@@ -13,7 +13,7 @@ i18n
     lng: localStorage.getItem('language') || 'es',
     fallbackLng: 'es',
     interpolation: {
-      escapeValue: false
+      escapeValue: true
     }
   });
 
