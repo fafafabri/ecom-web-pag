@@ -52,7 +52,10 @@ const ServiceDetail = () => {
 
   const image = serviceImages[service.imageKey];
   const serviceKey = serviceKeyMap[service.id] || service.id;
-  const serviceData = t(`serviceDetails.${serviceKey}`, { returnObjects: true }) as { title: string; desc: string; benefits: string[] };
+  const rawServiceData = t(`serviceDetails.${serviceKey}`, { returnObjects: true });
+  const serviceData = (typeof rawServiceData === 'object' && rawServiceData !== null)
+    ? rawServiceData as { title: string; desc: string; benefits: string[] }
+    : null;
 
   const related = (service.category === 'destruccion' ? servicesByCategory.destruccion : servicesByCategory.otros)
     .filter(s => s.id !== service.id)

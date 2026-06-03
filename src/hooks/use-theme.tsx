@@ -14,19 +14,25 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // Leer tema guardado o detectar preferencia del sistema
-    const savedTheme = localStorage.getItem('theme') as Theme | null;
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
-    
-    setTheme(initialTheme);
+    try {
+      const savedTheme = localStorage.getItem('theme') as Theme | null;
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+      setTheme(initialTheme);
+    } catch {
+      // localStorage unavailable; fall back to default 'light' theme
+    }
     setMounted(true);
   }, []);
 
   useEffect(() => {
     if (!mounted) return;
 
-    localStorage.setItem('theme', theme);
+    try {
+      localStorage.setItem('theme', theme);
+    } catch {
+      // localStorage unavailable (e.g. private browsing quota exceeded)
+    }
     const root = document.documentElement;
     
     if (theme === 'dark') {

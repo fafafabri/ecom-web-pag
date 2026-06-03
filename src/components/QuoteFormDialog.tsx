@@ -4,7 +4,8 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, AlertCircle } from 'lucide-react';
+import { toast } from 'sonner';
 
 interface QuoteFormDialogProps {
   open: boolean;
@@ -14,6 +15,8 @@ interface QuoteFormDialogProps {
 const QuoteFormDialog = ({ open, onOpenChange }: QuoteFormDialogProps) => {
   const { t } = useTranslation();
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [form, setForm] = useState({
     contactName: '',
     companyName: '',
@@ -25,13 +28,25 @@ const QuoteFormDialog = ({ open, onOpenChange }: QuoteFormDialogProps) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSubmitting(true);
+    setError(null);
+    try {
+      // TODO: Replace with actual API call when backend is available
+      setSubmitted(true);
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Error desconocido';
+      setError(message);
+      toast.error(t('form.quote.error') || `Error al enviar: ${message}`);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const handleClose = (val: boolean) => {
     if (!val) {
       setTimeout(() => {
         setSubmitted(false);
+        setError(null);
         setForm({ contactName: '', companyName: '', ruc: '', service: '', volume: '', district: '' });
       }, 300);
     }
@@ -57,6 +72,12 @@ const QuoteFormDialog = ({ open, onOpenChange }: QuoteFormDialogProps) => {
               <DialogDescription>{t('form.quote.description')}</DialogDescription>
             </DialogHeader>
             <form onSubmit={handleSubmit} className="grid gap-4 mt-2">
+              {error && (
+                <div className="flex items-center gap-2 p-3 rounded-lg bg-destructive/10 text-destructive text-sm">
+                  <AlertCircle className="h-4 w-4 shrink-0" />
+                  <span>{error}</span>
+                </div>
+              )}
               <div className="grid gap-1.5">
                 <Label htmlFor="contactName">{t('form.quote.contactName')}</Label>
                 <Input id="contactName" required value={form.contactName} onChange={e => setForm(f => ({ ...f, contactName: e.target.value }))} placeholder={t('form.quote.contactNamePlaceholder')} />
@@ -115,8 +136,8 @@ const QuoteFormDialog = ({ open, onOpenChange }: QuoteFormDialogProps) => {
                   <Input id="district" required value={form.district} onChange={e => setForm(f => ({ ...f, district: e.target.value }))} placeholder={t('form.quote.districtPlaceholder')} />
                 </div>
               </div>
-              <button type="submit" className="w-full mt-2 bg-cta text-cta-foreground py-3 rounded-xl font-semibold hover:scale-[1.03] hover:shadow-[0_6px_20px_hsl(var(--cta)/0.35)] transition-all duration-200">
-                {t('form.quote.submit')}
+              <button type="submit" disabled={submitting} className="w-full mt-2 bg-cta text-cta-foreground py-3 rounded-xl font-semibold hover:scale-[1.03] hover:shadow-[0_6px_20px_hsl(var(--cta)/0.35)] transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100">
+                {submitting ? (t('form.sending') || 'Enviando...') : t('form.quote.submit')}
               </button>
             </form>
           </>
