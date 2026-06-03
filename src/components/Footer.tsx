@@ -1,6 +1,7 @@
 import { MapPin, Phone, Clock, Mail, Linkedin, Facebook, Twitter, Instagram } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import logo from '@/assets/logo-eco-m-final.png';
+import { ContactInfoItem } from '@/components/shared';
 
 const socials = [
   { label: 'Facebook', icon: Facebook, href: 'https://www.facebook.com/profile.php?id=61579597344363' },
@@ -44,39 +45,23 @@ const Footer = () => {
             <div className="w-8 h-0.5 bg-accent mb-4" />
             <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
               <div className="space-y-5">
-                <div className="flex gap-3">
-                  <Phone className="h-5 w-5 text-primary mt-0.5 shrink-0" />
-                  <div>
-                    <p className="text-xs opacity-60 mb-1">{t('footer.consultations')}:</p>
-                    <p className="text-sm font-semibold">933 342 580 – 933 342 454</p>
-                  </div>
-                </div>
-                <div className="flex gap-3">
-                  <Clock className="h-5 w-5 text-primary mt-0.5 shrink-0" />
-                  <div>
-                    <p className="text-xs opacity-60 mb-1">{t('footer.hours')}</p>
-                    <p className="text-sm font-semibold">{t('footer.hoursDetail')}</p>
-                    <p className="text-sm font-semibold">{t('footer.hoursSat')}</p>
-                  </div>
-                </div>
+                <ContactInfoItem icon={Phone} label={`${t('footer.consultations')}:`} labelOpacity="opacity-60">
+                  <p className="text-sm font-semibold">933 342 580 – 933 342 454</p>
+                </ContactInfoItem>
+                <ContactInfoItem icon={Clock} label={t('footer.hours')} labelOpacity="opacity-60">
+                  <p className="text-sm font-semibold">{t('footer.hoursDetail')}</p>
+                  <p className="text-sm font-semibold">{t('footer.hoursSat')}</p>
+                </ContactInfoItem>
               </div>
               <div className="space-y-5">
-                <div className="flex gap-3">
-                  <Mail className="h-5 w-5 text-primary mt-0.5 shrink-0" />
-                  <div>
-                    <p className="text-xs opacity-60 mb-1">{t('footer.email')}</p>
-                    <p className="text-sm font-semibold">comercial@eco-m.com</p>
-                  </div>
-                </div>
-                <div className="flex gap-3">
-                  <MapPin className="h-5 w-5 text-primary mt-0.5 shrink-0" />
-                  <div>
-                    <p className="text-xs opacity-60 mb-1">{t('footer.plants')}:</p>
-                    <p className="text-sm">Valle Hermoso El Arenal, Puente Piedra</p>
-                    <p className="text-sm">Calle Apurímac 07, Ancón</p>
-                    <p className="text-sm">Mz. M Lote 114, Ventanilla, Callao</p>
-                  </div>
-                </div>
+                <ContactInfoItem icon={Mail} label={t('footer.email')} labelOpacity="opacity-60">
+                  <p className="text-sm font-semibold">comercial@eco-m.com</p>
+                </ContactInfoItem>
+                <ContactInfoItem icon={MapPin} label={`${t('footer.plants')}:`} labelOpacity="opacity-60">
+                  <p className="text-sm">Valle Hermoso El Arenal, Puente Piedra</p>
+                  <p className="text-sm">Calle Apurímac 07, Ancón</p>
+                  <p className="text-sm">Mz. M Lote 114, Ventanilla, Callao</p>
+                </ContactInfoItem>
               </div>
             </div>
           </div>

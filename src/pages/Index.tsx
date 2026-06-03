@@ -19,6 +19,7 @@ import QuoteFormDialog from '@/components/QuoteFormDialog';
 import InquiryFormDialog from '@/components/InquiryFormDialog';
 import AnimatedCounter from '@/components/AnimatedCounter';
 import AnimatedSection from '@/components/AnimatedSection';
+import { DecorativeDivider, SectionHeader } from '@/components/shared';
 
 /* ─── Componente principal ─── */
 const Index = () => {
@@ -92,11 +93,10 @@ const Index = () => {
 
           {/* Línea decorativa animada */}
           <div
-            className={`flex gap-1 mt-6 transition-all duration-700 ${heroVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}
+            className={`transition-all duration-700 ${heroVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}
             style={{ transitionDelay: '600ms' }}
           >
-            <div className="w-12 h-1 rounded-full bg-accent" />
-            <div className="w-6 h-1 rounded-full bg-primary" />
+            <DecorativeDivider className="mt-6" firstColor="bg-accent" secondColor="bg-primary" />
           </div>
 
           <div
@@ -165,12 +165,7 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Texto */}
             <AnimatedSection direction="left" duration={700}>
-              <p className="text-xs uppercase tracking-[0.2em] text-primary font-semibold mb-3">{t('why.label')}</p>
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-2">{t('why.title')}</h2>
-              <div className="flex gap-1 my-6">
-                <div className="w-8 h-1 rounded-full bg-accent" />
-                <div className="w-8 h-1 rounded-full bg-primary" />
-              </div>
+              <SectionHeader label={t('why.label')} title={t('why.title')} />
               <p className="text-muted-foreground leading-relaxed mb-8">{t('why.desc')}</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {pillars.map((p, i) => (
@@ -215,12 +210,7 @@ const Index = () => {
           <AnimatedSection direction="up" threshold={0.1} duration={700}>
             <div className="flex items-end justify-between mb-14">
               <div>
-                <p className="text-xs uppercase tracking-[0.2em] text-primary font-semibold mb-3">{t('services.label')}</p>
-                <h2 className="text-3xl md:text-4xl font-bold tracking-tight">{t('services.title')}</h2>
-                <div className="flex gap-1 mt-4">
-                  <div className="w-8 h-1 rounded-full bg-accent" />
-                  <div className="w-8 h-1 rounded-full bg-primary" />
-                </div>
+                <SectionHeader label={t('services.label')} title={t('services.title')} className="mb-0" />
               </div>
               <Link
                 to="/servicios/destruccion-de-documentos"
