@@ -7,6 +7,7 @@ import { toast } from 'sonner';
 const Contacto = () => {
   const { t } = useTranslation();
   const [form, setForm] = useState({ nombre: '', email: '', telefono: '', consulta: '' });
+  const [submitting, setSubmitting] = useState(false);
 
   const plantas = [
     { name: 'Puente Piedra', address: 'Valle Hermoso El Arenal, Mz. M Lote 6, Puente Piedra.' },
@@ -16,8 +17,17 @@ const Contacto = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success(t('contacto.messageSent') || 'Mensaje enviado!');
-    setForm({ nombre: '', email: '', telefono: '', consulta: '' });
+    setSubmitting(true);
+    try {
+      // TODO: Replace with actual API call when backend is available
+      toast.success(t('contacto.messageSent') || 'Mensaje enviado!');
+      setForm({ nombre: '', email: '', telefono: '', consulta: '' });
+    } catch (error) {
+      const message = error instanceof Error ? error.message : 'Error desconocido';
+      toast.error(t('contacto.messageError') || `Error al enviar el mensaje: ${message}`);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -102,8 +112,8 @@ const Contacto = () => {
               </div>
               <input type="tel" placeholder={t('form.phone')} value={form.telefono} onChange={e => setForm({ ...form, telefono: e.target.value })} className="w-full bg-background border-0 ring-1 ring-inset ring-border focus:ring-2 focus:ring-inset focus:ring-heading rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground transition-all outline-none" />
               <textarea placeholder={t('form.inquiry')} rows={5} value={form.consulta} onChange={e => setForm({ ...form, consulta: e.target.value })} className="w-full bg-background border-0 ring-1 ring-inset ring-border focus:ring-2 focus:ring-inset focus:ring-heading rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground transition-all outline-none resize-none" />
-              <button type="submit" className="bg-cta text-cta-foreground px-8 py-3 rounded-xl font-semibold text-sm hover:scale-[1.03] hover:shadow-[0_6px_20px_hsl(var(--cta)/0.35)] transition-all duration-200 shadow-[0_4px_14px_0_hsl(var(--cta)/0.25)]">
-                {t('form.send')}
+              <button type="submit" disabled={submitting} className="bg-cta text-cta-foreground px-8 py-3 rounded-xl font-semibold text-sm hover:scale-[1.03] hover:shadow-[0_6px_20px_hsl(var(--cta)/0.35)] transition-all duration-200 shadow-[0_4px_14px_0_hsl(var(--cta)/0.25)] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100">
+                {submitting ? (t('form.sending') || 'Enviando...') : t('form.send')}
               </button>
             </form>
           </div>

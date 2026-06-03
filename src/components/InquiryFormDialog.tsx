@@ -4,7 +4,8 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, AlertCircle } from 'lucide-react';
+import { toast } from 'sonner';
 
 interface InquiryFormDialogProps {
   open: boolean;
@@ -14,17 +15,31 @@ interface InquiryFormDialogProps {
 const InquiryFormDialog = ({ open, onOpenChange }: InquiryFormDialogProps) => {
   const { t } = useTranslation();
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [form, setForm] = useState({ name: '', phone: '', message: '' });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSubmitting(true);
+    setError(null);
+    try {
+      // TODO: Replace with actual API call when backend is available
+      setSubmitted(true);
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Error desconocido';
+      setError(message);
+      toast.error(t('form.inquiryForm.error') || `Error al enviar: ${message}`);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const handleClose = (val: boolean) => {
     if (!val) {
       setTimeout(() => {
         setSubmitted(false);
+        setError(null);
         setForm({ name: '', phone: '', message: '' });
       }, 300);
     }
@@ -50,6 +65,12 @@ const InquiryFormDialog = ({ open, onOpenChange }: InquiryFormDialogProps) => {
               <DialogDescription>{t('form.inquiryForm.description')}</DialogDescription>
             </DialogHeader>
             <form onSubmit={handleSubmit} className="grid gap-4 mt-2">
+              {error && (
+                <div className="flex items-center gap-2 p-3 rounded-lg bg-destructive/10 text-destructive text-sm">
+                  <AlertCircle className="h-4 w-4 shrink-0" />
+                  <span>{error}</span>
+                </div>
+              )}
               <div className="grid gap-1.5">
                 <Label htmlFor="inq-name">{t('form.inquiryForm.name')}</Label>
                 <Input id="inq-name" required value={form.name} onChange={e => setForm(f => ({ ...f, name: e.target.value }))} placeholder={t('form.inquiryForm.namePlaceholder')} />
@@ -62,8 +83,8 @@ const InquiryFormDialog = ({ open, onOpenChange }: InquiryFormDialogProps) => {
                 <Label htmlFor="inq-message">{t('form.inquiryForm.message')}</Label>
                 <Textarea id="inq-message" required value={form.message} onChange={e => setForm(f => ({ ...f, message: e.target.value }))} placeholder={t('form.inquiryForm.messagePlaceholder')} rows={4} />
               </div>
-              <button type="submit" className="w-full mt-2 bg-cta text-cta-foreground py-3 rounded-xl font-semibold hover:scale-[1.03] hover:shadow-[0_6px_20px_hsl(var(--cta)/0.35)] transition-all duration-200">
-                {t('form.inquiryForm.submit')}
+              <button type="submit" disabled={submitting} className="w-full mt-2 bg-cta text-cta-foreground py-3 rounded-xl font-semibold hover:scale-[1.03] hover:shadow-[0_6px_20px_hsl(var(--cta)/0.35)] transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100">
+                {submitting ? (t('form.sending') || 'Enviando...') : t('form.inquiryForm.submit')}
               </button>
             </form>
           </>
