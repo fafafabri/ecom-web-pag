@@ -12,7 +12,7 @@ const Empresa = () => {
   return (
     <>
       <AnimatedSection direction="up" duration={900} className="relative flex items-center min-h-[40vh] w-full overflow-hidden">
-        <img src={empresaHero} alt="ECO M empresa" className="absolute inset-0 w-full h-full object-contain object-center bg-[#f3f6f7]" />
+        <img src={empresaHero} alt="ECO M empresa" className="absolute inset-0 w-full h-full object-cover object-center" />
         <div className="absolute inset-0 bg-foreground/65" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 w-full text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-background tracking-tight">{t('empresa.ourCompany')}</h1>
