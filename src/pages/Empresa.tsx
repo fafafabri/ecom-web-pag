@@ -31,33 +31,19 @@ const Empresa = () => {
           <div className="text-center mb-16">
             <p className="text-xs uppercase tracking-[0.2em] text-primary font-semibold mb-3">ECO M</p>
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">{t('empresa.who')}</h2>
-              {
-                icon: Users,
-                title: 'Personal Calificado',
-                subtitle: 'Con Certificaciones, Experiencia y Capacitaciones constantes.',
-              },
-              {
-                icon: Award,
-                title: 'Certificaciones',
-                subtitle: 'Contamos con ISO 9001, BQSR, IAS, IAF.',
-              },
-              {
-                icon: Truck,
-                title: 'Flota de Camiones',
-                subtitle: 'Con todos los permisos para el transporte a nivel nacional en Perú.',
-              },
-              {
-                icon: Wrench,
-                title: 'Equipos y Maquinarias',
-                subtitle: 'De última tecnología para Gestión Residuos y Destrucciones.',
-              },
+            <p className="text-muted-foreground leading-relaxed max-w-4xl mx-auto text-lg">
+              {t('empresa.descIntro')}
+              <span className="font-semibold text-foreground">{t('empresa.descHighlight1')}</span>
+              {t('empresa.descMiddle')}
               <span className="font-semibold text-foreground">{t('empresa.descHighlight2')}</span>
               {t('empresa.descOutro')}
             </p>
           </div>
 
-                <h3 className="font-display font-bold text-lg text-heading leading-tight">{item.title}</h3>
-                <p className="text-sm text-muted-foreground mt-2 leading-relaxed max-w-[18rem]">{item.subtitle}</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { icon: Target, titleKey: 'empresa.mission', descKey: 'empresa.missionDesc' },
+              { icon: Eye, titleKey: 'empresa.vision', descKey: 'empresa.visionDesc' },
               { icon: Shield, titleKey: 'empresa.values', descKey: 'empresa.valuesDesc' },
             ].map((item, idx) => (
               <AnimatedSection key={item.titleKey} direction="up" delay={idx * 120} duration={700} className="bg-background rounded-2xl p-8 shadow-[0_1px_3px_rgba(0,0,0,0.05),0_10px_24px_-4px_rgba(0,0,0,0.02)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.05),0_20px_32px_-8px_rgba(0,0,0,0.08)] hover:scale-[1.01] transition-all duration-300">
