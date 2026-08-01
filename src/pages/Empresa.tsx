@@ -3,7 +3,6 @@ import { Users, Award, Truck, Wrench, Target, Eye, Shield } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import empresaHero from '@/assets/empresa-hero.jpg';
 import AnimatedSection from '@/components/AnimatedSection';
-import AnimatedCounter from '@/components/AnimatedCounter';
 
 const Empresa = () => {
   const { t } = useTranslation();
@@ -63,19 +62,33 @@ const Empresa = () => {
           <h2 className="text-3xl font-bold tracking-tight mb-12">{t('empresa.capabilities')}</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { icon: Users, titleKey: 'empresa.staff', value: 200, suffix: '+' },
-              { icon: Award, titleKey: 'empresa.certs', value: 4 },
-              { icon: Truck, titleKey: 'empresa.trucks', value: 50, suffix: '+' },
-              { icon: Wrench, titleKey: 'empresa.experience', value: 25, suffix: '+' },
+              {
+                icon: Users,
+                title: 'Personal Calificado',
+                subtitle: 'Con Certificaciones, Experiencia y Capacitaciones constantes.',
+              },
+              {
+                icon: Award,
+                title: 'Certificaciones',
+                subtitle: 'Contamos con ISO 9001, BQSR, IAS, IAF.',
+              },
+              {
+                icon: Truck,
+                title: 'Flota de Camiones',
+                subtitle: 'Con todos los permisos para el transporte a nivel nacional en Perú.',
+              },
+              {
+                icon: Wrench,
+                title: 'Equipos y Maquinarias',
+                subtitle: 'De última tecnología para Gestión Residuos y Destrucciones.',
+              },
             ].map((item, idx) => (
-              <AnimatedSection key={item.titleKey} direction="up" delay={idx * 100} duration={600} className="flex flex-col items-center">
+              <AnimatedSection key={item.title} direction="up" delay={idx * 100} duration={600} className="flex flex-col items-center">
                 <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-4">
                   <item.icon className="h-8 w-8 text-primary" />
                 </div>
-                <span className="font-display font-bold text-3xl text-heading">
-                  <AnimatedCounter target={item.value} suffix={item.suffix || ''} />
-                </span>
-                <span className="text-sm text-muted-foreground mt-1">{t(item.titleKey)}</span>
+                <h3 className="font-display font-bold text-lg text-heading leading-tight">{item.title}</h3>
+                <p className="text-sm text-muted-foreground mt-2 leading-relaxed max-w-[18rem]">{item.subtitle}</p>
               </AnimatedSection>
             ))}
           </div>
