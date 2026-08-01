@@ -12,7 +12,7 @@ const Empresa = () => {
   return (
     <>
       <AnimatedSection direction="up" duration={900} className="relative flex items-center min-h-[40vh] w-full overflow-hidden">
-        <img src={empresaHero} alt="ECO M empresa" className="absolute inset-0 w-full h-full object-cover" />
+        <img src={empresaHero} alt="ECO M empresa" className="absolute inset-0 w-full h-full object-contain object-center bg-[#f3f6f7]" />
         <div className="absolute inset-0 bg-foreground/65" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 w-full text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-background tracking-tight">{t('empresa.ourCompany')}</h1>
@@ -29,8 +29,12 @@ const Empresa = () => {
           <div className="text-center mb-16">
             <p className="text-xs uppercase tracking-[0.2em] text-primary font-semibold mb-3">ECO M</p>
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">{t('empresa.who')}</h2>
-            <p className="text-muted-foreground leading-relaxed max-w-3xl mx-auto text-lg">
-              {t('empresa.desc')}
+            <p className="text-muted-foreground leading-relaxed max-w-4xl mx-auto text-lg">
+              {t('empresa.descIntro')}
+              <span className="font-semibold text-foreground">{t('empresa.descHighlight1')}</span>
+              {t('empresa.descMiddle')}
+              <span className="font-semibold text-foreground">{t('empresa.descHighlight2')}</span>
+              {t('empresa.descOutro')}
             </p>
           </div>
 
