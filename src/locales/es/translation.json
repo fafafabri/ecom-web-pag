@@ -143,8 +143,14 @@
     },
     "destruccionRAEE": {
       "title": "Destrucción de RAEE",
-      "desc": "Realizamos el recojo, transporte y destrucción de Residuos de Aparatos Eléctricos y Electrónicos (RAEE) cumpliendo con la normativa vigente y garantizando la disposición final adecuada.",
-      "benefits": ["Recojo y transporte especializado", "Destrucción certificada de equipos electrónicos", "Cumplimiento de normativa RAEE", "Disposición final responsable", "Trazabilidad completa del proceso"]
+      "intro": "Garantizamos la total seguridad de su información confidencial mientras impulsamos el cumplimiento de sus objetivos de sostenibilidad empresarial. A través de nuestro servicio especializado de Minería Urbana y Manejo de RAEE a nivel nacional, nos encargamos del ciclo final de sus activos tecnológicos en desuso.",
+      "aeHeading": "Sobre la destrucción de AEE (Aparatos Eléctricos y Electrónicos)",
+      "aeText": "Este procedimiento técnico consiste en la recolección, el desensamblaje estructurado y la trituración física e irreversible de los equipos informáticos y de comunicación. Su propósito principal es garantizar la inutilización definitiva del hardware para anular cualquier riesgo de fuga de datos o comercialización informal, permitiendo al mismo tiempo la recuperación de materias primas que serán reinsertadas en la industria productiva.",
+      "supportHeading": "Respaldo para su gestión corporativa:",
+      "supportBenefits": ["Baja contable segura: Ejecutamos la destrucción física de los activos con presencia notarial para transparentar sus procesos administrativos.", "Cumplimiento normativo: Emitimos el Certificado Ambiental correspondiente, un documento clave para dar soporte a sus reportes ESG y certificar sus prácticas de economía circular."],
+      "fullHeading": "Destrucción de Residuos de Aparatos Eléctricos y Electrónicos (RAEE)",
+      "fullNote": "(Combina el término completo con su sigla, lo cual es ideal para que el cliente entienda exactamente de qué se trata).",
+      "serviceItems": ["Destrucción de equipos informáticos y de cómputo", "Destrucción de activos de TI y comunicaciones", "Destrucción de servidores", "Destrucción de discos duros", "Destrucción de celulares"]
     },
     "destruccionRopa": {
       "title": "Destrucción de Ropa",

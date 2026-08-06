@@ -42,6 +42,20 @@ const serviceKeyMap: { [key: string]: string } = {
   'asesorias-ambientales': 'asesorias',
 };
 
+type ServiceCopy = {
+  title: string;
+  desc: string;
+  benefits: string[];
+  intro?: string;
+  aeHeading?: string;
+  aeText?: string;
+  supportHeading?: string;
+  supportBenefits?: string[];
+  fullHeading?: string;
+  fullNote?: string;
+  serviceItems?: string[];
+};
+
 const ServiceDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const { t } = useTranslation();
@@ -51,7 +65,7 @@ const ServiceDetail = () => {
 
   const image = serviceImages[service.imageKey];
   const serviceKey = serviceKeyMap[service.id] || service.id;
-  const serviceData = t(`serviceDetails.${serviceKey}`, { returnObjects: true }) as { title: string; desc: string; benefits: string[] };
+  const serviceData = t(`serviceDetails.${serviceKey}`, { returnObjects: true }) as ServiceCopy;
 
   const related = service.id === 'sanitarios-portatiles'
     ? []
@@ -85,16 +99,54 @@ const ServiceDetail = () => {
               <div className="w-8 h-1 rounded-full bg-accent" />
               <div className="w-8 h-1 rounded-full bg-primary" />
             </div>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-10">{serviceData?.desc || service.fullDesc}</p>
+            {service.id === 'destruccion-raee' ? (
+              <div className="space-y-8 text-lg text-muted-foreground leading-relaxed">
+                <p>{serviceData?.intro || service.fullDesc}</p>
 
-            <div className="flex flex-col gap-4">
-              {(serviceData?.benefits || service.benefits).map((b: string, i: number) => (
-                <div key={i} className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary mt-0.5 shrink-0" />
-                  <span className="text-foreground">{b}</span>
+                <div className="space-y-3">
+                  <h3 className="text-xl font-semibold text-foreground">{serviceData?.aeHeading || 'Sobre la destrucción de AEE (Aparatos Eléctricos y Electrónicos)'}</h3>
+                  <p>{serviceData?.aeText || ''}</p>
                 </div>
-              ))}
-            </div>
+
+                <div className="space-y-4">
+                  <h3 className="text-xl font-semibold text-foreground">{serviceData?.supportHeading || 'Respaldo para su gestión corporativa:'}</h3>
+                  <div className="flex flex-col gap-4">
+                    {(serviceData?.supportBenefits || []).map((b: string, i: number) => (
+                      <div key={i} className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-primary mt-0.5 shrink-0" />
+                        <span className="text-foreground text-base">{b}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                  <h3 className="text-xl font-semibold text-foreground">{serviceData?.fullHeading || 'Destrucción de Residuos de Aparatos Eléctricos y Electrónicos (RAEE)'}</h3>
+                  {serviceData?.fullNote ? <p className="text-base italic text-muted-foreground">{serviceData.fullNote}</p> : null}
+                  <div className="flex flex-col gap-4 pt-2">
+                    {(serviceData?.serviceItems || []).map((b: string, i: number) => (
+                      <div key={i} className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-primary mt-0.5 shrink-0" />
+                        <span className="text-foreground text-base">{b}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-10">{serviceData?.desc || service.fullDesc}</p>
+
+                <div className="flex flex-col gap-4">
+                  {(serviceData?.benefits || service.benefits).map((b: string, i: number) => (
+                    <div key={i} className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-primary mt-0.5 shrink-0" />
+                      <span className="text-foreground">{b}</span>
+                    </div>
+                  ))}
+                </div>
+              </>
+            )}
           </div>
 
           <div className="lg:col-span-5">

@@ -36,8 +36,8 @@ export const services: Service[] = [
     category: 'destruccion',
     title: 'Destrucción de RAEE',
     shortDesc: 'Manejo adecuado de residuos de aparatos eléctricos y electrónicos.',
-    fullDesc: 'Realizamos el recojo, transporte y destrucción de Residuos de Aparatos Eléctricos y Electrónicos (RAEE) cumpliendo con la normativa vigente y garantizando la disposición final adecuada.',
-    benefits: ['Recojo y transporte especializado', 'Destrucción certificada de equipos electrónicos', 'Cumplimiento de normativa RAEE', 'Disposición final responsable', 'Trazabilidad completa del proceso'],
+    fullDesc: 'Garantizamos la total seguridad de su información confidencial mientras impulsamos el cumplimiento de sus objetivos de sostenibilidad empresarial. A través de nuestro servicio especializado de Minería Urbana y Manejo de RAEE a nivel nacional, nos encargamos del ciclo final de sus activos tecnológicos en desuso.',
+    benefits: ['Baja contable segura', 'Cumplimiento normativo', 'Destrucción de equipos informáticos y de cómputo', 'Destrucción de activos de TI y comunicaciones', 'Destrucción de servidores', 'Destrucción de discos duros', 'Destrucción de celulares'],
     imageKey: 'destruccion-raee',
   },
   {
