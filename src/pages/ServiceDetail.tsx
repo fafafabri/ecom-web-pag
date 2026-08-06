@@ -53,9 +53,11 @@ const ServiceDetail = () => {
   const serviceKey = serviceKeyMap[service.id] || service.id;
   const serviceData = t(`serviceDetails.${serviceKey}`, { returnObjects: true }) as { title: string; desc: string; benefits: string[] };
 
-  const related = (service.category === 'destruccion' ? servicesByCategory.destruccion : servicesByCategory.otros)
-    .filter(s => s.id !== service.id)
-    .slice(0, 3);
+  const related = service.id === 'sanitarios-portatiles'
+    ? []
+    : (service.category === 'destruccion' ? servicesByCategory.destruccion : servicesByCategory.otros)
+        .filter(s => s.id !== service.id)
+        .slice(0, 3);
 
   return (
     <>
@@ -117,7 +119,7 @@ const ServiceDetail = () => {
         </div>
       </section>
 
-      {related.length > 0 && (
+      {related.length > 0 && service.id !== 'sanitarios-portatiles' && (
         <section className="py-16 bg-background">
           <div className="max-w-7xl mx-auto px-6">
             <h3 className="font-display font-bold text-2xl mb-8">Otras Soluciones</h3>
