@@ -52,6 +52,7 @@ type ServiceCopy = {
   supportHeading?: string;
   supportBenefits?: string[];
   fullHeading?: string;
+  specializationIntro?: string;
   fullNote?: string;
   serviceItems?: string[];
 };
@@ -122,6 +123,7 @@ const ServiceDetail = () => {
 
                 <div className="space-y-3">
                   <h3 className="text-xl font-semibold text-foreground">{serviceData?.fullHeading || 'Destrucción de Residuos de Aparatos Eléctricos y Electrónicos (RAEE)'}</h3>
+                  <p className="text-base text-muted-foreground font-medium">{serviceData?.specializationIntro || 'Nos especializamos en:'}</p>
                   {serviceData?.fullNote ? <p className="text-base italic text-muted-foreground">{serviceData.fullNote}</p> : null}
                   <div className="flex flex-col gap-4 pt-2">
                     {(serviceData?.serviceItems || []).map((b: string, i: number) => (

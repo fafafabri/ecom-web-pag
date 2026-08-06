@@ -149,7 +149,7 @@
       "supportHeading": "Respaldo para su gestión corporativa:",
       "supportBenefits": ["Baja contable segura: Ejecutamos la destrucción física de los activos con presencia notarial para transparentar sus procesos administrativos.", "Cumplimiento normativo: Emitimos el Certificado Ambiental correspondiente, un documento clave para dar soporte a sus reportes ESG y certificar sus prácticas de economía circular."],
       "fullHeading": "Destrucción de Residuos de Aparatos Eléctricos y Electrónicos (RAEE)",
-      "fullNote": "(Combina el término completo con su sigla, lo cual es ideal para que el cliente entienda exactamente de qué se trata).",
+      "specializationIntro": "Nos especializamos en:",
       "serviceItems": ["Destrucción de equipos informáticos y de cómputo", "Destrucción de activos de TI y comunicaciones", "Destrucción de servidores", "Destrucción de discos duros", "Destrucción de celulares"]
     },
     "destruccionRopa": {

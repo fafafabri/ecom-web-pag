@@ -149,7 +149,7 @@
       "supportHeading": "Support for your corporate management:",
       "supportBenefits": ["Safe accounting disposal: We carry out the physical destruction of assets with notarial presence to provide transparency to your administrative processes.", "Regulatory compliance: We issue the corresponding Environmental Certificate, a key document to support your ESG reports and certify your circular economy practices."],
       "fullHeading": "Destruction of Waste Electrical and Electronic Equipment (WEEE)",
-      "fullNote": "(Combines the full term with its acronym, which is ideal so the client understands exactly what it is).",
+      "specializationIntro": "We specialize in:",
       "serviceItems": ["Destruction of IT and computing equipment", "Destruction of IT and communications assets", "Destruction of servers", "Destruction of hard drives", "Destruction of cell phones"]
     },
     "destruccionRopa": {
