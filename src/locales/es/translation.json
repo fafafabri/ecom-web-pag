@@ -14,7 +14,7 @@
     "services": {
       "destruccion_notarial": "Destrucción Notarial de Documentos",
       "destruccion_residuos": "Destrucción de Residuos",
-      "destruccion_raee": "Destrucción de RAEE",
+      "destruccion_raee": "Destrucción de Residuos de Aparatos Eléctricos y Electrónicos (RAEE)",
       "destruccion_ropa": "Destrucción de Ropa",
       "disposicion_final": "Disposición Final",
       "limpieza_grasas": "Limpieza de Trampas de Grasa",
@@ -142,7 +142,7 @@
       "benefits": ["Destrucción de mermas y mercadería", "Inventarios obsoletos y materiales dados de baja", "Certificado de destrucción", "Cumplimiento normativo ambiental", "Supervisión permanente del proceso"]
     },
     "destruccionRAEE": {
-      "title": "Destrucción de RAEE",
+      "title": "Destrucción de Residuos de Aparatos Eléctricos y Electrónicos (RAEE)",
       "intro": "Garantizamos la total seguridad de su información confidencial mientras impulsamos el cumplimiento de sus objetivos de sostenibilidad empresarial. A través de nuestro servicio especializado de Minería Urbana y Manejo de RAEE a nivel nacional, nos encargamos del ciclo final de sus activos tecnológicos en desuso.",
       "aeHeading": "Sobre la destrucción de AEE (Aparatos Eléctricos y Electrónicos)",
       "aeText": "Este procedimiento técnico consiste en la recolección, el desensamblaje estructurado y la trituración física e irreversible de los equipos informáticos y de comunicación. Su propósito principal es garantizar la inutilización definitiva del hardware para anular cualquier riesgo de fuga de datos o comercialización informal, permitiendo al mismo tiempo la recuperación de materias primas que serán reinsertadas en la industria productiva.",

@@ -82,7 +82,7 @@ const QuoteFormDialog = ({ open, onOpenChange }: QuoteFormDialogProps) => {
                       <SelectLabel>{t('form.quote.destruction')}</SelectLabel>
                       <SelectItem value="Destrucción Notarial de Documentos">{t('nav.services.destruccion_notarial')}</SelectItem>
                       <SelectItem value="Destrucción de Residuos">{t('nav.services.destruccion_residuos')}</SelectItem>
-                      <SelectItem value="Destrucción de RAEE">{t('nav.services.destruccion_raee')}</SelectItem>
+                      <SelectItem value="Destrucción de Residuos de Aparatos Eléctricos y Electrónicos (RAEE)">{t('nav.services.destruccion_raee')}</SelectItem>
                       <SelectItem value="Destrucción de Ropa">{t('nav.services.destruccion_ropa')}</SelectItem>
                     </SelectGroup>
                     <SelectGroup>

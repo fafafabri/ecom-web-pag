@@ -34,7 +34,7 @@ export const services: Service[] = [
     id: 'destruccion-raee',
     slug: 'destruccion-de-raee',
     category: 'destruccion',
-    title: 'Destrucción de RAEE',
+    title: 'Destrucción de Residuos de Aparatos Eléctricos y Electrónicos (RAEE)',
     shortDesc: 'Manejo adecuado de residuos de aparatos eléctricos y electrónicos.',
     fullDesc: 'Garantizamos la total seguridad de su información confidencial mientras impulsamos el cumplimiento de sus objetivos de sostenibilidad empresarial. A través de nuestro servicio especializado de Minería Urbana y Manejo de RAEE a nivel nacional, nos encargamos del ciclo final de sus activos tecnológicos en desuso.',
     benefits: ['Baja contable segura', 'Cumplimiento normativo', 'Destrucción de equipos informáticos y de cómputo', 'Destrucción de activos de TI y comunicaciones', 'Destrucción de servidores', 'Destrucción de discos duros', 'Destrucción de celulares'],
