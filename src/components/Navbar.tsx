@@ -4,12 +4,11 @@ import { Phone, ChevronDown, Menu, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
 import logo from '@/assets/logo-eco-m-final.png';
-import { destruccionMenu, mainNav, otrosMenu } from '@/data/menu';
 
 const Navbar = () => {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [activeCategory, setActiveCategory] = useState<'destruccion' | 'limpieza' | 'logistica' | 'comercial'>('destruccion');
+  const [activeCategory, setActiveCategory] = useState<'destruccion' | 'logistica' | 'sanitarios'>('destruccion');
   const location = useLocation();
   const { t } = useTranslation();
 
@@ -27,17 +26,6 @@ const Navbar = () => {
       ],
     },
     {
-      key: 'limpieza',
-      label: t('nav.categories.limpieza'),
-      description: t('nav.categories.limpiezaDesc'),
-      items: [
-        { title: t('nav.services.limpieza_grasas'), slug: 'limpieza-trampas-de-grasa' },
-        { title: t('nav.services.limpieza_pozos'), slug: 'limpieza-pozos-septicos' },
-        { title: t('nav.services.limpieza_biodigestores'), slug: 'limpieza-de-biodigestores' },
-        { title: t('nav.services.limpieza_industrial'), slug: 'limpieza-industrial' },
-      ],
-    },
-    {
       key: 'logistica',
       label: t('nav.categories.logistica'),
       description: t('nav.categories.logisticaDesc'),
@@ -51,12 +39,10 @@ const Navbar = () => {
       ],
     },
     {
-      key: 'comercial',
-      label: t('nav.categories.comercial'),
-      description: t('nav.categories.comercialDesc'),
+      key: 'sanitarios',
+      label: t('nav.services.sanitarios'),
+      description: '',
       items: [
-        { title: t('nav.services.asesorias'), slug: 'asesorias-ambientales' },
-        { title: t('nav.services.comercializacion'), slug: 'comercializacion-de-materiales' },
         { title: t('nav.services.sanitarios'), slug: 'venta-sanitarios-portatiles' },
       ],
     },

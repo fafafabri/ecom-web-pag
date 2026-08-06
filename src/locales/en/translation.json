@@ -8,12 +8,8 @@
     "categories": {
       "destruccion": "Destruction and Disposal",
       "destruccionDesc": "Certified destruction and final disposal services.",
-      "limpieza": "Industrial Cleaning",
-      "limpiezaDesc": "Industrial cleaning and specialized maintenance services.",
       "logistica": "Logistics and Waste Management",
-      "logisticaDesc": "Logistics solutions and specialized waste management.",
-      "comercial": "Commercial and Environmental Solutions",
-      "comercialDesc": "Commercial solutions and strategic environmental advisory."
+      "logisticaDesc": "Logistics solutions and specialized waste management."
     },
     "services": {
       "destruccion_notarial": "Notarial Document Destruction",
@@ -24,7 +20,6 @@
       "limpieza_grasas": "Grease Trap Cleaning",
       "limpieza_pozos": "Septic Tank Cleaning",
       "limpieza_biodigestores": "Biodigester Cleaning",
-      "limpieza_industrial": "Industrial Cleaning",
       "recojo_transporte": "Collection and Transport of Waste",
       "carga_transporte": "Loading and Transportation",
       "transporte_maptel": "Maptel Transportation",
@@ -183,8 +178,8 @@
     },
     "sanitariosPortatiles": {
       "title": "Sale of Portable Toilets",
-      "desc": "Sale and rental of high-quality portable toilets for events, construction projects and temporary projects. We include maintenance and periodic cleaning services.",
-      "benefits": ["New and quality toilets", "Maintenance service included", "Delivery and installation", "Standard and premium models", "National coverage"]
+      "desc": "At ECO M, we supply mining, industrial, construction and event sectors across Peru with high-durability portable sinks and toilets. Each unit is built to withstand intensive use in demanding environments, ensuring cleanliness and easy maintenance.",
+      "benefits": ["Sale of Standard and VIP Portable Toilets.", "Sale of autonomous Portable Sinks.", "Sale of Portable Showers for camps.", "Complementary suction and cabin cleaning service."]
     },
     "limpiezaGrasas": {
       "title": "Grease Trap Cleaning",
@@ -195,11 +190,6 @@
       "title": "Septic Tank Cleaning",
       "desc": "Professional cleaning, maintenance and disinfection service for septic tanks with high-capacity suction equipment and specialized personnel.",
       "benefits": ["High capacity equipment", "Specialized personnel", "24/7 emergency service", "Disinfection included", "Coverage in Lima and provinces"]
-    },
-    "limpiezaIndustrial": {
-      "title": "Industrial Cleaning",
-      "desc": "Complete industrial cleaning service for production plants, warehouses, corporate offices and common areas. We use specialized equipment and products.",
-      "benefits": ["Cleaning of production plants", "Disinfection of industrial areas", "Specialized equipment", "Personnel trained with PPE", "Customized cleaning plans"]
     },
     "asesorias": {
       "title": "Environmental Advisory",

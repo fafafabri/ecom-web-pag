@@ -97,7 +97,6 @@ const QuoteFormDialog = ({ open, onOpenChange }: QuoteFormDialogProps) => {
                       <SelectItem value="Venta de Sanitarios Portátiles">{t('nav.services.sanitarios')}</SelectItem>
                       <SelectItem value="Limpieza de Trampas de Grasa">{t('nav.services.limpieza_grasas')}</SelectItem>
                       <SelectItem value="Limpieza de Pozos Sépticos">{t('nav.services.limpieza_pozos')}</SelectItem>
-                      <SelectItem value="Limpieza Industrial">{t('nav.services.limpieza_industrial')}</SelectItem>
                       <SelectItem value="Asesorías Ambientales">{t('nav.services.asesorias')}</SelectItem>
                       <SelectItem value="Limpieza de Biodigestores">{t('nav.services.limpieza_biodigestores')}</SelectItem>
                       <SelectItem value="Comercialización de Materiales">{t('nav.services.comercializacion')}</SelectItem>

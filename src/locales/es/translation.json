@@ -8,12 +8,8 @@
     "categories": {
       "destruccion": "Destrucción y Disposición",
       "destruccionDesc": "Servicios certificados de destrucción y disposición final.",
-      "limpieza": "Limpieza Industrial",
-      "limpiezaDesc": "Servicios de limpieza industrial y mantenimiento especializado.",
       "logistica": "Logística y Gestión de Residuos",
-      "logisticaDesc": "Soluciones logísticas y gestión especializada de residuos.",
-      "comercial": "Soluciones Comerciales y Ambientales",
-      "comercialDesc": "Soluciones comerciales y asesoría ambiental estratégica."
+      "logisticaDesc": "Soluciones logísticas y gestión especializada de residuos."
     },
     "services": {
       "destruccion_notarial": "Destrucción Notarial de Documentos",
@@ -24,7 +20,6 @@
       "limpieza_grasas": "Limpieza de Trampas de Grasa",
       "limpieza_pozos": "Limpieza de Pozos Sépticos",
       "limpieza_biodigestores": "Limpieza de Biodigestores",
-      "limpieza_industrial": "Limpieza Industrial",
       "recojo_transporte": "Recojo y Transporte de Residuos",
       "carga_transporte": "Carga y Transporte",
       "transporte_maptel": "Transporte Maptel",
@@ -183,8 +178,8 @@
     },
     "sanitariosPortatiles": {
       "title": "Venta de Sanitarios Portátiles",
-      "desc": "Venta y alquiler de sanitarios portátiles de alta calidad para eventos, obras de construcción y proyectos temporales. Incluimos servicio de mantenimiento y limpieza periódica.",
-      "benefits": ["Sanitarios nuevos y de calidad", "Servicio de mantenimiento incluido", "Entrega e instalación", "Modelos estándar y premium", "Atención a nivel nacional"]
+      "desc": "En ECO M, proveemos a los sectores minero, industrial, de construcción y eventos en todo el Perú con lavamanos y baños portátiles de alta durabilidad. Cada unidad está fabricada para tolerar el uso intensivo en entornos exigentes, asegurando limpieza y un mantenimiento sencillo.",
+      "benefits": ["Venta de Baños Portátiles Estándar y VIP.", "Venta de Lavamanos Portátiles autónomos.", "Venta de Duchas Portátiles para campamentos.", "Servicio complementario de Succión y Limpieza de cabinas."]
     },
     "limpiezaGrasas": {
       "title": "Limpieza de Trampas de Grasa",
@@ -195,11 +190,6 @@
       "title": "Limpieza de Pozos Sépticos",
       "desc": "Servicio profesional de limpieza, mantenimiento y desinfección de pozos sépticos con equipos de succión de alta capacidad y personal especializado.",
       "benefits": ["Equipos de alta capacidad", "Personal especializado", "Servicio 24/7 para emergencias", "Desinfección incluida", "Cobertura Lima y provincias"]
-    },
-    "limpiezaIndustrial": {
-      "title": "Limpieza Industrial",
-      "desc": "Servicio completo de limpieza industrial para plantas de producción, almacenes, oficinas corporativas y áreas comunes. Utilizamos equipos y productos especializados.",
-      "benefits": ["Limpieza de plantas de producción", "Desinfección de áreas industriales", "Equipos especializados", "Personal capacitado con EPP", "Planes de limpieza personalizados"]
     },
     "asesorias": {
       "title": "Asesorías Ambientales",

@@ -107,8 +107,8 @@ export const services: Service[] = [
     category: 'otros',
     title: 'Venta de Sanitarios Portátiles',
     shortDesc: 'Sanitarios portátiles para eventos y obras de construcción.',
-    fullDesc: 'Venta y alquiler de sanitarios portátiles de alta calidad para eventos, obras de construcción y proyectos temporales. Incluimos servicio de mantenimiento y limpieza periódica.',
-    benefits: ['Sanitarios nuevos y de calidad', 'Servicio de mantenimiento incluido', 'Entrega e instalación', 'Modelos estándar y premium', 'Atención a nivel nacional'],
+    fullDesc: 'En ECO M, proveemos a los sectores minero, industrial, de construcción y eventos en todo el Perú con lavamanos y baños portátiles de alta durabilidad. Cada unidad está fabricada para tolerar el uso intensivo en entornos exigentes, asegurando limpieza y un mantenimiento sencillo.',
+    benefits: ['Venta de Baños Portátiles Estándar y VIP.', 'Venta de Lavamanos Portátiles autónomos.', 'Venta de Duchas Portátiles para campamentos.', 'Servicio complementario de Succión y Limpieza de cabinas.'],
     imageKey: 'sanitarios',
   },
   {
@@ -130,16 +130,6 @@ export const services: Service[] = [
     fullDesc: 'Servicio profesional de limpieza, mantenimiento y desinfección de pozos sépticos con equipos de succión de alta capacidad y personal especializado.',
     benefits: ['Equipos de alta capacidad', 'Personal especializado', 'Servicio 24/7 para emergencias', 'Desinfección incluida', 'Cobertura Lima y provincias'],
     imageKey: 'pozos-septicos',
-  },
-  {
-    id: 'limpieza-industrial',
-    slug: 'limpieza-industrial',
-    category: 'otros',
-    title: 'Limpieza Industrial',
-    shortDesc: 'Limpieza integral de plantas y facilidades industriales.',
-    fullDesc: 'Servicio completo de limpieza industrial para plantas de producción, almacenes, oficinas corporativas y áreas comunes. Utilizamos equipos y productos especializados.',
-    benefits: ['Limpieza de plantas de producción', 'Desinfección de áreas industriales', 'Equipos especializados', 'Personal capacitado con EPP', 'Planes de limpieza personalizados'],
-    imageKey: 'limpieza-industrial',
   },
   {
     id: 'asesorias-ambientales',

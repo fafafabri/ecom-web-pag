@@ -39,7 +39,6 @@ const serviceKeyMap: { [key: string]: string } = {
   'sanitarios-portatiles': 'sanitariosPortatiles',
   'trampas-grasa': 'limpiezaGrasas',
   'pozos-septicos': 'limpiezaPozos',
-  'limpieza-industrial': 'limpiezaIndustrial',
   'asesorias-ambientales': 'asesorias',
 };
 
