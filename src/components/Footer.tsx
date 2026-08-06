@@ -1,13 +1,7 @@
-import { MapPin, Phone, Clock, Mail, Linkedin, Facebook, Twitter, Instagram } from 'lucide-react';
+import { MapPin, Phone, Clock, Mail } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import logo from '@/assets/logo-eco-m-final.png';
 
-const socials = [
-  { label: 'Facebook', icon: Facebook, href: 'https://www.facebook.com/profile.php?id=61579597344363' },
-  { label: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/in/eco-mba-87774837b/' },
-  { label: 'X', icon: Twitter, href: 'https://x.com/eco_mba_peru' },
-  { label: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/eco_mba_peru/' },
-];
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -23,20 +17,7 @@ const Footer = () => {
             <p className="text-sm leading-relaxed opacity-70 mb-6">
               {t('footer.description')}
             </p>
-            <div className="flex gap-3 mt-4">
-              {socials.map(s => (
-                <a
-                  key={s.label}
-                  href={s.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={s.label}
-                  className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-white transition-all duration-300 hover:bg-[#448E33]/20 hover:text-[#448E33] hover:scale-110"
-                >
-                  <s.icon className="h-5 w-5" />
-                </a>
-              ))}
-            </div>
+            {/* Redes sociales removidas del pie según solicitud */}
           </div>
 
           <div>
