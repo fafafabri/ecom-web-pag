@@ -87,8 +87,8 @@ const Empresa = () => {
                 <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-4">
                   <item.icon className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="font-display font-bold text-lg text-heading leading-tight">{item.title}</h3>
-                <p className="text-sm text-muted-foreground mt-2 leading-relaxed max-w-[18rem]">{item.subtitle}</p>
+                <h3 className="font-display font-bold text-xl text-heading leading-tight">{item.title}</h3>
+                <p className="text-base text-muted-foreground mt-3 leading-relaxed max-w-[18rem]">{item.subtitle}</p>
               </AnimatedSection>
             ))}
           </div>
