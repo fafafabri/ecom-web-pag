@@ -24,7 +24,19 @@ const Empresa = () => {
 
             <div className="flex flex-wrap gap-4 mt-6 justify-center">
               <a
-                href="/soluciones"
+                href="#soluciones"
+                onClick={(e) => {
+                  e.preventDefault();
+                  if (typeof document !== 'undefined') {
+                    const el = document.querySelector('#soluciones');
+                    if (el) {
+                      (el as HTMLElement).scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    } else {
+                      // Fallback: update the hash
+                      window.location.hash = '#soluciones';
+                    }
+                  }
+                }}
                 className="group bg-cta text-cta-foreground px-6 py-3 rounded-xl font-semibold shadow-[0_4px_14px_0_hsl(var(--cta)/0.4)] hover:shadow-[0_8px_24px_hsl(var(--cta)/0.5)] hover:scale-[1.04] hover:-translate-y-1 transition-all duration-300 inline-flex items-center gap-2"
               >
                 Conocer Soluciones
