@@ -43,7 +43,7 @@ const Empresa = () => {
               </a>
 
               <a
-                href={`https://wa.me/51933342580?text=${encodeURIComponent('Hola, deseo conocer más sobre los servicios y acreditaciones de ECO M.')}`}
+                href={`https://wa.me/51902667683?text=${encodeURIComponent('Hola, deseo conocer más sobre los servicios y acreditaciones de ECO M.')}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-transparent text-background border border-background/40 px-6 py-3 rounded-xl font-semibold hover:bg-background/15 hover:border-background/60 hover:scale-[1.03] hover:shadow-[0_4px_14px_rgba(255,255,255,0.15)] transition-all duration-300 backdrop-blur-sm inline-flex items-center"
