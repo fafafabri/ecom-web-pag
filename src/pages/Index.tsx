@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right';
-import Shield from 'lucide-react/dist/esm/icons/shield';
-import Award from 'lucide-react/dist/esm/icons/award';
-import Wrench from 'lucide-react/dist/esm/icons/wrench';
-import Target from 'lucide-react/dist/esm/icons/target';
+import Lock from 'lucide-react/dist/esm/icons/lock';
+import Scale from 'lucide-react/dist/esm/icons/scale';
+import Factory from 'lucide-react/dist/esm/icons/factory';
+import FileText from 'lucide-react/dist/esm/icons/file-text';
 import ChevronDown from 'lucide-react/dist/esm/icons/chevron-down';
 import { useTranslation } from 'react-i18next';
 import { services } from '@/data/services';
@@ -45,10 +45,10 @@ const Index = () => {
   }, []);
 
   const pillars = [
-    { icon: Shield, title: t('why.pillars.qualified'), desc: t('why.pillars.qualifiedDesc') },
-    { icon: Award,  title: t('why.pillars.certifications'), desc: t('why.pillars.certificationsDesc') },
-    { icon: Wrench, title: t('why.pillars.fleet'), desc: t('why.pillars.fleetDesc') },
-    { icon: Target, title: t('why.pillars.equipment'), desc: t('why.pillars.equipmentDesc') },
+    { icon: Lock, title: t('why.pillars.qualified'), desc: t('why.pillars.qualifiedDesc') },
+    { icon: Scale, title: t('why.pillars.certifications'), desc: t('why.pillars.certificationsDesc') },
+    { icon: Factory, title: t('why.pillars.fleet'), desc: t('why.pillars.fleetDesc') },
+    { icon: FileText, title: t('why.pillars.equipment'), desc: t('why.pillars.equipmentDesc') },
   ];
 
   const certifications = [
@@ -197,7 +197,12 @@ const Index = () => {
                 <div className="w-8 h-1 rounded-full bg-primary" />
               </div>
               <p className="text-muted-foreground leading-relaxed mb-8 text-justify">{t('why.desc')}</p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+<h3 className="text-xl md:text-2xl font-bold tracking-tight mb-6 mt-8 text-foreground">
+  ¿Por qué las empresas líderes confían en ECO M?
+</h3>
+
+<div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {pillars.map((p, i) => (
                   <AnimatedSection key={p.title} direction="up" duration={600} delay={200 + i * 100}>
                     <div className="group flex gap-4 p-4 rounded-xl hover:bg-background hover:shadow-md transition-all duration-300 cursor-default">
