@@ -49,7 +49,7 @@ const Empresa = () => {
         <div className="max-w-5xl mx-auto px-6 text-center">
           <p className="text-xs uppercase tracking-[0.2em] text-primary font-semibold mb-3">ECO M</p>
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-8">¿Quiénes Somos?</h2>
-          <p className="text-justify text-muted-foreground leading-relaxed text-base md:text-lg max-w-4xl mx-auto">
+          <p className="text-center text-muted-foreground leading-relaxed text-base md:text-lg max-w-3xl mx-auto">
             En ECO M (Expert Destruction Management) nos especializamos en mitigar los riesgos operativos, legales y reputacionales de las organizaciones. Entendemos que la acumulación de inventarios obsoletos, la indumentaria con logotipo corporativo y el manejo de archivos con datos sensibles representan una vulnerabilidad para su empresa si caen en manos equivocadas.
             <br /><br />
             Diseñamos e implementamos procesos de destrucción física e inhabilitación irreversible, operando bajo la normativa ambiental del MINAM/OEFA y brindando el sustento notarial exigido por la SUNAT para la deducción de mermas y desmedros en el Impuesto a la Renta.
@@ -66,7 +66,7 @@ const Empresa = () => {
                 <Target className="h-6 w-6 text-primary" />
               </div>
               <h3 className="font-bold text-xl mb-3">Nuestra Misión</h3>
-              <p className="text-muted-foreground leading-relaxed text-sm md:text-base text-justify w-full">
+              <p className="text-muted-foreground leading-relaxed text-sm md:text-base text-center w-full">
                 Proteger el prestigio y la propiedad intelectual de nuestros clientes mediante procesos blindados de destrucción, garantizando la trazabilidad total, el cumplimiento legal y una disposición final ambientalmente responsable.
               </p>
             </div>
@@ -76,7 +76,7 @@ const Empresa = () => {
                 <Eye className="h-6 w-6 text-primary" />
               </div>
               <h3 className="font-bold text-xl mb-3">Nuestra Visión</h3>
-              <p className="text-muted-foreground leading-relaxed text-sm md:text-base text-justify w-full">
+              <p className="text-muted-foreground leading-relaxed text-sm md:text-base text-center w-full">
                 Ser la empresa referente en el Perú en gestión de destrucción corporativa y protección de marca, reconocida por nuestra rigurosidad operativa, transparencia y excelencia en el servicio B2B.
               </p>
             </div>
@@ -117,8 +117,10 @@ const Empresa = () => {
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                   <pilar.icon className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="font-bold text-lg mb-3 text-center">{pilar.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed text-justify w-full">{pilar.desc}</p>
+                <div className="min-h-[3.5rem] flex items-center justify-center mb-2 w-full">
+                  <h3 className="font-bold text-lg text-center leading-snug">{pilar.title}</h3>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed text-center">{pilar.desc}</p>
               </AnimatedSection>
             ))}
           </div>
@@ -131,7 +133,7 @@ const Empresa = () => {
           <p className="text-xs uppercase tracking-[0.2em] text-primary font-semibold mb-3">RESPALDO CORPORATIVO</p>
           <h2 className="text-3xl font-bold tracking-tight mb-12">Garantías de Cumplimiento</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
                 icon: Video,
@@ -149,12 +151,14 @@ const Empresa = () => {
                 desc: 'Inhabilitación mecánica de uniformes, empaques y productos para erradicar cualquier riesgo de falsificación o comercialización informal.'
               }
             ].map((garantia, idx) => (
-              <AnimatedSection key={garantia.title} direction="up" delay={idx * 120} className="flex flex-col items-center">
+              <AnimatedSection key={garantia.title} direction="up" delay={idx * 120} className="bg-card rounded-2xl p-6 border border-border/60 shadow-sm flex flex-col items-center">
                 <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-4">
                   <garantia.icon className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="font-bold text-xl mb-2 text-center">{garantia.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed text-justify w-full max-w-xs">{garantia.desc}</p>
+                <div className="min-h-[3rem] flex items-center justify-center mb-2 w-full">
+                  <h3 className="font-bold text-xl text-center leading-tight">{garantia.title}</h3>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed text-center">{garantia.desc}</p>
               </AnimatedSection>
             ))}
           </div>
