@@ -115,11 +115,11 @@ const Navbar = () => {
 
         <div className="hidden lg:flex items-center gap-3">
           <LanguageSwitcher />
-          <a href="https://wa.me/51933342580?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20sobre%20sus%20servicios." target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-6 py-3 rounded-xl bg-cta text-cta-foreground font-semibold text-sm transition-all duration-200 hover:scale-[1.03] hover:shadow-[0_6px_20px_0_hsl(var(--cta)/0.35)] shadow-[0_4px_14px_0_hsl(var(--cta)/0.25)]">
+          <a href="https://wa.me/51902667683?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20sobre%20sus%20servicios." target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-6 py-3 rounded-xl bg-cta text-cta-foreground font-semibold text-sm transition-all duration-200 hover:scale-[1.03] hover:shadow-[0_6px_20px_0_hsl(var(--cta)/0.35)] shadow-[0_4px_14px_0_hsl(var(--cta)/0.25)]">
             <Phone className="h-5 w-5" />
             <div className="leading-tight text-left">
               <span className="text-xs opacity-80">{t('footer.consultations')}</span>
-              <span className="block text-base font-bold tabular-nums">933 342 580</span>
+              <span className="block text-base font-bold tabular-nums">902 667 683</span>
             </div>
           </a>
         </div>
@@ -168,9 +168,9 @@ const Navbar = () => {
           </nav>
           <div className="flex gap-2 mt-4">
             <LanguageSwitcher />
-            <a href="https://wa.me/51933342580?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20sobre%20sus%20servicios." target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-cta text-cta-foreground font-semibold text-sm">
+            <a href="https://wa.me/51902667683?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20sobre%20sus%20servicios." target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-cta text-cta-foreground font-semibold text-sm">
               <Phone className="h-4 w-4" />
-              {t('footer.consultations')} 933 342 580
+              {t('footer.consultations')} 902 667 683
             </a>
           </div>
         </div>
