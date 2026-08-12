@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { MessageCircle } from 'lucide-react';
 
-const WHATSAPP_NUMBER = '51933342580';
+const WHATSAPP_NUMBER = '51902667683';
 
 // Helper: extrae y formatea el último segmento del pathname
 function extractTitleFromPath(): string {
