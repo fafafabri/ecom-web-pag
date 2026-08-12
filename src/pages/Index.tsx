@@ -311,6 +311,23 @@ const Index = () => {
         </div>
       </section>
 
+{/* Llamado a la Acción (CTA) insertado entre Servicios y Certificaciones */}
+      <section className="py-16 bg-primary/5 rounded-3xl my-16 text-center px-6 mx-auto max-w-7xl">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8 leading-tight">
+            ¿Listo para proteger la reputación de su empresa y dar de baja sus activos de forma segura?
+          </h2>
+          <a
+            href="https://wa.me/51902667683?text=Hola,%20estoy%20en%20la%20p%C3%A1gina%20de%20Inicio%20y%20deseo%20contactar%20a%20un%20asesor%20comercial."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1EBE5C] text-white px-8 py-4 rounded-full font-bold transition-all shadow-lg hover:shadow-xl text-lg"
+          >
+            Contactar por WhatsApp
+          </a>
+        </div>
+      </section>
+
       {/* ══════════════ CERTIFICACIONES — marquee infinito ══════════════ */}
       <section className="py-16 bg-card border-t border-border overflow-hidden relative">
         <div className="max-w-5xl mx-auto px-6 mb-8 text-center">
