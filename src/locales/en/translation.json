@@ -39,24 +39,24 @@
   },
   "why": {
     "label": "ECO M",
-    "title": "Comprehensive Solid Waste Management",
-    "desc": "Leading company in comprehensive waste management and renewable energy generation. We offer various services: merchandise transport, collection of non-hazardous and hazardous solid waste, destruction of obsolete materials.",
+    "title": "We mitigate the legal and commercial risks of your business.",
+    "desc": "At ECO M - Expert Destruction Management, we understand that confidential information, obsolete inventory, and defective goods represent a latent risk to your brand. Therefore, we operate under the strictest physical and industrial security standards, guaranteeing that your assets are irreversibly destroyed and disabled, preventing their entry into the black market and securing your tax benefits.",
     "pillars": {
-      "qualified": "Qualified Staff",
-      "qualifiedDesc": "With certifications, experience and continuous training.",
-      "certifications": "Certifications",
-      "certificationsDesc": "We have ISO 9001, BQSR, IAS, IAF.",
-      "fleet": "Truck Fleet",
-      "fleetDesc": "With all permits for national transport.",
-      "equipment": "Equipment and Machinery",
-      "equipmentDesc": "Latest technology for waste management and destructions."
+      "qualified": "Chain of Custody",
+      "qualifiedDesc": "Monitoring and traceability from pickup to final shredding.",
+      "certifications": "Legal Backing",
+      "certificationsDesc": "Alliances with Public Notaries and MINAM/OEFA regulatory compliance.",
+      "fleet": "Industrial Infrastructure",
+      "fleetDesc": "High-power machinery for high-volume shredding.",
+      "equipment": "Guaranteed Certification",
+      "equipmentDesc": "Fast issuance of destruction and final disposal certificates."
     }
   },
   "services": {
-    "label": "ECO M",
-    "title": "Solutions",
+    "label": "Our Solutions",
+    "title": "Comprehensive Disabling Solutions",
     "more": "+ Solutions",
-    "learnMore": "Learn More"
+    "learnMore": "Learn more"
   },
   "form": {
     "name": "Name *",
