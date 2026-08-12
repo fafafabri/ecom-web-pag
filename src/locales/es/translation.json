@@ -39,22 +39,22 @@
   },
   "why": {
     "label": "ECO M",
-    "title": "Gestión Integral de Residuos Sólidos",
-    "desc": "Empresa líder en la gestión integral de residuos y generación de energía renovable. Brindamos varios servicios: transporte de mercadería, recojo de residuos sólidos no peligrosos, peligrosos, destrucción de materiales dados de baja.",
+    "title": "Mitigamos los riesgos legales y comerciales de su empresa.",
+    "desc": "En ECO M - Expert Destruction Management, entendemos que la información confidencial, los inventarios obsoletos y la mercadería defectuosa representan un riesgo latente para su marca. Por ello, operamos bajo los más estrictos estándares de seguridad física e industrial, garantizando que sus activos sean destruidos e inhabilitados de manera irreversible, evitando su ingreso al mercado negro y asegurando sus beneficios tributarios ante SUNAT.",
     "pillars": {
-      "qualified": "Personal Calificado",
-      "qualifiedDesc": "Con certificaciones, experiencia y capacitaciones constantes.",
-      "certifications": "Certificaciones",
-      "certificationsDesc": "Contamos con ISO 9001, BQSR, IAS, IAF.",
-      "fleet": "Flota de Camiones",
-      "fleetDesc": "Con todos los permisos para el transporte nacional.",
-      "equipment": "Equipos y Maquinarias",
-      "equipmentDesc": "De última tecnología para gestión de residuos y destrucciones."
+      "qualified": "Cadena de Custodia",
+      "qualifiedDesc": "Monitoreo y trazabilidad desde el recojo hasta la trituración final.",
+      "certifications": "Respaldo Legal",
+      "certificationsDesc": "Alianzas con Notarios Públicos y cumplimiento normativo MINAM/OEFA.",
+      "fleet": "Infraestructura Industrial",
+      "fleetDesc": "Maquinaria de alta potencia para trituración de grandes volúmenes.",
+      "equipment": "Certificación Garantizada",
+      "equipmentDesc": "Emisión rápida de certificados de destrucción y disposición final."
     }
   },
   "services": {
-    "label": "ECO M",
-    "title": "Soluciones",
+    "label": "Nuestras Soluciones",
+    "title": "Soluciones Integrales de Inhabilitación",
     "more": "+ Soluciones",
     "learnMore": "Saber más"
   },
