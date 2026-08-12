@@ -60,7 +60,7 @@ const Empresa = () => {
           <div className="text-center mb-16">
             <p className="text-xs uppercase tracking-[0.2em] text-primary font-semibold mb-3">ECO M</p>
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">{t('empresa.who')}</h2>
-            <p className="text-muted-foreground leading-relaxed max-w-4xl mx-auto text-lg">
+            <p className="text-justify text-muted-foreground leading-relaxed max-w-4xl mx-auto text-lg">
               {t('empresa.descIntro')}
               <span className="font-semibold text-foreground">{t('empresa.descHighlight1')}</span>
               {t('empresa.descMiddle')}
