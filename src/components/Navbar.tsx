@@ -15,7 +15,7 @@ const Navbar = () => {
   const solutionCategories = [
     {
       key: 'destruccion',
-      label: t('nav.categories.destruccion') || 'Destrucción y Disposición',
+      label: 'Destrucción y Disposición',
       description: '',
       items: [
         { title: 'Destrucción de Productos, Mercadería y Materiales Industriales', slug: 'destruccion-productos-mercaderia-materiales-industriales' },
@@ -28,7 +28,7 @@ const Navbar = () => {
     },
     {
       key: 'sanitarios',
-      label: t('nav.categories.sanitarios') || 'Soluciones Sanitarias',
+      label: 'Soluciones Sanitarias',
       description: '',
       items: [
         { title: 'Venta de Baños, Duchas y Lavamanos Portátiles', slug: 'venta-banos-duchas-lavamanos-portatiles' },
