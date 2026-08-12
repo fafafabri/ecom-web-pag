@@ -4,11 +4,29 @@ import { MessageCircle } from 'lucide-react';
 const WHATSAPP_NUMBER = '51933342580';
 
 const WhatsAppButton = () => {
-  // Construye la URL de WhatsApp dinámicamente usando el título del documento.
-  // En entornos sin DOM (SSR) se usa un mensaje por defecto y la URL estática como fallback.
+  // Construye la URL de WhatsApp dinámicamente usando el último segmento del pathname.
+  // Extrae el segmento, reemplaza guiones por espacios y capitaliza cada palabra.
+  // En entornos sin DOM (SSR) usa 'Inicio' como nombre por defecto.
   const href = useMemo(() => {
-    const pageTitle = typeof document !== 'undefined' ? document.title || '' : '';
-    const message = `Hola, me encuentro revisando la página de ${pageTitle} y deseo solicitar más información.`;
+    if (typeof window === 'undefined') {
+      const fallbackMsg = 'Hola, me encuentro revisando la página de Inicio y deseo solicitar más información.';
+      return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(fallbackMsg)}`;
+    }
+
+    const pathname = window.location.pathname || '/';
+    // Obtener el último segmento no vacío
+    const segments = pathname.split('/').filter(Boolean);
+    const lastSegment = segments.length ? segments[segments.length - 1] : '';
+
+    // Limpiar: reemplazar guiones por espacios y trim
+    const cleaned = lastSegment.replace(/-/g, ' ').trim();
+
+    // Capitalizar la primera letra de cada palabra
+    const titleized = cleaned
+      ? cleaned.split(/\s+/).map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
+      : 'Inicio';
+
+    const message = `Hola, me encuentro revisando la página de ${titleized} y deseo solicitar más información.`;
     return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
   }, []);
 
