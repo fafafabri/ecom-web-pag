@@ -9,6 +9,7 @@ import Empresa from "./pages/Empresa";
 import Contacto from "./pages/Contacto";
 import ServiceDetail from "./pages/ServiceDetail";
 import NotFound from "./pages/NotFound";
+import ScrollToTop from './components/ScrollToTop';
 
 const queryClient = new QueryClient();
 
