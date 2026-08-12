@@ -45,7 +45,7 @@ const Contacto = () => {
         <div className="absolute inset-0 bg-foreground/70" />
         <div className="relative z-10 max-w-4xl mx-auto px-6 py-20 w-full text-center">
           <h1 className="text-3xl md:text-5xl font-bold text-background tracking-tight leading-tight mb-6">
-            Hablemos: Cotizaciones y Asesoría Corporativa
+            Cotizaciones y Asesoría Corporativa
           </h1>
           <div className="flex gap-1 justify-center mb-6">
             <div className="w-8 h-1 rounded-full bg-accent" />
@@ -94,9 +94,9 @@ const Contacto = () => {
                   <Phone className="h-6 w-6 text-accent mt-1 shrink-0" />
                   <div>
                     <p className="text-xs text-primary-foreground/70 uppercase tracking-wider mb-2 font-semibold">Líneas Directas</p>
-                    <a href="tel:+51902667683" className="block text-base font-semibold hover:text-accent transition-colors mb-1">902 667 683</a>
-                    <a href="tel:+51960695955" className="block text-base font-semibold hover:text-accent transition-colors mb-1">960 695 955</a>
-                    <a href="tel:+51922719251" className="block text-base font-semibold hover:text-accent transition-colors">922 719 251</a>
+                    <a href="tel:+51902667683" className="block text-base font-semibold font-mono tabular-nums hover:text-accent transition-colors mb-1">902 667 683</a>
+                    <a href="tel:+51960695955" className="block text-base font-semibold font-mono tabular-nums hover:text-accent transition-colors mb-1">960 695 955</a>
+                    <a href="tel:+51922719251" className="block text-base font-semibold font-mono tabular-nums hover:text-accent transition-colors">922 719 251</a>
                   </div>
                 </div>
 
@@ -126,7 +126,6 @@ const Contacto = () => {
                         • {p.address}
                       </p>
                     ))}
-                    {/* Espacio reservado para mapa en el futuro */}
                     <div className="w-full h-32 bg-primary-foreground/10 rounded-lg mt-4 flex items-center justify-center border border-primary-foreground/20">
                       <span className="text-xs text-primary-foreground/60 text-center px-4">Mapa de ubicación disponible próximamente</span>
                     </div>
@@ -147,7 +146,6 @@ const Contacto = () => {
               <p className="text-muted-foreground mb-8 text-lg">Complete el formulario y nuestro equipo comercial le enviará una propuesta a la brevedad.</p>
 
               <form onSubmit={handleSubmit} className="space-y-6">
-                {/* Campos ocultos para trazabilidad (como pide el documento) */}
                 <input type="hidden" name="Page_URL" value={typeof window !== 'undefined' ? window.location.href : ''} />
                 <input type="hidden" name="Page_Title" value="Contacto - ECO M" />
 
