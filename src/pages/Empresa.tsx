@@ -20,7 +20,7 @@ const Empresa = () => {
               <div className="w-8 h-1 rounded-full bg-accent" />
               <div className="w-8 h-1 rounded-full bg-background/40" />
             </div>
-            <p className="text-background/70 mt-4 text-xl">Somos el aliado estratégico de las empresas en el Perú para la inhabilitación segura de activos, destrucción de información confidencial y gestión de mermas bajo estricto cumplimiento normativo.</p>
+            <p className="text-lg md:text-xl text-background/90 font-medium mt-4">Somos el aliado estratégico de las empresas en el Perú para la inhabilitación segura de activos, destrucción de información confidencial y gestión de mermas bajo estricto cumplimiento normativo.</p>
 
             <div className="flex flex-wrap gap-4 mt-6 justify-center">
               <a
