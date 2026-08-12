@@ -9,7 +9,7 @@ import ChevronDown from 'lucide-react/dist/esm/icons/chevron-down';
 import { useTranslation } from 'react-i18next';
 import { services } from '@/data/services';
 import { serviceImages } from '@/data/serviceImages';
-import heroBg from '@/assets/hero-bg.jpg';
+import heroBg from '@/assets/imagen-inicio.png';
 import empresaImg from '@/assets/empresa-hero.jpg';
 import certIso from '@/assets/cert-iso9001.png';
 import certBqsr from '@/assets/cert-bqsr.png';
