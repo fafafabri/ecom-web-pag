@@ -196,7 +196,7 @@ const Index = () => {
                 <div className="w-8 h-1 rounded-full bg-accent" />
                 <div className="w-8 h-1 rounded-full bg-primary" />
               </div>
-              <p className="text-muted-foreground leading-relaxed mb-8">{t('why.desc')}</p>
+              <p className="text-muted-foreground leading-relaxed mb-8 text-justify">{t('why.desc')}</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {pillars.map((p, i) => (
                   <AnimatedSection key={p.title} direction="up" duration={600} delay={200 + i * 100}>
