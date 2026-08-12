@@ -8,23 +8,18 @@
     "categories": {
       "destruccion": "Destruction and Disposal",
       "destruccionDesc": "Certified destruction and final disposal services.",
-      "limpieza": "Industrial Cleaning",
-      "limpiezaDesc": "Industrial cleaning and specialized maintenance services.",
       "logistica": "Logistics and Waste Management",
-      "logisticaDesc": "Logistics solutions and specialized waste management.",
-      "comercial": "Commercial and Environmental Solutions",
-      "comercialDesc": "Commercial solutions and strategic environmental advisory."
+      "logisticaDesc": "Logistics solutions and specialized waste management."
     },
     "services": {
       "destruccion_notarial": "Notarial Document Destruction",
       "destruccion_residuos": "Waste Destruction",
-      "destruccion_raee": "WEEE Destruction",
+      "destruccion_raee": "Waste Electrical and Electronic Equipment Destruction (WEEE)",
       "destruccion_ropa": "Clothing Destruction",
       "disposicion_final": "Final Disposal",
       "limpieza_grasas": "Grease Trap Cleaning",
       "limpieza_pozos": "Septic Tank Cleaning",
       "limpieza_biodigestores": "Biodigester Cleaning",
-      "limpieza_industrial": "Industrial Cleaning",
       "recojo_transporte": "Collection and Transport of Waste",
       "carga_transporte": "Loading and Transportation",
       "transporte_maptel": "Maptel Transportation",
@@ -147,9 +142,14 @@
       "benefits": ["Destruction of surplus and merchandise", "Obsolete inventory and scrapped materials", "Destruction certificate", "Environmental compliance", "Permanent process supervision"]
     },
     "destruccionRAEE": {
-      "title": "WEEE Destruction",
-      "desc": "We handle the collection, transportation and destruction of Waste Electrical and Electronic Equipment (WEEE) in compliance with current regulations and ensuring proper final disposal.",
-      "benefits": ["Specialized collection and transportation", "Certified destruction of electronic equipment", "Compliance with WEEE regulations", "Responsible final disposal", "Complete process traceability"]
+      "title": "Waste Electrical and Electronic Equipment Destruction (WEEE)",
+      "intro": "We guarantee the total security of your confidential information while driving your corporate sustainability goals. Through our specialized Urban Mining and WEEE Management service nationwide, we take care of the final cycle of your decommissioned technology assets.",
+      "aeHeading": "About AEE destruction (Electrical and Electronic Appliances)",
+      "aeText": "This technical procedure consists of the collection, structured disassembly and physical irreversible shredding of IT and communication equipment. Its main purpose is to ensure the definitive inoperability of hardware, eliminating any risk of data leakage or informal resale while enabling the recovery of raw materials that will be reintegrated into the productive industry.",
+      "supportHeading": "Support for your corporate management:",
+      "supportBenefits": ["Safe accounting disposal: We carry out the physical destruction of assets with notarial presence to provide transparency to your administrative processes.", "Regulatory compliance: We issue the corresponding Environmental Certificate, a key document to support your ESG reports and certify your circular economy practices."],
+      "specializationIntro": "We specialize in:",
+      "serviceItems": ["Destruction of IT and computing equipment", "Destruction of IT and communications assets", "Destruction of servers", "Destruction of hard drives", "Destruction of cell phones"]
     },
     "destruccionRopa": {
       "title": "Clothing Destruction",
@@ -183,8 +183,8 @@
     },
     "sanitariosPortatiles": {
       "title": "Sale of Portable Toilets",
-      "desc": "Sale and rental of high-quality portable toilets for events, construction projects and temporary projects. We include maintenance and periodic cleaning services.",
-      "benefits": ["New and quality toilets", "Maintenance service included", "Delivery and installation", "Standard and premium models", "National coverage"]
+      "desc": "At ECO M, we supply mining, industrial, construction and event sectors across Peru with high-durability portable sinks and toilets. Each unit is built to withstand intensive use in demanding environments, ensuring cleanliness and easy maintenance.",
+      "benefits": ["Sale of Standard and VIP Portable Toilets.", "Sale of autonomous Portable Sinks.", "Sale of Portable Showers for camps."]
     },
     "limpiezaGrasas": {
       "title": "Grease Trap Cleaning",
@@ -195,11 +195,6 @@
       "title": "Septic Tank Cleaning",
       "desc": "Professional cleaning, maintenance and disinfection service for septic tanks with high-capacity suction equipment and specialized personnel.",
       "benefits": ["High capacity equipment", "Specialized personnel", "24/7 emergency service", "Disinfection included", "Coverage in Lima and provinces"]
-    },
-    "limpiezaIndustrial": {
-      "title": "Industrial Cleaning",
-      "desc": "Complete industrial cleaning service for production plants, warehouses, corporate offices and common areas. We use specialized equipment and products.",
-      "benefits": ["Cleaning of production plants", "Disinfection of industrial areas", "Specialized equipment", "Personnel trained with PPE", "Customized cleaning plans"]
     },
     "asesorias": {
       "title": "Environmental Advisory",

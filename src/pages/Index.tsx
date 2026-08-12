@@ -9,7 +9,7 @@ import ChevronDown from 'lucide-react/dist/esm/icons/chevron-down';
 import { useTranslation } from 'react-i18next';
 import { services } from '@/data/services';
 import { serviceImages } from '@/data/serviceImages';
-import heroBg from '@/assets/hero-bg.jpg';
+import heroBg from '@/assets/imagen-inicio.png';
 import empresaImg from '@/assets/empresa-hero.jpg';
 import certIso from '@/assets/cert-iso9001.png';
 import certBqsr from '@/assets/cert-bqsr.png';
@@ -34,6 +34,16 @@ const Index = () => {
     return () => clearTimeout(t);
   }, []);
 
+  // Ensure smooth scroll behavior is enabled globally (fallback for browsers/styles that don't set it)
+  useEffect(() => {
+    if (typeof document === 'undefined') return;
+    const prev = document.documentElement.style.scrollBehavior;
+    document.documentElement.style.scrollBehavior = 'smooth';
+    return () => {
+      document.documentElement.style.scrollBehavior = prev || '';
+    };
+  }, []);
+
   const pillars = [
     { icon: Users,  title: t('why.pillars.qualified'),     desc: t('why.pillars.qualifiedDesc') },
     { icon: Award,  title: t('why.pillars.certifications'), desc: t('why.pillars.certificationsDesc') },
@@ -49,10 +59,10 @@ const Index = () => {
   ];
 
   const stats = [
-    { value: 15,   suffix: '+', label: 'Años de experiencia' },
-    { value: 500,  suffix: '+', label: 'Clientes atendidos' },
-    { value: 98,   suffix: '%', label: 'Satisfacción' },
-    { value: 1200, suffix: '+', label: 'Proyectos completados' },
+    { value: 100, suffix: '%', label: 'Confidencialidad y Protección de Marca' },
+    { value: 100, suffix: '%', label: 'Respaldo Notarial y Certificación Oficial' },
+    { value: 100, suffix: '%', label: 'Cumplimiento Normativo (MINAM / SUNAT)' },
+    { value: 100, suffix: '%', label: 'Procesos Auditables con Cadena de Custodia' },
   ];
 
   return (
@@ -77,17 +87,17 @@ const Index = () => {
         {/* Contenido del hero */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 w-full">
           <p
-            className={`text-sm uppercase tracking-[0.25em] text-background/70 font-medium mb-4 transition-all duration-700 ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+            className={`text-lg md:text-xl text-background/90 font-medium mb-4 transition-all duration-700 ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
             style={{ transitionDelay: '200ms' }}
           >
-            {t('hero.subtitle')}
+            Brindamos soluciones corporativas para la inhabilitación de mercadería, destrucción de archivos confidenciales y baja de activos con estricto respaldo notarial y cumplimiento normativo.
           </p>
 
           <h1
             className={`text-4xl sm:text-5xl md:text-7xl font-bold text-background tracking-tight max-w-4xl leading-[1.1] transition-all duration-700 ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
             style={{ transitionDelay: '400ms' }}
           >
-            {t('hero.title')}
+            Expertos en Destrucción Segura y Protección de Marca.
           </h1>
 
           {/* Línea decorativa animada */}
@@ -103,19 +113,34 @@ const Index = () => {
             className={`flex flex-wrap gap-4 mt-10 transition-all duration-700 ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
             style={{ transitionDelay: '700ms' }}
           >
-            <button
-              onClick={() => setQuoteOpen(true)}
+            <a
+              href="#soluciones"
+              onClick={(e) => {
+                e.preventDefault();
+                if (typeof window !== 'undefined') {
+                  const el = document.querySelector('#soluciones');
+                  if (el) {
+                    (el as HTMLElement).scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  } else {
+                    // Fallback: change hash
+                    window.location.hash = '#soluciones';
+                  }
+                }
+              }}
               className="group bg-cta text-cta-foreground px-8 py-4 rounded-xl font-semibold shadow-[0_4px_14px_0_hsl(var(--cta)/0.4)] hover:shadow-[0_8px_24px_hsl(var(--cta)/0.5)] hover:scale-[1.04] hover:-translate-y-1 transition-all duration-300 inline-flex items-center gap-2"
             >
-              {t('hero.btnContact')}
+              Ver Soluciones de Destrucción
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-            </button>
-            <button
-              onClick={() => setInquiryOpen(true)}
-              className="bg-transparent text-background border border-background/40 px-8 py-4 rounded-xl font-semibold hover:bg-background/15 hover:border-background/60 hover:scale-[1.03] hover:shadow-[0_4px_14px_rgba(255,255,255,0.15)] transition-all duration-300 backdrop-blur-sm"
+            </a>
+
+            <a
+              href={`https://wa.me/51933342580?text=${encodeURIComponent('Hola, deseo cotizar un servicio con ECO M.')}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-transparent text-background border border-background/40 px-8 py-4 rounded-xl font-semibold hover:bg-background/15 hover:border-background/60 hover:scale-[1.03] hover:shadow-[0_4px_14px_rgba(255,255,255,0.15)] transition-all duration-300 backdrop-blur-sm inline-flex items-center"
             >
-              {t('hero.btnInquiry')}
-            </button>
+              Contactar a un Asesor
+            </a>
           </div>
         </div>
 
@@ -208,7 +233,7 @@ const Index = () => {
       </section>
 
       {/* ══════════════ SERVICIOS ══════════════ */}
-      <section className="py-28 bg-background relative overflow-hidden">
+      <section id="soluciones" className="py-28 bg-background relative overflow-hidden">
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
         <div className="max-w-7xl mx-auto px-6">
           {/* Header */}

@@ -39,8 +39,20 @@ const serviceKeyMap: { [key: string]: string } = {
   'sanitarios-portatiles': 'sanitariosPortatiles',
   'trampas-grasa': 'limpiezaGrasas',
   'pozos-septicos': 'limpiezaPozos',
-  'limpieza-industrial': 'limpiezaIndustrial',
   'asesorias-ambientales': 'asesorias',
+};
+
+type ServiceCopy = {
+  title: string;
+  desc: string;
+  benefits: string[];
+  intro?: string;
+  aeHeading?: string;
+  aeText?: string;
+  supportHeading?: string;
+  supportBenefits?: string[];
+  specializationIntro?: string;
+  serviceItems?: string[];
 };
 
 const ServiceDetail = () => {
@@ -52,11 +64,13 @@ const ServiceDetail = () => {
 
   const image = serviceImages[service.imageKey];
   const serviceKey = serviceKeyMap[service.id] || service.id;
-  const serviceData = t(`serviceDetails.${serviceKey}`, { returnObjects: true }) as { title: string; desc: string; benefits: string[] };
+  const serviceData = t(`serviceDetails.${serviceKey}`, { returnObjects: true }) as ServiceCopy;
 
-  const related = (service.category === 'destruccion' ? servicesByCategory.destruccion : servicesByCategory.otros)
-    .filter(s => s.id !== service.id)
-    .slice(0, 3);
+  const related = service.id === 'sanitarios-portatiles'
+    ? []
+    : (service.category === 'destruccion' ? servicesByCategory.destruccion : servicesByCategory.otros)
+        .filter(s => s.id !== service.id)
+        .slice(0, 3);
 
   return (
     <>
@@ -84,16 +98,53 @@ const ServiceDetail = () => {
               <div className="w-8 h-1 rounded-full bg-accent" />
               <div className="w-8 h-1 rounded-full bg-primary" />
             </div>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-10">{serviceData?.desc || service.fullDesc}</p>
+            {service.id === 'destruccion-raee' ? (
+              <div className="space-y-8 text-lg text-muted-foreground leading-relaxed">
+                <p>{serviceData?.intro || service.fullDesc}</p>
 
-            <div className="flex flex-col gap-4">
-              {(serviceData?.benefits || service.benefits).map((b: string, i: number) => (
-                <div key={i} className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary mt-0.5 shrink-0" />
-                  <span className="text-foreground">{b}</span>
+                <div className="space-y-3">
+                  <h3 className="text-xl font-semibold text-foreground">{serviceData?.aeHeading || 'Sobre la destrucción de AEE (Aparatos Eléctricos y Electrónicos)'}</h3>
+                  <p>{serviceData?.aeText || ''}</p>
                 </div>
-              ))}
-            </div>
+
+                <div className="space-y-4">
+                  <h3 className="text-xl font-semibold text-foreground">{serviceData?.supportHeading || 'Respaldo para su gestión corporativa:'}</h3>
+                  <div className="flex flex-col gap-4">
+                    {(serviceData?.supportBenefits || []).map((b: string, i: number) => (
+                      <div key={i} className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-primary mt-0.5 shrink-0" />
+                        <span className="text-foreground text-base">{b}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                  <p className="text-base text-muted-foreground font-medium">{serviceData?.specializationIntro || 'Nos especializamos en:'}</p>
+                  <div className="flex flex-col gap-4 pt-2">
+                    {(serviceData?.serviceItems || []).map((b: string, i: number) => (
+                      <div key={i} className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-primary mt-0.5 shrink-0" />
+                        <span className="text-foreground text-base">{b}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-10">{serviceData?.desc || service.fullDesc}</p>
+
+                <div className="flex flex-col gap-4">
+                  {(serviceData?.benefits || service.benefits).map((b: string, i: number) => (
+                    <div key={i} className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-primary mt-0.5 shrink-0" />
+                      <span className="text-foreground">{b}</span>
+                    </div>
+                  ))}
+                </div>
+              </>
+            )}
           </div>
 
           <div className="lg:col-span-5">
@@ -118,7 +169,7 @@ const ServiceDetail = () => {
         </div>
       </section>
 
-      {related.length > 0 && (
+      {related.length > 0 && service.id !== 'sanitarios-portatiles' && (
         <section className="py-16 bg-background">
           <div className="max-w-7xl mx-auto px-6">
             <h3 className="font-display font-bold text-2xl mb-8">Otras Soluciones</h3>

@@ -15,12 +15,42 @@ const Empresa = () => {
         <div className="absolute inset-0 bg-foreground/65" />
         <div className="relative z-10 mx-auto flex min-h-[40vh] w-full max-w-7xl items-center justify-center px-6 py-20 text-center">
           <div>
-            <h1 className="text-4xl md:text-6xl font-bold text-background tracking-tight">{t('empresa.ourCompany')}</h1>
+            <h1 className="text-4xl md:text-6xl font-bold text-background tracking-tight">Compromiso con la Seguridad, Confidencialidad y Protección de Marca</h1>
             <div className="flex gap-1 justify-center mt-6">
               <div className="w-8 h-1 rounded-full bg-accent" />
               <div className="w-8 h-1 rounded-full bg-background/40" />
             </div>
-            <p className="text-background/70 mt-4 text-sm">{t('nav.inicio')} / {t('nav.empresa')}</p>
+            <p className="text-background/70 mt-4 text-sm">Somos el aliado estratégico de las empresas en el Perú para la inhabilitación segura de activos, destrucción de información confidencial y gestión de mermas bajo estricto cumplimiento normativo.</p>
+
+            <div className="flex flex-wrap gap-4 mt-6 justify-center">
+              <a
+                href="#soluciones"
+                onClick={(e) => {
+                  e.preventDefault();
+                  if (typeof document !== 'undefined') {
+                    const el = document.querySelector('#soluciones');
+                    if (el) {
+                      (el as HTMLElement).scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    } else {
+                      // Fallback: update the hash
+                      window.location.hash = '#soluciones';
+                    }
+                  }
+                }}
+                className="group bg-cta text-cta-foreground px-6 py-3 rounded-xl font-semibold shadow-[0_4px_14px_0_hsl(var(--cta)/0.4)] hover:shadow-[0_8px_24px_hsl(var(--cta)/0.5)] hover:scale-[1.04] hover:-translate-y-1 transition-all duration-300 inline-flex items-center gap-2"
+              >
+                Conocer Soluciones
+              </a>
+
+              <a
+                href={`https://wa.me/51933342580?text=${encodeURIComponent('Hola, deseo conocer más sobre los servicios y acreditaciones de ECO M.')}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-transparent text-background border border-background/40 px-6 py-3 rounded-xl font-semibold hover:bg-background/15 hover:border-background/60 hover:scale-[1.03] hover:shadow-[0_4px_14px_rgba(255,255,255,0.15)] transition-all duration-300 backdrop-blur-sm inline-flex items-center"
+              >
+                Hablar con un Especialista
+              </a>
+            </div>
           </div>
         </div>
       </section>
