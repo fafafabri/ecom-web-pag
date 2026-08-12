@@ -1,9 +1,20 @@
+import React, { useMemo } from 'react';
 import { MessageCircle } from 'lucide-react';
 
+const WHATSAPP_NUMBER = '51933342580';
+
 const WhatsAppButton = () => {
+  // Construye la URL de WhatsApp dinámicamente usando el título del documento.
+  // En entornos sin DOM (SSR) se usa un mensaje por defecto y la URL estática como fallback.
+  const href = useMemo(() => {
+    const pageTitle = typeof document !== 'undefined' ? document.title || '' : '';
+    const message = `Hola, me encuentro revisando la página de ${pageTitle} y deseo solicitar más información.`;
+    return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+  }, []);
+
   return (
     <a
-      href="https://wa.me/51933342580?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20sobre%20sus%20servicios."
+      href={href}
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50 w-16 h-16 rounded-full bg-whatsapp flex items-center justify-center shadow-[0_8px_32px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform duration-300 animate-wa-pulse"
