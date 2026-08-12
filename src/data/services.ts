@@ -1,7 +1,7 @@
 export interface Service {
   id: string;
   slug: string;
-  category: 'destruccion' | 'otros';
+  category: 'destruccion' | 'sanitarios';
   title: string;
   shortDesc: string;
   fullDesc: string;
@@ -12,10 +12,10 @@ export interface Service {
 export const services: Service[] = [
   {
     id: 'productos-mercaderia',
-    slug: 'productos-mercaderia-y-materiales-industriales',
+    slug: 'destruccion-productos-mercaderia-materiales-industriales',
     category: 'destruccion',
-    title: 'Productos, Mercadería y Materiales Industriales',
-    shortDesc: 'Inhabilitación de inventarios obsoletos y mermas.',
+    title: 'Destrucción de Productos, Mercadería y Materiales Industriales',
+    shortDesc: 'Inhabilitación de inventarios obsoletos, mermas y repuestos.',
     fullDesc: 'Inhabilitación irreversible de inventarios obsoletos, mermas industriales y productos defectuosos para proteger su marca y evitar su reingreso al mercado informal.',
     benefits: [
       'Inhabilitación física e irreversible de productos',
@@ -27,10 +27,10 @@ export const services: Service[] = [
   },
   {
     id: 'destruccion-notarial',
-    slug: 'destruccion-notarial-fiscal-y-aduanera',
+    slug: 'destruccion-notarial-fiscal-aduanera',
     category: 'destruccion',
     title: 'Destrucción Notarial, Fiscal y Aduanera',
-    shortDesc: 'Respaldo legal para deducciones ante SUNAT.',
+    shortDesc: 'Respaldo legal para deducciones tributarias ante SUNAT.',
     fullDesc: 'Proceso de destrucción ejecutado con supervisión e intervención de Notario Público para respaldar legalmente la baja de activos y deducciones tributarias ante SUNAT.',
     benefits: [
       'Respaldo notarial con acta e informe legal',
@@ -42,7 +42,7 @@ export const services: Service[] = [
   },
   {
     id: 'destruccion-documentos',
-    slug: 'destruccion-segura-de-documentos-y-archivos',
+    slug: 'destruccion-segura-documentos-archivos',
     category: 'destruccion',
     title: 'Destrucción Segura de Documentos y Archivos',
     shortDesc: 'Trituración confidencial de información sensible.',
@@ -57,9 +57,9 @@ export const services: Service[] = [
   },
   {
     id: 'equipos-tecnologicos',
-    slug: 'equipos-tecnologicos-y-borrado-de-datos',
+    slug: 'destruccion-equipos-tecnologicos-borrado-datos',
     category: 'destruccion',
-    title: 'Equipos Tecnológicos y Borrado de Datos',
+    title: 'Destrucción de Equipos Tecnológicos y Borrado de Datos',
     shortDesc: 'Inhabilitación física de hardware y borrado digital.',
     fullDesc: 'Destrucción física de componentes de TI (servidores, discos duros, laptops) y borrado seguro de datos para evitar la filtración de información confidencial.',
     benefits: [
@@ -72,9 +72,9 @@ export const services: Service[] = [
   },
   {
     id: 'textiles-calzado-uniformes',
-    slug: 'textiles-calzado-y-uniformes-corporativos',
+    slug: 'destruccion-textiles-calzado-uniformes-corporativos',
     category: 'destruccion',
-    title: 'Textiles, Calzado y Uniformes Corporativos',
+    title: 'Destrucción de Textiles, Calzado y Uniformes Corporativos',
     shortDesc: 'Protección de marca para ropa corporativa y avíos.',
     fullDesc: 'Inhabilitación y destrucción de uniformes corporativos en desuso, indumentaria de trabajo y calzado con logos para evitar la suplantación de identidad.',
     benefits: [
@@ -87,9 +87,9 @@ export const services: Service[] = [
   },
   {
     id: 'bienes-fiscalizados-iqbf',
-    slug: 'bienes-fiscalizados-iqbf-y-residuos-peligrosos',
+    slug: 'destruccion-bienes-fiscalizados-residuos-peligrosos',
     category: 'destruccion',
-    title: 'Bienes Fiscalizados (IQBF) y Residuos Peligrosos',
+    title: 'Destrucción de Bienes Fiscalizados (IQBF) y Residuos Peligrosos',
     shortDesc: 'Destrucción certificada de bienes fiscalizados.',
     fullDesc: 'Manejo especializado y destrucción certificada de Insumos Químicos y Bienes Fiscalizados (IQBF) y residuos peligrosos bajo normativas de MINAM, OEFA y SUNAT.',
     benefits: [
@@ -102,9 +102,9 @@ export const services: Service[] = [
   },
   {
     id: 'sanitarios-portatiles',
-    slug: 'venta-de-sanitarios-duchas-y-lavamanos-portatiles',
-    category: 'otros',
-    title: 'Venta de Sanitarios, Duchas y Lavamanos Portátiles',
+    slug: 'venta-banos-duchas-lavamanos-portatiles',
+    category: 'sanitarios',
+    title: 'Venta de Baños, Duchas y Lavamanos Portátiles',
     shortDesc: 'Módulos de higiene de alta durabilidad para obras.',
     fullDesc: 'Suministro e instalación de baños, duchas y lavamanos portátiles de alta resistencia y durabilidad para sectores de construcción, minería e industria.',
     benefits: [
@@ -119,7 +119,8 @@ export const services: Service[] = [
 
 export const servicesByCategory = {
   destruccion: services.filter(s => s.category === 'destruccion'),
-  otros: services.filter(s => s.category === 'otros'),
+  sanitarios: services.filter(s => s.category === 'sanitarios'),
+  otros: services.filter(s => s.category === 'sanitarios'),
 };
 
 export function getServiceBySlug(slug: string): Service | undefined {
