@@ -252,13 +252,7 @@ const Index = () => {
                   <div className="w-8 h-1 rounded-full bg-primary" />
                 </div>
               </div>
-              <Link
-                to="/servicios/destruccion-de-documentos"
-                className="hidden md:inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-border text-sm font-medium text-foreground hover:bg-primary hover:text-white hover:border-primary hover:scale-[1.03] hover:shadow-md transition-all duration-300 group"
-              >
-                {t('services.more')}
-                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-              </Link>
+              
             </div>
           </AnimatedSection>
 
@@ -298,16 +292,8 @@ const Index = () => {
               </AnimatedSection>
             ))}
           </div>
-
-          {/* Botón mobile */}
-          <div className="mt-10 flex justify-center md:hidden">
-            <Link
-              to="/servicios/destruccion-de-documentos"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-white text-sm font-medium hover:bg-primary-dark transition-colors duration-200"
-            >
-              {t('services.more')} <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
+     
+     
         </div>
       </section>
 
