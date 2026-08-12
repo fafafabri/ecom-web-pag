@@ -59,10 +59,10 @@ const Index = () => {
   ];
 
   const stats = [
-    { value: 15,   suffix: '+', label: 'Años de experiencia' },
-    { value: 500,  suffix: '+', label: 'Clientes atendidos' },
-    { value: 98,   suffix: '%', label: 'Satisfacción' },
-    { value: 1200, suffix: '+', label: 'Proyectos completados' },
+    { value: 100, suffix: '%', label: 'Confidencialidad y Protección de Marca' },
+    { value: 100, suffix: '%', label: 'Respaldo Notarial y Certificación Oficial' },
+    { value: 100, suffix: '%', label: 'Cumplimiento Normativo (MINAM / SUNAT)' },
+    { value: 100, suffix: '%', label: 'Procesos Auditables con Cadena de Custodia' },
   ];
 
   return (
