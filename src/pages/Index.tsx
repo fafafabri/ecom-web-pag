@@ -1,11 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right';
-import Users from 'lucide-react/dist/esm/icons/users';
-import Award from 'lucide-react/dist/esm/icons/award';
-import Truck from 'lucide-react/dist/esm/icons/truck';
-import Wrench from 'lucide-react/dist/esm/icons/wrench';
-import ChevronDown from 'lucide-react/dist/esm/icons/chevron-down';
+import { ArrowRight, Shield, Award, Wrench, Target, ChevronDown } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { services } from '@/data/services';
 import { serviceImages } from '@/data/serviceImages';
@@ -45,10 +40,10 @@ const Index = () => {
   }, []);
 
   const pillars = [
-    { icon: Users,  title: t('why.pillars.qualified'),     desc: t('why.pillars.qualifiedDesc') },
+    { icon: Shield, title: t('why.pillars.qualified'), desc: t('why.pillars.qualifiedDesc') },
     { icon: Award,  title: t('why.pillars.certifications'), desc: t('why.pillars.certificationsDesc') },
-    { icon: Truck,  title: t('why.pillars.fleet'),          desc: t('why.pillars.fleetDesc') },
-    { icon: Wrench, title: t('why.pillars.equipment'),      desc: t('why.pillars.equipmentDesc') },
+    { icon: Wrench, title: t('why.pillars.fleet'), desc: t('why.pillars.fleetDesc') },
+    { icon: Target, title: t('why.pillars.equipment'), desc: t('why.pillars.equipmentDesc') },
   ];
 
   const certifications = [
