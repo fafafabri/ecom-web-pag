@@ -29,7 +29,7 @@ const Footer = () => {
                   <Phone className="h-5 w-5 text-primary mt-0.5 shrink-0" />
                   <div>
                     <p className="text-xs opacity-60 mb-1">{t('footer.consultations')}:</p>
-                    <p className="text-sm font-semibold">933 342 580 – 933 342 454</p>
+                    <p className="text-sm font-semibold">902 667 683 - 960 695 955 - 922 719 251</p>
                   </div>
                 </div>
                 <div className="flex gap-3">
