@@ -46,7 +46,7 @@ const Footer = () => {
                   <Mail className="h-5 w-5 text-primary mt-0.5 shrink-0" />
                   <div>
                     <p className="text-xs opacity-60 mb-1">{t('footer.email')}</p>
-                    <p className="text-sm font-semibold">comercial@eco-m.com</p>
+                    <p className="text-sm font-semibold">comercial@eco-mperu.com</p>
                   </div>
                 </div>
                 <div className="flex gap-3">
