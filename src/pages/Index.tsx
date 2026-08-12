@@ -1,6 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Shield, Award, Wrench, Target, ChevronDown } from 'lucide-react';
+import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right';
+import Shield from 'lucide-react/dist/esm/icons/shield';
+import Award from 'lucide-react/dist/esm/icons/award';
+import Wrench from 'lucide-react/dist/esm/icons/wrench';
+import Target from 'lucide-react/dist/esm/icons/target';
+import ChevronDown from 'lucide-react/dist/esm/icons/chevron-down';
 import { useTranslation } from 'react-i18next';
 import { services } from '@/data/services';
 import { serviceImages } from '@/data/serviceImages';
