@@ -108,6 +108,39 @@ const extendedServiceContent: Record<string, any> = {
     ],
     
     footerText: '¿Necesita depurar su archivo central, destruir planillas antiguas o deshacerse de tarjetas bancarias con máxima seguridad? Nuestro equipo de confidencialidad le espera.'
+  },
+
+  // SERVICIO 4
+  'destruccion-equipos-tecnologicos-borrado-datos': {
+    heroTitle: 'Destrucción de Equipos Tecnológicos, AEE y Borrado Seguro de Datos',
+    heroSubtitle: 'Garantizamos la inhabilitación física de su hardware y la eliminación irreversible de su información confidencial. Protegemos los datos de su empresa y gestionamos los componentes resultantes bajo la estricta normativa ambiental peruana.',
+    ctaButton: 'Cotizar Destrucción y Borrado',
+    whatsappMessage: 'Hola, estoy en la web de ECO M y deseo cotizar la destrucción de equipos tecnológicos y borrado de datos.',
+    
+    section2Intro: 'Abarcamos la destrucción integral de todo tipo de Aparatos Eléctricos y Electrónicos (AEE) u obsolescencia tecnológica para evitar fugas de información y proteger su marca.',
+    products: [
+      { title: 'Equipos Informáticos e Infraestructura TI', desc: 'Computadoras de escritorio (CPU), laptops, servidores, discos duros (HDD y SSD), memorias USB, tarjetas madre y routers.' },
+      { title: 'Dispositivos Móviles y Telecomunicaciones', desc: 'Celulares corporativos (smartphones), tablets, iPads, radios de comunicación, teléfonos IP y centrales telefónicas.' },
+      { title: 'Periféricos y Accesorios', desc: 'Monitores, pantallas, impresoras, fotocopiadoras, teclados, mouses, audífonos (headsets), terminales de pago (POS) y relojes biométricos.' },
+      { title: 'Almacenamiento de Energía', desc: 'Baterías externas (power banks), UPS, cargadores, fuentes de poder y cables.' }
+    ],
+
+    cycleTitle: 'Nuestro Ciclo de Servicio Seguro',
+    cycleSteps: [
+      { icon: Truck, title: '1. Recolección y Custodia Segura', desc: 'Retiramos los equipos directamente en sus instalaciones o almacenes utilizando furgones cerrados y personal capacitado, garantizando la trazabilidad desde el primer minuto.' },
+      { icon: ShieldCheck, title: '2. Borrado Lógico de Datos (Destrucción Digital)', desc: 'A solicitud del cliente, aplicamos un borrado seguro de la información contenida en los discos y memorias antes de su destrucción física, asegurando que los datos confidenciales sean 100% irrecuperables.' },
+      { icon: Recycle, title: '3. Destrucción Física y Trituración', desc: 'Sometemos los equipos tecnológicos a procesos mecánicos de trituración o inhabilitación total. El hardware pierde su forma original, evitando que piezas con su marca o información terminen en el mercado negro.' },
+      { icon: FileCheck, title: '4. Manejo de RAEE y Disposición Final', desc: 'Los fragmentos resultantes de la destrucción son gestionados correctamente como Residuos de Aparatos Eléctricos y Electrónicos (RAEE). Emitimos el Certificado de Destrucción y Disposición Final, válido ante las autoridades ambientales (MINAM/OEFA).' }
+    ],
+
+    whyTitle: '¿Por qué confiar en ECO M para sus activos tecnológicos?',
+    whyPoints: [
+      { title: 'Cero Riesgo de Fuga de Información', desc: 'Cumplimiento total para bancos, clínicas, aseguradoras y entidades estatales.' },
+      { title: 'Protección de Marca', desc: 'Evitamos el mercado secundario no autorizado de sus equipos dados de baja.' },
+      { title: 'Cumplimiento Normativo', desc: 'Procesos alineados a la Ley de Protección de Datos Personales y la Ley de Gestión de Residuos Sólidos.' }
+    ],
+    
+    footerText: '¿Tiene un inventario tecnológico obsoleto o requiere destruir discos duros con urgencia? Un asesor de ECO M está listo para ayudarle.'
   }
 };
 
