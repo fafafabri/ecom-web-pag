@@ -1,131 +1,168 @@
+import { useRef } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { CheckCircle, MessageCircle, ArrowRight } from 'lucide-react';
+import { CheckCircle, MessageCircle, ArrowRight, ShieldCheck, Truck, Recycle, FileCheck, ChevronLeft, ChevronRight } from 'lucide-react';
 import { getServiceBySlug, servicesByCategory, Service } from '@/data/services';
 import { serviceImages } from '@/data/serviceImages';
 import NotFound from './NotFound';
 
-const WHATSAPP_NUMBER = '51933342580';
+const WHATSAPP_NUMBER = '51902667683';
 
-function getWhatsAppUrl(service: Service): string {
-  const title = service.title;
-  let msg = '';
+// 1. DICCIONARIO DE CONTENIDOS EXTENDIDOS
+const extendedServiceContent: Record<string, any> = {
+  'destruccion-productos-mercaderia-materiales-industriales': {
+    heroTitle: 'Destrucción de Productos, Mercadería Vencida y Materiales Industriales',
+    heroSubtitle: 'Soluciones seguras para la eliminación de inventarios obsoletos, mermas y lotes defectundo. Inhabilitamos su mercadería para proteger el prestigio de su marca, garantizando una disposición final responsable y certificada.',
+    ctaButton: 'Cotizar Destrucción de Mercadería',
+    whatsappMessage: 'Hola, estoy en la web de ECO M y deseo cotizar la destrucción de productos y mercadería.',
+    
+    section2Intro: 'Gestionamos la inhabilitación física de bienes que han perdido su valor comercial, evitando su ingreso al mercado informal y protegiendo tanto a los consumidores como a su empresa.',
+    products: [
+      { title: 'Productos de Consumo y Cuidado Personal', desc: 'Cosméticos, champús, cremas, perfumes, artículos de belleza y cuidado personal con fallas de calidad, empaques dañados o fechas expiradas.' },
+      { title: 'Industria Alimentaria y Farmacéutica', desc: 'Lotes de alimentos y bebidas vencidas, suplementos, insumos médicos y productos rechazados por control de calidad.' },
+      { title: 'Materiales Industriales y Mermas', desc: 'Repuestos, autopartes, componentes plásticos, empaques devueltos, envases con logo impreso y saldos de producción.' },
+      { title: 'Mercadería General y Retail', desc: 'Lentes de sol, juguetes, artículos de hogar, productos falsificados (incautaciones) o mercancía en estado de abandono legal.' }
+    ],
 
-  if (service.id.startsWith('destruccion-') || service.id === 'manejo-raee') {
-    msg = `Hola ECO M, solicito cotización para ${title}. Detalle del material: [ ], ¿Requiere Notario?: [ ], Peso aprox: [ ].`;
-  } else if (service.id === 'sanitarios-portatiles') {
-    msg = `Hola ECO M, solicito información sobre Sanitarios Portátiles. Cantidad: [ ], Tipo/Modelo: [ ].`;
-  } else if (['trampas-grasa', 'pozos-septicos', 'biodigestores'].includes(service.id)) {
-    msg = `Hola ECO M, solicito servicio de ${title}. Capacidad aprox: [ ], Distrito: [ ], ¿Cuándo fue su última limpieza?: [ ].`;
-  } else if (['gestion-iqbf', 'transporte-maptel', 'recojo-residuos', 'disposicion-final', 'carga-transporte'].includes(service.id)) {
-    msg = `Hola ECO M, solicito servicio de ${title}. Tipo de carga: [ ], Volumen: [ ], Origen/Destino: [ ].`;
-  } else {
-    msg = `Hola ECO M, solicito información sobre ${title}.`;
+    cycleTitle: 'Nuestro Ciclo de Servicio Seguro',
+    cycleSteps: [
+      { icon: Truck, title: '1. Recolección y Logística Inversa', desc: 'Retiramos la mercadería directamente desde sus almacenes, centros de distribución o aduanas, utilizando vehículos adecuados y personal homologado para cargas de cualquier volumen.' },
+      { icon: ShieldCheck, title: '2. Transporte Seguro y Custodia', desc: 'Realizamos el traslado directo y monitoreado hacia nuestra planta de operaciones, garantizando que ningún producto se extravíe o desvíe durante el trayecto.' },
+      { icon: Recycle, title: '3. Proceso de Destrucción y Desnaturalización', desc: 'Aplicamos procesos mecánicos (trituración, compactación o corte) que inutilizan por completo el producto y su empaque original, haciéndolo irreconocible e inservible.' },
+      { icon: FileCheck, title: '4. Disposición Final y Certificación', desc: 'Los residuos generados se valorizan (reciclan) o se disponen en rellenos autorizados de forma ecológica. Emitimos el Certificado de Destrucción y Disposición, documento clave para sus auditorías.' }
+    ],
+
+    whyTitle: '¿Por qué confiar en ECO M para sus inventarios?',
+    whyPoints: [
+      { title: 'Protección de Marca y Reputación', desc: 'Eliminamos el riesgo de que productos defectuosos o vencidos lleguen al mercado negro y dañen la imagen de su empresa.' },
+      { title: 'Liberación de Espacio y Ahorro', desc: 'Le ayudamos a despejar rápidamente sus almacenes de inventarios inmovilizados, reduciendo sus altos costos logísticos.' },
+      { title: 'Sustento Legal y Transparencia', desc: 'Nuestros procesos respaldan documentariamente la baja de sus activos frente a inspecciones y controles de calidad.' }
+    ],
+    
+    footerText: '¿Necesita dar de baja un lote de productos, destruir mermas o liberar espacio en su almacén de forma inmediata? Un especialista de ECO M está listo para asesorarle.'
   }
-
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
-}
-
-const serviceKeyMap: { [key: string]: string } = {
-  'destruccion-documentos': 'destruccionDocumentos',
-  'destruccion-residuos': 'destruccionResiduos',
-  'destruccion-raee': 'destruccionRAEE',
-  'destruccion-ropa': 'destruccionRopa',
-  'gestion-iqbf': 'gestionIQBF',
-  'transporte-maptel': 'transporteMaptel',
-  'recojo-residuos': 'recojoresiduos',
-  'disposicion-final': 'disposicionFinal',
-  'manejo-raee': 'manejoRAEE',
-  'sanitarios-portatiles': 'sanitariosPortatiles',
-  'trampas-grasa': 'limpiezaGrasas',
-  'pozos-septicos': 'limpiezaPozos',
-  'asesorias-ambientales': 'asesorias',
-};
-
-type ServiceCopy = {
-  title: string;
-  desc: string;
-  benefits: string[];
-  intro?: string;
-  aeHeading?: string;
-  aeText?: string;
-  supportHeading?: string;
-  supportBenefits?: string[];
-  specializationIntro?: string;
-  serviceItems?: string[];
 };
 
 const ServiceDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const { t } = useTranslation();
+  const carouselRef = useRef<HTMLDivElement>(null);
+  
   const service = slug ? getServiceBySlug(slug) : undefined;
 
   if (!service) return <NotFound />;
 
   const image = serviceImages[service.imageKey];
-  const serviceKey = serviceKeyMap[service.id] || service.id;
-  const serviceData = t(`serviceDetails.${serviceKey}`, { returnObjects: true }) as ServiceCopy;
+  const extendedData = extendedServiceContent[service.slug];
 
-  const related = service.id === 'sanitarios-portatiles'
-    ? []
-    : (service.category === 'destruccion' ? servicesByCategory.destruccion : servicesByCategory.otros)
-        .filter(s => s.id !== service.id)
-        .slice(0, 3);
+  // Obtener TODOS los demás servicios excluyendo el actual (para el carrusel)
+  const allServices = [...servicesByCategory.destruccion, ...servicesByCategory.sanitarios];
+  const related = allServices.filter(s => s.id !== service.id);
+
+  // Funciones para desplazar el carrusel
+  const scrollLeft = () => {
+    if (carouselRef.current) {
+      carouselRef.current.scrollBy({ left: -340, behavior: 'smooth' });
+    }
+  };
+
+  const scrollRight = () => {
+    if (carouselRef.current) {
+      carouselRef.current.scrollBy({ left: 340, behavior: 'smooth' });
+    }
+  };
+
+  const getFallbackWhatsAppUrl = (serv: Service) => {
+    return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hola ECO M, solicito información sobre ${serv.title}.`)}`;
+  };
+
+  const whatsappLink = extendedData 
+    ? `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(extendedData.whatsappMessage)}`
+    : getFallbackWhatsAppUrl(service);
 
   return (
     <>
-      <section className="relative flex items-center min-h-[40vh] w-full overflow-hidden">
+      <section className="relative flex items-center min-h-[50vh] w-full overflow-hidden">
         <img src={image} alt={service.title} className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-foreground/65" />
+        <div className="absolute inset-0 bg-foreground/75" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 w-full text-center">
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-background tracking-tight">{serviceData?.title || service.title}</h1>
-          <div className="flex gap-1 justify-center mt-6">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-background tracking-tight max-w-5xl mx-auto leading-tight">
+            {extendedData ? extendedData.heroTitle : service.title}
+          </h1>
+          <div className="flex gap-1 justify-center mt-8 mb-6">
             <div className="w-8 h-1 rounded-full bg-accent" />
             <div className="w-8 h-1 rounded-full bg-background/40" />
           </div>
-          <p className="text-background/70 mt-4 text-sm">
-            <Link to="/" className="hover:text-background transition-colors">{t('nav.inicio')}</Link> / <Link to="/" className="hover:text-background transition-colors">{t('nav.soluciones')}</Link> / {serviceData?.title || service.title}
+          
+          <p className="text-background/90 mt-6 text-lg md:text-xl max-w-4xl mx-auto leading-relaxed font-medium">
+            {extendedData ? extendedData.heroSubtitle : service.shortDesc}
+          </p>
+
+          <p className="text-background/60 mt-8 text-sm">
+            <Link to="/" className="hover:text-background transition-colors">{t('nav.inicio')}</Link> / 
+            <span className="mx-2">Soluciones</span> / 
+            <span className="text-background ml-2">{extendedData ? extendedData.heroTitle : service.title}</span>
           </p>
         </div>
       </section>
 
-      <section className="py-24 bg-card">
+      <section className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12">
+          
           <div className="lg:col-span-7">
-            <p className="text-xs uppercase tracking-[0.2em] text-primary font-semibold mb-3">ECO M</p>
-            <h2 className="text-3xl font-bold tracking-tight mb-2">{serviceData?.title || service.title}</h2>
-            <div className="flex gap-1 my-6">
-              <div className="w-8 h-1 rounded-full bg-accent" />
-              <div className="w-8 h-1 rounded-full bg-primary" />
-            </div>
-            {service.id === 'destruccion-raee' ? (
-              <div className="space-y-8 text-lg text-muted-foreground leading-relaxed">
-                <p>{serviceData?.intro || service.fullDesc}</p>
-
-                <div className="space-y-3">
-                  <h3 className="text-xl font-semibold text-foreground">{serviceData?.aeHeading || 'Sobre la destrucción de AEE (Aparatos Eléctricos y Electrónicos)'}</h3>
-                  <p>{serviceData?.aeText || ''}</p>
-                </div>
-
-                <div className="space-y-4">
-                  <h3 className="text-xl font-semibold text-foreground">{serviceData?.supportHeading || 'Respaldo para su gestión corporativa:'}</h3>
-                  <div className="flex flex-col gap-4">
-                    {(serviceData?.supportBenefits || []).map((b: string, i: number) => (
-                      <div key={i} className="flex items-start gap-3">
-                        <CheckCircle className="h-5 w-5 text-primary mt-0.5 shrink-0" />
-                        <span className="text-foreground text-base">{b}</span>
+            {extendedData ? (
+              <div className="space-y-16">
+                <div className="space-y-6">
+                  <h2 className="text-3xl font-bold tracking-tight text-foreground">¿Qué productos y materiales destruimos?</h2>
+                  <div className="flex gap-1 mb-6">
+                    <div className="w-8 h-1 rounded-full bg-accent" />
+                    <div className="w-8 h-1 rounded-full bg-primary" />
+                  </div>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    {extendedData.section2Intro}
+                  </p>
+                  <div className="grid gap-6 mt-8">
+                    {extendedData.products.map((prod: any, idx: number) => (
+                      <div key={idx} className="bg-card border border-border/50 p-6 rounded-2xl shadow-sm flex gap-4">
+                        <CheckCircle className="h-6 w-6 text-primary shrink-0 mt-1" />
+                        <div>
+                          <h3 className="font-bold text-foreground text-lg mb-2">{prod.title}</h3>
+                          <p className="text-muted-foreground leading-relaxed">{prod.desc}</p>
+                        </div>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                <div className="space-y-3">
-                  <p className="text-base text-muted-foreground font-medium">{serviceData?.specializationIntro || 'Nos especializamos en:'}</p>
-                  <div className="flex flex-col gap-4 pt-2">
-                    {(serviceData?.serviceItems || []).map((b: string, i: number) => (
-                      <div key={i} className="flex items-start gap-3">
-                        <CheckCircle className="h-5 w-5 text-primary mt-0.5 shrink-0" />
-                        <span className="text-foreground text-base">{b}</span>
+                <div className="space-y-8 bg-card border border-border/50 p-8 rounded-3xl shadow-sm">
+                  <h2 className="text-2xl font-bold tracking-tight text-foreground">{extendedData.cycleTitle}</h2>
+                  <div className="grid gap-8">
+                    {extendedData.cycleSteps.map((step: any, idx: number) => (
+                      <div key={idx} className="flex gap-5 relative">
+                        {idx !== extendedData.cycleSteps.length - 1 && (
+                          <div className="absolute left-6 top-14 bottom-[-2rem] w-px bg-border/60" />
+                        )}
+                        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 z-10 relative">
+                          <step.icon className="h-6 w-6 text-primary" />
+                        </div>
+                        <div>
+                          <h3 className="font-bold text-foreground text-lg mb-2">{step.title}</h3>
+                          <p className="text-muted-foreground leading-relaxed">{step.desc}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="space-y-6">
+                  <h2 className="text-2xl font-bold tracking-tight text-foreground">{extendedData.whyTitle}</h2>
+                  <div className="grid gap-5">
+                    {extendedData.whyPoints.map((point: any, idx: number) => (
+                      <div key={idx} className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-accent mt-1 shrink-0" />
+                        <p className="text-muted-foreground leading-relaxed">
+                          <strong className="text-foreground">{point.title}:</strong> {point.desc}
+                        </p>
                       </div>
                     ))}
                   </div>
@@ -133,10 +170,15 @@ const ServiceDetail = () => {
               </div>
             ) : (
               <>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-10">{serviceData?.desc || service.fullDesc}</p>
-
+                <p className="text-xs uppercase tracking-[0.2em] text-primary font-semibold mb-3">ECO M</p>
+                <h2 className="text-3xl font-bold tracking-tight mb-2">{service.title}</h2>
+                <div className="flex gap-1 my-6">
+                  <div className="w-8 h-1 rounded-full bg-accent" />
+                  <div className="w-8 h-1 rounded-full bg-primary" />
+                </div>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-10">{service.fullDesc}</p>
                 <div className="flex flex-col gap-4">
-                  {(serviceData?.benefits || service.benefits).map((b: string, i: number) => (
+                  {service.benefits.map((b: string, i: number) => (
                     <div key={i} className="flex items-start gap-3">
                       <CheckCircle className="h-5 w-5 text-primary mt-0.5 shrink-0" />
                       <span className="text-foreground">{b}</span>
@@ -149,45 +191,92 @@ const ServiceDetail = () => {
 
           <div className="lg:col-span-5">
             <div className="sticky top-28 flex flex-col gap-6">
-              <img src={image} alt={service.title} className="rounded-2xl shadow-lg w-full object-cover aspect-[4/3]" loading="lazy" />
+              <img src={image} alt={service.title} className="rounded-2xl shadow-lg w-full object-cover aspect-[4/3] border border-border/50" loading="lazy" />
               
-              <a
-                href={getWhatsAppUrl(service)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full bg-whatsapp/90 text-accent-foreground flex items-center justify-center gap-3 py-5 rounded-xl text-lg font-bold shadow-[0_8px_24px_rgba(37,211,102,0.25)] hover:-translate-y-1 hover:scale-[1.03] hover:bg-whatsapp hover:shadow-[0_12px_32px_rgba(37,211,102,0.35)] transition-all duration-300"
+              <Link 
+                to="/contacto" 
+                state={{ serviceContext: service.title }}
+                className="w-full bg-cta text-cta-foreground flex items-center justify-center gap-2 py-5 rounded-xl font-bold shadow-[0_4px_14px_0_hsl(var(--cta)/0.25)] hover:scale-[1.02] hover:shadow-[0_6px_20px_hsl(var(--cta)/0.35)] transition-all duration-200 text-lg"
               >
-                <MessageCircle className="h-6 w-6" />
-                {t('contacto.contact')} WhatsApp
-              </a>
-
-              <Link to="/contacto" className="w-full bg-cta text-cta-foreground flex items-center justify-center gap-2 py-4 rounded-xl font-semibold shadow-[0_4px_14px_0_hsl(var(--cta)/0.25)] hover:scale-[1.03] hover:shadow-[0_6px_20px_hsl(var(--cta)/0.35)] transition-all duration-200">
-                {t('form.quote.submit')} <ArrowRight className="h-4 w-4" />
+                {extendedData ? extendedData.ctaButton : 'Solicitar Cotización'} <ArrowRight className="h-5 w-5" />
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {related.length > 0 && service.id !== 'sanitarios-portatiles' && (
+      {extendedData && (
         <section className="py-16 bg-background">
+          <div className="max-w-7xl mx-auto px-6 text-center border border-primary/10 bg-primary/5 rounded-3xl py-16">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8 max-w-3xl mx-auto leading-tight">
+              {extendedData.footerText}
+            </h2>
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-3 bg-whatsapp/90 text-accent-foreground px-8 py-4 rounded-xl text-lg font-bold shadow-[0_8px_24px_rgba(37,211,102,0.25)] hover:-translate-y-1 hover:scale-[1.03] hover:bg-whatsapp hover:shadow-[0_12px_32px_rgba(37,211,102,0.35)] transition-all duration-300"
+            >
+              <MessageCircle className="h-6 w-6" />
+              Contactar por WhatsApp
+            </a>
+          </div>
+        </section>
+      )}
+
+      {/* Otras Soluciones - Estilo Original + Carrusel */}
+      {related.length > 0 && (
+        <section className="py-16 bg-[#f4f6f8]">
           <div className="max-w-7xl mx-auto px-6">
-            <h3 className="font-display font-bold text-2xl mb-8">Otras Soluciones</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {related.map(s => (
-                <Link key={s.id} to={`/servicios/${s.slug}`} className="group flex flex-col bg-card rounded-2xl overflow-hidden shadow-[0_1px_3px_rgba(0,0,0,0.05),0_10px_24px_-4px_rgba(0,0,0,0.02)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.05),0_20px_32px_-8px_rgba(0,0,0,0.08)] hover:scale-[1.01] transition-all duration-300">
-                  <div className="h-40 w-full overflow-hidden">
-                    <img src={serviceImages[s.imageKey]} alt={s.title} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
-                  </div>
-                  <div className="p-5">
-                    <h4 className="font-display font-bold text-sm">{s.title}</h4>
-                    <span className="mt-2 inline-flex items-center text-primary text-xs font-medium group-hover:text-heading transition-colors">
-                      Ver detalle <ArrowRight className="h-3 w-3 ml-1 transition-transform group-hover:translate-x-1" />
-                    </span>
-                  </div>
-                </Link>
-              ))}
+            <h3 className="font-display font-bold text-2xl mb-8 text-[#2c6e6b]">Otras Soluciones</h3>
+            
+            <div className="relative group">
+              {/* Flecha Izquierda */}
+              <button 
+                onClick={scrollLeft}
+                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-white shadow-lg rounded-full p-2 text-primary hover:bg-primary hover:text-white transition-all opacity-0 group-hover:opacity-100 hidden md:block"
+              >
+                <ChevronLeft className="w-6 h-6" />
+              </button>
+
+              {/* Contenedor Carrusel */}
+              <div 
+                ref={carouselRef}
+                className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 pt-2 px-1"
+                style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+              >
+                <style>{`
+                  ::-webkit-scrollbar { display: none; }
+                `}</style>
+
+                {related.map(s => (
+                  <Link 
+                    key={s.id} 
+                    to={`/servicios/${s.slug}`} 
+                    className="min-w-[300px] md:min-w-[340px] snap-start shrink-0 flex flex-col bg-card rounded-2xl overflow-hidden shadow-[0_1px_3px_rgba(0,0,0,0.05),0_10px_24px_-4px_rgba(0,0,0,0.02)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.05),0_20px_32px_-8px_rgba(0,0,0,0.08)] hover:scale-[1.01] transition-all duration-300"
+                  >
+                    <div className="h-40 w-full overflow-hidden">
+                      <img src={serviceImages[s.imageKey]} alt={s.title} className="h-full w-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy" />
+                    </div>
+                    <div className="p-5 flex flex-col justify-between flex-grow">
+                      <h4 className="font-display font-bold text-sm text-[#2c6e6b] mb-4">{s.title}</h4>
+                      <span className="inline-flex items-center text-[#5c9d3e] text-xs font-semibold transition-colors">
+                        Ver detalle <ArrowRight className="h-3 w-3 ml-1" />
+                      </span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+
+              {/* Flecha Derecha */}
+              <button 
+                onClick={scrollRight}
+                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-white shadow-lg rounded-full p-2 text-primary hover:bg-primary hover:text-white transition-all opacity-0 group-hover:opacity-100 hidden md:block"
+              >
+                <ChevronRight className="w-6 h-6" />
+              </button>
             </div>
+
           </div>
         </section>
       )}
