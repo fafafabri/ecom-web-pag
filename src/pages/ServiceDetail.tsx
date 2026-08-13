@@ -183,6 +183,34 @@ const extendedServiceContent: Record<string, any> = {
       { title: 'Cero Riesgo Ambiental y Laboral', desc: 'Personal altamente capacitado en manejo de materiales peligrosos (MATPEL) e infraestructura que previene cualquier tipo de derrame o contaminación.' }
     ],
     footerText: '¿Requiere gestionar insumos químicos vencidos o dar de baja bienes fiscalizados con urgencia y seguridad garantizada? Un ingeniero de ECO M está listo para evaluar su requerimiento.'
+  },
+
+  // SERVICIO 7
+  'venta-banos-duchas-lavamanos-portatiles': {
+    heroTitle: 'Venta de Sanitarios, Duchas y Lavamanos Portátiles',
+    heroSubtitle: 'Equipamiento de higiene de alta durabilidad para proyectos de construcción, campamentos mineros, agricultura y eventos. Venta directa de módulos nuevos, fabricados para soportar climas extremos, con garantía y disponibilidad inmediata.',
+    ctaButton: 'Solicitar Catálogo y Precios',
+    whatsappMessage: 'Hola, estoy en la web de ECO M y solicito cotización para la compra de sanitarios, duchas o lavamanos portátiles.',
+    section2Intro: 'Proveemos equipos 100% nuevos, fabricados en polietileno de alta densidad (HDPE) con protección UV, diseñados para garantizar la higiene y cumplir con las normas de seguridad ocupacional en su proyecto.',
+    products: [
+      { title: 'Baños Portátiles', desc: 'Sanitarios autónomos (Estándar y VIP), de fácil limpieza y mantenimiento. Ideales para obras civiles, campamentos remotos, uso agrícola o recintos de eventos. Estructura robusta y piso antideslizante.' },
+      { title: 'Duchas Portátiles', desc: 'Módulos de ducha individuales listos para conectar a la red de agua o tanques elevados. Espaciosos, higiénicos y con excelente drenaje; la solución perfecta para el aseo del personal en campamentos y proyectos de larga duración.' },
+      { title: 'Lavamanos Portátiles (Estaciones de Higiene)', desc: 'Estaciones de lavado autónomas o conectables. Diseñadas con bomba de pie (pedal) para evitar el contacto manual, fundamentales para cumplir con los protocolos de salud (SSOMA) en comedores e ingresos de obra.' }
+    ],
+    cycleTitle: 'Su Proceso de Compra (Los 4 Pasos)',
+    cycleSteps: [
+      { icon: MessageCircle, title: '1. Asesoría Comercial', desc: 'Le ayudamos a dimensionar su compra: calculamos la cantidad exacta de baños, duchas o lavamanos que su proyecto necesita según el número de trabajadores y la normativa vigente.' },
+      { icon: FileCheck, title: '2. Cotización y Adquisición', desc: 'Proceso de venta ágil para empresas. Emitimos cotizaciones formales y ofrecemos precios competitivos, con descuentos especiales para compras por volumen o licitaciones.' },
+      { icon: Truck, title: '3. Preparación y Despacho', desc: 'Preparamos sus equipos para recojo inmediato en nuestra planta en Lima o coordinamos la logística para envíos a su obra en cualquier parte del Perú.' },
+      { icon: ShieldCheck, title: '4. Entrega y Garantía', desc: 'Recibe equipos totalmente nuevos y listos para operar en su proyecto, respaldados por nuestra garantía de fábrica contra defectos de manufactura y diseño estructural.' }
+    ],
+    whyTitle: '¿Por qué es mejor comprar sus propios equipos con ECO M?',
+    whyPoints: [
+      { title: 'Rentabilidad para su Proyecto', desc: 'Para obras de mediana y larga duración, comprar los sanitarios representa un ahorro económico enorme en comparación con los altos costos de alquiler mensual. Usted invierte en un activo que puede reutilizar en futuras obras.' },
+      { title: 'Máxima Resistencia Extrema', desc: 'Equipos inyectados para resistir golpes, uso rudo, y diseñados con protección UV para soportar el intenso sol de la costa, la sierra y la selva peruana.' },
+      { title: 'Cumplimiento Normativo (SSOMA)', desc: 'Garantice las condiciones sanitarias obligatorias para el bienestar de su personal de manera definitiva y eleve el estándar de su empresa.' }
+    ],
+    footerText: '¿Iniciando una nueva obra o equipando un campamento? Invierta inteligentemente en sus propios equipos sanitarios. Solicite nuestro catálogo de ventas hoy.'
   }
 };
 
@@ -256,7 +284,11 @@ const ServiceDetail = () => {
             {extendedData ? (
               <div className="space-y-16">
                 <div className="space-y-6">
-                  <h2 className="text-3xl font-bold tracking-tight text-foreground">¿Qué procesos y materiales gestionamos?</h2>
+                  <h2 className="text-3xl font-bold tracking-tight text-foreground">
+                    {service.slug === 'venta-banos-duchas-lavamanos-portatiles' 
+                      ? 'Nuestro Catálogo de Soluciones (¿Qué vendemos?)' 
+                      : '¿Qué procesos y materiales gestionamos?'}
+                  </h2>
                   <div className="flex gap-1 mb-6">
                     <div className="w-8 h-1 rounded-full bg-accent" />
                     <div className="w-8 h-1 rounded-full bg-primary" />
