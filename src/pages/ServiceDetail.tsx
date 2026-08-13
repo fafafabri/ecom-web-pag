@@ -10,9 +10,11 @@ const WHATSAPP_NUMBER = '51902667683';
 
 // 1. DICCIONARIO DE CONTENIDOS EXTENDIDOS
 const extendedServiceContent: Record<string, any> = {
+  
+  // SERVICIO 1
   'destruccion-productos-mercaderia-materiales-industriales': {
     heroTitle: 'Destrucción de Productos, Mercadería Vencida y Materiales Industriales',
-    heroSubtitle: 'Soluciones seguras para la eliminación de inventarios obsoletos, mermas y lotes defectundo. Inhabilitamos su mercadería para proteger el prestigio de su marca, garantizando una disposición final responsable y certificada.',
+    heroSubtitle: 'Soluciones seguras para la eliminación de inventarios obsoletos, mermas y lotes defectuosos. Inhabilitamos su mercadería para proteger el prestigio de su marca, garantizando una disposición final responsable y certificada.',
     ctaButton: 'Cotizar Destrucción de Mercadería',
     whatsappMessage: 'Hola, estoy en la web de ECO M y deseo cotizar la destrucción de productos y mercadería.',
     
@@ -40,6 +42,39 @@ const extendedServiceContent: Record<string, any> = {
     ],
     
     footerText: '¿Necesita dar de baja un lote de productos, destruir mermas o liberar espacio en su almacén de forma inmediata? Un especialista de ECO M está listo para asesorarle.'
+  },
+
+  // SERVICIO 2
+  'destruccion-notarial-fiscal-aduanera': {
+    heroTitle: 'Destrucción Notarial, Fiscal y Aduanera (Baja de Inventarios)',
+    heroSubtitle: 'Respaldo legal absoluto para la deducción de impuestos y el sustento de gastos ante SUNAT. Realizamos la inhabilitación de mermas y desmedros con presencia de Notario Público, garantizando el cumplimiento tributario y ambiental de su empresa.',
+    ctaButton: 'Solicitar Asesoría Fiscal',
+    whatsappMessage: 'Hola, estoy en la web de ECO M y necesito asesoría para destrucción notarial y baja de inventarios ante SUNAT.',
+    
+    section2Intro: 'Ejecutamos procesos de destrucción bajo los estrictos lineamientos de la Ley del Impuesto a la Renta y la Ley General de Aduanas, brindándole a su área contable la documentación probatoria requerida.',
+    products: [
+      { title: 'Baja de Desmedros (SUNAT)', desc: 'Destrucción de mercadería que ha perdido su calidad o valor comercial (obsoleta, vencida o deteriorada) con presencia notarial, requisito indispensable para que su empresa deduzca el gasto en el Impuesto a la Renta.' },
+      { title: 'Destrucción Notarial de Mermas', desc: 'Validación legal para las pérdidas cuantitativas de insumos generadas durante su proceso productivo o industrial.' },
+      { title: 'Destrucción Fiscal y Aduanera', desc: 'Disposición de mercancías en situación de abandono legal, comiso administrativo o restringidas, bajo la supervisión directa de autoridades aduaneras.' },
+      { title: 'Baja de Activos Fijos', desc: 'Inhabilitación y destrucción de maquinaria, mobiliario o equipos depreciados que deben ser retirados de sus libros contables con el debido sustento notarial.' }
+    ],
+
+    cycleTitle: 'Nuestro Ciclo de Servicio Seguro',
+    cycleSteps: [
+      { icon: Truck, title: '1. Coordinación Logística y Legal', desc: 'Asesoramos a su equipo contable, agendamos el recojo de la mercadería y coordinamos la presencia de nuestro Notario Público aliado (o del funcionario de SUNAT asignado) para el día exacto de la operación.' },
+      { icon: ShieldCheck, title: '2. Transporte Custodiado', desc: 'Trasladamos los inventarios obsoletos desde su centro de distribución hasta nuestra planta autorizada, bajo estrictos protocolos de seguridad y trazabilidad.' },
+      { icon: Recycle, title: '3. Destrucción Presencial (Acto Notarial)', desc: 'Sometemos los bienes a trituración o compactación presencial. El Notario, auditor o representante de su empresa verifica in situ que la mercadería quede totalmente inhabilitada y sin valor comercial.' },
+      { icon: FileCheck, title: '4. Emisión de Acta y Certificado', desc: 'Le entregamos el Acta Notarial de Destrucción (documento probatorio para SUNAT) junto con el Certificado de Disposición Final (respaldo ambiental para el MINAM/OEFA), cerrando su ciclo legal de manera impecable.' }
+    ],
+
+    whyTitle: '¿Por qué confiar en ECO M para sus procesos tributarios?',
+    whyPoints: [
+      { title: 'Beneficio Tributario Garantizado', desc: 'Entregamos el sustento exacto que su área financiera necesita para deducir gastos y evitar contingencias o multas en auditorías de SUNAT.' },
+      { title: 'Proceso 100% Auditable y Transparente', desc: 'Ofrecemos registro fotográfico y en video de toda la operación para el respaldo y archivo de sus inspectores de calidad.' },
+      { title: 'Alianzas Notariales Estratégicas', desc: 'Trabajamos con Notarios Públicos especialistas en procesos de destrucción industrial, agilizando los trámites y garantizando que el acta cumpla con todos los requisitos de ley.' }
+    ],
+    
+    footerText: '¿Tiene un cierre contable próximo y necesita dar de baja un lote de mercadería ante SUNAT sin contratiempos? Nuestro equipo legal y operativo está listo para asistirle hoy mismo.'
   }
 };
 
@@ -113,7 +148,7 @@ const ServiceDetail = () => {
             {extendedData ? (
               <div className="space-y-16">
                 <div className="space-y-6">
-                  <h2 className="text-3xl font-bold tracking-tight text-foreground">¿Qué productos y materiales destruimos?</h2>
+                  <h2 className="text-3xl font-bold tracking-tight text-foreground">¿Qué procesos y materiales gestionamos?</h2>
                   <div className="flex gap-1 mb-6">
                     <div className="w-8 h-1 rounded-full bg-accent" />
                     <div className="w-8 h-1 rounded-full bg-primary" />
@@ -224,14 +259,13 @@ const ServiceDetail = () => {
         </section>
       )}
 
-      {/* Otras Soluciones - Estilo Original + Carrusel */}
+      {/* Otras Soluciones */}
       {related.length > 0 && (
         <section className="py-16 bg-[#f4f6f8]">
           <div className="max-w-7xl mx-auto px-6">
             <h3 className="font-display font-bold text-2xl mb-8 text-[#2c6e6b]">Otras Soluciones</h3>
             
             <div className="relative group">
-              {/* Flecha Izquierda */}
               <button 
                 onClick={scrollLeft}
                 className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-white shadow-lg rounded-full p-2 text-primary hover:bg-primary hover:text-white transition-all opacity-0 group-hover:opacity-100 hidden md:block"
@@ -239,7 +273,6 @@ const ServiceDetail = () => {
                 <ChevronLeft className="w-6 h-6" />
               </button>
 
-              {/* Contenedor Carrusel */}
               <div 
                 ref={carouselRef}
                 className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 pt-2 px-1"
@@ -268,7 +301,6 @@ const ServiceDetail = () => {
                 ))}
               </div>
 
-              {/* Flecha Derecha */}
               <button 
                 onClick={scrollRight}
                 className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-white shadow-lg rounded-full p-2 text-primary hover:bg-primary hover:text-white transition-all opacity-0 group-hover:opacity-100 hidden md:block"
