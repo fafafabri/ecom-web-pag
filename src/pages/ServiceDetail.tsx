@@ -154,6 +154,35 @@ const extendedServiceContent: Record<string, any> = {
       { title: 'Cuidado del Medio Ambiente', desc: 'Promovemos la valorización y correcta disposición de los residuos, ayudando a mitigar el impacto ambiental que genera la industria de la indumentaria.' }
     ],
     footerText: '¿Necesita dar de baja un lote de uniformes antiguos, destruir avíos de marca o inhabilitar calzado de seguridad? Nuestro equipo operativo está preparado para proteger su imagen hoy mismo.'
+  },
+
+  // SERVICIO 6
+  'destruccion-bienes-fiscalizados-residuos-peligrosos': {
+    heroTitle: 'Destrucción de Bienes Fiscalizados (IQBF) y Residuos Peligrosos',
+    heroSubtitle: 'Gestión de alto riesgo con cumplimiento normativo absoluto. Neutralizamos, destruimos y disponemos de insumos químicos, mercancías peligrosas y bienes fiscalizados (SUNAT) bajo los más estrictos estándares de seguridad y protección ambiental.',
+    ctaButton: 'Cotizar Destrucción de Peligrosos',
+    whatsappMessage: 'Hola, estoy en la web de ECO M y requiero gestión para bienes fiscalizados o residuos peligrosos.',
+    section2Intro: 'Evite contingencias legales y ambientales. Contamos con la infraestructura, los permisos y el personal calificado para la inhabilitación de materiales tóxicos, inflamables o controlados por el Estado.',
+    products: [
+      { title: 'Insumos Químicos y Bienes Fiscalizados (IQBF)', desc: 'Destrucción notarial y fiscal de productos químicos controlados por SUNAT (solventes, ácidos, acetona, etc.) garantizando que no sean desviados a actividades ilícitas.' },
+      { title: 'Productos Industriales Vencidos', desc: 'Lotes de pinturas, lubricantes, aditivos, resinas, pegamentos y reactivos químicos que han perdido su vida útil.' },
+      { title: 'Residuos Peligrosos Contaminados (RESPEL)', desc: 'Envases, cilindros, paños absorbentes o empaques que hayan estado en contacto directo con sustancias tóxicas o hidrocarburos.' },
+      { title: 'Materiales de Riesgo Biológico y Sanitario', desc: 'Cosméticos o fármacos altamente contaminados que requieren un tratamiento especial antes de su disposición final.' }
+    ],
+    cycleTitle: 'Nuestro Ciclo de Servicio Seguro',
+    cycleSteps: [
+      { icon: ShieldCheck, title: '1. Evaluación y Plan de Contingencia', desc: 'Nuestro equipo de ingenieros ambientales evalúa la hoja de seguridad (MSDS) de sus productos para determinar el EPP adecuado, los protocolos de manipulación y el método de destrucción más seguro.' },
+      { icon: Truck, title: '2. Transporte de Materiales Peligrosos (MTC)', desc: 'Recolectamos y trasladamos la carga utilizando nuestra flota especializada y autorizada por el MTC para el transporte de materiales y residuos peligrosos, garantizando total hermeticidad en la ruta.' },
+      { icon: Recycle, title: '3. Tratamiento, Neutralización y Destrucción', desc: 'Sometemos los bienes a procesos físico-químicos de neutralización, encapsulamiento o trituración mecánica controlada, eliminando su peligrosidad y desnaturalizando el producto por completo.' },
+      { icon: FileCheck, title: '4. Disposición en Relleno de Seguridad y Certificación', desc: 'Los residuos resultantes son confinados en rellenos de seguridad autorizados. Finalizamos emitiendo el Certificado de Destrucción y el Manifiesto de Residuos Peligrosos (MINAM/SIGERSOL).' }
+    ],
+    whyTitle: '¿Por qué confiar en ECO M para operaciones de alto riesgo?',
+    whyPoints: [
+      { title: 'Licencias y Autorizaciones Vigentes', desc: 'Operamos estrictamente como Empresa Operadora de Residuos Sólidos (EO-RS) autorizada por MINAM, DIGESA y MTC.' },
+      { title: 'Control Legal SUNAT para IQBF', desc: 'Brindamos la trazabilidad y el soporte notarial/fiscal exigido para dar de baja bienes fiscalizados sin riesgo de sanciones penales o tributarias.' },
+      { title: 'Cero Riesgo Ambiental y Laboral', desc: 'Personal altamente capacitado en manejo de materiales peligrosos (MATPEL) e infraestructura que previene cualquier tipo de derrame o contaminación.' }
+    ],
+    footerText: '¿Requiere gestionar insumos químicos vencidos o dar de baja bienes fiscalizados con urgencia y seguridad garantizada? Un ingeniero de ECO M está listo para evaluar su requerimiento.'
   }
 };
 
