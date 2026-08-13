@@ -17,7 +17,6 @@ const extendedServiceContent: Record<string, any> = {
     heroSubtitle: 'Soluciones seguras para la eliminación de inventarios obsoletos, mermas y lotes defectuosos. Inhabilitamos su mercadería para proteger el prestigio de su marca, garantizando una disposición final responsable y certificada.',
     ctaButton: 'Cotizar Destrucción de Mercadería',
     whatsappMessage: 'Hola, estoy en la web de ECO M y deseo cotizar la destrucción de productos y mercadería.',
-    
     section2Intro: 'Gestionamos la inhabilitación física de bienes que han perdido su valor comercial, evitando su ingreso al mercado informal y protegiendo tanto a los consumidores como a su empresa.',
     products: [
       { title: 'Productos de Consumo y Cuidado Personal', desc: 'Cosméticos, champús, cremas, perfumes, artículos de belleza y cuidado personal con fallas de calidad, empaques dañados o fechas expiradas.' },
@@ -25,7 +24,6 @@ const extendedServiceContent: Record<string, any> = {
       { title: 'Materiales Industriales y Mermas', desc: 'Repuestos, autopartes, componentes plásticos, empaques devueltos, envases con logo impreso y saldos de producción.' },
       { title: 'Mercadería General y Retail', desc: 'Lentes de sol, juguetes, artículos de hogar, productos falsificados (incautaciones) o mercancía en estado de abandono legal.' }
     ],
-
     cycleTitle: 'Nuestro Ciclo de Servicio Seguro',
     cycleSteps: [
       { icon: Truck, title: '1. Recolección y Logística Inversa', desc: 'Retiramos la mercadería directamente desde sus almacenes, centros de distribución o aduanas, utilizando vehículos adecuados y personal homologado para cargas de cualquier volumen.' },
@@ -33,14 +31,12 @@ const extendedServiceContent: Record<string, any> = {
       { icon: Recycle, title: '3. Proceso de Destrucción y Desnaturalización', desc: 'Aplicamos procesos mecánicos (trituración, compactación o corte) que inutilizan por completo el producto y su empaque original, haciéndolo irreconocible e inservible.' },
       { icon: FileCheck, title: '4. Disposición Final y Certificación', desc: 'Los residuos generados se valorizan (reciclan) o se disponen en rellenos autorizados de forma ecológica. Emitimos el Certificado de Destrucción y Disposición, documento clave para sus auditorías.' }
     ],
-
     whyTitle: '¿Por qué confiar en ECO M para sus inventarios?',
     whyPoints: [
       { title: 'Protección de Marca y Reputación', desc: 'Eliminamos el riesgo de que productos defectuosos o vencidos lleguen al mercado negro y dañen la imagen de su empresa.' },
       { title: 'Liberación de Espacio y Ahorro', desc: 'Le ayudamos a despejar rápidamente sus almacenes de inventarios inmovilizados, reduciendo sus altos costos logísticos.' },
       { title: 'Sustento Legal y Transparencia', desc: 'Nuestros procesos respaldan documentariamente la baja de sus activos frente a inspecciones y controles de calidad.' }
     ],
-    
     footerText: '¿Necesita dar de baja un lote de productos, destruir mermas o liberar espacio en su almacén de forma inmediata? Un especialista de ECO M está listo para asesorarle.'
   },
 
@@ -50,7 +46,6 @@ const extendedServiceContent: Record<string, any> = {
     heroSubtitle: 'Respaldo legal absoluto para la deducción de impuestos y el sustento de gastos ante SUNAT. Realizamos la inhabilitación de mermas y desmedros con presencia de Notario Público, garantizando el cumplimiento tributario y ambiental de su empresa.',
     ctaButton: 'Solicitar Asesoría Fiscal',
     whatsappMessage: 'Hola, estoy en la web de ECO M y necesito asesoría para destrucción notarial y baja de inventarios ante SUNAT.',
-    
     section2Intro: 'Ejecutamos procesos de destrucción bajo los estrictos lineamientos de la Ley del Impuesto a la Renta y la Ley General de Aduanas, brindándole a su área contable la documentación probatoria requerida.',
     products: [
       { title: 'Baja de Desmedros (SUNAT)', desc: 'Destrucción de mercadería que ha perdido su calidad o valor comercial (obsoleta, vencida o deteriorada) con presencia notarial, requisito indispensable para que su empresa deduzca el gasto en el Impuesto a la Renta.' },
@@ -58,7 +53,6 @@ const extendedServiceContent: Record<string, any> = {
       { title: 'Destrucción Fiscal y Aduanera', desc: 'Disposición de mercancías en situación de abandono legal, comiso administrativo o restringidas, bajo la supervisión directa de autoridades aduaneras.' },
       { title: 'Baja de Activos Fijos', desc: 'Inhabilitación y destrucción de maquinaria, mobiliario o equipos depreciados que deben ser retirados de sus libros contables con el debido sustento notarial.' }
     ],
-
     cycleTitle: 'Nuestro Ciclo de Servicio Seguro',
     cycleSteps: [
       { icon: Truck, title: '1. Coordinación Logística y Legal', desc: 'Asesoramos a su equipo contable, agendamos el recojo de la mercadería y coordinamos la presencia de nuestro Notario Público aliado (o del funcionario de SUNAT asignado) para el día exacto de la operación.' },
@@ -66,14 +60,12 @@ const extendedServiceContent: Record<string, any> = {
       { icon: Recycle, title: '3. Destrucción Presencial (Acto Notarial)', desc: 'Sometemos los bienes a trituración o compactación presencial. El Notario, auditor o representante de su empresa verifica in situ que la mercadería quede totalmente inhabilitada y sin valor comercial.' },
       { icon: FileCheck, title: '4. Emisión de Acta y Certificado', desc: 'Le entregamos el Acta Notarial de Destrucción (documento probatorio para SUNAT) junto con el Certificado de Disposición Final (respaldo ambiental para el MINAM/OEFA), cerrando su ciclo legal de manera impecable.' }
     ],
-
     whyTitle: '¿Por qué confiar en ECO M para sus procesos tributarios?',
     whyPoints: [
       { title: 'Beneficio Tributario Garantizado', desc: 'Entregamos el sustento exacto que su área financiera necesita para deducir gastos y evitar contingencias o multas en auditorías de SUNAT.' },
       { title: 'Proceso 100% Auditable y Transparente', desc: 'Ofrecemos registro fotográfico y en video de toda la operación para el respaldo y archivo de sus inspectores de calidad.' },
       { title: 'Alianzas Notariales Estratégicas', desc: 'Trabajamos con Notarios Públicos especialistas en procesos de destrucción industrial, agilizando los trámites y garantizando que el acta cumpla con todos los requisitos de ley.' }
     ],
-    
     footerText: '¿Tiene un cierre contable próximo y necesita dar de baja un lote de mercadería ante SUNAT sin contratiempos? Nuestro equipo legal y operativo está listo para asistirle hoy mismo.'
   },
 
@@ -83,7 +75,6 @@ const extendedServiceContent: Record<string, any> = {
     heroSubtitle: 'Protegemos el activo más valioso de su empresa: la información. Garantizamos la trituración confidencial e irrecuperable de sus archivos físicos y contables, en estricto cumplimiento con la Ley de Protección de Datos Personales.',
     ctaButton: 'Cotizar Destrucción de Archivos',
     whatsappMessage: 'Hola, estoy en la web de ECO M y solicito cotización para la trituración confidencial de archivos.',
-    
     section2Intro: 'Evite el espionaje corporativo y las multas legales. Nos encargamos de la eliminación definitiva de cualquier soporte físico que contenga información sensible de su empresa, empleados o clientes.',
     products: [
       { title: 'Archivos Contables y Financieros', desc: 'Facturas, balances, cheques anulados, estados de cuenta, declaraciones de impuestos y reportes de auditoría.' },
@@ -91,7 +82,6 @@ const extendedServiceContent: Record<string, any> = {
       { title: 'Información Estratégica y Comercial', desc: 'Bases de datos impresas, estrategias de marketing, planos, licitaciones, listados de clientes y presupuestos.' },
       { title: 'Soportes Magnéticos y Ópticos Menores', desc: 'Destrucción de CD-ROMs, DVDs, cintas de respaldo (tapes), fotochecks, tarjetas de crédito y tarjetas de identificación corporativa.' }
     ],
-
     cycleTitle: 'Nuestro Ciclo de Servicio Seguro',
     cycleSteps: [
       { icon: Truck, title: '1. Recolección Confidencial', desc: 'Nuestro personal debidamente identificado y homologado retira las cajas de documentos o archivos directamente de sus oficinas, garantizando que nadie externo tenga acceso a la información.' },
@@ -99,14 +89,12 @@ const extendedServiceContent: Record<string, any> = {
       { icon: Recycle, title: '3. Trituración de Alta Seguridad', desc: 'Sometemos los documentos a molinos trituradores industriales de corte cruzado (cross-cut), reduciendo el papel a partículas diminutas (confeti) que hacen humanamente imposible su reconstrucción o lectura.' },
       { icon: FileCheck, title: '4. Reciclaje y Emisión de Certificado', desc: 'Fomentamos la economía circular enviando el papel triturado a plantas de reciclaje de cartón. Finalmente, le entregamos su Certificado de Destrucción Confidencial, respaldando su cumplimiento normativo.' }
     ],
-
     whyTitle: '¿Por qué confiar sus archivos a ECO M?',
     whyPoints: [
       { title: 'Cumplimiento Legal Total', desc: 'Operamos bajo los lineamientos de la Ley N° 29733 (Ley de Protección de Datos Personales), evitando multas severas para su organización.' },
       { title: 'Recuperación de Espacio Valioso', desc: 'Libere oficinas o almacenes enteros que hoy están ocupados por cajas de papel acumulado durante años y reduzca sus costos de almacenaje.' },
       { title: 'Seguridad y Discreción Absoluta', desc: 'Procesos blindados y auditables; sus documentos pasan del contenedor a la trituradora sin que nadie lea una sola página.' }
     ],
-    
     footerText: '¿Necesita depurar su archivo central, destruir planillas antiguas o deshacerse de tarjetas bancarias con máxima seguridad? Nuestro equipo de confidencialidad le espera.'
   },
 
@@ -116,7 +104,6 @@ const extendedServiceContent: Record<string, any> = {
     heroSubtitle: 'Garantizamos la inhabilitación física de su hardware y la eliminación irreversible de su información confidencial. Protegemos los datos de su empresa y gestionamos los componentes resultantes bajo la estricta normativa ambiental peruana.',
     ctaButton: 'Cotizar Destrucción y Borrado',
     whatsappMessage: 'Hola, estoy en la web de ECO M y deseo cotizar la destrucción de equipos tecnológicos y borrado de datos.',
-    
     section2Intro: 'Abarcamos la destrucción integral de todo tipo de Aparatos Eléctricos y Electrónicos (AEE) u obsolescencia tecnológica para evitar fugas de información y proteger su marca.',
     products: [
       { title: 'Equipos Informáticos e Infraestructura TI', desc: 'Computadoras de escritorio (CPU), laptops, servidores, discos duros (HDD y SSD), memorias USB, tarjetas madre y routers.' },
@@ -124,7 +111,6 @@ const extendedServiceContent: Record<string, any> = {
       { title: 'Periféricos y Accesorios', desc: 'Monitores, pantallas, impresoras, fotocopiadoras, teclados, mouses, audífonos (headsets), terminales de pago (POS) y relojes biométricos.' },
       { title: 'Almacenamiento de Energía', desc: 'Baterías externas (power banks), UPS, cargadores, fuentes de poder y cables.' }
     ],
-
     cycleTitle: 'Nuestro Ciclo de Servicio Seguro',
     cycleSteps: [
       { icon: Truck, title: '1. Recolección y Custodia Segura', desc: 'Retiramos los equipos directamente en sus instalaciones o almacenes utilizando furgones cerrados y personal capacitado, garantizando la trazabilidad desde el primer minuto.' },
@@ -132,15 +118,42 @@ const extendedServiceContent: Record<string, any> = {
       { icon: Recycle, title: '3. Destrucción Física y Trituración', desc: 'Sometemos los equipos tecnológicos a procesos mecánicos de trituración o inhabilitación total. El hardware pierde su forma original, evitando que piezas con su marca o información terminen en el mercado negro.' },
       { icon: FileCheck, title: '4. Manejo de RAEE y Disposición Final', desc: 'Los fragmentos resultantes de la destrucción son gestionados correctamente como Residuos de Aparatos Eléctricos y Electrónicos (RAEE). Emitimos el Certificado de Destrucción y Disposición Final, válido ante las autoridades ambientales (MINAM/OEFA).' }
     ],
-
     whyTitle: '¿Por qué confiar en ECO M para sus activos tecnológicos?',
     whyPoints: [
       { title: 'Cero Riesgo de Fuga de Información', desc: 'Cumplimiento total para bancos, clínicas, aseguradoras y entidades estatales.' },
       { title: 'Protección de Marca', desc: 'Evitamos el mercado secundario no autorizado de sus equipos dados de baja.' },
       { title: 'Cumplimiento Normativo', desc: 'Procesos alineados a la Ley de Protección de Datos Personales y la Ley de Gestión de Residuos Sólidos.' }
     ],
-    
     footerText: '¿Tiene un inventario tecnológico obsoleto o requiere destruir discos duros con urgencia? Un asesor de ECO M está listo para ayudarle.'
+  },
+
+  // SERVICIO 5
+  'destruccion-textiles-calzado-uniformes-corporativos': {
+    heroTitle: 'Destrucción de Textiles, Calzado y Uniformes Corporativos',
+    heroSubtitle: 'Proteja la identidad de su empresa y evite suplantaciones o fraudes. Inhabilitamos de forma segura prendas institucionales, calzado de seguridad, avíos y saldos textiles para blindar el prestigio de su marca.',
+    ctaButton: 'Cotizar Destrucción Textil',
+    whatsappMessage: 'Hola, estoy en la web de ECO M y quiero cotizar la inhabilitación de textiles y uniformes corporativos.',
+    section2Intro: 'Evite que su ropa corporativa o productos defectuosos terminen en el mercado negro. Nos encargamos de la eliminación de cualquier elemento que contenga su logotipo, colores institucionales o propiedad intelectual.',
+    products: [
+      { title: 'Uniformes e Indumentaria Institucional', desc: 'Ropa de trabajo, camisas bordadas, chalecos reflectivos, casacas, mamelucos y uniformes de seguridad privada o fuerzas del orden.' },
+      { title: 'Calzado Industrial y de Retail', desc: 'Botas de seguridad (EPP) dadas de baja, zapatos corporativos, zapatillas, y lotes de calzado con defectos de fábrica o falsificados (incautaciones).' },
+      { title: 'Insumos, Avíos y Retazos de Producción', desc: 'Etiquetas tejidas o estampadas, pasadores personalizados, suelas de marca, cierres, botones, parches con logos y rollos de tela con estampados registrados.' },
+      { title: 'Saldos de Campaña y Merchandising', desc: 'Ropa de temporadas pasadas no vendida, mochilas corporativas, gorras, maletines y artículos promocionales descontinuados.' }
+    ],
+    cycleTitle: 'Nuestro Ciclo de Servicio Seguro',
+    cycleSteps: [
+      { icon: Truck, title: '1. Recolección Segura de Lotes', desc: 'Retiramos los lotes de prendas, calzado o avíos directamente desde sus almacenes, fábricas o tiendas, garantizando un control de inventario estricto desde el punto de origen.' },
+      { icon: ShieldCheck, title: '2. Transporte en Cadena de Custodia', desc: 'Realizamos el traslado hacia nuestra planta de operaciones en vehículos cerrados, evitando cualquier riesgo de sustracción, pérdida o desvío de los artículos en la ruta.' },
+      { icon: Recycle, title: '3. Destrucción Mecánica (Corte y Trituración)', desc: 'Empleamos guillotinas industriales y trituradoras de alta potencia para cortar, deshilachar los textiles y trozar el calzado. Inhabilitamos de raíz cualquier logo o distintivo, haciendo imposible su uso o comercialización.' },
+      { icon: FileCheck, title: '4. Disposición Final y Certificación', desc: 'Los residuos inhabilitados se gestionan ambientalmente (destinándolos a reciclaje textil para trapos industriales o rellenos cuando es viable). Finalizamos entregándole su Certificado de Destrucción respaldado documentariamente.' }
+    ],
+    whyTitle: '¿Por qué confiar en ECO M para proteger su marca?',
+    whyPoints: [
+      { title: 'Prevención de Suplantaciones y Delitos', desc: 'Evite que terceros no autorizados utilicen uniformes con el nombre de su empresa para cometer fraudes, robos o dañar su reputación.' },
+      { title: 'Protección de Propiedad Intelectual', desc: 'Somos el aliado estratégico de las marcas de retail para asegurar que las falsificaciones (piratería) o productos con fallas no regresen jamás al mercado.' },
+      { title: 'Cuidado del Medio Ambiente', desc: 'Promovemos la valorización y correcta disposición de los residuos, ayudando a mitigar el impacto ambiental que genera la industria de la indumentaria.' }
+    ],
+    footerText: '¿Necesita dar de baja un lote de uniformes antiguos, destruir avíos de marca o inhabilitar calzado de seguridad? Nuestro equipo operativo está preparado para proteger su imagen hoy mismo.'
   }
 };
 
