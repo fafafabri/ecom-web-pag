@@ -65,77 +65,38 @@ const Index = () => {
   return (
     <>
       <section className="relative flex items-center min-h-[92vh] w-full overflow-hidden">
-        <img
-          src={heroBg}
-          alt="Planta industrial ECO M"
-          className={`absolute inset-0 w-full h-full object-cover transition-transform duration-[8000ms] ease-out ${heroVisible ? 'scale-105' : 'scale-100'}`}
-          loading="eager"
-        />
+        <img src={heroBg} alt="Planta industrial ECO M" className={`absolute inset-0 w-full h-full object-cover transition-transform duration-[8000ms] ease-out ${heroVisible ? 'scale-105' : 'scale-100'}`} loading="eager" />
         <div className="absolute inset-0 bg-gradient-to-br from-foreground/80 via-foreground/60 to-foreground/30" />
         <div className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full bg-primary/10 blur-3xl animate-pulse" style={{ animationDuration: '4s' }} />
         <div className="absolute bottom-1/3 left-1/3 w-64 h-64 rounded-full bg-accent/10 blur-3xl animate-pulse" style={{ animationDuration: '6s', animationDelay: '1s' }} />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 w-full">
-          <p
-            className={`text-lg md:text-xl text-background/90 font-medium mb-4 transition-all duration-700 ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-            style={{ transitionDelay: '200ms' }}
-          >
+          <p className={`text-lg md:text-xl text-background/90 font-medium mb-4 transition-all duration-700 ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} style={{ transitionDelay: '200ms' }}>
             {t('homePage.heroPreTitle')}
           </p>
 
-          <h1
-            className={`text-4xl sm:text-5xl md:text-7xl font-bold text-background tracking-tight max-w-4xl leading-[1.1] transition-all duration-700 ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
-            style={{ transitionDelay: '400ms' }}
-          >
+          <h1 className={`text-4xl sm:text-5xl md:text-7xl font-bold text-background tracking-tight max-w-4xl leading-[1.1] transition-all duration-700 ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`} style={{ transitionDelay: '400ms' }}>
             {t('homePage.heroTitle')}
           </h1>
 
-          <div
-            className={`flex gap-1 mt-6 transition-all duration-700 ${heroVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}
-            style={{ transitionDelay: '600ms' }}
-          >
+          <div className={`flex gap-1 mt-6 transition-all duration-700 ${heroVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`} style={{ transitionDelay: '600ms' }}>
             <div className="w-12 h-1 rounded-full bg-accent" />
             <div className="w-6 h-1 rounded-full bg-primary" />
           </div>
 
-          <div
-            className={`flex flex-wrap gap-4 mt-10 transition-all duration-700 ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-            style={{ transitionDelay: '700ms' }}
-          >
-            <a
-              href="#soluciones"
-              onClick={(e) => {
-                e.preventDefault();
-                if (typeof window !== 'undefined') {
-                  const el = document.querySelector('#soluciones');
-                  if (el) {
-                    (el as HTMLElement).scrollIntoView({ behavior: 'smooth', block: 'start' });
-                  } else {
-                    window.location.hash = '#soluciones';
-                  }
-                }
-              }}
-              className="group bg-cta text-cta-foreground px-8 py-4 rounded-xl font-semibold shadow-[0_4px_14px_0_hsl(var(--cta)/0.4)] hover:shadow-[0_8px_24px_hsl(var(--cta)/0.5)] hover:scale-[1.04] hover:-translate-y-1 transition-all duration-300 inline-flex items-center gap-2"
-            >
+          <div className={`flex flex-wrap gap-4 mt-10 transition-all duration-700 ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} style={{ transitionDelay: '700ms' }}>
+            <a href="#soluciones" onClick={(e) => { e.preventDefault(); document.querySelector('#soluciones')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }} className="group bg-cta text-cta-foreground px-8 py-4 rounded-xl font-semibold shadow-[0_4px_14px_0_hsl(var(--cta)/0.4)] hover:shadow-[0_8px_24px_hsl(var(--cta)/0.5)] hover:scale-[1.04] hover:-translate-y-1 transition-all duration-300 inline-flex items-center gap-2">
               {t('homePage.btnSolutions')}
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </a>
 
-            <a
-              href={`https://wa.me/51902667683?text=${encodeURIComponent('Hola, deseo cotizar un servicio con ECO M.')}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-transparent text-background border border-background/40 px-8 py-4 rounded-xl font-semibold hover:bg-background/15 hover:border-background/60 hover:scale-[1.03] hover:shadow-[0_4px_14px_rgba(255,255,255,0.15)] transition-all duration-300 backdrop-blur-sm inline-flex items-center"
-            >
+            <a href={`https://wa.me/51902667683`} target="_blank" rel="noopener noreferrer" className="bg-transparent text-background border border-background/40 px-8 py-4 rounded-xl font-semibold hover:bg-background/15 hover:border-background/60 hover:scale-[1.03] hover:shadow-[0_4px_14px_rgba(255,255,255,0.15)] transition-all duration-300 backdrop-blur-sm inline-flex items-center">
               {t('homePage.btnAdvisor')}
             </a>
           </div>
         </div>
 
-        <div
-          className={`absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 transition-all duration-700 ${heroVisible ? 'opacity-100' : 'opacity-0'}`}
-          style={{ transitionDelay: '1200ms' }}
-        >
+        <div className={`absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 transition-all duration-700 ${heroVisible ? 'opacity-100' : 'opacity-0'}`} style={{ transitionDelay: '1200ms' }}>
           <span className="text-background/50 text-xs tracking-widest uppercase">{t('homePage.scroll')}</span>
           <ChevronDown className="h-5 w-5 text-background/50 animate-bounce" />
         </div>
@@ -145,9 +106,7 @@ const Index = () => {
       <InquiryFormDialog open={inquiryOpen} onOpenChange={setInquiryOpen} />
 
       <section className="py-16 bg-primary relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10"
-          style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '32px 32px' }}
-        />
+        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '32px 32px' }} />
         <AnimatedSection direction="up" threshold={0.2} duration={700}>
           <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 relative">
           {stats.map((s, i) => (
@@ -262,7 +221,7 @@ const Index = () => {
             {t('aboutPage.ctaTitle')}
           </h2>
           <a
-            href="https://wa.me/51902667683?text=Hola"
+            href="https://wa.me/51902667683"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1EBE5C] text-white px-8 py-4 rounded-full font-bold transition-all shadow-lg hover:shadow-xl text-lg"
