@@ -31,6 +31,53 @@
       "sanitarios": "Sale of Portable Toilets"
     }
   },
+  "newNav": {
+    "categories": {
+      "destruccion": "Destruction and Disposal",
+      "sanitarias": "Sanitary Solutions"
+    },
+    "services": {
+      "s1": "Destruction of Products, Merchandise and Industrial Materials",
+      "s2": "Notarial, Fiscal and Customs Destruction",
+      "s3": "Secure Document and Archive Destruction",
+      "s4": "Destruction of Technological Equipment and Data Wiping",
+      "s5": "Destruction of Textiles, Footwear and Corporate Uniforms",
+      "s6": "Destruction of Regulated Goods (IQBF) and Hazardous Waste",
+      "s7": "Sale of Portable Toilets, Showers and Sinks"
+    }
+  },
+  "common": {
+    "otherSolutions": "Other Solutions",
+    "viewDetail": "View details",
+    "whatWeManage": "What processes and materials do we manage?",
+    "whatWeSell": "Our Solution Catalog (What do we sell?)"
+  },
+  "contactoPage": {
+    "heroTitle": "Let's Talk: Corporate Quotes and Advisory",
+    "heroSubtitle": "Contact our commercial team to request a formal proposal, coordinate a technical evaluation, or resolve your queries about asset disabling and notarial procedures.",
+    "btnForm": "Fill Form",
+    "btnWhatsapp": "Write on WhatsApp",
+    "channelsTitle": "Customer Service Channels",
+    "directLines": "Direct Lines",
+    "corporateEmail": "Corporate Email",
+    "businessHours": "Business Hours",
+    "plants": "Operating Plants",
+    "mapComingSoon": "Location map coming soon",
+    "formTitle": "Request a Quote",
+    "formSubtitle": "Complete the form and our commercial team will send you a proposal shortly.",
+    "formName": "Name and Surname *",
+    "formCompany": "Company / Corporate Name *",
+    "formRuc": "Tax ID (Optional)",
+    "formPhone": "Contact Phone *",
+    "formEmail": "Corporate Email *",
+    "formService": "Service of Interest",
+    "formServiceSelect": "Select a service...",
+    "formDetails": "Details of your Requirement / Estimated Volume",
+    "formSubmit": "Send Quote Request",
+    "urgencyTitle": "Need to attend an operational urgency or an upcoming audit? Contact us directly.",
+    "urgencyBtn": "Direct WhatsApp Chat",
+    "successMessage": "Thank you for writing to us. A commercial advisor will contact you shortly."
+  },
   "hero": {
     "subtitle": "Document destruction, waste, merchandise, inventories, general waste",
     "title": "Material and Product Destruction",
@@ -130,89 +177,194 @@
     "trucks": "Truck Fleet",
     "experience": "Years of Experience"
   },
-  "serviceDetails": {
-    "destruccionDocumentos": {
-      "title": "Notarial Document Destruction",
-      "desc": "We are specialists in document destruction. We handle the entire process from collection, transportation and destruction under strict notarial supervision. We guarantee absolute confidentiality of your information.",
-      "benefits": ["Public and private files unnecessary, obsolete or confidential", "Destruction certificate delivered", "Highly trained personnel", "Efficiency and proven experience", "Absolute warranty and confidentiality", "We have permits and authorizations"]
+  "extendedServices": {
+    "destruccion-productos-mercaderia-materiales-industriales": {
+      "heroTitle": "Destruction of Products, Expired Merchandise and Industrial Materials",
+      "heroSubtitle": "Secure solutions for the disposal of obsolete inventories, shrinkages, and defective batches. We disable your merchandise to protect your brand's prestige, guaranteeing a responsible and certified final disposal.",
+      "ctaButton": "Quote Merchandise Destruction",
+      "whatsappMessage": "Hello, I am on the ECO M website and I wish to quote the destruction of products and merchandise.",
+      "section2Intro": "We manage the physical disabling of goods that have lost their commercial value, preventing their entry into the informal market and protecting both consumers and your company.",
+      "products": [
+        { "title": "Consumer and Personal Care Products", "desc": "Cosmetics, shampoos, creams, perfumes, beauty and personal care items with quality flaws, damaged packaging, or expired dates." },
+        { "title": "Food and Pharmaceutical Industry", "desc": "Batches of expired food and beverages, supplements, medical supplies, and products rejected by quality control." },
+        { "title": "Industrial Materials and Shrinkages", "desc": "Spare parts, auto parts, plastic components, returned packaging, branded containers, and production remainders." },
+        { "title": "General Merchandise and Retail", "desc": "Sunglasses, toys, household items, counterfeit products (seizures), or legally abandoned merchandise." }
+      ],
+      "cycleTitle": "Our Secure Service Cycle",
+      "cycleSteps": [
+        { "title": "1. Collection and Reverse Logistics", "desc": "We collect the merchandise directly from your warehouses, distribution centers, or customs, using appropriate vehicles and approved personnel for loads of any volume." },
+        { "title": "2. Secure Transport and Custody", "desc": "We carry out direct and monitored transport to our operations plant, ensuring that no product is lost or diverted during the journey." },
+        { "title": "3. Destruction and Denaturation Process", "desc": "We apply mechanical processes (shredding, compaction, or cutting) that completely render the product and its original packaging useless, making it unrecognizable." },
+        { "title": "4. Final Disposal and Certification", "desc": "The generated waste is recovered (recycled) or disposed of in authorized landfills ecologically. We issue the Destruction and Disposal Certificate, a key document for your audits." }
+      ],
+      "whyTitle": "Why trust ECO M with your inventories?",
+      "whyPoints": [
+        { "title": "Brand and Reputation Protection", "desc": "We eliminate the risk of defective or expired products reaching the black market and damaging your company's image." },
+        { "title": "Space Liberation and Savings", "desc": "We help you quickly clear your warehouses of immobilized inventories, reducing your high logistical costs." },
+        { "title": "Legal Support and Transparency", "desc": "Our processes provide documentary support for the write-off of your assets in the face of inspections and quality controls." }
+      ],
+      "footerText": "Do you need to write off a batch of products, destroy shrinkages, or free up space in your warehouse immediately? An ECO M specialist is ready to advise you."
     },
-    "destruccionResiduos": {
-      "title": "Waste Destruction",
-      "desc": "We provide comprehensive waste destruction services for solid waste, including surplus materials, expired merchandise, obsolete inventory and scrapped materials. All in strict regulatory compliance.",
-      "benefits": ["Destruction of surplus and merchandise", "Obsolete inventory and scrapped materials", "Destruction certificate", "Environmental compliance", "Permanent process supervision"]
+    "destruccion-notarial-fiscal-aduanera": {
+      "heroTitle": "Notarial, Fiscal, and Customs Destruction (Inventory Write-offs)",
+      "heroSubtitle": "Absolute legal backing for tax deduction and expense support before SUNAT. We carry out the disabling of shrinkages and impairments with the presence of a Notary Public, ensuring tax and environmental compliance.",
+      "ctaButton": "Request Fiscal Advisory",
+      "whatsappMessage": "Hello, I am on the ECO M website and I need advice on notarial destruction and inventory write-offs before SUNAT.",
+      "section2Intro": "We execute destruction processes under the strict guidelines of the Income Tax Law and the General Customs Law, providing your accounting department with the required evidentiary documentation.",
+      "products": [
+        { "title": "Impairment Write-offs (SUNAT)", "desc": "Destruction of merchandise that has lost its quality or commercial value (obsolete, expired, or deteriorated) with notarial presence, an indispensable requirement for tax deduction." },
+        { "title": "Notarial Destruction of Shrinkages", "desc": "Legal validation for quantitative losses of inputs generated during your productive or industrial process." },
+        { "title": "Fiscal and Customs Destruction", "desc": "Disposal of goods in a state of legal abandonment, administrative seizure, or restricted goods, under the direct supervision of customs authorities." },
+        { "title": "Fixed Asset Write-offs", "desc": "Disabling and destruction of depreciated machinery, furniture, or equipment that must be removed from your accounting books with proper notarial support." }
+      ],
+      "cycleTitle": "Our Secure Service Cycle",
+      "cycleSteps": [
+        { "title": "1. Logistical and Legal Coordination", "desc": "We advise your accounting team, schedule the pickup of the merchandise, and coordinate the presence of our allied Notary Public (or assigned SUNAT official)." },
+        { "title": "2. Custodied Transport", "desc": "We transport obsolete inventories from your distribution center to our authorized plant under strict security and traceability protocols." },
+        { "title": "3. On-site Destruction (Notarial Act)", "desc": "We subject the goods to on-site shredding or compaction. The Notary or auditor verifies in situ that the merchandise is completely disabled." },
+        { "title": "4. Issuance of Act and Certificate", "desc": "We deliver the Notarial Act of Destruction (evidentiary document for SUNAT) along with the Final Disposal Certificate (environmental backing for MINAM/OEFA)." }
+      ],
+      "whyTitle": "Why trust ECO M with your tax processes?",
+      "whyPoints": [
+        { "title": "Guaranteed Tax Benefit", "desc": "We provide the exact support your financial area needs to deduct expenses and avoid contingencies or fines in SUNAT audits." },
+        { "title": "100% Auditable and Transparent Process", "desc": "We offer photographic and video records of the entire operation for the support and archiving of your quality inspectors." },
+        { "title": "Strategic Notarial Alliances", "desc": "We work with Notaries Public specializing in industrial destruction processes, streamlining procedures and ensuring legal compliance." }
+      ],
+      "footerText": "Do you have an upcoming accounting close and need to write off a batch of merchandise before SUNAT without setbacks? Our legal team is ready to assist you today."
     },
-    "destruccionRAEE": {
-      "title": "Waste Electrical and Electronic Equipment Destruction (WEEE)",
-      "intro": "We guarantee the total security of your confidential information while driving your corporate sustainability goals. Through our specialized Urban Mining and WEEE Management service nationwide, we take care of the final cycle of your decommissioned technology assets.",
-      "aeHeading": "About AEE destruction (Electrical and Electronic Appliances)",
-      "aeText": "This technical procedure consists of the collection, structured disassembly and physical irreversible shredding of IT and communication equipment. Its main purpose is to ensure the definitive inoperability of hardware, eliminating any risk of data leakage or informal resale while enabling the recovery of raw materials that will be reintegrated into the productive industry.",
-      "supportHeading": "Support for your corporate management:",
-      "supportBenefits": ["Safe accounting disposal: We carry out the physical destruction of assets with notarial presence to provide transparency to your administrative processes.", "Regulatory compliance: We issue the corresponding Environmental Certificate, a key document to support your ESG reports and certify your circular economy practices."],
-      "specializationIntro": "We specialize in:",
-      "serviceItems": ["Destruction of IT and computing equipment", "Destruction of IT and communications assets", "Destruction of servers", "Destruction of hard drives", "Destruction of cell phones"]
+    "destruccion-segura-documentos-archivos": {
+      "heroTitle": "Secure Document and Confidential Archive Destruction",
+      "heroSubtitle": "We protect your company's most valuable asset: information. We guarantee the confidential and irretrievable shredding of your physical and accounting files, in strict compliance with the Personal Data Protection Law.",
+      "ctaButton": "Quote Archive Destruction",
+      "whatsappMessage": "Hello, I am on the ECO M website and I request a quote for the confidential shredding of archives.",
+      "section2Intro": "Avoid corporate espionage and legal fines. We handle the definitive elimination of any physical media containing sensitive information about your company, employees, or clients.",
+      "products": [
+        { "title": "Accounting and Financial Records", "desc": "Invoices, balance sheets, voided checks, bank statements, tax returns, and audit reports." },
+        { "title": "Legal and HR Documentation", "desc": "Expired contracts, payrolls, personnel files, resumes, confidentiality agreements, and medical records (ideal for the health sector)." },
+        { "title": "Strategic and Commercial Information", "desc": "Printed databases, marketing strategies, blueprints, bids, customer lists, and budgets." },
+        { "title": "Minor Magnetic and Optical Media", "desc": "Destruction of CD-ROMs, DVDs, backup tapes, ID badges, credit cards, and corporate identification cards." }
+      ],
+      "cycleTitle": "Our Secure Service Cycle",
+      "cycleSteps": [
+        { "title": "1. Confidential Collection", "desc": "Our properly identified and approved personnel collect document boxes directly from your offices, ensuring no outsiders have access." },
+        { "title": "2. Chain of Custody Transport", "desc": "We transport your files in closed, monitored units directly to our plant, ensuring uninterrupted custody from your door to the shredding zone." },
+        { "title": "3. High-Security Shredding", "desc": "Documents undergo industrial cross-cut shredding, reducing paper to tiny particles (confetti), making reconstruction humanly impossible." },
+        { "title": "4. Recycling and Certificate Issuance", "desc": "We promote the circular economy by sending shredded paper to cardboard recycling plants. Finally, we issue your Confidential Destruction Certificate." }
+      ],
+      "whyTitle": "Why trust your archives to ECO M?",
+      "whyPoints": [
+        { "title": "Total Legal Compliance", "desc": "We operate under the guidelines of Law No. 29733 (Personal Data Protection Law), preventing severe fines for your organization." },
+        { "title": "Valuable Space Recovery", "desc": "Free up entire offices or warehouses currently occupied by paper boxes accumulated over years and reduce storage costs." },
+        { "title": "Absolute Security and Discretion", "desc": "Shielded and auditable processes; your documents go from the container to the shredder without anyone reading a single page." }
+      ],
+      "footerText": "Do you need to purge your central archive, destroy old payrolls, or dispose of bank cards with maximum security? Our confidentiality team awaits you."
     },
-    "destruccionRopa": {
-      "title": "Clothing Destruction",
-      "desc": "Specialized service for the destruction of clothing, corporate uniforms, branded textiles and textile materials requiring certified destruction for brand protection.",
-      "benefits": ["Guaranteed brand protection", "Certified textile destruction", "Supervised and documented process", "Ecological final disposal", "Absolute confidentiality"]
+    "destruccion-equipos-tecnologicos-borrado-datos": {
+      "heroTitle": "Destruction of Technological Equipment, WEEE, and Secure Data Wiping",
+      "heroSubtitle": "We guarantee the physical disabling of your hardware and the irreversible elimination of confidential information. We protect your data and manage components under strict Peruvian environmental regulations.",
+      "ctaButton": "Quote Destruction and Wiping",
+      "whatsappMessage": "Hello, I am on the ECO M website and I wish to quote technological equipment destruction and data wiping.",
+      "section2Intro": "We cover the comprehensive destruction of all types of Waste Electrical and Electronic Equipment (WEEE) or technological obsolescence to prevent data leaks and protect your brand.",
+      "products": [
+        { "title": "IT Equipment and Infrastructure", "desc": "Desktop computers (CPU), laptops, servers, hard drives (HDD and SSD), USB drives, motherboards, and routers." },
+        { "title": "Mobile Devices and Telecommunications", "desc": "Corporate cell phones (smartphones), tablets, iPads, two-way radios, IP phones, and telephone exchanges." },
+        { "title": "Peripherals and Accessories", "desc": "Monitors, screens, printers, photocopiers, keyboards, mice, headsets, POS terminals, and biometric clocks." },
+        { "title": "Energy Storage", "desc": "External batteries (power banks), UPS, chargers, power supplies, and cables." }
+      ],
+      "cycleTitle": "Our Secure Service Cycle",
+      "cycleSteps": [
+        { "title": "1. Secure Collection and Custody", "desc": "We collect equipment directly from your facilities using closed vans and trained personnel, guaranteeing traceability from minute one." },
+        { "title": "2. Logical Data Wiping (Digital Destruction)", "desc": "Upon request, we apply secure data wiping to drives and memories before physical destruction, ensuring confidential data is 100% unrecoverable." },
+        { "title": "3. Physical Destruction and Shredding", "desc": "We subject IT equipment to mechanical shredding processes. The hardware loses its original form, preventing branded parts from entering the black market." },
+        { "title": "4. WEEE Management and Final Disposal", "desc": "The resulting fragments are properly managed as WEEE. We issue the Final Destruction and Disposal Certificate, valid before environmental authorities." }
+      ],
+      "whyTitle": "Why trust ECO M with your technological assets?",
+      "whyPoints": [
+        { "title": "Zero Risk of Data Leakage", "desc": "Total compliance for banks, clinics, insurance companies, and state entities." },
+        { "title": "Brand Protection", "desc": "We prevent the unauthorized secondary market of your decommissioned equipment." },
+        { "title": "Regulatory Compliance", "desc": "Processes aligned with the Personal Data Protection Law and the Solid Waste Management Law." }
+      ],
+      "footerText": "Do you have obsolete tech inventory or urgently need to destroy hard drives? An ECO M advisor is ready to help."
     },
-    "gestionIQBF": {
-      "title": "IQBF Management",
-      "desc": "Comprehensive management of Chemical Inputs and Regulated Goods (IQBF) with all required permits and authorizations by law. Collection, transportation and safe final disposal.",
-      "benefits": ["Current permits and authorizations", "Specialized transportation", "Certified final disposal", "SUNAT regulatory compliance", "Personnel trained in IQBF handling"]
+    "destruccion-textiles-calzado-uniformes-corporativos": {
+      "heroTitle": "Destruction of Textiles, Footwear, and Corporate Uniforms",
+      "heroSubtitle": "Protect your company's identity and prevent impersonation or fraud. We securely disable institutional garments, safety footwear, trims, and textile remnants to shield your brand's prestige.",
+      "ctaButton": "Quote Textile Destruction",
+      "whatsappMessage": "Hello, I am on the ECO M website and I want to quote the disabling of textiles and corporate uniforms.",
+      "section2Intro": "Prevent your corporate clothing or defective products from ending up on the black market. We eliminate any item containing your logo, institutional colors, or intellectual property.",
+      "products": [
+        { "title": "Uniforms and Institutional Clothing", "desc": "Workwear, embroidered shirts, reflective vests, jackets, overalls, and private security or law enforcement uniforms." },
+        { "title": "Industrial and Retail Footwear", "desc": "Decommissioned safety boots (PPE), corporate shoes, sneakers, and footwear batches with factory defects or counterfeits." },
+        { "title": "Trims, Supplies, and Production Scraps", "desc": "Woven or printed labels, custom shoelaces, branded soles, zippers, buttons, logo patches, and fabric rolls with registered prints." },
+        { "title": "Campaign Surpluses and Merchandising", "desc": "Unsold past-season clothing, corporate backpacks, caps, briefcases, and discontinued promotional items." }
+      ],
+      "cycleTitle": "Our Secure Service Cycle",
+      "cycleSteps": [
+        { "title": "1. Secure Batch Collection", "desc": "We collect batches of garments or footwear directly from your warehouses, factories, or stores, ensuring strict inventory control from the origin." },
+        { "title": "2. Chain of Custody Transport", "desc": "We transport items to our plant in closed vehicles, preventing any risk of theft, loss, or diversion during transit." },
+        { "title": "3. Mechanical Destruction (Cutting and Shredding)", "desc": "We use industrial guillotines and high-power shredders to cut textiles and chop footwear. We completely disable any logo, making reuse impossible." },
+        { "title": "4. Final Disposal and Certification", "desc": "Disabled waste is managed environmentally (sent for textile recycling into industrial rags when viable). We finalize by delivering your Destruction Certificate." }
+      ],
+      "whyTitle": "Why trust ECO M to protect your brand?",
+      "whyPoints": [
+        { "title": "Prevention of Impersonation and Crimes", "desc": "Prevent unauthorized third parties from using uniforms with your company's name to commit fraud, theft, or damage your reputation." },
+        { "title": "Intellectual Property Protection", "desc": "We are the strategic ally of retail brands to ensure that counterfeits or flawed products never return to the market." },
+        { "title": "Environmental Care", "desc": "We promote the recovery and correct disposal of waste, helping to mitigate the environmental impact of the clothing industry." }
+      ],
+      "footerText": "Do you need to write off old uniforms, destroy branded trims, or disable safety footwear? Our operational team is prepared to protect your image today."
     },
-    "transporteMaptel": {
-      "title": "Maptel Transportation",
-      "desc": "We have a fleet of trucks with all permits for national transportation of hazardous and non-hazardous materials, complying with all current regulations.",
-      "benefits": ["Certified own fleet", "National transportation permits", "GPS and real-time monitoring", "Trained drivers", "Cargo and liability insurance"]
+    "destruccion-bienes-fiscalizados-residuos-peligrosos": {
+      "heroTitle": "Destruction of Regulated Goods (IQBF) and Hazardous Waste",
+      "heroSubtitle": "High-risk management with absolute regulatory compliance. We neutralize, destroy, and dispose of chemical inputs, dangerous goods, and regulated assets (SUNAT) under the strictest safety and environmental standards.",
+      "ctaButton": "Quote Hazmat Destruction",
+      "whatsappMessage": "Hello, I am on the ECO M website and I require management for regulated goods or hazardous waste.",
+      "section2Intro": "Avoid legal and environmental contingencies. We have the infrastructure, permits, and qualified personnel for disabling toxic, flammable, or state-controlled materials.",
+      "products": [
+        { "title": "Chemical Inputs and Regulated Goods (IQBF)", "desc": "Notarial and fiscal destruction of chemical products controlled by SUNAT (solvents, acids, acetone, etc.), ensuring they are not diverted to illicit activities." },
+        { "title": "Expired Industrial Products", "desc": "Batches of paints, lubricants, additives, resins, glues, and chemical reagents that have lost their useful life." },
+        { "title": "Contaminated Hazardous Waste (RESPEL)", "desc": "Containers, cylinders, absorbent pads, or packaging that have been in direct contact with toxic substances or hydrocarbons." },
+        { "title": "Biological and Sanitary Risk Materials", "desc": "Highly contaminated cosmetics or pharmaceuticals requiring special treatment before final disposal." }
+      ],
+      "cycleTitle": "Our Secure Service Cycle",
+      "cycleSteps": [
+        { "title": "1. Evaluation and Contingency Plan", "desc": "Our environmental engineers evaluate the safety data sheet (MSDS) of your products to determine the appropriate PPE, handling protocols, and safest destruction method." },
+        { "title": "2. Transport of Hazardous Materials (MTC)", "desc": "We collect and transport the load using our specialized fleet authorized by the MTC for hazmat transport, ensuring total hermeticity on the route." },
+        { "title": "3. Treatment, Neutralization, and Destruction", "desc": "We subject goods to physical-chemical neutralization, encapsulation, or controlled mechanical shredding, eliminating their hazard and denaturing the product." },
+        { "title": "4. Security Landfill Disposal and Certification", "desc": "The resulting waste is confined in authorized security landfills. We finalize by issuing the Destruction Certificate and the Hazardous Waste Manifest." }
+      ],
+      "whyTitle": "Why trust ECO M for high-risk operations?",
+      "whyPoints": [
+        { "title": "Valid Licenses and Authorizations", "desc": "We operate strictly as a Solid Waste Operator Company (EO-RS) authorized by MINAM, DIGESA, and MTC." },
+        { "title": "SUNAT Legal Control for IQBF", "desc": "We provide traceability and notarial/fiscal support required to write off regulated goods without risk of penal or tax sanctions." },
+        { "title": "Zero Environmental and Occupational Risk", "desc": "Highly trained personnel in hazardous materials handling (MATPEL) and infrastructure that prevents any type of spill or contamination." }
+      ],
+      "footerText": "Do you need to manage expired chemical inputs or write off regulated goods urgently and securely? An ECO M engineer is ready to evaluate your requirements."
     },
-    "recojoresiduos": {
-      "title": "Collection and Transportation of Waste",
-      "desc": "Comprehensive collection and transportation service for hazardous and non-hazardous waste. We have specialized vehicles and highly trained personnel to ensure safe handling.",
-      "benefits": ["Hazardous and non-hazardous waste", "Specialized vehicles", "Personnel with protective equipment", "Waste management manifests", "Coverage in Lima and provinces"]
-    },
-    "disposicionFinal": {
-      "title": "Final Disposal",
-      "desc": "We guarantee proper final disposal of waste in authorized sanitary and security landfills, complying with all current environmental regulations.",
-      "benefits": ["Authorized sanitary landfills", "Final disposal certificates", "Complete traceability", "Regulatory compliance", "Monthly management reports"]
-    },
-    "manejoRAEE": {
-      "title": "Adequate WEEE Management",
-      "desc": "Comprehensive WEEE management program including collection, segregation, dismantling and recycling of components, maximizing recovery of valuable materials.",
-      "benefits": ["Recovery of valuable materials", "Controlled dismantling", "Certified recycling", "Reduction of environmental impact", "Detailed management reports"]
-    },
-    "sanitariosPortatiles": {
-      "title": "Sale of Portable Toilets",
-      "desc": "At ECO M, we supply mining, industrial, construction and event sectors across Peru with high-durability portable sinks and toilets. Each unit is built to withstand intensive use in demanding environments, ensuring cleanliness and easy maintenance.",
-      "benefits": ["Sale of Standard and VIP Portable Toilets.", "Sale of autonomous Portable Sinks.", "Sale of Portable Showers for camps."]
-    },
-    "limpiezaGrasas": {
-      "title": "Grease Trap Cleaning",
-      "desc": "Specialized cleaning and maintenance service for industrial grease traps for restaurants, hotels, shopping centers and food industries.",
-      "benefits": ["Specialized suction equipment", "Sanitary regulation compliance", "Scheduled and emergency service", "Cleaning certificate", "Proper waste disposal"]
-    },
-    "limpiezaPozos": {
-      "title": "Septic Tank Cleaning",
-      "desc": "Professional cleaning, maintenance and disinfection service for septic tanks with high-capacity suction equipment and specialized personnel.",
-      "benefits": ["High capacity equipment", "Specialized personnel", "24/7 emergency service", "Disinfection included", "Coverage in Lima and provinces"]
-    },
-    "asesorias": {
-      "title": "Environmental Advisory",
-      "desc": "We provide comprehensive environmental advisory for compliance with current regulations, development of environmental management plans and solid waste management.",
-      "benefits": ["Environmental audit", "Environmental management plans", "Training in waste management", "Advisory on regulatory compliance", "Detailed technical reports"]
+    "venta-banos-duchas-lavamanos-portatiles": {
+      "heroTitle": "Sale of Portable Toilets, Showers, and Sinks",
+      "heroSubtitle": "High-durability hygiene equipment for construction projects, mining camps, agriculture, and events. Direct sale of new modules, manufactured to withstand extreme climates, with warranty and immediate availability.",
+      "ctaButton": "Request Catalog and Prices",
+      "whatsappMessage": "Hello, I am on the ECO M website and I request a quote for the purchase of portable toilets, showers, or sinks.",
+      "section2Intro": "We provide 100% new equipment, made of high-density polyethylene (HDPE) with UV protection, designed to ensure hygiene and comply with occupational safety standards in your project.",
+      "products": [
+        { "title": "Portable Toilets", "desc": "Autonomous toilets (Standard and VIP), easy to clean and maintain. Ideal for civil works, remote camps, agricultural use, or event venues. Robust structure and non-slip floor." },
+        { "title": "Portable Showers", "desc": "Individual shower modules ready to connect to the water network or elevated tanks. Spacious, hygienic, and with excellent drainage; the perfect solution for personnel hygiene in long-term camps." },
+        { "title": "Portable Sinks (Hygiene Stations)", "desc": "Autonomous or connectable washing stations. Designed with a foot pump (pedal) to avoid manual contact, fundamental to complying with health protocols (SSOMA) in dining rooms and site entrances." }
+      ],
+      "cycleTitle": "Your Purchasing Process (4 Steps)",
+      "cycleSteps": [
+        { "title": "1. Commercial Advisory", "desc": "We help you size your purchase: we calculate the exact number of toilets, showers, or sinks your project needs according to the number of workers and current regulations." },
+        { "title": "2. Quotation and Acquisition", "desc": "Agile sales process for companies. We issue formal quotes and offer competitive prices, with special discounts for volume purchases or bids." },
+        { "title": "3. Preparation and Dispatch", "desc": "We prepare your equipment for immediate pickup at our plant in Lima or coordinate logistics for shipping to your site anywhere in Peru." },
+        { "title": "4. Delivery and Warranty", "desc": "You receive completely new equipment ready to operate in your project, backed by our factory warranty against manufacturing defects and structural design." }
+      ],
+      "whyTitle": "Why is it better to buy your own equipment with ECO M?",
+      "whyPoints": [
+        { "title": "Profitability for your Project", "desc": "For medium and long-term projects, buying toilets represents a massive economic saving compared to high monthly rental costs. You invest in an asset that can be reused in future works." },
+        { "title": "Maximum Extreme Resistance", "desc": "Equipment injected to resist impacts, rough use, and designed with UV protection to withstand the intense sun of the Peruvian coast, highlands, and jungle." },
+        { "title": "Regulatory Compliance (SSOMA)", "desc": "Guarantee mandatory sanitary conditions for the well-being of your personnel definitively and raise your company's standards." }
+      ],
+      "footerText": "Starting a new project or equipping a camp? Invest smartly in your own sanitary equipment. Request our sales catalog today."
     }
-  },
-  "contacto": {
-    "title": "Contact Us",
-    "contact": "Quote via",
-    "inquiries": "Inquiries",
-    "dontHesitate": "Do not hesitate to contact us if you have any questions.",
-    "plants": "Plants",
-    "phones": "Phones",
-    "hours": "Business Hours",
-    "email": "Email",
-    "hoursDetail": "Mon-Fri: 8:00 am to 5:30 pm",
-    "hoursSat": "Sat 8:00 am to 12:30 pm",
-    "messageSent": "Message sent! We will contact you soon."
   }
 }

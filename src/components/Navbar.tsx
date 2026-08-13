@@ -15,23 +15,23 @@ const Navbar = () => {
   const solutionCategories = [
     {
       key: 'destruccion',
-      label: 'Destrucción y Disposición',
+      label: t('newNav.categories.destruccion'),
       description: '',
       items: [
-        { title: 'Destrucción de Productos, Mercadería y Materiales Industriales', slug: 'destruccion-productos-mercaderia-materiales-industriales' },
-        { title: 'Destrucción Notarial, Fiscal y Aduanera', slug: 'destruccion-notarial-fiscal-aduanera' },
-        { title: 'Destrucción Segura de Documentos y Archivos', slug: 'destruccion-segura-documentos-archivos' },
-        { title: 'Destrucción de Equipos Tecnológicos y Borrado de Datos', slug: 'destruccion-equipos-tecnologicos-borrado-datos' },
-        { title: 'Destrucción de Textiles, Calzado y Uniformes Corporativos', slug: 'destruccion-textiles-calzado-uniformes-corporativos' },
-        { title: 'Destrucción de Bienes Fiscalizados (IQBF) y Residuos Peligrosos', slug: 'destruccion-bienes-fiscalizados-residuos-peligrosos' },
+        { title: t('newNav.services.s1'), slug: 'destruccion-productos-mercaderia-materiales-industriales' },
+        { title: t('newNav.services.s2'), slug: 'destruccion-notarial-fiscal-aduanera' },
+        { title: t('newNav.services.s3'), slug: 'destruccion-segura-documentos-archivos' },
+        { title: t('newNav.services.s4'), slug: 'destruccion-equipos-tecnologicos-borrado-datos' },
+        { title: t('newNav.services.s5'), slug: 'destruccion-textiles-calzado-uniformes-corporativos' },
+        { title: t('newNav.services.s6'), slug: 'destruccion-bienes-fiscalizados-residuos-peligrosos' },
       ],
     },
     {
       key: 'sanitarios',
-      label: 'Soluciones Sanitarias',
+      label: t('newNav.categories.sanitarias'),
       description: '',
       items: [
-        { title: 'Venta de Baños, Duchas y Lavamanos Portátiles', slug: 'venta-banos-duchas-lavamanos-portatiles' },
+        { title: t('newNav.services.s7'), slug: 'venta-banos-duchas-lavamanos-portatiles' },
       ],
     },
   ];
@@ -103,7 +103,7 @@ const Navbar = () => {
 
         <div className="hidden lg:flex items-center gap-3">
           <LanguageSwitcher />
-          <a href="https://wa.me/51902667683?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20sobre%20sus%20servicios." target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-6 py-3 rounded-xl bg-cta text-cta-foreground font-semibold text-sm transition-all duration-200 hover:scale-[1.03] hover:shadow-[0_6px_20px_0_hsl(var(--cta)/0.35)] shadow-[0_4px_14px_0_hsl(var(--cta)/0.25)]">
+          <a href="https://wa.me/51902667683?text=Hola" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-6 py-3 rounded-xl bg-cta text-cta-foreground font-semibold text-sm transition-all duration-200 hover:scale-[1.03] hover:shadow-[0_6px_20px_0_hsl(var(--cta)/0.35)] shadow-[0_4px_14px_0_hsl(var(--cta)/0.25)]">
             <Phone className="h-5 w-5" />
             <div className="leading-tight text-left">
               <span className="text-xs opacity-80">{t('footer.consultations')}</span>
@@ -156,7 +156,7 @@ const Navbar = () => {
           </nav>
           <div className="flex gap-2 mt-4">
             <LanguageSwitcher />
-            <a href="https://wa.me/51902667683?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20sobre%20sus%20servicios." target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-cta text-cta-foreground font-semibold text-sm">
+            <a href="https://wa.me/51902667683?text=Hola" target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-cta text-cta-foreground font-semibold text-sm">
               <Phone className="h-4 w-4" />
               {t('footer.consultations')} 902 667 683
             </a>
