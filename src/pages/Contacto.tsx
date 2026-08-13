@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { Phone, Mail, Clock, MapPin, MessageCircle } from 'lucide-react';
 import AnimatedSection from '@/components/AnimatedSection';
 import { useState } from 'react';
+import bgContacto from '@/assets/contacto-hero.jpg'; 
 
 const Contacto = () => {
   const { t } = useTranslation();
@@ -18,25 +19,26 @@ const Contacto = () => {
 
   return (
     <>
-      {/* Cabecera */}
-      <section className="relative pt-24 pb-32 bg-slate-900 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/90 to-slate-900/60 z-0" />
-        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+      {/* Cabecera Restaurada a pantalla completa */}
+      <section className="relative left-1/2 right-1/2 w-screen -ml-[50vw] -mr-[50vw] min-h-[45vh] overflow-hidden flex items-center justify-center">
+        <img src={bgContacto} alt="Fondo Contacto" className="absolute inset-0 w-full h-full object-cover object-center" />
+        <div className="absolute inset-0 bg-[#0f172a]/85 z-0" />
+        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center py-20">
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
             {t('contactoPage.heroTitle')}
           </h1>
           <div className="flex gap-1 justify-center mt-6 mb-6">
             <div className="w-8 h-1 rounded-full bg-accent" />
             <div className="w-8 h-1 rounded-full bg-white/40" />
           </div>
-          <p className="text-lg text-slate-200 max-w-3xl mx-auto mb-10 leading-relaxed">
+          <p className="text-base md:text-xl text-slate-200 max-w-3xl mx-auto mb-10 leading-relaxed font-medium">
             {t('contactoPage.heroSubtitle')}
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a href="#formulario" className="bg-[#48c474] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#3ba661] transition-colors shadow-lg hover:shadow-xl">
+          <div className="flex flex-wrap justify-center gap-4 mt-8">
+            <a href="#formulario" className="bg-[#48c474] text-white px-6 py-3 rounded-xl font-semibold hover:scale-[1.03] transition-all shadow-md">
               {t('contactoPage.btnForm')}
             </a>
-            <a href="https://wa.me/51902667683" target="_blank" rel="noopener noreferrer" className="bg-transparent border border-white/30 text-white px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition-colors backdrop-blur-sm">
+            <a href="https://wa.me/51902667683" target="_blank" rel="noopener noreferrer" className="bg-transparent border border-white/40 text-white px-6 py-3 rounded-xl font-semibold hover:bg-white/10 hover:border-white/60 hover:scale-[1.03] transition-all backdrop-blur-sm">
               {t('contactoPage.btnWhatsapp')}
             </a>
           </div>
@@ -44,7 +46,7 @@ const Contacto = () => {
       </section>
 
       {/* Sección Formulario e Info */}
-      <section id="formulario" className="py-24 bg-background relative -mt-16 z-20">
+      <section id="formulario" className="py-24 bg-background relative z-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Panel Izquierdo (Verde) */}
