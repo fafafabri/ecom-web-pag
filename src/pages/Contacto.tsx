@@ -128,11 +128,11 @@ const Contacto = () => {
                     </p>
                     <p className="text-base font-medium mb-1">
                       {isEnglish ? 'Monday to Friday:' : 'Lunes a Viernes:'}<br/>
-                      <span className="font-semibold">8:00 am - 5:00 pm</span>
+                      <span className="font-semibold">8:00 am - 5:30 pm</span>
                     </p>
                     <p className="text-base font-medium">
                       {isEnglish ? 'Saturdays:' : 'Sábados:'}<br/>
-                      <span className="font-semibold">8:00 am - 12:00 pm</span>
+                      <span className="font-semibold">8:00 am - 12:30 pm</span>
                     </p>
                   </div>
                 </div>
