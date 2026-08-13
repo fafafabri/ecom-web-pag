@@ -27,6 +27,52 @@
     "whatWeManage": "¿Qué procesos y materiales gestionamos?",
     "whatWeSell": "Nuestro Catálogo de Soluciones (¿Qué vendemos?)"
   },
+  "homePage": {
+    "heroPreTitle": "Brindamos soluciones corporativas para la inhabilitación de mercadería, destrucción de archivos confidenciales y baja de activos con estricto respaldo notarial y cumplimiento normativo.",
+    "heroTitle": "Expertos en Destrucción Segura y Protección de Marca.",
+    "btnSolutions": "Ver Soluciones de Destrucción",
+    "btnAdvisor": "Contactar a un Asesor",
+    "scroll": "SCROLL",
+    "stat1": "100% Confidencialidad y Protección de Marca",
+    "stat2": "100% Respaldo Notarial y Certificación Oficial",
+    "stat3": "100% Cumplimiento Normativo (MINAM / SUNAT)",
+    "stat4": "100% Procesos Auditables con Cadena de Custodia",
+    "whyTrustUs": "¿Por qué las empresas líderes confían en ECO M?",
+    "certifiedBadge": "✓ Certificados internacionalmente"
+  },
+  "aboutPage": {
+    "heroTitle": "Compromiso con la Seguridad, Confidencialidad y Protección de Marca",
+    "heroSubtitle": "Somos el aliado estratégico de las empresas en el Perú para la inhabilitación segura de activos, destrucción de información confidencial y gestión de mermas bajo estricto cumplimiento normativo.",
+    "btnSolutions": "Conocer Soluciones",
+    "btnSpecialist": "Hablar con un Especialista",
+    "whoWeAre": "¿Quiénes Somos?",
+    "intro1": "En ECO M (Expert Destruction Management) nos especializamos en mitigar los riesgos operativos, legales y reputacionales de las organizaciones. Entendemos que la acumulación de inventarios obsoletos, la indumentaria con logotipo corporativo y el manejo de archivos con datos sensibles representan una vulnerabilidad para su empresa si caen en manos equivocadas.",
+    "intro2": "Diseñamos e implementamos procesos de destrucción física e inhabilitación irreversible, operando bajo la normativa ambiental del MINAM/OEFA y brindando el sustento notarial exigido por la SUNAT para la deducción de mermas y desmedros en el Impuesto a la Renta.",
+    "missionTitle": "Nuestra Misión",
+    "missionText": "Proteger el prestigio y la propiedad intelectual de nuestros clientes mediante procesos blindados de destrucción, garantizando la trazabilidad total, el cumplimiento legal y una disposición final ambientalmente responsable.",
+    "visionTitle": "Nuestra Visión",
+    "visionText": "Ser la empresa referente en el Perú en gestión de destrucción corporativa y protección de marca, reconocida por nuestra rigurosidad operativa, transparencia y excelencia en el servicio B2B.",
+    "pillarsPre": "NUESTROS VALORES",
+    "pillarsTitle": "Pilares Operativos",
+    "p1Title": "Confidencialidad y Custodia",
+    "p1Text": "Proteger la información de nuestros clientes es una prioridad absoluta. Mantenemos una cadena de custodia estricta desde la recolección hasta la trituración final.",
+    "p2Title": "Rigor Legal y Tributario",
+    "p2Text": "Ejecutamos cada procedimiento con presencia notarial y documentación auditable para garantizar la validez del proceso ante la SUNAT.",
+    "p3Title": "Sostenibilidad y Economía Circular",
+    "p3Text": "Priorizamos la valorización de residuos (reciclaje de papel, cartón y metales) y la disposición responsable para reducir el impacto ambiental.",
+    "p4Title": "Eficiencia Operativa",
+    "p4Text": "Respuestas ágiles y soluciones logísticas adaptadas a la escala y necesidades específicas de cada industria.",
+    "guaranteesPre": "RESPALDO CORPORATIVO",
+    "guaranteesTitle": "Garantías de Cumplimiento",
+    "g1Title": "Trazabilidad Garantizada",
+    "g1Text": "Registro fotográfico y en video de los procesos de destrucción para archivos y auditorías internas.",
+    "g2Title": "Certificación Oficial",
+    "g2Text": "Emisión de Certificados de Destrucción y Manifiestos de Manejo de Residuos válidos ante las autoridades competentes.",
+    "g3Title": "Protección Antifraude",
+    "g3Text": "Inhabilitación mecánica de uniformes, empaques y productos para erradicar cualquier riesgo de falsificación o comercialización informal.",
+    "ctaTitle": "¿Busca un aliado confiable para la protección de su marca y la baja segura de sus activos?",
+    "ctaBtn": "Contactar por WhatsApp"
+  },
   "contactoPage": {
     "heroTitle": "Hablemos: Cotizaciones y Asesoría Corporativa",
     "heroSubtitle": "Póngase en contacto con nuestro equipo comercial para solicitar una propuesta formal, coordinar una evaluación técnica o resolver sus consultas sobre inhabilitación de activos y trámites notariales.",
@@ -52,12 +98,6 @@
     "urgencyTitle": "¿Requiere atender una urgencia operativa o una auditoría próxima? Contáctenos de forma directa.",
     "urgencyBtn": "Chat Directo por WhatsApp",
     "successMessage": "Gracias por escribirnos. Un asesor comercial se pondrá en contacto en breve."
-  },
-  "hero": {
-    "subtitle": "Destrucción de documentos, mermas, mercadería, inventarios, residuos generales",
-    "title": "Destrucción de Materiales y Productos",
-    "btnContact": "Contacto",
-    "btnInquiry": "Consultas"
   },
   "why": {
     "label": "ECO M",
@@ -131,27 +171,6 @@
     "hoursDetail": "L a V: 8:00 am a 5:30 pm",
     "hoursSat": "Sáb 8:00 am a 12:30 pm"
   },
-  "empresa": {
-    "ourCompany": "Nuestra Empresa",
-    "who": "¿Quiénes Somos?",
-    "desc": "Operador de residuos sólidos autorizado por MINAM y DIGESA en Perú. Brindamos soluciones integrales de gestión ambiental a nivel nacional con estricto cumplimiento legal y trazabilidad garantizada.",
-    "descIntro": "Operador de residuos sólidos autorizado por ",
-    "descHighlight1": "MINAM y DIGESA en Perú",
-    "descMiddle": ". Brindamos soluciones integrales de gestión ambiental a nivel ",
-    "descHighlight2": "nacional",
-    "descOutro": " con estricto cumplimiento legal y trazabilidad garantizada.",
-    "mission": "Misión",
-    "missionDesc": "Brindar soluciones corporativas especializadas para el recojo, transporte y destrucción de residuos, construyendo alianzas estratégicas duraderas.",
-    "vision": "Visión",
-    "visionDesc": "Consolidarnos como el socio operativo a nivel nacional de referencia en gestión integral de residuos y destrucción notarial.",
-    "values": "Valores",
-    "valuesDesc": "Nuestro Sistema Integrado de Gestión (SIG) salvaguarda sus operaciones trabajando bajo las más estrictas normas ISO.",
-    "capabilities": "Nuestras Capacidades",
-    "staff": "Personal Calificado",
-    "certs": "Certificaciones",
-    "trucks": "Flota de Camiones",
-    "experience": "Años de Experiencia"
-  },
   "extendedServices": {
     "destruccion-productos-mercaderia-materiales-industriales": {
       "heroTitle": "Destrucción de Productos, Mercadería Vencida y Materiales Industriales",
@@ -174,7 +193,7 @@
       ],
       "whyTitle": "¿Por qué confiar en ECO M para sus inventarios?",
       "whyPoints": [
-        { "title": "Protección de Marca y Reputación", "desc": "Eliminamos el riesgo de que productos defectuosos o vencidos lleguen al mercado negro y dañen la imagen de su empresa." },
+        { "title": "Protección de Marca y Reputación", "desc": "Eliminamos el riesgo de que productos defectuoso o vencidos lleguen al mercado negro y dañen la imagen de su empresa." },
         { "title": "Liberación de Espacio y Ahorro", "desc": "Le ayudamos a despejar rápidamente sus almacenes de inventarios inmovilizados, reduciendo sus altos costos logísticos." },
         { "title": "Sustento Legal y Transparencia", "desc": "Nuestros procesos respaldan documentariamente la baja de sus activos frente a inspecciones y controles de calidad." }
       ],
@@ -341,51 +360,5 @@
       ],
       "footerText": "¿Iniciando una nueva obra o equipando un campamento? Invierta inteligentemente en sus propios equipos sanitarios. Solicite nuestro catálogo de ventas hoy."
     }
-  }
-  "homePage": {
-    "heroPreTitle": "Brindamos soluciones corporativas para la inhabilitación de mercadería, destrucción de archivos confidenciales y baja de activos con estricto respaldo notarial y cumplimiento normativo.",
-    "heroTitle": "Expertos en Destrucción Segura y Protección de Marca.",
-    "btnSolutions": "Ver Soluciones de Destrucción",
-    "btnAdvisor": "Contactar a un Asesor",
-    "scroll": "SCROLL",
-    "stat1": "100% Confidencialidad y Protección de Marca",
-    "stat2": "100% Respaldo Notarial y Certificación Oficial",
-    "stat3": "100% Cumplimiento Normativo (MINAM / SUNAT)",
-    "stat4": "100% Procesos Auditables con Cadena de Custodia",
-    "whyTrustUs": "¿Por qué las empresas líderes confían en ECO M?",
-    "certifiedBadge": "✓ Certificados internacionalmente"
-  },
-  "aboutPage": {
-    "heroTitle": "Compromiso con la Seguridad, Confidencialidad y Protección de Marca",
-    "heroSubtitle": "Somos el aliado estratégico de las empresas en el Perú para la inhabilitación segura de activos, destrucción de información confidencial y gestión de mermas bajo estricto cumplimiento normativo.",
-    "btnSolutions": "Conocer Soluciones",
-    "btnSpecialist": "Hablar con un Especialista",
-    "whoWeAre": "¿Quiénes Somos?",
-    "intro1": "En ECO M (Expert Destruction Management) nos especializamos en mitigar los riesgos operativos, legales y reputacionales de las organizaciones. Entendemos que la acumulación de inventarios obsoletos, la indumentaria con logotipo corporativo y el manejo de archivos con datos sensibles representan una vulnerabilidad para su empresa si caen en manos equivocadas.",
-    "intro2": "Diseñamos e implementamos procesos de destrucción física e inhabilitación irreversible, operando bajo la normativa ambiental del MINAM/OEFA y brindando el sustento notarial exigido por la SUNAT para la deducción de mermas y desmedros en el Impuesto a la Renta.",
-    "missionTitle": "Nuestra Misión",
-    "missionText": "Proteger el prestigio y la propiedad intelectual de nuestros clientes mediante procesos blindados de destrucción, garantizando la trazabilidad total, el cumplimiento legal y una disposición final ambientalmente responsable.",
-    "visionTitle": "Nuestra Visión",
-    "visionText": "Ser la empresa referente en el Perú en gestión de destrucción corporativa y protección de marca, reconocida por nuestra rigurosidad operativa, transparencia y excelencia en el servicio B2B.",
-    "pillarsPre": "NUESTROS VALORES",
-    "pillarsTitle": "Pilares Operativos",
-    "p1Title": "Confidencialidad y Custodia",
-    "p1Text": "Proteger la información de nuestros clientes es una prioridad absoluta. Mantenemos una cadena de custodia estricta desde la recolección hasta la trituración final.",
-    "p2Title": "Rigor Legal y Tributario",
-    "p2Text": "Ejecutamos cada procedimiento con presencia notarial y documentación auditable para garantizar la validez del proceso ante la SUNAT.",
-    "p3Title": "Sostenibilidad y Economía Circular",
-    "p3Text": "Priorizamos la valorización de residuos (reciclaje de papel, cartón y metales) y la disposición responsable para reducir el impacto ambiental.",
-    "p4Title": "Eficiencia Operativa",
-    "p4Text": "Respuestas ágiles y soluciones logísticas adaptadas a la escala y necesidades específicas de cada industria.",
-    "guaranteesPre": "RESPALDO CORPORATIVO",
-    "guaranteesTitle": "Garantías de Cumplimiento",
-    "g1Title": "Trazabilidad Garantizada",
-    "g1Text": "Registro fotográfico y en video de los procesos de destrucción para archivos y auditorías internas.",
-    "g2Title": "Certificación Oficial",
-    "g2Text": "Emisión de Certificados de Destrucción y Manifiestos de Manejo de Residuos válidos ante las autoridades competentes.",
-    "g3Title": "Protección Antifraude",
-    "g3Text": "Inhabilitación mecánica de uniformes, empaques y productos para erradicar cualquier riesgo de falsificación o comercialización informal.",
-    "ctaTitle": "¿Busca un aliado confiable para la protección de su marca y la baja segura de sus activos?",
-    "ctaBtn": "Contactar por WhatsApp"
   }
 }

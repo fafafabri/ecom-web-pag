@@ -4,32 +4,7 @@
     "empresa": "About Us",
     "soluciones": "Solutions",
     "contacto": "Contact",
-    "categorias": "Categories",
-    "categories": {
-      "destruccion": "Destruction and Disposal",
-      "destruccionDesc": "Certified destruction and final disposal services.",
-      "logistica": "Logistics and Waste Management",
-      "logisticaDesc": "Logistics solutions and specialized waste management."
-    },
-    "services": {
-      "destruccion_notarial": "Notarial Document Destruction",
-      "destruccion_residuos": "Waste Destruction",
-      "destruccion_raee": "Waste Electrical and Electronic Equipment Destruction (WEEE)",
-      "destruccion_ropa": "Clothing Destruction",
-      "disposicion_final": "Final Disposal",
-      "limpieza_grasas": "Grease Trap Cleaning",
-      "limpieza_pozos": "Septic Tank Cleaning",
-      "limpieza_biodigestores": "Biodigester Cleaning",
-      "recojo_transporte": "Collection and Transport of Waste",
-      "carga_transporte": "Loading and Transportation",
-      "transporte_maptel": "Maptel Transportation",
-      "gestion_iqbf": "IQBF Management",
-      "manejo_raee": "Adequate WEEE Management",
-      "acondicionamiento": "Material Conditioning",
-      "asesorias": "Environmental Advisory",
-      "comercializacion": "Material Commercialization",
-      "sanitarios": "Sale of Portable Toilets"
-    }
+    "categorias": "Categories"
   },
   "newNav": {
     "categories": {
@@ -51,6 +26,52 @@
     "viewDetail": "View details",
     "whatWeManage": "What processes and materials do we manage?",
     "whatWeSell": "Our Solution Catalog (What do we sell?)"
+  },
+  "homePage": {
+    "heroPreTitle": "We provide corporate solutions for the disabling of merchandise, destruction of confidential archives, and asset write-offs with strict notarial backing and regulatory compliance.",
+    "heroTitle": "Experts in Secure Destruction and Brand Protection.",
+    "btnSolutions": "View Destruction Solutions",
+    "btnAdvisor": "Contact an Advisor",
+    "scroll": "SCROLL",
+    "stat1": "100% Confidentiality and Brand Protection",
+    "stat2": "100% Notarial Backing and Official Certification",
+    "stat3": "100% Regulatory Compliance (MINAM / SUNAT)",
+    "stat4": "100% Auditable Processes with Chain of Custody",
+    "whyTrustUs": "Why do leading companies trust ECO M?",
+    "certifiedBadge": "✓ Internationally Certified"
+  },
+  "aboutPage": {
+    "heroTitle": "Commitment to Security, Confidentiality, and Brand Protection",
+    "heroSubtitle": "We are the strategic ally of companies in Peru for the secure disabling of assets, destruction of confidential information, and shrinkage management under strict regulatory compliance.",
+    "btnSolutions": "Discover Solutions",
+    "btnSpecialist": "Speak with a Specialist",
+    "whoWeAre": "Who Are We?",
+    "intro1": "At ECO M (Expert Destruction Management) we specialize in mitigating the operational, legal, and reputational risks of organizations. We understand that the accumulation of obsolete inventories, clothing with corporate logos, and the handling of archives with sensitive data represent a vulnerability for your company if they fall into the wrong hands.",
+    "intro2": "We design and implement processes of physical destruction and irreversible disabling, operating under the environmental regulations of MINAM/OEFA and providing the notarial support required by SUNAT for the deduction of shrinkages and impairments in the Income Tax.",
+    "missionTitle": "Our Mission",
+    "missionText": "To protect the prestige and intellectual property of our clients through shielded destruction processes, guaranteeing full traceability, legal compliance, and environmentally responsible final disposal.",
+    "visionTitle": "Our Vision",
+    "visionText": "To be the benchmark company in Peru in corporate destruction management and brand protection, recognized for our operational rigor, transparency, and excellence in B2B service.",
+    "pillarsPre": "OUR VALUES",
+    "pillarsTitle": "Operational Pillars",
+    "p1Title": "Confidentiality and Custody",
+    "p1Text": "Protecting our clients' information is an absolute priority. We maintain a strict chain of custody from collection to final shredding.",
+    "p2Title": "Legal and Tax Rigor",
+    "p2Text": "We execute each procedure with notarial presence and auditable documentation to guarantee the validity of the process before SUNAT.",
+    "p3Title": "Sustainability and Circular Economy",
+    "p3Text": "We prioritize waste recovery (recycling of paper, cardboard, and metals) and responsible disposal to reduce environmental impact.",
+    "p4Title": "Operational Efficiency",
+    "p4Text": "Agile responses and logistics solutions adapted to the scale and specific needs of each industry.",
+    "guaranteesPre": "CORPORATE BACKING",
+    "guaranteesTitle": "Compliance Guarantees",
+    "g1Title": "Guaranteed Traceability",
+    "g1Text": "Photographic and video record of destruction processes for files and internal audits.",
+    "g2Title": "Official Certification",
+    "g2Text": "Issuance of Destruction Certificates and Waste Management Manifests valid before competent authorities.",
+    "g3Title": "Anti-Fraud Protection",
+    "g3Text": "Mechanical disabling of uniforms, packaging, and products to eradicate any risk of counterfeiting or informal marketing.",
+    "ctaTitle": "Looking for a reliable ally for the protection of your brand and the secure write-off of your assets?",
+    "ctaBtn": "Contact via WhatsApp"
   },
   "contactoPage": {
     "heroTitle": "Let's Talk: Corporate Quotes and Advisory",
@@ -77,12 +98,6 @@
     "urgencyTitle": "Need to attend an operational urgency or an upcoming audit? Contact us directly.",
     "urgencyBtn": "Direct WhatsApp Chat",
     "successMessage": "Thank you for writing to us. A commercial advisor will contact you shortly."
-  },
-  "hero": {
-    "subtitle": "Document destruction, waste, merchandise, inventories, general waste",
-    "title": "Material and Product Destruction",
-    "btnContact": "Contact",
-    "btnInquiry": "Inquiries"
   },
   "why": {
     "label": "ECO M",
@@ -155,27 +170,6 @@
     "email": "Email",
     "hoursDetail": "Mon-Fri: 8:00 am to 5:30 pm",
     "hoursSat": "Sat 8:00 am to 12:30 pm"
-  },
-  "empresa": {
-    "ourCompany": "Our Company",
-    "who": "Who Are We?",
-    "desc": "Solid waste operator authorized by MINAM and DIGESA in Peru. We provide comprehensive environmental management solutions nationwide with strict legal compliance and guaranteed traceability. We specialize in the collection, transport, and certified final disposal of hazardous and non-hazardous waste, as well as material destruction with notarial backing.",
-    "descIntro": "Solid waste operator authorized by ",
-    "descHighlight1": "MINAM and DIGESA in Peru",
-    "descMiddle": ". We provide comprehensive environmental management solutions ",
-    "descHighlight2": "nationwide",
-    "descOutro": " with strict legal compliance and guaranteed traceability. We specialize in the collection, transport, and certified final disposal of hazardous and non-hazardous waste, as well as material destruction with notarial backing.",
-    "mission": "Mission",
-    "missionDesc": "Provide specialized corporate solutions for the collection, transport and destruction of waste, building lasting strategic alliances. We prioritize legal risk mitigation and environmental care, ensuring profitability and brand protection for our clients.",
-    "vision": "Vision",
-    "visionDesc": "To consolidate ourselves as the national operational partner of reference in comprehensive waste management and notarial destruction of merchandise, applying cutting-edge technologies to drive the country's sustainable development.",
-    "values": "Values",
-    "valuesDesc": "Our Integrated Management System (SIG) safeguards your operations. We work under the strictest ISO standards, guaranteeing impeccable, biosecure processes with absolute documentary support against any audit.",
-    "capabilities": "Our Capabilities",
-    "staff": "Qualified Staff",
-    "certs": "Certifications",
-    "trucks": "Truck Fleet",
-    "experience": "Years of Experience"
   },
   "extendedServices": {
     "destruccion-productos-mercaderia-materiales-industriales": {
@@ -366,52 +360,5 @@
       ],
       "footerText": "Starting a new project or equipping a camp? Invest smartly in your own sanitary equipment. Request our sales catalog today."
     }
-  }
-  "homePage": 
-  {
-    "heroPreTitle": "We provide corporate solutions for the disabling of merchandise, destruction of confidential archives, and asset write-offs with strict notarial backing and regulatory compliance.",
-    "heroTitle": "Experts in Secure Destruction and Brand Protection.",
-    "btnSolutions": "View Destruction Solutions",
-    "btnAdvisor": "Contact an Advisor",
-    "scroll": "SCROLL",
-    "stat1": "100% Confidentiality and Brand Protection",
-    "stat2": "100% Notarial Backing and Official Certification",
-    "stat3": "100% Regulatory Compliance (MINAM / SUNAT)",
-    "stat4": "100% Auditable Processes with Chain of Custody",
-    "whyTrustUs": "Why do leading companies trust ECO M?",
-    "certifiedBadge": "✓ Internationally Certified"
-  },
-  "aboutPage": {
-    "heroTitle": "Commitment to Security, Confidentiality, and Brand Protection",
-    "heroSubtitle": "We are the strategic ally of companies in Peru for the secure disabling of assets, destruction of confidential information, and shrinkage management under strict regulatory compliance.",
-    "btnSolutions": "Discover Solutions",
-    "btnSpecialist": "Speak with a Specialist",
-    "whoWeAre": "Who Are We?",
-    "intro1": "At ECO M (Expert Destruction Management) we specialize in mitigating the operational, legal, and reputational risks of organizations. We understand that the accumulation of obsolete inventories, clothing with corporate logos, and the handling of archives with sensitive data represent a vulnerability for your company if they fall into the wrong hands.",
-    "intro2": "We design and implement processes of physical destruction and irreversible disabling, operating under the environmental regulations of MINAM/OEFA and providing the notarial support required by SUNAT for the deduction of shrinkages and impairments in the Income Tax.",
-    "missionTitle": "Our Mission",
-    "missionText": "To protect the prestige and intellectual property of our clients through shielded destruction processes, guaranteeing full traceability, legal compliance, and environmentally responsible final disposal.",
-    "visionTitle": "Our Vision",
-    "visionText": "To be the benchmark company in Peru in corporate destruction management and brand protection, recognized for our operational rigor, transparency, and excellence in B2B service.",
-    "pillarsPre": "OUR VALUES",
-    "pillarsTitle": "Operational Pillars",
-    "p1Title": "Confidentiality and Custody",
-    "p1Text": "Protecting our clients' information is an absolute priority. We maintain a strict chain of custody from collection to final shredding.",
-    "p2Title": "Legal and Tax Rigor",
-    "p2Text": "We execute each procedure with notarial presence and auditable documentation to guarantee the validity of the process before SUNAT.",
-    "p3Title": "Sustainability and Circular Economy",
-    "p3Text": "We prioritize waste recovery (recycling of paper, cardboard, and metals) and responsible disposal to reduce environmental impact.",
-    "p4Title": "Operational Efficiency",
-    "p4Text": "Agile responses and logistics solutions adapted to the scale and specific needs of each industry.",
-    "guaranteesPre": "CORPORATE BACKING",
-    "guaranteesTitle": "Compliance Guarantees",
-    "g1Title": "Guaranteed Traceability",
-    "g1Text": "Photographic and video record of destruction processes for files and internal audits.",
-    "g2Title": "Official Certification",
-    "g2Text": "Issuance of Destruction Certificates and Waste Management Manifests valid before competent authorities.",
-    "g3Title": "Anti-Fraud Protection",
-    "g3Text": "Mechanical disabling of uniforms, packaging, and products to eradicate any risk of counterfeiting or informal marketing.",
-    "ctaTitle": "Looking for a reliable ally for the protection of your brand and the secure write-off of your assets?",
-    "ctaBtn": "Contact via WhatsApp"
   }
 }
