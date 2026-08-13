@@ -20,7 +20,6 @@ import InquiryFormDialog from '@/components/InquiryFormDialog';
 import AnimatedCounter from '@/components/AnimatedCounter';
 import AnimatedSection from '@/components/AnimatedSection';
 
-/* ─── Componente principal ─── */
 const Index = () => {
   const [quoteOpen, setQuoteOpen] = useState(false);
   const [inquiryOpen, setInquiryOpen] = useState(false);
@@ -28,13 +27,11 @@ const Index = () => {
   const { t } = useTranslation();
   const featuredServices = services.slice(0, 6);
 
-  // Hero mount animation
   useEffect(() => {
-    const t = setTimeout(() => setHeroVisible(true), 100);
-    return () => clearTimeout(t);
+    const timer = setTimeout(() => setHeroVisible(true), 100);
+    return () => clearTimeout(timer);
   }, []);
 
-  // Ensure smooth scroll behavior is enabled globally (fallback for browsers/styles that don't set it)
   useEffect(() => {
     if (typeof document === 'undefined') return;
     const prev = document.documentElement.style.scrollBehavior;
@@ -59,48 +56,40 @@ const Index = () => {
   ];
 
   const stats = [
-    { value: 100, suffix: '%', label: 'Confidencialidad y Protección de Marca' },
-    { value: 100, suffix: '%', label: 'Respaldo Notarial y Certificación Oficial' },
-    { value: 100, suffix: '%', label: 'Cumplimiento Normativo (MINAM / SUNAT)' },
-    { value: 100, suffix: '%', label: 'Procesos Auditables con Cadena de Custodia' },
+    { value: 100, suffix: '%', label: t('homePage.stat1').replace('100% ', '') },
+    { value: 100, suffix: '%', label: t('homePage.stat2').replace('100% ', '') },
+    { value: 100, suffix: '%', label: t('homePage.stat3').replace('100% ', '') },
+    { value: 100, suffix: '%', label: t('homePage.stat4').replace('100% ', '') },
   ];
 
   return (
     <>
-      {/* ══════════════ HERO ══════════════ */}
       <section className="relative flex items-center min-h-[92vh] w-full overflow-hidden">
-        {/* Imagen de fondo con zoom suave */}
         <img
           src={heroBg}
           alt="Planta industrial ECO M"
           className={`absolute inset-0 w-full h-full object-cover transition-transform duration-[8000ms] ease-out ${heroVisible ? 'scale-105' : 'scale-100'}`}
           loading="eager"
         />
-
-        {/* Overlay con gradiente más rico */}
         <div className="absolute inset-0 bg-gradient-to-br from-foreground/80 via-foreground/60 to-foreground/30" />
-
-        {/* Orbes decorativos animados */}
         <div className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full bg-primary/10 blur-3xl animate-pulse" style={{ animationDuration: '4s' }} />
         <div className="absolute bottom-1/3 left-1/3 w-64 h-64 rounded-full bg-accent/10 blur-3xl animate-pulse" style={{ animationDuration: '6s', animationDelay: '1s' }} />
 
-        {/* Contenido del hero */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 w-full">
           <p
             className={`text-lg md:text-xl text-background/90 font-medium mb-4 transition-all duration-700 ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
             style={{ transitionDelay: '200ms' }}
           >
-            Brindamos soluciones corporativas para la inhabilitación de mercadería, destrucción de archivos confidenciales y baja de activos con estricto respaldo notarial y cumplimiento normativo.
+            {t('homePage.heroPreTitle')}
           </p>
 
           <h1
             className={`text-4xl sm:text-5xl md:text-7xl font-bold text-background tracking-tight max-w-4xl leading-[1.1] transition-all duration-700 ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
             style={{ transitionDelay: '400ms' }}
           >
-            Expertos en Destrucción Segura y Protección de Marca.
+            {t('homePage.heroTitle')}
           </h1>
 
-          {/* Línea decorativa animada */}
           <div
             className={`flex gap-1 mt-6 transition-all duration-700 ${heroVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}
             style={{ transitionDelay: '600ms' }}
@@ -122,14 +111,13 @@ const Index = () => {
                   if (el) {
                     (el as HTMLElement).scrollIntoView({ behavior: 'smooth', block: 'start' });
                   } else {
-                    // Fallback: change hash
                     window.location.hash = '#soluciones';
                   }
                 }
               }}
               className="group bg-cta text-cta-foreground px-8 py-4 rounded-xl font-semibold shadow-[0_4px_14px_0_hsl(var(--cta)/0.4)] hover:shadow-[0_8px_24px_hsl(var(--cta)/0.5)] hover:scale-[1.04] hover:-translate-y-1 transition-all duration-300 inline-flex items-center gap-2"
             >
-              Ver Soluciones de Destrucción
+              {t('homePage.btnSolutions')}
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </a>
 
@@ -139,17 +127,16 @@ const Index = () => {
               rel="noopener noreferrer"
               className="bg-transparent text-background border border-background/40 px-8 py-4 rounded-xl font-semibold hover:bg-background/15 hover:border-background/60 hover:scale-[1.03] hover:shadow-[0_4px_14px_rgba(255,255,255,0.15)] transition-all duration-300 backdrop-blur-sm inline-flex items-center"
             >
-              Contactar a un Asesor
+              {t('homePage.btnAdvisor')}
             </a>
           </div>
         </div>
 
-        {/* Scroll indicator */}
         <div
           className={`absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 transition-all duration-700 ${heroVisible ? 'opacity-100' : 'opacity-0'}`}
           style={{ transitionDelay: '1200ms' }}
         >
-          <span className="text-background/50 text-xs tracking-widest uppercase">Scroll</span>
+          <span className="text-background/50 text-xs tracking-widest uppercase">{t('homePage.scroll')}</span>
           <ChevronDown className="h-5 w-5 text-background/50 animate-bounce" />
         </div>
       </section>
@@ -157,20 +144,14 @@ const Index = () => {
       <QuoteFormDialog open={quoteOpen} onOpenChange={setQuoteOpen} />
       <InquiryFormDialog open={inquiryOpen} onOpenChange={setInquiryOpen} />
 
-      {/* ══════════════ ESTADÍSTICAS ══════════════ */}
       <section className="py-16 bg-primary relative overflow-hidden">
-        {/* Patrón decorativo de fondo */}
         <div className="absolute inset-0 opacity-10"
           style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '32px 32px' }}
         />
         <AnimatedSection direction="up" threshold={0.2} duration={700}>
           <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 relative">
           {stats.map((s, i) => (
-            <div
-              key={s.label}
-              className="text-center transition-all duration-500"
-              style={{ transitionDelay: `${i * 100}ms` }}
-            >
+            <div key={s.label} className="text-center transition-all duration-500" style={{ transitionDelay: `${i * 100}ms` }}>
               <p className="text-4xl md:text-5xl font-bold text-white font-display">
                 <AnimatedCounter target={s.value} suffix={s.suffix} />
               </p>
@@ -181,14 +162,11 @@ const Index = () => {
         </AnimatedSection>
       </section>
 
-      {/* ══════════════ WHY CHOOSE US ══════════════ */}
       <section className="py-28 bg-card relative overflow-hidden">
-        {/* Gradiente decorativo esquina */}
         <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-primary/5 blur-3xl pointer-events-none" />
         <div className="absolute -bottom-32 -left-32 w-96 h-96 rounded-full bg-accent/5 blur-3xl pointer-events-none" />
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Texto */}
             <AnimatedSection direction="left" duration={700}>
               <p className="text-xs uppercase tracking-[0.2em] text-primary font-semibold mb-3">{t('why.label')}</p>
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-2">{t('why.title')}</h2>
@@ -198,11 +176,11 @@ const Index = () => {
               </div>
               <p className="text-muted-foreground leading-relaxed mb-8 text-justify">{t('why.desc')}</p>
 
-<h3 className="text-xl md:text-2xl font-bold tracking-tight mb-6 mt-8 text-foreground">
-  ¿Por qué las empresas líderes confían en ECO M?
-</h3>
+              <h3 className="text-xl md:text-2xl font-bold tracking-tight mb-6 mt-8 text-foreground">
+                {t('homePage.whyTrustUs')}
+              </h3>
 
-<div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {pillars.map((p, i) => (
                   <AnimatedSection key={p.title} direction="up" duration={600} delay={200 + i * 100}>
                     <div className="group flex gap-4 p-4 rounded-xl hover:bg-background hover:shadow-md transition-all duration-300 cursor-default">
@@ -218,30 +196,20 @@ const Index = () => {
                 ))}
               </div>
             </AnimatedSection>
-            {/* Imagen con efecto */}
             <AnimatedSection direction="right" duration={700} delay={200}>
-              {/* Marco decorativo desfasado */}
               <div className="absolute -top-4 -right-4 w-full h-full rounded-2xl border-2 border-primary/20 pointer-events-none" />
-              <img
-                src={empresaImg}
-                alt="ECO M operaciones"
-                className="relative rounded-2xl shadow-xl w-full object-cover aspect-[4/3] hover:shadow-2xl transition-shadow duration-500"
-                loading="lazy"
-              />
-              {/* Badge flotante */}
+              <img src={empresaImg} alt="ECO M operaciones" className="relative rounded-2xl shadow-xl w-full object-cover aspect-[4/3] hover:shadow-2xl transition-shadow duration-500" loading="lazy" />
               <div className="absolute -bottom-5 -left-5 bg-primary text-white px-5 py-3 rounded-xl shadow-lg font-semibold text-sm">
-                ✓ Certificados internacionalmente
+                {t('homePage.certifiedBadge')}
               </div>
             </AnimatedSection>
           </div>
         </div>
       </section>
 
-      {/* ══════════════ SERVICIOS ══════════════ */}
       <section id="soluciones" className="py-28 bg-background relative overflow-hidden">
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
         <div className="max-w-7xl mx-auto px-6">
-          {/* Header */}
           <AnimatedSection direction="up" threshold={0.1} duration={700}>
             <div className="flex items-end justify-between mb-14">
               <div>
@@ -252,92 +220,70 @@ const Index = () => {
                   <div className="w-8 h-1 rounded-full bg-primary" />
                 </div>
               </div>
-              
             </div>
           </AnimatedSection>
 
-          {/* Grid de servicios */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredServices.map((s, i) => (
-              <AnimatedSection key={s.id} direction="up" duration={600} delay={i * 80} threshold={0.1}>
-                <Link
-                  to={`/servicios/${s.slug}`}
-                  className="group relative flex flex-col bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:scale-[1.02] hover:-translate-y-1 transition-all duration-400"
-                >
-                  {/* Imagen */}
-                  <div className="h-48 w-full overflow-hidden relative">
-                    <img
-                      src={serviceImages[s.imageKey]}
-                      alt={s.title}
-                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      loading="lazy"
-                    />
-                    {/* Shimmer overlay al hover */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  </div>
+            {featuredServices.map((s, i) => {
+              const sData: any = t(`extendedServices.${s.slug}`, { returnObjects: true });
+              const finalTitle = (sData && typeof sData === 'object' && sData.heroTitle) ? sData.heroTitle : s.title;
+              const finalDesc = (sData && typeof sData === 'object' && sData.section2Intro) ? sData.section2Intro : s.shortDesc;
 
-                  {/* Borde superior de color al hover */}
-                  <div className="absolute top-0 left-0 right-0 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-400 origin-left" />
-
-                  {/* Contenido */}
-                  <div className="p-6 flex flex-col flex-1">
-                    <h3 className="font-display font-bold mb-2 group-hover:text-primary transition-colors duration-300">{s.title}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed flex-1">{s.shortDesc}</p>
-                    <span className="mt-4 inline-flex items-center text-primary font-medium text-sm group-hover:gap-2 transition-all duration-300">
-                      {t('services.learnMore')}
-                      <ArrowRight className="h-4 w-4 ml-1 transition-transform duration-300 group-hover:translate-x-1" />
-                    </span>
-                  </div>
-                </Link>
-              </AnimatedSection>
-            ))}
+              return (
+                <AnimatedSection key={s.id} direction="up" duration={600} delay={i * 80} threshold={0.1}>
+                  <Link
+                    to={`/servicios/${s.slug}`}
+                    className="group relative flex flex-col bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:scale-[1.02] hover:-translate-y-1 transition-all duration-400"
+                  >
+                    <div className="h-48 w-full overflow-hidden relative">
+                      <img src={serviceImages[s.imageKey]} alt={finalTitle} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    </div>
+                    <div className="absolute top-0 left-0 right-0 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-400 origin-left" />
+                    <div className="p-6 flex flex-col flex-1">
+                      <h3 className="font-display font-bold mb-2 group-hover:text-primary transition-colors duration-300">{finalTitle}</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed flex-1">{finalDesc}</p>
+                      <span className="mt-4 inline-flex items-center text-primary font-medium text-sm group-hover:gap-2 transition-all duration-300">
+                        {t('common.viewDetail')}
+                        <ArrowRight className="h-4 w-4 ml-1 transition-transform duration-300 group-hover:translate-x-1" />
+                      </span>
+                    </div>
+                  </Link>
+                </AnimatedSection>
+              )
+            })}
           </div>
-     
-     
         </div>
       </section>
 
-{/* Llamado a la Acción (CTA) insertado entre Servicios y Certificaciones */}
       <section className="py-16 bg-primary/5 rounded-3xl my-16 text-center px-6 mx-auto max-w-7xl">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8 leading-tight">
-            ¿Listo para proteger la reputación de su empresa y dar de baja sus activos de forma segura?
+            {t('aboutPage.ctaTitle')}
           </h2>
           <a
-            href="https://wa.me/51902667683?text=Hola,%20estoy%20en%20la%20p%C3%A1gina%20de%20Inicio%20y%20deseo%20contactar%20a%20un%20asesor%20comercial."
+            href="https://wa.me/51902667683?text=Hola"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1EBE5C] text-white px-8 py-4 rounded-full font-bold transition-all shadow-lg hover:shadow-xl text-lg"
           >
-            Contactar por WhatsApp
+            {t('aboutPage.ctaBtn')}
           </a>
         </div>
       </section>
 
-      {/* ══════════════ CERTIFICACIONES — marquee infinito ══════════════ */}
       <section className="py-16 bg-card border-t border-border overflow-hidden relative">
         <div className="max-w-5xl mx-auto px-6 mb-8 text-center">
           <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-semibold">
-            Avalados por organismos internacionales
+            {t('empresa.certs')}
           </p>
         </div>
-
-        {/* Fade edges */}
         <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-card to-transparent z-10 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-card to-transparent z-10 pointer-events-none" />
-
-        {/* Marquee: duplicamos los logos para el loop infinito */}
         <div className="flex gap-16 w-max animate-[marquee_12s_linear_infinite] hover:[animation-play-state:paused]">
           {[...certifications, ...certifications].map((cert, i) => (
-            <div
-              key={`${cert.name}-${i}`}
-              className="flex flex-col items-center gap-2 group cursor-default select-none"
-            >
-              <img
-                src={cert.img}
-                alt={cert.name}
-                className="h-20 w-auto object-contain grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-300"
-              />
+            <div key={`${cert.name}-${i}`} className="flex flex-col items-center gap-2 group cursor-default select-none">
+              <img src={cert.img} alt={cert.name} className="h-20 w-auto object-contain grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-300" />
               <span className="text-xs text-muted-foreground font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 {cert.name}
               </span>
