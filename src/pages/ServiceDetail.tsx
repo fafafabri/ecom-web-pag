@@ -75,6 +75,39 @@ const extendedServiceContent: Record<string, any> = {
     ],
     
     footerText: '¿Tiene un cierre contable próximo y necesita dar de baja un lote de mercadería ante SUNAT sin contratiempos? Nuestro equipo legal y operativo está listo para asistirle hoy mismo.'
+  },
+
+  // SERVICIO 3
+  'destruccion-segura-documentos-archivos': {
+    heroTitle: 'Destrucción Segura de Documentos y Archivos Confidenciales',
+    heroSubtitle: 'Protegemos el activo más valioso de su empresa: la información. Garantizamos la trituración confidencial e irrecuperable de sus archivos físicos y contables, en estricto cumplimiento con la Ley de Protección de Datos Personales.',
+    ctaButton: 'Cotizar Destrucción de Archivos',
+    whatsappMessage: 'Hola, estoy en la web de ECO M y solicito cotización para la trituración confidencial de archivos.',
+    
+    section2Intro: 'Evite el espionaje corporativo y las multas legales. Nos encargamos de la eliminación definitiva de cualquier soporte físico que contenga información sensible de su empresa, empleados o clientes.',
+    products: [
+      { title: 'Archivos Contables y Financieros', desc: 'Facturas, balances, cheques anulados, estados de cuenta, declaraciones de impuestos y reportes de auditoría.' },
+      { title: 'Documentación Legal y de RR.HH.', desc: 'Contratos caducados, planillas de sueldos, legajos de personal, currículums, acuerdos de confidencialidad e historias clínicas (ideal para el sector salud).' },
+      { title: 'Información Estratégica y Comercial', desc: 'Bases de datos impresas, estrategias de marketing, planos, licitaciones, listados de clientes y presupuestos.' },
+      { title: 'Soportes Magnéticos y Ópticos Menores', desc: 'Destrucción de CD-ROMs, DVDs, cintas de respaldo (tapes), fotochecks, tarjetas de crédito y tarjetas de identificación corporativa.' }
+    ],
+
+    cycleTitle: 'Nuestro Ciclo de Servicio Seguro',
+    cycleSteps: [
+      { icon: Truck, title: '1. Recolección Confidencial', desc: 'Nuestro personal debidamente identificado y homologado retira las cajas de documentos o archivos directamente de sus oficinas, garantizando que nadie externo tenga acceso a la información.' },
+      { icon: ShieldCheck, title: '2. Transporte en Cadena de Custodia', desc: 'Trasladamos sus archivos en unidades cerradas y monitoreadas directamente hasta nuestra planta, asegurando una custodia ininterrumpida desde su puerta hasta la zona de trituración.' },
+      { icon: Recycle, title: '3. Trituración de Alta Seguridad', desc: 'Sometemos los documentos a molinos trituradores industriales de corte cruzado (cross-cut), reduciendo el papel a partículas diminutas (confeti) que hacen humanamente imposible su reconstrucción o lectura.' },
+      { icon: FileCheck, title: '4. Reciclaje y Emisión de Certificado', desc: 'Fomentamos la economía circular enviando el papel triturado a plantas de reciclaje de cartón. Finalmente, le entregamos su Certificado de Destrucción Confidencial, respaldando su cumplimiento normativo.' }
+    ],
+
+    whyTitle: '¿Por qué confiar sus archivos a ECO M?',
+    whyPoints: [
+      { title: 'Cumplimiento Legal Total', desc: 'Operamos bajo los lineamientos de la Ley N° 29733 (Ley de Protección de Datos Personales), evitando multas severas para su organización.' },
+      { title: 'Recuperación de Espacio Valioso', desc: 'Libere oficinas o almacenes enteros que hoy están ocupados por cajas de papel acumulado durante años y reduzca sus costos de almacenaje.' },
+      { title: 'Seguridad y Discreción Absoluta', desc: 'Procesos blindados y auditables; sus documentos pasan del contenedor a la trituradora sin que nadie lea una sola página.' }
+    ],
+    
+    footerText: '¿Necesita depurar su archivo central, destruir planillas antiguas o deshacerse de tarjetas bancarias con máxima seguridad? Nuestro equipo de confidencialidad le espera.'
   }
 };
 
