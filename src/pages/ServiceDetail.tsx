@@ -43,20 +43,20 @@ const ServiceDetail = () => {
   };
 
   const getFallbackWhatsAppUrl = (serv: Service) => {
-    return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hola ECO M, solicito información sobre ${serv.title}.`)}`;
+    return `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(`Hola, estoy en la web de ECO M y deseo cotizar el servicio de ${serv.title}.`)}`;
   };
 
   const whatsappLink = hasExtendedData 
-    ? `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(extendedData.whatsappMessage)}`
+    ? `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(extendedData.whatsappMessage)}`
     : getFallbackWhatsAppUrl(service);
 
-  // Función interna para determinar qué imagen mostrar en la tarjeta lateral según el slug
+  // Función para mostrar la imagen secundaria en la tarjeta lateral manteniendo intacta la portada
   const getSidebarCardImage = () => {
     if (service.slug === 'destruccion-equipos-tecnologicos-borrado-datos') {
-      return serviceImages['destruccion-raee-card'];
+      return serviceImages['destruccion-raee-card'] || image;
     }
     if (service.slug === 'destruccion-textiles-calzado-uniformes-corporativos') {
-      return serviceImages['destruccion-ropa-card'];
+      return serviceImages['destruccion-ropa-card'] || image;
     }
     return image;
   };
@@ -212,7 +212,7 @@ const ServiceDetail = () => {
               className="inline-flex items-center justify-center gap-3 bg-whatsapp/90 text-accent-foreground px-8 py-4 rounded-xl text-lg font-bold shadow-[0_8px_24px_rgba(37,211,102,0.25)] hover:-translate-y-1 hover:scale-[1.03] hover:bg-whatsapp hover:shadow-[0_12px_32px_rgba(37,211,102,0.35)] transition-all duration-300"
             >
               <MessageCircle className="h-6 w-6" />
-              {t('contacto.contact')} WhatsApp
+              Contactar por WhatsApp
             </a>
           </div>
         </section>
@@ -245,7 +245,7 @@ const ServiceDetail = () => {
                   const sData: any = t(`extendedServices.${s.slug}`, { returnObjects: true });
                   const finalTitle = (sData && typeof sData === 'object' && sData.heroTitle) ? sData.heroTitle : s.title;
 
-                  // Lógica para el carrusel inferior
+                  // Lógica limpia para el carrusel inferior
                   let imageToShowCarousel = serviceImages[s.imageKey];
                   if (s.imageKey === 'destruccion-raee') {
                     imageToShowCarousel = serviceImages['destruccion-raee-card'];
