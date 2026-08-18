@@ -43,11 +43,11 @@ const ServiceDetail = () => {
   };
 
   const getFallbackWhatsAppUrl = (serv: Service) => {
-    return `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(`Hola, estoy en la web de ECO M y deseo cotizar el servicio de ${serv.title}.`)}`;
+    return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hola ECO M, solicito información sobre ${serv.title}.`)}`;
   };
 
   const whatsappLink = hasExtendedData 
-    ? `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(extendedData.whatsappMessage)}`
+    ? `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(extendedData.whatsappMessage)}`
     : getFallbackWhatsAppUrl(service);
 
   // Función interna para determinar qué imagen mostrar en la tarjeta lateral según el slug
@@ -212,7 +212,7 @@ const ServiceDetail = () => {
               className="inline-flex items-center justify-center gap-3 bg-whatsapp/90 text-accent-foreground px-8 py-4 rounded-xl text-lg font-bold shadow-[0_8px_24px_rgba(37,211,102,0.25)] hover:-translate-y-1 hover:scale-[1.03] hover:bg-whatsapp hover:shadow-[0_12px_32px_rgba(37,211,102,0.35)] transition-all duration-300"
             >
               <MessageCircle className="h-6 w-6" />
-              Contactar por WhatsApp
+              {t('contacto.contact')} WhatsApp
             </a>
           </div>
         </section>
