@@ -19,7 +19,7 @@ const Empresa = () => {
             </h1>
             <div className="flex gap-1 justify-center mt-6 mb-4">
               <div className="w-8 h-1 rounded-full bg-accent" />
-              <div className="w-8 h-1 rounded-full bg-background/40" />
+              <div className="w-8 h-1 rounded-full bg-backgro und/40" />
             </div>
             <p className="text-base md:text-xl text-background/90 font-medium leading-relaxed">
               {t('aboutPage.heroSubtitle')}
