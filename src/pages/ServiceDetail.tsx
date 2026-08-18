@@ -53,7 +53,6 @@ const ServiceDetail = () => {
   return (
     <>
       <section className="relative flex items-center min-h-[50vh] w-full overflow-hidden">
-        {/* Aquí nos aseguramos de que el banner principal use object-cover y object-center */}
         <img src={image} alt={service.title} className="absolute inset-0 w-full h-full object-cover object-center" />
         <div className="absolute inset-0 bg-foreground/75" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 w-full text-center">
@@ -169,8 +168,13 @@ const ServiceDetail = () => {
 
           <div className="lg:col-span-5">
             <div className="sticky top-28 flex flex-col gap-6">
-              {/* Aquí también forzamos object-cover y object-center para la imagen lateral */}
-              <img src={image} alt={service.title} className="rounded-2xl shadow-lg w-full object-cover object-center aspect-[4/3] border border-border/50" loading="lazy" />
+              {/* Truco para cargar la imagen de trabajadores en la tarjeta lateral */}
+              <img 
+                src={service.slug === 'destruccion-equipos-tecnologicos-borrado-datos' ? serviceImages['destruccion-raee-card'] : image} 
+                alt={service.title} 
+                className="rounded-2xl shadow-lg w-full object-cover object-center aspect-[4/3] border border-border/50" 
+                loading="lazy" 
+              />
               
               <Link 
                 to="/contacto" 
@@ -230,6 +234,9 @@ const ServiceDetail = () => {
                   const sData: any = t(`extendedServices.${s.slug}`, { returnObjects: true });
                   const finalTitle = (sData && typeof sData === 'object' && sData.heroTitle) ? sData.heroTitle : s.title;
 
+                  // TRUCO PARA EL CARRUSEL: Cargar la tarjeta de RAEE si aparece en "Otras Soluciones"
+                  const imageToShowCarousel = s.imageKey === 'destruccion-raee' ? serviceImages['destruccion-raee-card'] : serviceImages[s.imageKey];
+
                   return (
                     <Link 
                       key={s.id} 
@@ -237,8 +244,8 @@ const ServiceDetail = () => {
                       className="min-w-[300px] md:min-w-[340px] snap-start shrink-0 flex flex-col bg-card rounded-2xl overflow-hidden shadow-[0_1px_3px_rgba(0,0,0,0.05),0_10px_24px_-4px_rgba(0,0,0,0.02)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.05),0_20px_32px_-8px_rgba(0,0,0,0.08)] hover:scale-[1.01] transition-all duration-300"
                     >
                       <div className="h-40 w-full overflow-hidden relative">
-                        {/* Aquí también nos aseguramos que las imágenes pequeñas no se deformen */}
-                        <img src={serviceImages[s.imageKey]} alt={finalTitle} className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105" loading="lazy" />
+                        {/* Aquí usamos imageToShowCarousel en vez de serviceImages[s.imageKey] */}
+                        <img src={imageToShowCarousel} alt={finalTitle} className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105" loading="lazy" />
                       </div>
                       <div className="p-5 flex flex-col justify-between flex-grow">
                         <h4 className="font-display font-bold text-sm text-[#2c6e6b] mb-4">{finalTitle}</h4>
