@@ -50,12 +50,12 @@ const ServiceDetail = () => {
     ? `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(extendedData.whatsappMessage)}`
     : getFallbackWhatsAppUrl(service);
 
-  // Función para mostrar la imagen secundaria en la tarjeta lateral manteniendo intacta la portada
+  // Validación directa por imageKey para asegurar que la imagen secundaria cargue siempre correctamente
   const getSidebarCardImage = () => {
-    if (service.slug === 'destruccion-equipos-tecnologicos-borrado-datos') {
+    if (service.imageKey === 'destruccion-raee') {
       return serviceImages['destruccion-raee-card'] || image;
     }
-    if (service.slug === 'destruccion-textiles-calzado-uniformes-corporativos') {
+    if (service.imageKey === 'destruccion-ropa') {
       return serviceImages['destruccion-ropa-card'] || image;
     }
     return image;
@@ -245,7 +245,6 @@ const ServiceDetail = () => {
                   const sData: any = t(`extendedServices.${s.slug}`, { returnObjects: true });
                   const finalTitle = (sData && typeof sData === 'object' && sData.heroTitle) ? sData.heroTitle : s.title;
 
-                  // Lógica limpia para el carrusel inferior
                   let imageToShowCarousel = serviceImages[s.imageKey];
                   if (s.imageKey === 'destruccion-raee') {
                     imageToShowCarousel = serviceImages['destruccion-raee-card'];
