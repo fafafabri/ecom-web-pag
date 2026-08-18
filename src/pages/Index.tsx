@@ -65,7 +65,6 @@ const Index = () => {
   return (
     <>
       <section className="relative flex items-center min-h-[92vh] w-full overflow-hidden">
-        {/* Agregado object-center al Hero Background */}
         <img src={heroBg} alt="Planta industrial ECO M" className={`absolute inset-0 w-full h-full object-cover object-center transition-transform duration-[8000ms] ease-out ${heroVisible ? 'scale-105' : 'scale-100'}`} loading="eager" />
         <div className="absolute inset-0 bg-gradient-to-br from-foreground/80 via-foreground/60 to-foreground/30" />
         <div className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full bg-primary/10 blur-3xl animate-pulse" style={{ animationDuration: '4s' }} />
@@ -158,7 +157,6 @@ const Index = () => {
             </AnimatedSection>
             <AnimatedSection direction="right" duration={700} delay={200}>
               <div className="absolute -top-4 -right-4 w-full h-full rounded-2xl border-2 border-primary/20 pointer-events-none" />
-              {/* Agregado object-center a la imagen de empresa */}
               <img src={empresaImg} alt="ECO M operaciones" className="relative rounded-2xl shadow-xl w-full object-cover object-center aspect-[4/3] hover:shadow-2xl transition-shadow duration-500" loading="lazy" />
               <div className="absolute -bottom-5 -left-5 bg-primary text-white px-5 py-3 rounded-xl shadow-lg font-semibold text-sm">
                 {t('homePage.certifiedBadge')}
@@ -189,6 +187,9 @@ const Index = () => {
               const sData: any = t(`extendedServices.${s.slug}`, { returnObjects: true });
               const finalTitle = (sData && typeof sData === 'object' && sData.heroTitle) ? sData.heroTitle : s.title;
               const finalDesc = (sData && typeof sData === 'object' && sData.section2Intro) ? sData.section2Intro : s.shortDesc;
+              
+              // TRUCO: Si es la tarjeta de RAEE, usamos la imagen "card", sino, usamos la normal
+              const imageToShow = s.imageKey === 'destruccion-raee' ? serviceImages['destruccion-raee-card'] : serviceImages[s.imageKey];
 
               return (
                 <AnimatedSection key={s.id} direction="up" duration={600} delay={i * 80} threshold={0.1}>
@@ -197,8 +198,7 @@ const Index = () => {
                     className="group relative flex flex-col bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:scale-[1.02] hover:-translate-y-1 transition-all duration-400"
                   >
                     <div className="h-48 w-full overflow-hidden relative">
-                      {/* Agregado object-center a las imágenes de las tarjetas de servicios */}
-                      <img src={serviceImages[s.imageKey]} alt={finalTitle} className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-110" loading="lazy" />
+                      <img src={imageToShow} alt={finalTitle} className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-110" loading="lazy" />
                       <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </div>
                     <div className="absolute top-0 left-0 right-0 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-400 origin-left" />

@@ -2,6 +2,7 @@ import destruccionNotarialFiscalAduanera from '@/assets/Destrucción_Notarial,_F
 import destruccionSeguraDocumentosArchivos from '@/assets/Destrucción_Segura_de_Documentos_y_Archivos_Confidenciales.jpg';
 import destruccionResiduos from '@/assets/service-destruccion-residuos.jpg';
 import destruccionRaee from '@/assets/service-destruccion-raee.jpg';
+import destruccionRaeeCard from '@/assets/service-destruccion-raee-2.jpg';
 import destruccionRopa from '@/assets/service-destruccion-ropa.jpg';
 import gestionIqbf from '@/assets/service-gestion-iqbf.jpg';
 import transporte from '@/assets/service-transporte.jpg';
@@ -17,7 +18,8 @@ export const serviceImages: Record<string, string> = {
   'destruccion-documentos': destruccionSeguraDocumentosArchivos,
   'destruccion-notarial-fiscal-aduanera': destruccionNotarialFiscalAduanera,
   'destruccion-residuos': destruccionResiduos,
-  'destruccion-raee': destruccionRaee,
+  'destruccion-raee': destruccionRaee, // <- Esta se queda para la portada
+  'destruccion-raee-card': destruccionRaeeCard, // <- Esta es exclusiva para la tarjeta pequeña
   'destruccion-ropa': destruccionRopa,
   'gestion-iqbf': gestionIqbf,
   'transporte': transporte,
