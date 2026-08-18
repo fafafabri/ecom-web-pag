@@ -4,6 +4,7 @@ import destruccionResiduos from '@/assets/service-destruccion-residuos.jpg';
 import destruccionRaee from '@/assets/service-destruccion-raee.jpg';
 import destruccionRaeeCard from '@/assets/service-destruccion-raee-2.jpg';
 import destruccionRopa from '@/assets/service-destruccion-ropa.jpg';
+import destruccionRopaCard from '@/assets/service-destruccion-ropa-2.jpg';
 import gestionIqbf from '@/assets/service-gestion-iqbf.jpg';
 import transporte from '@/assets/service-transporte.jpg';
 import recojoResiduos from '@/assets/service-recojo-residuos.jpg';
@@ -21,6 +22,7 @@ export const serviceImages: Record<string, string> = {
   'destruccion-raee': destruccionRaee, // <- Esta se queda para la portada
   'destruccion-raee-card': destruccionRaeeCard, // <- Esta es exclusiva para la tarjeta pequeña
   'destruccion-ropa': destruccionRopa,
+  'destruccion-ropa-card': destruccionRopaCard,
   'gestion-iqbf': gestionIqbf,
   'transporte': transporte,
   'recojo-residuos': recojoResiduos,
