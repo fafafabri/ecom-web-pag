@@ -50,7 +50,7 @@ const ServiceDetail = () => {
     ? `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(extendedData.whatsappMessage)}`
     : getFallbackWhatsAppUrl(service);
 
-  // Validación directa por imageKey para asegurar que la imagen secundaria cargue siempre correctamente
+  // Validación exacta por imageKey para que la portada no cambie, pero la tarjeta lateral sí use la versión "-2"
   const getSidebarCardImage = () => {
     if (service.imageKey === 'destruccion-raee') {
       return serviceImages['destruccion-raee-card'] || image;
@@ -64,6 +64,7 @@ const ServiceDetail = () => {
   return (
     <>
       <section className="relative flex items-center min-h-[50vh] w-full overflow-hidden">
+        {/* La portada mantiene la imagen original */}
         <img src={image} alt={service.title} className="absolute inset-0 w-full h-full object-cover object-center" />
         <div className="absolute inset-0 bg-foreground/75" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 w-full text-center">
@@ -179,7 +180,7 @@ const ServiceDetail = () => {
 
           <div className="lg:col-span-5">
             <div className="sticky top-28 flex flex-col gap-6">
-              {/* Imagen de la tarjeta lateral derecha */}
+              {/* Imagen de la tarjeta lateral derecha (usa service-destruccion-ropa-2.jpg) */}
               <img 
                 src={getSidebarCardImage()} 
                 alt={service.title} 
