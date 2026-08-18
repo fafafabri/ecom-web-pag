@@ -38,7 +38,7 @@ export const services: Service[] = [
       'Cumplimiento de normativas aduaneras y fiscales',
       'Supervisión y certificación oficial'
     ],
-    imageKey: 'destruccion-documentos',
+    imageKey: 'destruccion-notarial-fiscal-aduanera',
   },
   {
     id: 'destruccion-documentos',

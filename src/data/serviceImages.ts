@@ -1,4 +1,5 @@
-import destruccionDocumentos from '@/assets/service-destruccion-documentos.jpg';
+import destruccionNotarialFiscalAduanera from '@/assets/Destrucción_Notarial,_Fiscal_y_Aduanera_(Baja _de _Inventarios).jpg';
+import destruccionSeguraDocumentosArchivos from '@/assets/Destrucción_Segura_de_Documentos_y_Archivos_Confidenciales.jpg';
 import destruccionResiduos from '@/assets/service-destruccion-residuos.jpg';
 import destruccionRaee from '@/assets/service-destruccion-raee.jpg';
 import destruccionRopa from '@/assets/service-destruccion-ropa.jpg';
@@ -13,7 +14,8 @@ import asesorias from '@/assets/service-asesorias.jpg';
 import biodigestores from '@/assets/service-biodigestores.jpg';
 
 export const serviceImages: Record<string, string> = {
-  'destruccion-documentos': destruccionDocumentos,
+  'destruccion-documentos': destruccionSeguraDocumentosArchivos,
+  'destruccion-notarial-fiscal-aduanera': destruccionNotarialFiscalAduanera,
   'destruccion-residuos': destruccionResiduos,
   'destruccion-raee': destruccionRaee,
   'destruccion-ropa': destruccionRopa,
