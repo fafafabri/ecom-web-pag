@@ -141,7 +141,7 @@ const Empresa = () => {
                 {t('aboutPage.ctaTitle')}
               </h2>
               <a
-                href="https://wa.me/51902667683"
+                href="https://api.whatsapp.com/send?phone=51902667683&text=Hola,%20deseo%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20y%20acreditaciones%20de%20ECO%20M"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-cta text-cta-foreground px-8 py-4 rounded-xl font-bold shadow-lg hover:scale-[1.03] transition-all inline-flex items-center gap-2"
