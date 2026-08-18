@@ -90,7 +90,7 @@ const Index = () => {
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </a>
 
-            <a href={`https://wa.me/51902667683`} target="_blank" rel="noopener noreferrer" className="bg-transparent text-background border border-background/40 px-8 py-4 rounded-xl font-semibold hover:bg-background/15 hover:border-background/60 hover:scale-[1.03] hover:shadow-[0_4px_14px_rgba(255,255,255,0.15)] transition-all duration-300 backdrop-blur-sm inline-flex items-center">
+            <a href="https://api.whatsapp.com/send?phone=51902667683&text=Hola,%20deseo%20cotizar%20un%20servicio%20con%20ECO%20M" target="_blank" rel="noopener noreferrer" className="bg-transparent text-background border border-background/40 px-8 py-4 rounded-xl font-semibold hover:bg-background/15 hover:border-background/60 hover:scale-[1.03] hover:shadow-[0_4px_14px_rgba(255,255,255,0.15)] transition-all duration-300 backdrop-blur-sm inline-flex items-center">
               {t('homePage.btnAdvisor')}
             </a>
           </div>
@@ -229,7 +229,7 @@ const Index = () => {
             {t('aboutPage.ctaTitle')}
           </h2>
           <a
-            href="https://wa.me/51902667683"
+            href="https://api.whatsapp.com/send?phone=51902667683&text=Hola,%20estoy%20en%20la%20p%C3%A1gina%20de%20Inicio%20y%20deseo%20contactar%20a%20un%20asesor%20comercial"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1EBE5C] text-white px-8 py-4 rounded-full font-bold transition-all shadow-lg hover:shadow-xl text-lg"

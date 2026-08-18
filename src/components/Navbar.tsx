@@ -103,7 +103,7 @@ const Navbar = () => {
 
         <div className="hidden lg:flex items-center gap-3">
           <LanguageSwitcher />
-          <a href="https://wa.me/51902667683?text=Hola" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-6 py-3 rounded-xl bg-cta text-cta-foreground font-semibold text-sm transition-all duration-200 hover:scale-[1.03] hover:shadow-[0_6px_20px_0_hsl(var(--cta)/0.35)] shadow-[0_4px_14px_0_hsl(var(--cta)/0.25)]">
+          <a href="https://api.whatsapp.com/send?phone=51902667683&text=Hola,%20estoy%20en%20la%20web%20de%20ECO%20M%20y%20deseo%20realizar%20una%20consulta" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-6 py-3 rounded-xl bg-cta text-cta-foreground font-semibold text-sm transition-all duration-200 hover:scale-[1.03] hover:shadow-[0_6px_20px_0_hsl(var(--cta)/0.35)] shadow-[0_4px_14px_0_hsl(var(--cta)/0.25)]">
             <Phone className="h-5 w-5" />
             <div className="leading-tight text-left">
               <span className="text-xs opacity-80">{t('footer.consultations')}</span>
@@ -156,7 +156,7 @@ const Navbar = () => {
           </nav>
           <div className="flex gap-2 mt-4">
             <LanguageSwitcher />
-            <a href="https://wa.me/51902667683?text=Hola" target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-cta text-cta-foreground font-semibold text-sm">
+            <a href="https://api.whatsapp.com/send?phone=51902667683&text=Hola,%20estoy%20en%20la%20web%20de%20ECO%20M%20y%20deseo%20realizar%20una%20consulta" target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-cta text-cta-foreground font-semibold text-sm">
               <Phone className="h-4 w-4" />
               {t('footer.consultations')} 902 667 683
             </a>

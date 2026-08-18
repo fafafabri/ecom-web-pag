@@ -34,7 +34,7 @@ const Empresa = () => {
               </Link>
 
               <a
-                href={`https://wa.me/51902667683`}
+                href="https://api.whatsapp.com/send?phone=51902667683&text=Hola,%20deseo%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20y%20acreditaciones%20de%20ECO%20M"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-transparent text-background border border-background/40 px-6 py-3 rounded-xl font-semibold hover:bg-background/15 hover:border-background/60 hover:scale-[1.03] transition-all inline-flex items-center"
