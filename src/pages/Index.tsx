@@ -188,8 +188,13 @@ const Index = () => {
               const finalTitle = (sData && typeof sData === 'object' && sData.heroTitle) ? sData.heroTitle : s.title;
               const finalDesc = (sData && typeof sData === 'object' && sData.section2Intro) ? sData.section2Intro : s.shortDesc;
               
-              // TRUCO: Si es la tarjeta de RAEE, usamos la imagen "card", sino, usamos la normal
-              const imageToShow = s.imageKey === 'destruccion-raee' ? serviceImages['destruccion-raee-card'] : serviceImages[s.imageKey];
+              // Lógica para elegir la imagen correspondiente en las tarjetas de inicio
+              let imageToShow = serviceImages[s.imageKey];
+              if (s.imageKey === 'destruccion-raee') {
+                imageToShow = serviceImages['destruccion-raee-card'];
+              } else if (s.imageKey === 'destruccion-ropa') {
+                imageToShow = serviceImages['destruccion-ropa-card'];
+              }
 
               return (
                 <AnimatedSection key={s.id} direction="up" duration={600} delay={i * 80} threshold={0.1}>
