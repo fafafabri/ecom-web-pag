@@ -188,12 +188,14 @@ const Index = () => {
               const finalTitle = (sData && typeof sData === 'object' && sData.heroTitle) ? sData.heroTitle : s.title;
               const finalDesc = (sData && typeof sData === 'object' && sData.section2Intro) ? sData.section2Intro : s.shortDesc;
               
-              // Lógica para elegir la imagen correspondiente en las tarjetas de inicio
+              // SE AGREGA LA VALIDACIÓN PARA IQBF
               let imageToShow = serviceImages[s.imageKey];
               if (s.imageKey === 'destruccion-raee') {
                 imageToShow = serviceImages['destruccion-raee-card'];
               } else if (s.imageKey === 'destruccion-ropa') {
                 imageToShow = serviceImages['destruccion-ropa-card'];
+              } else if (s.imageKey === 'gestion-iqbf') {
+                imageToShow = serviceImages['gestion-iqbf-card'];
               }
 
               return (

@@ -50,13 +50,16 @@ const ServiceDetail = () => {
     ? `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(extendedData.whatsappMessage)}`
     : getFallbackWhatsAppUrl(service);
 
-  // Validación exacta por imageKey para que la portada no cambie, pero la tarjeta lateral sí use la versión "-2"
+  // SE AGREGA LA VALIDACIÓN PARA IQBF EN LA BARRA LATERAL
   const getSidebarCardImage = () => {
     if (service.imageKey === 'destruccion-raee') {
       return serviceImages['destruccion-raee-card'] || image;
     }
     if (service.imageKey === 'destruccion-ropa') {
       return serviceImages['destruccion-ropa-card'] || image;
+    }
+    if (service.imageKey === 'gestion-iqbf') {
+      return serviceImages['gestion-iqbf-card'] || image;
     }
     return image;
   };
@@ -180,7 +183,7 @@ const ServiceDetail = () => {
 
           <div className="lg:col-span-5">
             <div className="sticky top-28 flex flex-col gap-6">
-              {/* Imagen de la tarjeta lateral derecha (usa service-destruccion-ropa-2.jpg) */}
+              {/* Imagen de la tarjeta lateral derecha */}
               <img 
                 src={getSidebarCardImage()} 
                 alt={service.title} 
@@ -246,11 +249,14 @@ const ServiceDetail = () => {
                   const sData: any = t(`extendedServices.${s.slug}`, { returnObjects: true });
                   const finalTitle = (sData && typeof sData === 'object' && sData.heroTitle) ? sData.heroTitle : s.title;
 
+                  // SE AGREGA LA VALIDACIÓN PARA IQBF EN EL CARRUSEL
                   let imageToShowCarousel = serviceImages[s.imageKey];
                   if (s.imageKey === 'destruccion-raee') {
                     imageToShowCarousel = serviceImages['destruccion-raee-card'];
                   } else if (s.imageKey === 'destruccion-ropa') {
                     imageToShowCarousel = serviceImages['destruccion-ropa-card'];
+                  } else if (s.imageKey === 'gestion-iqbf') {
+                    imageToShowCarousel = serviceImages['gestion-iqbf-card'];
                   }
 
                   return (

@@ -6,6 +6,7 @@ import destruccionRaeeCard from '@/assets/service-destruccion-raee-2.jpg';
 import destruccionRopa from '@/assets/service-destruccion-ropa.jpg';
 import destruccionRopaCard from '@/assets/service-destruccion-ropa-2.jpg';
 import gestionIqbf from '@/assets/service-gestion-iqbf.jpg';
+import gestionIqbfCard from '@/assets/service-gestion-iqbf-2.jpg'; // <-- NUEVA IMAGEN IQBF
 import transporte from '@/assets/service-transporte.jpg';
 import recojoResiduos from '@/assets/service-recojo-residuos.jpg';
 import disposicionFinal from '@/assets/service-disposicion-final.jpg';
@@ -19,11 +20,12 @@ export const serviceImages: Record<string, string> = {
   'destruccion-documentos': destruccionSeguraDocumentosArchivos,
   'destruccion-notarial-fiscal-aduanera': destruccionNotarialFiscalAduanera,
   'destruccion-residuos': destruccionResiduos,
-  'destruccion-raee': destruccionRaee, // <- Esta se queda para la portada
-  'destruccion-raee-card': destruccionRaeeCard, // <- Esta es exclusiva para la tarjeta pequeña
+  'destruccion-raee': destruccionRaee,
+  'destruccion-raee-card': destruccionRaeeCard,
   'destruccion-ropa': destruccionRopa,
   'destruccion-ropa-card': destruccionRopaCard,
   'gestion-iqbf': gestionIqbf,
+  'gestion-iqbf-card': gestionIqbfCard, // <-- SE AGREGA AL MAPEO
   'transporte': transporte,
   'recojo-residuos': recojoResiduos,
   'disposicion-final': disposicionFinal,
